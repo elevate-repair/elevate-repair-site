@@ -423,7 +423,193 @@
                 padding: 40px 0;
             }
         }
-    </style>
+    
+        /* === Reviews + footer additions (v1) === */
+        .service-fee-note{
+            margin-top: 12px;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+        .service-fee-note strong{ font-weight: 700; }
+        .reviews-block{
+            margin-top: 22px;
+        }
+        .reviews-block h3{
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .reviews-marquee{
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid rgba(0,0,0,0.06);
+            background: rgba(255,255,255,0.06);
+        }
+        .reviews-track{
+            display: flex;
+            gap: 14px;
+            padding: 14px;
+            width: max-content;
+            animation: reviewsScroll 28s linear infinite;
+        }
+        .reviews-marquee:hover .reviews-track{
+            animation-play-state: paused;
+        }
+        @keyframes reviewsScroll{
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        .review-card{
+            width: 320px;
+            min-width: 320px;
+            padding: 14px 14px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .review-stars{
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            color: #fbbf24;
+        }
+        .review-text{
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+        .review-meta{
+            font-size: 0.9rem;
+            opacity: 0.85;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .site-footer{
+            margin-top: 40px;
+            padding: 26px 0;
+            border-top: 1px solid rgba(255,255,255,0.14);
+        }
+        .footer-inner{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .footer-social{
+            display:flex;
+            gap: 12px;
+            align-items:center;
+        }
+        .social-btn{
+            width: 40px;
+            height: 40px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .social-btn:hover{
+            transform: translateY(-1px);
+            background: rgba(255,255,255,0.16);
+        }
+        .social-btn svg{ width: 18px; height: 18px; }
+        .footer-small{
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+
+/* Service call price note */
+.service-call-note{
+  margin:10px 0 18px;
+  padding:10px 12px;
+  background:#f7f7f8;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:10px;
+  font-size:0.95rem;
+  line-height:1.35;
+}
+
+/* Social strip at bottom */
+.social-strip{
+  padding:28px 0;
+  background:#0f172a;
+  color:#fff;
+}
+.social-strip h3{
+  margin:0 0 6px;
+  font-size:1.1rem;
+}
+.social-strip p{
+  margin:0;
+  opacity:.9;
+}
+.social-strip-inner{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.social-strip-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.social-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.95rem;
+}
+.social-link:hover{
+  border-color:rgba(255,255,255,.5);
+}
+.social-emoji{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  border-radius:6px;
+  background:rgba(255,255,255,.14);
+  font-size:.9rem;
+}
+.social-strip-note{
+  margin:12px 0 0;
+  font-size:.85rem;
+  opacity:.75;
+}
+
+
+
+        .social-strip-centered{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            text-align:center;
+            gap:14px;
+        }
+        .social-strip-centered .social-strip-links{
+            justify-content:center;
+        }
+    
+</style>
 </head>
 <body>
     <script type="application/ld+json">
@@ -491,6 +677,7 @@
                 <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
                 <a href="#book" class="btn btn-secondary">Schedule Service</a>
             </div>
+</div>
         </div>
     </section>
 
@@ -663,6 +850,16 @@
                         We serve Denver and the surrounding metro area including Aurora, Lakewood, Arvada, Centennial, Thornton, and Littleton.
                     </div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the service call / diagnostic fee?
+                    </div>
+                    <div class="faq-answer">
+                        Service call / diagnostic fee: <strong>$89</strong>. This fee is applied toward the repair if you proceed.
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -709,6 +906,49 @@
                     We'll call you shortly to confirm availability. No spam.
                 </p>
             </form>
+
+
+                <div class="reviews-block" aria-label="Customer reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-marquee">
+                        <div class="reviews-track">
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
+                                <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
+                                <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
+                                <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
+                            </div>
+
+                            <!-- duplicate for smooth marquee -->
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
+                                <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
+                                <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
+                                <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
     </section>
@@ -723,8 +963,27 @@
             </div>
         </div>
     </section>
+    
+    <section class="social-strip" aria-label="Find us online">
+        <div class="container">
+            <div class="social-strip-inner social-strip-centered">
+                <h3>Find us online</h3>
+                <div class="social-strip-links">
+                    <a class="social-link" href="https://share.google/2O0pNZUpZoFaXTlNn" target="_blank" rel="noopener" aria-label="Google Business Profile">
+                        <span class="social-emoji">📍</span><span>Google</span>
+                    </a>
+                    <a class="social-link" href="https://www.facebook.com/profile.php?id=61557850731738" target="_blank" rel="noopener" aria-label="Facebook">
+                        <span class="social-emoji">f</span><span>Facebook</span>
+                    </a>
+                    <a class="social-link" href="https://nextdoor.com/page/mainratts-appliance-repair-nyc?utm_campaign=1769835024216&share_action_id=54877726-23b6-4d38-bc5d-6732215f6dbd" target="_blank" rel="noopener" aria-label="Nextdoor">
+                        <span class="social-emoji">N</span><span>Nextdoor</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <p><strong>Elevate Repair</strong></p>
@@ -735,7 +994,8 @@
         </div>
     </footer>
 
-    <a href="tel:7205758432" class="btn btn-primary mobile-call-btn">
+
+<a href="tel:7205758432" class="btn btn-primary mobile-call-btn">
         📞 Call Now: (720) 575-8432
     </a>
 
@@ -781,5 +1041,9 @@
             answer.style.display = 'none';
         });
     </script>
+
+
+        
+
 </body>
 </html>
