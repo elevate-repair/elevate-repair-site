@@ -1,0 +1,574 @@
+/* === Reset === */
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+  line-height:1.6;
+  color:#333;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* === Top Nav === */
+.top-nav{
+  background:#fff;
+  box-shadow:0 2px 5px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  color:#2563eb;
+  text-decoration:none;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  list-style:none;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#374151;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  transition:color .2s;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
+.nav-phone{
+  font-size:18px;
+  font-weight:700;
+  color:#2563eb;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:6px;
+}
+
+.nav-toggle span{
+  display:block;
+  width:24px;
+  height:3px;
+  background:#374151;
+  margin:4px 0;
+  border-radius:2px;
+  transition:all .3s;
+}
+
+/* === Hero === */
+.hero{
+  background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);
+  color:#fff;
+  padding:70px 0 60px;
+}
+
+.hero-inner{
+  max-width:720px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
+  margin-bottom:24px;
+}
+
+.hero-bullets{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+  font-size:17px;
+  font-weight:500;
+}
+
+.hero-bullets li::before{
+  content:"✓ ";
+  font-weight:700;
+}
+
+.hero-cta{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:16px 32px;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  transition:all .2s;
+  text-align:center;
+}
+
+.btn-call{
+  background:#ef4444;
+  color:#fff;
+}
+
+.btn-call:hover{
+  background:#dc2626;
+  transform:translateY(-2px);
+}
+
+.btn-text{
+  background:#fff;
+  color:#2563eb;
+}
+
+.btn-text:hover{
+  background:#f3f4f6;
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:#2563eb;
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background:#1d4ed8;
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  background:#fff;
+  color:#2563eb;
+  border:2px solid #2563eb;
+}
+
+.btn-secondary:hover{
+  background:#eff6ff;
+  transform:translateY(-2px);
+}
+
+/* === Appliances Grid === */
+.appliances{
+  padding:64px 0;
+}
+
+.appliances h2{
+  font-size:36px;
+  text-align:center;
+  margin-bottom:40px;
+  color:#1f2937;
+}
+
+.appliances-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.appliance-card{
+  background:#fff;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:28px 20px;
+  text-align:center;
+  transition:border-color .2s,box-shadow .2s;
+}
+
+.appliance-card:hover{
+  border-color:#2563eb;
+  box-shadow:0 4px 14px rgba(37,99,235,.12);
+}
+
+.appliance-icon{
+  font-size:44px;
+  margin-bottom:12px;
+}
+
+.appliance-card h3{
+  font-size:19px;
+  color:#1f2937;
+  margin-bottom:8px;
+}
+
+.appliance-card p{
+  font-size:14px;
+  color:#6b7280;
+  line-height:1.5;
+}
+
+/* === Service Areas === */
+.service-areas{
+  background:#eff6ff;
+  padding:64px 0;
+}
+
+.service-areas h2{
+  font-size:36px;
+  text-align:center;
+  margin-bottom:12px;
+  color:#1f2937;
+}
+
+.service-areas-sub{
+  text-align:center;
+  font-size:18px;
+  color:#4b5563;
+  margin-bottom:32px;
+}
+
+.areas-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.area-tag{
+  background:#fff;
+  padding:10px 22px;
+  border-radius:25px;
+  font-weight:500;
+  color:#1f2937;
+  border:2px solid #2563eb;
+  font-size:15px;
+}
+
+/* === Reviews === */
+.reviews{
+  padding:64px 0;
+  background:#f9fafb;
+}
+
+.reviews h2{
+  font-size:36px;
+  text-align:center;
+  margin-bottom:40px;
+  color:#1f2937;
+}
+
+.reviews-marquee{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+.reviews-track{
+  display:flex;
+  gap:16px;
+  padding:8px;
+  width:max-content;
+  animation:reviewsScroll 30s linear infinite;
+}
+
+.reviews-marquee:hover .reviews-track{
+  animation-play-state:paused;
+}
+
+@keyframes reviewsScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+.review-card{
+  width:320px;
+  min-width:320px;
+  padding:20px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.review-stars{
+  color:#fbbf24;
+  font-size:16px;
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
+
+.review-text{
+  font-size:15px;
+  color:#374151;
+  margin-bottom:12px;
+  line-height:1.5;
+}
+
+.review-meta{
+  font-size:14px;
+  color:#6b7280;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* === Booking Section === */
+.booking{
+  padding:64px 0;
+}
+
+.booking h2{
+  font-size:36px;
+  text-align:center;
+  margin-bottom:8px;
+  color:#1f2937;
+}
+
+.booking-sub{
+  text-align:center;
+  font-size:17px;
+  color:#4b5563;
+  margin-bottom:32px;
+}
+
+.booking-form{
+  max-width:480px;
+  margin:0 auto;
+  background:#f9fafb;
+  padding:36px 32px;
+  border-radius:12px;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+  color:#1f2937;
+  font-size:15px;
+}
+
+.form-group input{
+  width:100%;
+  padding:12px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:16px;
+}
+
+.form-group input:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.12);
+}
+
+.form-note{
+  text-align:center;
+  font-size:13px;
+  color:#9ca3af;
+  margin-top:14px;
+}
+
+/* === Footer === */
+.site-footer{
+  background:#1f2937;
+  color:#fff;
+  padding:40px 0 24px;
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:32px;
+  margin-bottom:28px;
+}
+
+.footer-brand{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.footer-tagline{
+  font-size:14px;
+  color:#9ca3af;
+  max-width:320px;
+  line-height:1.5;
+}
+
+.footer-contact p{
+  margin:4px 0;
+  font-size:15px;
+}
+
+.footer-contact a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.footer-contact a:hover{
+  text-decoration:underline;
+}
+
+.footer-social{
+  display:flex;
+  gap:10px;
+}
+
+.footer-social a{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 14px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  transition:border-color .2s;
+}
+
+.footer-social a:hover{
+  border-color:rgba(255,255,255,.5);
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:20px;
+  text-align:center;
+  font-size:14px;
+  color:#9ca3af;
+}
+
+/* === Mobile fixed CTA === */
+.mobile-cta-bar{
+  display:none;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:#fff;
+  box-shadow:0 -2px 10px rgba(0,0,0,.15);
+  padding:10px 16px;
+}
+
+.mobile-cta-bar .mobile-btns{
+  display:flex;
+  gap:10px;
+}
+
+.mobile-cta-bar .btn{
+  flex:1;
+  padding:14px 8px;
+  font-size:16px;
+  text-align:center;
+}
+
+/* === Responsive === */
+@media(max-width:900px){
+  .appliances-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero-bullets{
+    flex-direction:column;
+    gap:8px;
+    align-items:center;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#fff;
+    flex-direction:column;
+    padding:16px 20px;
+    gap:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .nav-phone-desktop{
+    display:none;
+  }
+
+  .appliances-grid{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+
+  .appliance-card{
+    padding:20px 14px;
+  }
+
+  .mobile-cta-bar{
+    display:block;
+  }
+
+  body{
+    padding-bottom:76px;
+  }
+
+  .booking-form{
+    padding:28px 20px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .appliances h2,
+  .service-areas h2,
+  .reviews h2,
+  .booking h2{
+    font-size:28px;
+  }
+}
+
+@media(max-width:480px){
+  .appliances-grid{
+    grid-template-columns:1fr;
+  }
+}

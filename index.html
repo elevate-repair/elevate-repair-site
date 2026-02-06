@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="k_seDL44KvFHpPCBDbNzQOJn0fKmzPdlr6oTNZZrAMs" />
-    <title>Appliance Repair in Denver, CO | Elevate Repair</title>
-    <meta name="description" content="Reliable appliance repair in Denver, CO. Same-day service for washers, dryers, refrigerators, dishwashers, ovens & ranges. Clear pricing. Call (720) 575-8432.">
+    <title>Appliance Repair in Denver | Elevate Repair</title>
+    <meta name="description" content="Professional appliance repair in Denver, CO. Same-day service for refrigerators, washers, dryers, dishwashers, ovens & more. Call (720) 575-8432 or book online.">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -13,9 +13,6 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/styles.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17878510208"></script>
@@ -25,6 +22,8 @@
         gtag('js', new Date());
         gtag('config', 'AW-17878510208');
     </script>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <script type="application/ld+json">
@@ -51,209 +50,149 @@
             "opens": "08:00",
             "closes": "17:00"
         },
-        "areaServed": ["Denver","Aurora","Lakewood","Evergreen","Golden","Boulder","Westminster","Littleton","Englewood","Centennial"]
+        "areaServed": ["Denver","Aurora","Lakewood","Arvada","Centennial","Thornton","Littleton"]
     }
     </script>
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">Elevate Repair</a>
-                <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
-            </div>
-        </div>
-    </header>
+    <!-- ===== TOP NAV ===== -->
+    <nav class="top-nav">
+        <div class="container nav-inner">
+            <a href="/" class="logo">Elevate Repair</a>
 
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#appliances">Services</a></li>
+                <li><a href="#areas">Service Areas</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#book">Book Now</a></li>
+            </ul>
+
+            <a href="tel:7205758432" class="nav-phone nav-phone-desktop">(720) 575-8432</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="container">
-            <h1>Appliance Repair in Denver, CO</h1>
-            <p class="hero-text">Reliable appliance repair services in Denver with same-day availability. We repair washers, dryers, refrigerators, dishwashers, ovens, and ranges. Clear pricing. Local technicians. Fast response.</p>
-            <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online</a>
+        <div class="container hero-inner">
+            <h1>Denver's Trusted Appliance Repair</h1>
+            <ul class="hero-bullets">
+                <li>Same-Day Service</li>
+                <li>Upfront Pricing</li>
+                <li>60-Day Warranty</li>
+            </ul>
+            <div class="hero-cta">
+                <a href="tel:7205758432" class="btn btn-call">Call (720) 575-8432</a>
+                <a href="sms:7205758432" class="btn btn-text">Text Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section>
+    <!-- ===== APPLIANCES WE REPAIR ===== -->
+    <section class="appliances" id="appliances">
         <div class="container">
-            <h2>Appliance Repair Services We Offer in Denver</h2>
-            <p class="section-intro">We provide professional appliance repair services across Denver and nearby cities. Our technicians diagnose issues quickly and explain repair options before starting any work. We focus on long-term solutions, not temporary fixes.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">&#x1F300;</div>
-                    <h3>Washer Repair</h3>
-                    <p>Won't spin, drain issues, leaks, loud noises</p>
+            <h2>Appliances We Repair</h2>
+            <div class="appliances-grid">
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x2744;&#xFE0F;</div>
+                    <h3>Refrigerator</h3>
+                    <p>Not cooling, leaking, ice maker issues, and more</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#x2668;&#xFE0F;</div>
-                    <h3>Dryer Repair</h3>
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x1F300;</div>
+                    <h3>Washer</h3>
+                    <p>Won't spin, drain problems, leaks, loud noises</p>
+                </div>
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x2668;&#xFE0F;</div>
+                    <h3>Dryer</h3>
                     <p>Not heating, won't start, taking too long to dry</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#x2744;&#xFE0F;</div>
-                    <h3>Refrigerator Repair</h3>
-                    <p>Not cooling, leaking, ice maker issues</p>
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x1F37D;&#xFE0F;</div>
+                    <h3>Dishwasher</h3>
+                    <p>Not cleaning, won't drain, leaking problems</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#x1F37D;&#xFE0F;</div>
-                    <h3>Dishwasher Repair</h3>
-                    <p>Not cleaning, won't drain, leaking</p>
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x1F525;</div>
+                    <h3>Oven &amp; Range</h3>
+                    <p>Not heating, temperature issues, burner problems</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">&#x1F525;</div>
-                    <h3>Oven Repair</h3>
-                    <p>Not heating, temperature issues, uneven baking</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">&#x1F373;</div>
-                    <h3>Stove &amp; Range Repair</h3>
-                    <p>Burner problems, igniter issues, gas smell</p>
+                <div class="appliance-card">
+                    <div class="appliance-icon">&#x1F4FB;</div>
+                    <h3>Microwave</h3>
+                    <p>Not heating, display issues, turntable problems</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose -->
-    <section class="section-alt">
+    <!-- ===== SERVICE AREAS ===== -->
+    <section class="service-areas" id="areas">
         <div class="container">
-            <h2>Why Choose Our Appliance Repair Company</h2>
-            <ul class="benefits-list">
-                <li><span class="benefit-check">&#x2713;</span> Same-day appointments available</li>
-                <li><span class="benefit-check">&#x2713;</span> Licensed and insured technicians</li>
-                <li><span class="benefit-check">&#x2713;</span> Transparent pricing before repair</li>
-                <li><span class="benefit-check">&#x2713;</span> Service warranty on completed repairs</li>
-                <li><span class="benefit-check">&#x2713;</span> Local Denver-based service</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Cost Table -->
-    <section>
-        <div class="container">
-            <h2>Appliance Repair Cost in Denver</h2>
-            <p class="section-intro">Appliance repair costs depend on the type of appliance and the issue. Below are typical price ranges for common appliance repairs in Denver.</p>
-            <div class="cost-table-wrap">
-                <table class="cost-table">
-                    <thead>
-                        <tr>
-                            <th>Service</th>
-                            <th>Typical Cost Range</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Washer Repair</td><td>$150 &ndash; $400</td></tr>
-                        <tr><td>Dryer Repair</td><td>$100 &ndash; $400</td></tr>
-                        <tr><td>Refrigerator Repair</td><td>$200 &ndash; $500</td></tr>
-                        <tr><td>Dishwasher Repair</td><td>$150 &ndash; $400</td></tr>
-                        <tr><td>Oven Repair</td><td>$150 &ndash; $450</td></tr>
-                        <tr><td>Stove / Range Repair</td><td>$150 &ndash; $450</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="cost-note">Final pricing is provided after diagnosis. Service call fee: $89 (applied toward repair if you proceed).</p>
-        </div>
-    </section>
-
-    <!-- Service Areas -->
-    <section class="section-blue">
-        <div class="container">
-            <h2>Our Service Areas</h2>
-            <p class="section-intro">We provide appliance repair services throughout Denver and surrounding areas.</p>
-            <div class="cities-grid">
-                <a href="/" class="city-link active">Denver</a>
-                <a href="/aurora.html" class="city-link">Aurora</a>
-                <a href="/lakewood.html" class="city-link">Lakewood</a>
-                <a href="/evergreen.html" class="city-link">Evergreen</a>
-                <a href="/golden.html" class="city-link">Golden</a>
-                <a href="/boulder.html" class="city-link">Boulder</a>
-                <span class="city-tag">Westminster</span>
-                <span class="city-tag">Littleton</span>
-                <span class="city-tag">Englewood</span>
-                <span class="city-tag">Centennial</span>
+            <h2>Service Areas</h2>
+            <p class="service-areas-sub">Proudly serving Denver and the surrounding metro area</p>
+            <div class="areas-grid">
+                <span class="area-tag">Denver</span>
+                <span class="area-tag">Aurora</span>
+                <span class="area-tag">Lakewood</span>
+                <span class="area-tag">Arvada</span>
+                <span class="area-tag">Centennial</span>
+                <span class="area-tag">Thornton</span>
+                <span class="area-tag">Littleton</span>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="section-alt">
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews" id="reviews">
         <div class="container">
-            <h2>How It Works</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Contact Us</h3>
-                    <p>Call or book online. Describe your appliance issue and we'll schedule a convenient time.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Diagnose</h3>
-                    <p>Our technician arrives on time, diagnoses the problem, and provides an upfront quote.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>We Fix It</h3>
-                    <p>Once approved, we complete the repair with quality parts and test everything thoroughly.</p>
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-marquee">
+                <div class="reviews-track">
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
+                        <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
+                        <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
+                        <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
+                    </div>
+                    <!-- Duplicates for seamless marquee loop -->
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
+                        <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
+                        <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
+                        <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Services -->
-    <section>
+    <!-- ===== BOOKING FORM ===== -->
+    <section class="booking" id="book">
         <div class="container">
-            <h2>Professional Appliance Repair Services in Denver</h2>
-            <p class="section-intro">Our goal is to make appliance repair simple and stress-free. From the first call to the completed repair, we focus on clear communication and quality work. Most repairs can be completed the same day depending on part availability.</p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section-alt">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Do you offer same-day service?</div>
-                    <div class="faq-answer">Yes, in most cases we can provide same-day service for urgent repairs. Call us early in the day for the best availability.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What brands do you service?</div>
-                    <div class="faq-answer">We repair all major appliance brands including Whirlpool, GE, Samsung, LG, Maytag, Frigidaire, KitchenAid, Bosch, and many more.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How much does a repair cost?</div>
-                    <div class="faq-answer">Costs vary by appliance and issue. We charge an $89 service call fee for the diagnosis, then provide an upfront quote before starting work. The service call fee is applied toward the repair if you proceed.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Do you warranty your work?</div>
-                    <div class="faq-answer">Yes, all repairs come with a 60-day warranty on parts and labor.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Should I repair or replace my appliance?</div>
-                    <div class="faq-answer">Our technicians will give you an honest assessment. If the repair cost is too high relative to the appliance value, we'll let you know.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What payment methods do you accept?</div>
-                    <div class="faq-answer">We accept cash, all major credit cards, and debit cards.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What areas do you serve?</div>
-                    <div class="faq-answer">We serve Denver and the surrounding metro area including Aurora, Lakewood, Evergreen, Golden, Boulder, Westminster, Littleton, Englewood, and Centennial.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What is the service call / diagnostic fee?</div>
-                    <div class="faq-answer">Service call / diagnostic fee: <strong>$89</strong>. This fee is applied toward the repair if you proceed.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking -->
-    <section id="book">
-        <div class="container">
-            <h2>Book Appliance Repair Today</h2>
-            <p class="section-intro">Call now or book online to schedule appliance repair in Denver or nearby areas. Same-day appointments available.</p>
+            <h2>Request Service</h2>
+            <p class="booking-sub">We'll call you back to confirm availability.</p>
             <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbxEVeK-JRHfVoX4oSmsJcuYF5wqn62Zi5qkm_1YmfNpVMkiSdrUBFxNb7cieJ7aCiUEvw/exec" target="hidden_iframe">
                 <input type="hidden" name="source" value="website-denver">
                 <input type="hidden" name="address" value="Not provided">
@@ -267,135 +206,83 @@
                     <label for="phone">Phone Number *</label>
                     <input type="tel" id="phone" name="phone" placeholder="(720) 555-1234" pattern="[\d\s\(\)\-]+" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Get a Call Back</button>
-                <p class="form-note">We'll call you shortly to confirm availability. No spam.</p>
+                <button type="submit" class="btn btn-primary" style="width:100%">Get a Call Back</button>
+                <p class="form-note">No spam. We'll call you shortly.</p>
             </form>
+            <iframe name="hidden_iframe" style="display:none"></iframe>
+        </div>
+    </section>
 
-            <div class="reviews-block" aria-label="Customer reviews">
-                <h3>Customer Reviews</h3>
-                <div class="reviews-marquee">
-                    <div class="reviews-track">
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
-                            <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
-                            <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
-                            <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
-                        </div>
-                        <!-- Duplicate set for seamless marquee -->
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
-                            <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
-                            <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
-                            <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
-                        </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Elevate Repair</div>
+                    <p class="footer-tagline">Appliance repair, installation &amp; replacement in Denver and the surrounding metro area.</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>Contact</strong></p>
+                    <p><a href="tel:7205758432">(720) 575-8432</a></p>
+                    <p><a href="sms:7205758432">Text Us</a></p>
+                    <p>Denver, CO</p>
+                </div>
+                <div>
+                    <p><strong>Find Us</strong></p>
+                    <div class="footer-social">
+                        <a href="https://share.google/2O0pNZUpZoFaXTlNn" target="_blank" rel="noopener">Google</a>
+                        <a href="https://www.facebook.com/profile.php?id=61557850731738" target="_blank" rel="noopener">Facebook</a>
                     </div>
                 </div>
             </div>
-
-            <iframe name="hidden_iframe" style="display:none;"></iframe>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Need Fast Appliance Repair?</h2>
-            <p>Call now or book online. Most repairs completed same-day.</p>
-            <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social -->
-    <section class="social-strip">
-        <div class="container">
-            <h3>Find us online</h3>
-            <div class="social-strip-links">
-                <a class="social-link" href="https://share.google/2O0pNZUpZoFaXTlNn" target="_blank" rel="noopener" aria-label="Google Business Profile">
-                    <span class="social-emoji">&#x1F4CD;</span><span>Google</span>
-                </a>
-                <a class="social-link" href="https://www.facebook.com/profile.php?id=61557850731738" target="_blank" rel="noopener" aria-label="Facebook">
-                    <span class="social-emoji">f</span><span>Facebook</span>
-                </a>
-                <a class="social-link" href="https://nextdoor.com/page/mainratts-appliance-repair-nyc?utm_campaign=1769835024216&share_action_id=54877726-23b6-4d38-bc5d-6732215f6dbd" target="_blank" rel="noopener" aria-label="Nextdoor">
-                    <span class="social-emoji">N</span><span>Nextdoor</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <p><strong>Elevate Repair</strong></p>
-            <p>Appliance Repair, Installation &amp; Replacement in Denver</p>
-            <div class="footer-links">
-                <a href="/aurora.html">Aurora</a>
-                <a href="/lakewood.html">Lakewood</a>
-                <a href="/evergreen.html">Evergreen</a>
-                <a href="/golden.html">Golden</a>
-                <a href="/boulder.html">Boulder</a>
+            <div class="footer-bottom">
+                &copy; 2026 Elevate Repair. All rights reserved.
             </div>
             <p>Denver, CO | <a href="tel:7205758432">(720) 575-8432</a></p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Sticky Bottom Bar (Mobile) -->
-    <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-book">Book Online</a>
+    <!-- Mobile fixed Call / Text bar -->
+    <div class="mobile-cta-bar">
+        <div class="mobile-btns">
+            <a href="tel:7205758432" class="btn btn-call">Call Now</a>
+            <a href="sms:7205758432" class="btn btn-text">Text Us</a>
+        </div>
     </div>
 
     <script>
-        // Form submission — redirects to /thank-you on success
-        (function() {
-            var submitted = false;
-            var form = document.getElementById("bookingForm");
-            var iframe = document.querySelector('iframe[name="hidden_iframe"]');
-            if (!form || !iframe) return;
-            form.addEventListener("submit", function() {
-                submitted = true;
-                var btn = form.querySelector("button[type=submit]");
-                if (btn) { btn.disabled = true; btn.innerText = "Sending..."; }
+        // Mobile nav toggle
+        (function(){
+            var toggle = document.querySelector('.nav-toggle');
+            var links = document.querySelector('.nav-links');
+            if(!toggle||!links) return;
+            toggle.addEventListener('click',function(){
+                var open = links.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
             });
-            iframe.addEventListener("load", function() {
-                if (!submitted) return;
+        })();
+
+        // Form submission → redirect to /thank-you.html
+        (function(){
+            var submitted = false;
+            var form = document.getElementById('bookingForm');
+            var iframe = document.querySelector('iframe[name="hidden_iframe"]');
+            if(!form||!iframe) return;
+
+            form.addEventListener('submit',function(){
+                submitted = true;
+                var btn = form.querySelector('button[type=submit]');
+                if(btn){ btn.disabled=true; btn.innerText='Sending...'; }
+            });
+
+            iframe.addEventListener('load',function(){
+                if(!submitted) return;
                 submitted = false;
                 sessionStorage.removeItem('conversion_fired');
                 window.location.href = '/thank-you.html';
             });
         })();
-
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(function(q) {
-            q.addEventListener('click', function() {
-                var item = this.parentElement;
-                var wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-                if (!wasOpen) item.classList.add('open');
-            });
-        });
     </script>
 </body>
 </html>

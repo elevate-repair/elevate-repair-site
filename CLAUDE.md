@@ -1,0 +1,8 @@
+- This repository is the single source of truth.
+- Do not create artifacts or side files.
+- Follow existing file structure.
+- One simple form (Name + Phone) per page.
+- No duplicate forms.
+- Shared header and footer across all pages.
+- CSS only in /assets/css/style.css.
+- Each page must be a separate HTML file.
