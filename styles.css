@@ -15,6 +15,10 @@ body {
     padding-bottom: 76px;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 a { color: inherit; }
 img { max-width: 100%; height: auto; }
 
@@ -40,6 +44,12 @@ header {
     align-items: center;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .logo {
     font-size: 20px;
     font-weight: 700;
@@ -55,12 +65,86 @@ header {
     white-space: nowrap;
 }
 
+/* === Burger Menu === */
+.burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 22px;
+    color: #1f2937;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-menu {
+    display: none;
+    padding: 16px 0 8px;
+}
+
+.nav-menu.nav-open {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.nav-group {
+    flex: 1;
+    min-width: 140px;
+}
+
+.nav-heading {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #9ca3af;
+    margin-bottom: 8px;
+    padding: 0 4px;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 8px 4px;
+    font-size: 15px;
+    color: #1f2937;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:active {
+    background: #f3f4f6;
+    color: #2563eb;
+}
+
 /* === Hero === */
 .hero {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 40%),
+        linear-gradient(135deg, #0f2a6b 0%, #1e40af 40%, #3b82f6 100%);
     color: #fff;
     padding: 48px 0 40px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 h1 {
@@ -103,6 +187,10 @@ h1 {
     flex-wrap: wrap;
 }
 
+.cta-buttons .btn {
+    min-width: 180px;
+}
+
 /* === Sub-page Hero (compact) === */
 .page-hero {
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
@@ -136,6 +224,8 @@ h1 {
     border: none;
     cursor: pointer;
     min-height: 52px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .btn-primary {
@@ -412,6 +502,66 @@ h3 {
     border-radius: 25px;
     color: #4b5563;
     font-size: 14px;
+}
+
+/* === Area Cards (City Photo Blocks) === */
+.area-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.area-card {
+    display: block;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.area-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.area-card:active {
+    transform: translateY(0);
+}
+
+.area-card-img {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.area-card-label {
+    padding: 10px 12px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+}
+
+.area-card-featured .area-card-label {
+    background: #1e40af;
+    color: #fff;
+}
+
+/* === Coupon Grid (homepage compact) === */
+.coupons-grid-home .coupon-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coupons-grid-home .coupon-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 /* === Process Steps === */
@@ -833,6 +983,9 @@ h3 {
 }
 
 .brand-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
     border: 1px solid #e5e7eb;
     padding: 16px 12px;
@@ -841,7 +994,10 @@ h3 {
     color: #1f2937;
     text-align: center;
     font-size: 15px;
+    text-decoration: none;
+    min-height: 52px;
     transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .brand-tag:hover {
@@ -924,6 +1080,10 @@ h3 {
     color: #93c5fd;
     font-size: 14px;
     text-decoration: none;
+    padding: 4px 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .footer-links a:hover {
@@ -1081,5 +1241,21 @@ h3 {
 
     .mid-cta {
         padding: 40px 0;
+    }
+
+    /* Burger still available on desktop but inline nav also works */
+    .burger-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Area cards: 4 cols on desktop */
+    .area-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .area-card-img {
+        height: 100px;
     }
 }
