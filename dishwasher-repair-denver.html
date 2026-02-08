@@ -24,8 +24,41 @@
         <div class="container">
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
-                <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                <div class="header-right">
+                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+                </div>
             </div>
+            <nav class="nav-menu" id="navMenu">
+                <div class="nav-group">
+                    <div class="nav-heading">Services</div>
+                    <a href="/fridge-repair-denver.html">Refrigerator Repair</a>
+                    <a href="/washer-repair-denver.html">Washer Repair</a>
+                    <a href="/dryer-repair-denver.html">Dryer Repair</a>
+                    <a href="/dishwasher-repair-denver.html">Dishwasher Repair</a>
+                    <a href="/oven-repair-denver.html">Oven &amp; Range Repair</a>
+                </div>
+                <div class="nav-group">
+                    <div class="nav-heading">Service Areas</div>
+                    <a href="/downtown-denver.html">Downtown Denver</a>
+                    <a href="/capitol-hill.html">Capitol Hill</a>
+                    <a href="/cherry-creek.html">Cherry Creek</a>
+                    <a href="/highlands.html">Highlands</a>
+                    <a href="/aurora.html">Aurora</a>
+                    <a href="/lakewood.html">Lakewood</a>
+                    <a href="/boulder.html">Boulder</a>
+                    <a href="/evergreen.html">Evergreen</a>
+                    <a href="/service-areas.html">All Areas &rarr;</a>
+                </div>
+                <div class="nav-group">
+                    <div class="nav-heading">More</div>
+                    <a href="/brands.html">Brands</a>
+                    <a href="/coupons.html">Coupons</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/warranty.html">Warranty</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -130,7 +163,7 @@
         </div>
     </section>
 
-    <section class="final-cta">
+    <section class="final-cta" id="book">
         <div class="container">
             <h2>Schedule Dishwasher Repair in Denver</h2>
             <p>Call now or text us. Most repairs completed same-day.</p>
@@ -165,6 +198,8 @@
                 <a href="/littleton.html">Littleton</a>
                 <a href="/centennial.html">Centennial</a>
                 <a href="/englewood.html">Englewood</a>
+                <a href="/boulder.html">Boulder</a>
+                <a href="/evergreen.html">Evergreen</a>
             </div>
             <p class="footer-heading">Appliance Repair</p>
             <div class="footer-links">
@@ -191,5 +226,24 @@
         <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
         <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
     </div>
+    <script>
+        (function() {
+            var btn = document.querySelector('.burger-btn');
+            var nav = document.getElementById('navMenu');
+            if (!btn || !nav) return;
+            btn.addEventListener('click', function() {
+                var open = nav.classList.toggle('nav-open');
+                btn.setAttribute('aria-expanded', open);
+                btn.textContent = open ? '\u2715' : '\u2630';
+            });
+            nav.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    nav.classList.remove('nav-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = '\u2630';
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
