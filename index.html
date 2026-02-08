@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="k_seDL44KvFHpPCBDbNzQOJn0fKmzPdlr6oTNZZrAMs" />
-    <title>Appliance Repair in Denver | Elevate Repair</title>
-    <meta name="description" content="Professional appliance repair in Denver, CO. Same-day service for refrigerators, washers, dryers, dishwashers, ovens & more. Call (720) 575-8432 or book online.">
+    <title>Appliance Repair in Denver, CO | Elevate Repair</title>
+    <meta name="description" content="Denver's trusted appliance repair service. Same-day appointments, upfront pricing, 60-day warranty. Washers, dryers, fridges, dishwashers, ovens & more. Call (720) 575-8432.">
 
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17878510208"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,8 +21,6 @@
         gtag('js', new Date());
         gtag('config', 'AW-17878510208');
     </script>
-
-    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <script type="application/ld+json">
@@ -31,12 +28,16 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Elevate Repair",
+        "url": "https://elevaterepair.com",
         "telephone": "(720) 575-8432",
+        "email": "support@elevaterepair.com",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "1500 N Grant St",
             "addressLocality": "Denver",
             "addressRegion": "CO",
+            "postalCode": "80203",
             "addressCountry": "US"
         },
         "geo": {
@@ -46,155 +47,310 @@
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "08:00",
-            "closes": "17:00"
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "22:00"
         },
-        "areaServed": ["Denver","Aurora","Lakewood","Arvada","Centennial","Thornton","Littleton"]
+        "areaServed": ["Denver","Aurora","Lakewood","Evergreen","Golden","Boulder","Westminster","Littleton","Englewood","Centennial"]
     }
     </script>
 
-    <!-- ===== TOP NAV ===== -->
-    <nav class="top-nav">
-        <div class="container nav-inner">
-            <a href="/" class="logo">Elevate Repair</a>
-
-            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="#appliances">Services</a></li>
-                <li><a href="#areas">Service Areas</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#book">Book Now</a></li>
-            </ul>
-
-            <a href="tel:7205758432" class="nav-phone nav-phone-desktop">(720) 575-8432</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Elevate Repair</a>
+                <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="container hero-inner">
-            <h1>Denver's Trusted Appliance Repair</h1>
-            <ul class="hero-bullets">
-                <li>Same-Day Service</li>
-                <li>Upfront Pricing</li>
-                <li>60-Day Warranty</li>
-            </ul>
-            <div class="hero-cta">
-                <a href="tel:7205758432" class="btn btn-call">Call (720) 575-8432</a>
-                <a href="sms:7205758432" class="btn btn-text">Text Us</a>
+        <div class="container">
+            <h1>Appliance Repair in Denver, CO</h1>
+            <p class="hero-text">Denver's trusted appliance repair service. Same-day appointments, upfront pricing, and a 60-day warranty on every repair. Our licensed technicians fix washers, dryers, refrigerators, dishwashers, ovens, and ranges &mdash; quickly and correctly.</p>
+            <div class="hero-highlights">
+                <span class="hero-badge">Same-Day Service</span>
+                <span class="hero-badge">Upfront Pricing</span>
+                <span class="hero-badge">60-Day Warranty</span>
+                <span class="hero-badge">Licensed &amp; Insured</span>
+                <span class="hero-badge">All Major Brands</span>
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
+                <a href="sms:7205758432" class="btn btn-secondary">Text Us</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== APPLIANCES WE REPAIR ===== -->
-    <section class="appliances" id="appliances">
+    <!-- Services -->
+    <section>
         <div class="container">
-            <h2>Appliances We Repair</h2>
-            <div class="appliances-grid">
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x2744;&#xFE0F;</div>
-                    <h3>Refrigerator</h3>
-                    <p>Not cooling, leaking, ice maker issues, and more</p>
+            <h2>Our Appliance Repair Services in Denver</h2>
+            <p class="section-intro">From kitchens to laundry rooms, we repair all major household appliances across Denver. Our trucks are fully stocked with common parts, so most repairs are completed in a single visit.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#x2744;&#xFE0F;</div>
+                    <h3>Refrigerator Repair</h3>
+                    <p>Not cooling, leaking, ice maker issues, noisy compressor</p>
                 </div>
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x1F300;</div>
-                    <h3>Washer</h3>
-                    <p>Won't spin, drain problems, leaks, loud noises</p>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F300;</div>
+                    <h3>Washer Repair</h3>
+                    <p>Won't spin, drain issues, leaks, loud vibrations</p>
                 </div>
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x2668;&#xFE0F;</div>
-                    <h3>Dryer</h3>
+                <div class="service-card">
+                    <div class="service-icon">&#x2668;&#xFE0F;</div>
+                    <h3>Dryer Repair</h3>
                     <p>Not heating, won't start, taking too long to dry</p>
                 </div>
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x1F37D;&#xFE0F;</div>
-                    <h3>Dishwasher</h3>
-                    <p>Not cleaning, won't drain, leaking problems</p>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F37D;&#xFE0F;</div>
+                    <h3>Dishwasher Repair</h3>
+                    <p>Not cleaning, won't drain, leaking, door issues</p>
                 </div>
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x1F525;</div>
-                    <h3>Oven &amp; Range</h3>
-                    <p>Not heating, temperature issues, burner problems</p>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F525;</div>
+                    <h3>Oven Repair</h3>
+                    <p>Not heating, temperature issues, uneven baking</p>
                 </div>
-                <div class="appliance-card">
-                    <div class="appliance-icon">&#x1F4FB;</div>
-                    <h3>Microwave</h3>
-                    <p>Not heating, display issues, turntable problems</p>
+                <div class="service-card">
+                    <div class="service-icon">&#x1F373;</div>
+                    <h3>Stove &amp; Range Repair</h3>
+                    <p>Burner problems, igniter issues, gas smell</p>
+                </div>
+            </div>
+
+            <!-- Detailed service descriptions for SEO -->
+            <div class="service-details">
+                <div class="service-detail">
+                    <h3>Refrigerator Repair in Denver</h3>
+                    <p>Is your refrigerator running warm, making unusual noises, or leaking water onto the kitchen floor? Our Denver technicians handle everything from thermostat failures and compressor problems to ice maker malfunctions and door seal replacements. We service top-freezer, bottom-freezer, side-by-side, and French door models from every major brand.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Washer Repair in Denver</h3>
+                    <p>A broken washing machine disrupts your entire routine. Whether it won't start, won't drain, vibrates excessively, or leaks during the spin cycle, our Denver repair team can diagnose and fix it. We work on both top-load and front-load washers, and most washer repairs are completed the same day you call.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Dryer Repair in Denver</h3>
+                    <p>If your dryer isn't producing heat, takes multiple cycles to dry a load, or shuts off mid-cycle, don't wait. Dryer problems can worsen quickly and even become a safety hazard. Our technicians troubleshoot heating elements, thermostats, belts, drum rollers, and more for fast dryer repair in Denver.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Dishwasher Repair in Denver</h3>
+                    <p>A dishwasher that leaves dishes dirty, won't fill with water, or fails to drain properly is more than an inconvenience. Our Denver technicians repair spray arm issues, clogged drains, faulty pumps, door latch problems, and detergent dispenser failures across all major brands.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Oven Repair in Denver</h3>
+                    <p>An oven that won't heat or heats unevenly can throw off your entire meal schedule. Our team handles gas and electric oven repairs, including igniter replacements, bake element failures, temperature calibration, and control board issues. Denver homeowners count on Elevate Repair for dependable oven service.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Stove &amp; Range Repair in Denver</h3>
+                    <p>Gas burner won't light? Electric coil not heating? Stove and range problems are both frustrating and potentially dangerous. Our licensed technicians repair gas leaks, faulty igniters, broken burner elements, and control knob issues safely and efficiently throughout Denver.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SERVICE AREAS ===== -->
-    <section class="service-areas" id="areas">
+    <!-- Mid-Page CTA -->
+    <section class="mid-cta">
         <div class="container">
-            <h2>Service Areas</h2>
-            <p class="service-areas-sub">Proudly serving Denver and the surrounding metro area</p>
-            <div class="areas-grid">
-                <span class="area-tag">Denver</span>
-                <span class="area-tag">Aurora</span>
-                <span class="area-tag">Lakewood</span>
-                <span class="area-tag">Arvada</span>
-                <span class="area-tag">Centennial</span>
-                <span class="area-tag">Thornton</span>
-                <span class="area-tag">Littleton</span>
+            <p>Same-day appointments available. Call or text now.</p>
+            <div class="cta-buttons">
+                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
+                <a href="sms:7205758432" class="btn btn-outline">Text Us</a>
             </div>
         </div>
     </section>
 
-    <!-- ===== REVIEWS ===== -->
-    <section class="reviews" id="reviews">
+    <!-- Cost Table -->
+    <section class="section-alt">
         <div class="container">
-            <h2>What Our Customers Say</h2>
-            <div class="reviews-marquee">
-                <div class="reviews-track">
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
-                        <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
-                        <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
-                        <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
-                    </div>
-                    <!-- Duplicates for seamless marquee loop -->
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Fast response and clear communication. Washer fixed the same day.</div>
-                        <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Professional tech, clean work, and honest recommendations. Highly recommend.</div>
-                        <div class="review-meta"><span><strong>Mark L.</strong></span><span>Aurora</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="review-text">Diagnosed quickly and explained the options. No pressure, just facts.</div>
-                        <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Lakewood</span></div>
-                    </div>
+            <h2>Appliance Repair Cost in Denver</h2>
+            <p class="section-intro">We believe in honest, transparent pricing. Every repair starts with a complete diagnosis, and we provide an upfront quote before any work begins. No hidden fees, no surprises.</p>
+            <div class="cost-table-wrap">
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Typical Cost Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Refrigerator Repair</td><td>$200 &ndash; $500</td></tr>
+                        <tr><td>Washer Repair</td><td>$150 &ndash; $400</td></tr>
+                        <tr><td>Dryer Repair</td><td>$100 &ndash; $400</td></tr>
+                        <tr><td>Dishwasher Repair</td><td>$150 &ndash; $400</td></tr>
+                        <tr><td>Oven Repair</td><td>$150 &ndash; $450</td></tr>
+                        <tr><td>Stove / Range Repair</td><td>$150 &ndash; $450</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="cost-note">Final pricing provided after diagnosis. Service call fee: $89 (applied toward repair if you proceed). <a href="/coupons.html" style="color:#2563eb;">View current coupons</a>.</p>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section>
+        <div class="container">
+            <h2>What Denver Customers Are Saying</h2>
+            <div class="reviews-grid">
+                <div class="review-card-static">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-text">Fast response and fixed my washer the same day. The tech was friendly, explained everything before starting, and left the area cleaner than he found it. 5 stars!</div>
+                    <div class="review-meta"><span><strong>Olga O.</strong></span><span>Denver</span></div>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-text">Our refrigerator stopped cooling on a Friday night. They had a tech here Saturday morning and it was fixed by noon. Can't recommend them enough.</div>
+                    <div class="review-meta"><span><strong>Mark L.</strong></span><span>Denver</span></div>
+                </div>
+                <div class="review-card-static">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-text">Professional, on time, and fair pricing. They replaced our oven igniter in under an hour. Will definitely call again for any appliance issues.</div>
+                    <div class="review-meta"><span><strong>Sarah K.</strong></span><span>Denver</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== BOOKING FORM ===== -->
-    <section class="booking" id="book">
+    <!-- Why Choose -->
+    <section class="section-blue">
         <div class="container">
-            <h2>Request Service</h2>
-            <p class="booking-sub">We'll call you back to confirm availability.</p>
+            <h2>Why Choose Elevate Repair</h2>
+            <ul class="benefits-list">
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>Locally Owned &amp; Denver-Based</strong> We live and work in Denver. When you call, you're talking to a neighbor, not a distant call center.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>Same-Day &amp; Next-Day Appointments</strong> Call before noon and we can often be at your door the same day. Emergency slots available 7 days a week.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>Upfront, Honest Pricing</strong> We provide a complete quote after diagnosing your appliance &mdash; before any work begins. No hidden fees.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>60-Day Warranty on All Repairs</strong> Every repair is backed by a 60-day warranty covering both parts and labor. If the same issue returns, we fix it free.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>Licensed &amp; Fully Insured</strong> Our technicians are licensed, background-checked, and carry full insurance. Your home is in good hands.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>Fully Stocked Trucks</strong> Our service vehicles carry common replacement parts, meaning faster repairs and fewer follow-up visits.</span>
+                </li>
+                <li>
+                    <span class="benefit-check">&#x2713;</span>
+                    <span class="benefit-text"><strong>All Major Brands</strong> From Whirlpool and Samsung to Sub-Zero and Viking, we repair appliances from <a href="/brands.html" style="color:#2563eb;">every major manufacturer</a>.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section>
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or book online. Describe the issue and we'll schedule a convenient time.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Diagnose</h3>
+                    <p>Our technician arrives on time, diagnoses the problem, and gives you an upfront quote &mdash; no work starts without your approval.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We Fix It</h3>
+                    <p>Once approved, we complete the repair with quality parts and test everything thoroughly. Backed by our 60-day warranty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section-alt">
+        <div class="container">
+            <h2>Denver Neighborhoods We Serve</h2>
+            <p class="section-intro">We repair appliances across Denver and surrounding communities.</p>
+            <div class="cities-grid">
+                <a href="/" class="city-link active">Denver</a>
+                <a href="/downtown-denver.html" class="city-link">Downtown</a>
+                <a href="/capitol-hill.html" class="city-link">Capitol Hill</a>
+                <a href="/cherry-creek.html" class="city-link">Cherry Creek</a>
+                <a href="/five-points.html" class="city-link">Five Points</a>
+                <a href="/highlands.html" class="city-link">Highlands</a>
+                <a href="/washington-park.html" class="city-link">Wash Park</a>
+            </div>
+            <h3 style="text-align:center;margin:28px 0 16px;color:#1f2937;">Nearby Cities</h3>
+            <div class="cities-grid">
+                <a href="/aurora.html" class="city-link">Aurora</a>
+                <a href="/lakewood.html" class="city-link">Lakewood</a>
+                <a href="/wheat-ridge.html" class="city-link">Wheat Ridge</a>
+                <a href="/westminster.html" class="city-link">Westminster</a>
+                <a href="/arvada.html" class="city-link">Arvada</a>
+                <a href="/littleton.html" class="city-link">Littleton</a>
+                <a href="/centennial.html" class="city-link">Centennial</a>
+                <a href="/englewood.html" class="city-link">Englewood</a>
+            </div>
+            <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See all <a href="/service-areas.html" style="color:#2563eb;">service areas</a>.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer same-day service?</div>
+                    <div class="faq-answer">Yes! In most cases, if you call before noon we can dispatch a technician to your Denver home the very same day. Our team is on call 7 days a week for emergencies.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What brands do you service?</div>
+                    <div class="faq-answer">We repair all major appliance brands including Whirlpool, GE, Samsung, LG, Maytag, Frigidaire, KitchenAid, Bosch, Sub-Zero, Viking, and many more. See our full <a href="/brands.html" style="color:#2563eb;">brands list</a>.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much does a repair cost?</div>
+                    <div class="faq-answer">It depends on the appliance and the issue. We charge an $89 service call fee for the diagnosis, then provide an upfront quote before starting work. The service call fee is applied toward the repair if you proceed. Check our pricing table above for typical ranges.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is your work guaranteed?</div>
+                    <div class="faq-answer">Absolutely. We include a <a href="/warranty.html" style="color:#2563eb;">60-day warranty</a> on all repairs. If the same problem comes back within 60 days, we fix it free of charge.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What appliances do you repair?</div>
+                    <div class="faq-answer">We fix refrigerators, freezers, ice makers, dishwashers, ovens, stoves, ranges, washers, dryers, microwaves, and more. If it's a major household appliance, our technicians can handle it.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I schedule a repair?</div>
+                    <div class="faq-answer">Just call us at <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or fill out our online booking form below. We'll arrange a convenient appointment and send a confirmation.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is the service call / diagnostic fee?</div>
+                    <div class="faq-answer">Our service call fee is <strong>$89</strong>. This covers the technician's visit and full diagnosis. If you approve the repair, the $89 is applied as a credit toward your total cost.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What payment methods do you accept?</div>
+                    <div class="faq-answer">We accept cash, all major credit cards, and debit cards. Payment is collected after the repair is completed to your satisfaction.</div>
+                </div>
+            </div>
+            <p class="section-intro" style="margin-top:16px;margin-bottom:0;">More questions? Visit our <a href="/faq.html" style="color:#2563eb;">full FAQ page</a> or call us.</p>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section-alt" id="book">
+        <div class="container">
+            <h2>Book Appliance Repair Today</h2>
+            <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or book online to schedule appliance repair in Denver. Same-day appointments available. <strong>Save $25 when you book online!</strong></p>
             <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbxEVeK-JRHfVoX4oSmsJcuYF5wqn62Zi5qkm_1YmfNpVMkiSdrUBFxNb7cieJ7aCiUEvw/exec" target="hidden_iframe">
-                <input type="hidden" name="source" value="website">
+                <input type="hidden" name="source" value="website-denver">
                 <input type="hidden" name="address" value="Not provided">
                 <input type="hidden" name="appliance" value="Not specified">
                 <input type="hidden" name="message" value="Customer requested callback">
@@ -204,83 +360,126 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(720) 555-1234" pattern="[\d\s\(\)\-]+" required>
+                    <input type="tel" id="phone" name="phone" placeholder="(720) 555-1234" pattern="[\d\s\(\)\-\+]+" required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%">Get a Call Back</button>
-                <p class="form-note">No spam. We'll call you shortly.</p>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Get a Call Back</button>
+                <p class="form-note">We'll call you shortly to confirm availability. No spam.</p>
             </form>
-            <iframe name="hidden_iframe" style="display:none"></iframe>
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Need Fast Appliance Repair in Denver?</h2>
+            <p>Call now or book online. Most repairs completed same-day. Open 7 days a week, 7am &ndash; 10pm.</p>
+            <div class="cta-buttons">
+                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
+                <a href="sms:7205758432" class="btn btn-secondary">Text Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social -->
+    <section class="social-strip">
+        <div class="container">
+            <h3>Find us online</h3>
+            <div class="social-strip-links">
+                <a class="social-link" href="https://share.google/2O0pNZUpZoFaXTlNn" target="_blank" rel="noopener" aria-label="Google Business Profile">
+                    <span class="social-emoji">&#x1F4CD;</span><span>Google</span>
+                </a>
+                <a class="social-link" href="https://www.facebook.com/profile.php?id=61557850731738" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="social-emoji">f</span><span>Facebook</span>
+                </a>
+                <a class="social-link" href="https://nextdoor.com/page/mainratts-appliance-repair-nyc?utm_campaign=1769835024216&share_action_id=54877726-23b6-4d38-bc5d-6732215f6dbd" target="_blank" rel="noopener" aria-label="Nextdoor">
+                    <span class="social-emoji">N</span><span>Nextdoor</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-brand">Elevate Repair</div>
-                    <p class="footer-tagline">Appliance repair, installation &amp; replacement in Denver and the surrounding metro area.</p>
-                </div>
-                <div class="footer-contact">
-                    <p><strong>Contact</strong></p>
-                    <p><a href="tel:7205758432">(720) 575-8432</a></p>
-                    <p><a href="sms:7205758432">Text Us</a></p>
-                    <p>Denver, CO</p>
-                </div>
-                <div>
-                    <p><strong>Find Us</strong></p>
-                    <div class="footer-social">
-                        <a href="https://share.google/2O0pNZUpZoFaXTlNn" target="_blank" rel="noopener">Google</a>
-                        <a href="https://www.facebook.com/profile.php?id=61557850731738" target="_blank" rel="noopener">Facebook</a>
-                    </div>
-                </div>
+            <p><strong>Elevate Repair</strong></p>
+            <p>1500 N Grant St, Denver, CO 80203</p>
+            <p class="footer-heading">Denver Neighborhoods</p>
+            <div class="footer-links">
+                <a href="/">Denver</a>
+                <a href="/downtown-denver.html">Downtown</a>
+                <a href="/capitol-hill.html">Capitol Hill</a>
+                <a href="/cherry-creek.html">Cherry Creek</a>
+                <a href="/five-points.html">Five Points</a>
+                <a href="/highlands.html">Highlands</a>
+                <a href="/washington-park.html">Wash Park</a>
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 Elevate Repair. All rights reserved.
+            <p class="footer-heading">Nearby Cities</p>
+            <div class="footer-links">
+                <a href="/aurora.html">Aurora</a>
+                <a href="/lakewood.html">Lakewood</a>
+                <a href="/wheat-ridge.html">Wheat Ridge</a>
+                <a href="/westminster.html">Westminster</a>
+                <a href="/arvada.html">Arvada</a>
+                <a href="/littleton.html">Littleton</a>
+                <a href="/centennial.html">Centennial</a>
+                <a href="/englewood.html">Englewood</a>
             </div>
+            <p class="footer-heading">Appliance Repair</p>
+            <div class="footer-links">
+                <a href="/fridge-repair-denver.html">Refrigerator</a>
+                <a href="/washer-repair-denver.html">Washer</a>
+                <a href="/dryer-repair-denver.html">Dryer</a>
+                <a href="/dishwasher-repair-denver.html">Dishwasher</a>
+                <a href="/oven-repair-denver.html">Oven</a>
+            </div>
+            <div class="footer-links">
+                <a href="/brands.html">Brands</a>
+                <a href="/coupons.html">Coupons</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/warranty.html">Warranty</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 10pm</p>
+            <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Mobile fixed Call / Text bar -->
-    <div class="mobile-cta-bar">
-        <div class="mobile-btns">
-            <a href="tel:7205758432" class="btn btn-call">Call Now</a>
-            <a href="sms:7205758432" class="btn btn-text">Text Us</a>
-        </div>
+    <!-- Sticky Bottom Bar (Mobile) -->
+    <div class="sticky-bottom-bar">
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
+        <a href="sms:7205758432" class="sticky-btn sticky-btn-text">Text Us</a>
     </div>
 
     <script>
-        // Mobile nav toggle
-        (function(){
-            var toggle = document.querySelector('.nav-toggle');
-            var links = document.querySelector('.nav-links');
-            if(!toggle||!links) return;
-            toggle.addEventListener('click',function(){
-                var open = links.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', open);
-            });
-        })();
-
-        // Form submission → redirect to /thank-you.html
-        (function(){
+        // Form submission
+        (function() {
             var submitted = false;
-            var form = document.getElementById('bookingForm');
+            var form = document.getElementById("bookingForm");
             var iframe = document.querySelector('iframe[name="hidden_iframe"]');
-            if(!form||!iframe) return;
-
-            form.addEventListener('submit',function(){
+            if (!form || !iframe) return;
+            form.addEventListener("submit", function() {
                 submitted = true;
-                var btn = form.querySelector('button[type=submit]');
-                if(btn){ btn.disabled=true; btn.innerText='Sending...'; }
+                var btn = form.querySelector("button[type=submit]");
+                if (btn) { btn.disabled = true; btn.innerText = "Sending..."; }
             });
-
-            iframe.addEventListener('load',function(){
-                if(!submitted) return;
+            iframe.addEventListener("load", function() {
+                if (!submitted) return;
                 submitted = false;
                 sessionStorage.removeItem('conversion_fired');
                 window.location.href = '/thank-you.html';
             });
         })();
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.addEventListener('click', function() {
+                var item = this.parentElement;
+                var wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
     </script>
 </body>
 </html>
