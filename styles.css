@@ -178,6 +178,11 @@ h1 {
     font-size: 13px;
     font-weight: 500;
     color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.hero-badge:hover {
+    background: rgba(255,255,255,0.3);
 }
 
 .cta-buttons {
