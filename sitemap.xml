@@ -141,6 +141,40 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- West Metro / Foothills -->
+  <url>
+    <loc>https://elevaterepair.com/golden.html</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elevaterepair.com/ken-caryl.html</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- North Metro -->
+  <url>
+    <loc>https://elevaterepair.com/broomfield.html</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elevaterepair.com/erie.html</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elevaterepair.com/federal-heights.html</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Appliance Repair Pages -->
   <url>
     <loc>https://elevaterepair.com/fridge-repair-denver.html</loc>
