@@ -538,8 +538,16 @@ h3 {
 .area-card-img {
     width: 100%;
     height: 80px;
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+
+.area-card-featured .area-card-img {
+    background: #eff6ff;
+    color: #2563eb;
 }
 
 .area-card-label {
