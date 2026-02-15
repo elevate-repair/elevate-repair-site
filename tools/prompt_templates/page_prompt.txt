@@ -1,0 +1,58 @@
+You are writing unique, SEO-optimized content for an appliance repair service page. The company is "Elevate Repair" based in Denver, CO.
+
+PAGE DETAILS:
+- City: {city}
+- Appliance: {category}
+- Problem: {problem}
+- Parent page: /{parent_page}
+
+You must output EXACTLY this structure with these exact labels. Do not add extra labels or sections:
+
+TITLE: {category} {problem} Repair in {city}, CO | Elevate Appliance Repair
+
+DESCRIPTION: Professional {category_lower} {problem_lower} repair in {city}, CO. Elevate Repair offers same-day service, upfront pricing, and a 60-day warranty. Call (720) 575-8432.
+
+H1: {category} {problem} Repair in {city}
+
+INTRO: [Write 2-3 sentences as an intro paragraph. Mention {city} and the specific problem. Reference Elevate Repair's same-day service and 60-day warranty. Keep under 60 words.]
+
+BODY:
+[Write the full body content below. Use raw HTML tags (<h2>, <p>, <ul>, <li>, <a>). The total body must be 900-1200 words.]
+
+<h2>Why Your {category} Is {problem} in {city}</h2>
+<p>[2-3 paragraphs explaining common causes of this problem. Be technically accurate but accessible. Reference {city} climate or home characteristics where relevant. Do NOT fabricate specific addresses or landmarks.]</p>
+
+<h2>What Our Technicians Inspect</h2>
+<ul>
+<li>[Component 1 — brief explanation]</li>
+<li>[Component 2 — brief explanation]</li>
+<li>[Component 3 — brief explanation]</li>
+<li>[Component 4 — brief explanation]</li>
+<li>[Component 5 — brief explanation]</li>
+<li>[Component 6 — brief explanation]</li>
+</ul>
+
+<h2>Our {category} Repair Process in {city}</h2>
+<p>[2-3 paragraphs about how Elevate Repair diagnoses and fixes this specific problem. Mention the $89 service call fee that applies toward the repair. Mention same-day availability.]</p>
+
+<h2>Common Questions About {category} {problem} Issues</h2>
+<p>[2-3 short Q&A pairs in paragraph form. Address questions homeowners commonly ask about this specific problem. Do not use fake statistics.]</p>
+
+<h2>Why {city} Residents Trust Elevate Repair</h2>
+<p>[1-2 paragraphs. Mention: licensed and insured, 60-day warranty on parts and labor, upfront pricing, scheduling 7 days a week from 7am to 7pm. Reference {city} generically — do not invent landmarks.]</p>
+
+<h2>Schedule Your {category} Repair Today</h2>
+<p>If your {category_lower} is {problem_lower}, do not wait for the problem to get worse. Elevate Repair provides same-day {category_lower} repair service in {city} and throughout the Denver metro area. Call <a href="tel:7205758432">(720) 575-8432</a> or <a href="#book">book online</a> to schedule your repair. Our $89 service call fee is applied toward the cost of any completed repair, and every job is backed by our 60-day warranty.</p>
+<p><a href="/{parent_page}">Back to {city} appliance repair</a></p>
+
+STRICT RULES:
+- Every sentence must be unique to THIS page. Do not reuse generic filler across pages.
+- Include 5-8 natural mentions of "{city}" throughout the body.
+- Do NOT mention "Cherry Creek" unless the city IS Cherry Creek.
+- Do NOT mention any competitor names.
+- Do NOT use "best", "cheapest", "most affordable", "24/7", or "#1".
+- Do NOT invent addresses, street names, or landmarks. Keep geographic references generic (e.g., "neighborhoods along major corridors").
+- Do NOT include merge conflict markers (<<<, ===, >>>).
+- Do NOT wrap the output in markdown code fences.
+- Output raw HTML for the BODY section only. TITLE, DESCRIPTION, H1, and INTRO are plain text.
+- Total word count for BODY must be 900-1200 words.
