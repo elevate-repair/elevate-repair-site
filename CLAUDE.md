@@ -166,7 +166,7 @@ Single file, ~1,266 lines, mobile-first with one `@media (min-width: 769px)` bre
 - Homepage includes Schema.org `LocalBusiness` structured data (JSON-LD)
 - `sitemap.xml` lists all pages with `lastmod`, `changefreq`, and `priority`
 - Priority tiers: homepage (1.0), services (0.9), cities (0.8), subpages/brands (0.7), info (0.3–0.8)
-- Canonical URLs use `https://www.elevaterepair.com/`
+- Canonical URLs use `https://elevaterepair.com/` (non-www)
 
 ---
 
