@@ -85,8 +85,17 @@ def build_prompt(prompt_template, entry):
     return result
 
 
-def call_openai(prompt, model="gpt-4o"):
-    """Call OpenAI Chat Completions API. Returns the assistant message content."""
+def call_openai(prompt, model="gpt-4o", timeout=180, max_retries=2):
+    """Call OpenAI Chat Completions API with retry logic.
+
+    Args:
+        prompt: The user prompt to send.
+        model: OpenAI model ID.
+        timeout: Request timeout in seconds (default 180).
+        max_retries: Number of retries on timeout/connection errors (default 2).
+
+    Returns the assistant message content.
+    """
     import requests
 
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -114,15 +123,26 @@ def call_openai(prompt, model="gpt-4o"):
         "max_tokens": 3000,
     }
 
-    resp = requests.post(
-        "https://api.openai.com/v1/chat/completions",
-        headers=headers,
-        json=payload,
-        timeout=60,
-    )
-    resp.raise_for_status()
-    data = resp.json()
-    return data["choices"][0]["message"]["content"]
+    last_exception = None
+    for attempt in range(1 + max_retries):
+        try:
+            resp = requests.post(
+                "https://api.openai.com/v1/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=timeout,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            return data["choices"][0]["message"]["content"]
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+            last_exception = e
+            if attempt < max_retries:
+                wait = 5 * (attempt + 1)
+                print(f" TIMEOUT (attempt {attempt + 1}/{1 + max_retries}), retrying in {wait}s...", end="", flush=True)
+                time.sleep(wait)
+            else:
+                raise last_exception
 
 
 def parse_openai_response(response_text):

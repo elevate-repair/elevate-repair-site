@@ -508,7 +508,7 @@ def main():
     args = parse_args()
     city_filter = args.cities.split(",") if args.cities else None
     appliance_filter = args.appliance.split(",") if args.appliance else None
-    output_path = args.output or str(SCRIPT_DIR / "seo_plan_mass_150.json")
+    output_path = args.output or str(SCRIPT_DIR / "seo_plan_authority_150.json")
 
     existing_root = detect_existing_html_files()
 
