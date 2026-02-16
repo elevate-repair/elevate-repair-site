@@ -735,6 +735,25 @@ h3 {
     gap: 10px;
 }
 
+/* details/summary accordion (no-JS) */
+details.problem-category summary.problem-category-btn {
+    list-style: none;
+}
+details.problem-category summary.problem-category-btn::-webkit-details-marker {
+    display: none;
+}
+details.problem-category[open] .problem-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+details.problem-category summary .problem-toggle::after {
+    content: '+';
+}
+details.problem-category[open] summary .problem-toggle::after {
+    content: '\2212';
+}
+
 /* === Booking Form === */
 .booking-form {
     max-width: 500px;
