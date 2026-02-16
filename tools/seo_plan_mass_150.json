@@ -1,0 +1,7602 @@
+[
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "denver-washer-not-draining.html",
+    "output_filename": "denver-washer-not-draining.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/denver-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "denver-washer-not-spinning.html",
+    "output_filename": "denver-washer-not-spinning.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/denver-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "denver-washer-leaking.html",
+    "output_filename": "denver-washer-leaking.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/denver-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "denver-washer-not-starting.html",
+    "output_filename": "denver-washer-not-starting.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/denver-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "denver-dryer-not-heating.html",
+    "output_filename": "denver-dryer-not-heating.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/denver-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "denver-dryer-not-spinning.html",
+    "output_filename": "denver-dryer-not-spinning.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/denver-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "denver-dryer-making-loud-noise.html",
+    "output_filename": "denver-dryer-making-loud-noise.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/denver-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "denver-dryer-not-starting.html",
+    "output_filename": "denver-dryer-not-starting.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/denver-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "denver-refrigerator-not-cooling.html",
+    "output_filename": "denver-refrigerator-not-cooling.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/denver-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "denver-refrigerator-leaking-water.html",
+    "output_filename": "denver-refrigerator-leaking-water.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/denver-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "denver-refrigerator-ice-maker-not-working.html",
+    "output_filename": "denver-refrigerator-ice-maker-not-working.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/denver-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "denver-refrigerator-not-running.html",
+    "output_filename": "denver-refrigerator-not-running.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/denver-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "denver-dishwasher-not-draining.html",
+    "output_filename": "denver-dishwasher-not-draining.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/denver-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "denver-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "denver-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/denver-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "denver-dishwasher-leaking.html",
+    "output_filename": "denver-dishwasher-leaking.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/denver-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "denver-dishwasher-not-starting.html",
+    "output_filename": "denver-dishwasher-not-starting.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/denver-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "denver-oven-not-heating.html",
+    "output_filename": "denver-oven-not-heating.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/denver-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "denver-oven-not-turning-on.html",
+    "output_filename": "denver-oven-not-turning-on.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/denver-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Denver",
+    "city_slug": "denver",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "denver-oven-temperature-inaccurate.html",
+    "output_filename": "denver-oven-temperature-inaccurate.html",
+    "parent_page": "index.html",
+    "parents": {
+      "city_page": "/index.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Denver",
+        "url": "/index.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/denver-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/index.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "lakewood-washer-not-draining.html",
+    "output_filename": "lakewood-washer-not-draining.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/lakewood-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "lakewood-washer-not-spinning.html",
+    "output_filename": "lakewood-washer-not-spinning.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/lakewood-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "lakewood-washer-leaking.html",
+    "output_filename": "lakewood-washer-leaking.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/lakewood-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lakewood-washer-not-starting.html",
+    "output_filename": "lakewood-washer-not-starting.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/lakewood-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "lakewood-dryer-not-heating.html",
+    "output_filename": "lakewood-dryer-not-heating.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/lakewood-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "lakewood-dryer-not-spinning.html",
+    "output_filename": "lakewood-dryer-not-spinning.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/lakewood-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "lakewood-dryer-making-loud-noise.html",
+    "output_filename": "lakewood-dryer-making-loud-noise.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/lakewood-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lakewood-dryer-not-starting.html",
+    "output_filename": "lakewood-dryer-not-starting.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/lakewood-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "lakewood-refrigerator-not-cooling.html",
+    "output_filename": "lakewood-refrigerator-not-cooling.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/lakewood-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "lakewood-refrigerator-leaking-water.html",
+    "output_filename": "lakewood-refrigerator-leaking-water.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/lakewood-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "lakewood-refrigerator-ice-maker-not-working.html",
+    "output_filename": "lakewood-refrigerator-ice-maker-not-working.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/lakewood-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "lakewood-refrigerator-not-running.html",
+    "output_filename": "lakewood-refrigerator-not-running.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/lakewood-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "lakewood-dishwasher-not-draining.html",
+    "output_filename": "lakewood-dishwasher-not-draining.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/lakewood-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "lakewood-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "lakewood-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/lakewood-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "lakewood-dishwasher-leaking.html",
+    "output_filename": "lakewood-dishwasher-leaking.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/lakewood-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lakewood-dishwasher-not-starting.html",
+    "output_filename": "lakewood-dishwasher-not-starting.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/lakewood-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "lakewood-oven-not-heating.html",
+    "output_filename": "lakewood-oven-not-heating.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/lakewood-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "lakewood-oven-not-turning-on.html",
+    "output_filename": "lakewood-oven-not-turning-on.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/lakewood-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lakewood",
+    "city_slug": "lakewood",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "lakewood-oven-temperature-inaccurate.html",
+    "output_filename": "lakewood-oven-temperature-inaccurate.html",
+    "parent_page": "lakewood.html",
+    "parents": {
+      "city_page": "/lakewood.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lakewood",
+        "url": "/lakewood.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/lakewood-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/lakewood.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "arvada-washer-not-draining.html",
+    "output_filename": "arvada-washer-not-draining.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/arvada-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "arvada-washer-not-spinning.html",
+    "output_filename": "arvada-washer-not-spinning.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/arvada-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "arvada-washer-leaking.html",
+    "output_filename": "arvada-washer-leaking.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/arvada-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "arvada-washer-not-starting.html",
+    "output_filename": "arvada-washer-not-starting.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/arvada-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "arvada-dryer-not-heating.html",
+    "output_filename": "arvada-dryer-not-heating.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/arvada-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "arvada-dryer-not-spinning.html",
+    "output_filename": "arvada-dryer-not-spinning.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/arvada-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "arvada-dryer-making-loud-noise.html",
+    "output_filename": "arvada-dryer-making-loud-noise.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/arvada-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "arvada-dryer-not-starting.html",
+    "output_filename": "arvada-dryer-not-starting.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/arvada-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "arvada-refrigerator-not-cooling.html",
+    "output_filename": "arvada-refrigerator-not-cooling.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/arvada-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "arvada-refrigerator-leaking-water.html",
+    "output_filename": "arvada-refrigerator-leaking-water.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/arvada-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "arvada-refrigerator-ice-maker-not-working.html",
+    "output_filename": "arvada-refrigerator-ice-maker-not-working.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/arvada-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "arvada-refrigerator-not-running.html",
+    "output_filename": "arvada-refrigerator-not-running.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/arvada-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "arvada-dishwasher-not-draining.html",
+    "output_filename": "arvada-dishwasher-not-draining.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/arvada-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "arvada-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "arvada-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/arvada-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "arvada-dishwasher-leaking.html",
+    "output_filename": "arvada-dishwasher-leaking.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/arvada-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "arvada-dishwasher-not-starting.html",
+    "output_filename": "arvada-dishwasher-not-starting.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/arvada-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "arvada-oven-not-heating.html",
+    "output_filename": "arvada-oven-not-heating.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/arvada-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "arvada-oven-not-turning-on.html",
+    "output_filename": "arvada-oven-not-turning-on.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/arvada-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Arvada",
+    "city_slug": "arvada",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "arvada-oven-temperature-inaccurate.html",
+    "output_filename": "arvada-oven-temperature-inaccurate.html",
+    "parent_page": "arvada.html",
+    "parents": {
+      "city_page": "/arvada.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Arvada",
+        "url": "/arvada.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/arvada-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/arvada.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "westminster-washer-not-draining.html",
+    "output_filename": "westminster-washer-not-draining.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/westminster-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "westminster-washer-not-spinning.html",
+    "output_filename": "westminster-washer-not-spinning.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/westminster-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "westminster-washer-leaking.html",
+    "output_filename": "westminster-washer-leaking.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/westminster-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "westminster-washer-not-starting.html",
+    "output_filename": "westminster-washer-not-starting.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/westminster-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "westminster-dryer-not-heating.html",
+    "output_filename": "westminster-dryer-not-heating.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/westminster-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "westminster-dryer-not-spinning.html",
+    "output_filename": "westminster-dryer-not-spinning.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/westminster-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "westminster-dryer-making-loud-noise.html",
+    "output_filename": "westminster-dryer-making-loud-noise.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/westminster-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "westminster-dryer-not-starting.html",
+    "output_filename": "westminster-dryer-not-starting.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/westminster-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "westminster-refrigerator-not-cooling.html",
+    "output_filename": "westminster-refrigerator-not-cooling.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/westminster-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "westminster-refrigerator-leaking-water.html",
+    "output_filename": "westminster-refrigerator-leaking-water.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/westminster-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "westminster-refrigerator-ice-maker-not-working.html",
+    "output_filename": "westminster-refrigerator-ice-maker-not-working.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/westminster-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "westminster-refrigerator-not-running.html",
+    "output_filename": "westminster-refrigerator-not-running.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/westminster-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "westminster-dishwasher-not-draining.html",
+    "output_filename": "westminster-dishwasher-not-draining.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/westminster-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "westminster-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "westminster-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/westminster-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "westminster-dishwasher-leaking.html",
+    "output_filename": "westminster-dishwasher-leaking.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/westminster-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "westminster-dishwasher-not-starting.html",
+    "output_filename": "westminster-dishwasher-not-starting.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/westminster-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "westminster-oven-not-heating.html",
+    "output_filename": "westminster-oven-not-heating.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/westminster-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "westminster-oven-not-turning-on.html",
+    "output_filename": "westminster-oven-not-turning-on.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/westminster-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Westminster",
+    "city_slug": "westminster",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "westminster-oven-temperature-inaccurate.html",
+    "output_filename": "westminster-oven-temperature-inaccurate.html",
+    "parent_page": "westminster.html",
+    "parents": {
+      "city_page": "/westminster.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Westminster",
+        "url": "/westminster.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/westminster-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/westminster.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "aurora-washer-not-draining.html",
+    "output_filename": "aurora-washer-not-draining.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/aurora-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "aurora-washer-not-spinning.html",
+    "output_filename": "aurora-washer-not-spinning.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/aurora-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "aurora-washer-leaking.html",
+    "output_filename": "aurora-washer-leaking.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/aurora-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "aurora-washer-not-starting.html",
+    "output_filename": "aurora-washer-not-starting.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/aurora-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "aurora-dryer-not-heating.html",
+    "output_filename": "aurora-dryer-not-heating.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/aurora-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "aurora-dryer-not-spinning.html",
+    "output_filename": "aurora-dryer-not-spinning.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/aurora-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "aurora-dryer-making-loud-noise.html",
+    "output_filename": "aurora-dryer-making-loud-noise.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/aurora-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "aurora-dryer-not-starting.html",
+    "output_filename": "aurora-dryer-not-starting.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/aurora-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "aurora-refrigerator-not-cooling.html",
+    "output_filename": "aurora-refrigerator-not-cooling.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/aurora-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "aurora-refrigerator-leaking-water.html",
+    "output_filename": "aurora-refrigerator-leaking-water.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/aurora-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "aurora-refrigerator-ice-maker-not-working.html",
+    "output_filename": "aurora-refrigerator-ice-maker-not-working.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/aurora-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "aurora-refrigerator-not-running.html",
+    "output_filename": "aurora-refrigerator-not-running.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/aurora-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "aurora-dishwasher-not-draining.html",
+    "output_filename": "aurora-dishwasher-not-draining.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/aurora-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "aurora-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "aurora-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/aurora-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "aurora-dishwasher-leaking.html",
+    "output_filename": "aurora-dishwasher-leaking.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/aurora-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "aurora-dishwasher-not-starting.html",
+    "output_filename": "aurora-dishwasher-not-starting.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/aurora-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "aurora-oven-not-heating.html",
+    "output_filename": "aurora-oven-not-heating.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/aurora-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "aurora-oven-not-turning-on.html",
+    "output_filename": "aurora-oven-not-turning-on.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/aurora-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Aurora",
+    "city_slug": "aurora",
+    "state": "CO",
+    "tier": 1,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "aurora-oven-temperature-inaccurate.html",
+    "output_filename": "aurora-oven-temperature-inaccurate.html",
+    "parent_page": "aurora.html",
+    "parents": {
+      "city_page": "/aurora.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Aurora",
+        "url": "/aurora.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/aurora-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/aurora.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "highlands-ranch-washer-not-draining.html",
+    "output_filename": "highlands-ranch-washer-not-draining.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/highlands-ranch-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "highlands-ranch-washer-not-spinning.html",
+    "output_filename": "highlands-ranch-washer-not-spinning.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/highlands-ranch-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "highlands-ranch-washer-leaking.html",
+    "output_filename": "highlands-ranch-washer-leaking.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/highlands-ranch-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "highlands-ranch-washer-not-starting.html",
+    "output_filename": "highlands-ranch-washer-not-starting.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/highlands-ranch-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "highlands-ranch-dryer-not-heating.html",
+    "output_filename": "highlands-ranch-dryer-not-heating.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/highlands-ranch-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "highlands-ranch-dryer-not-spinning.html",
+    "output_filename": "highlands-ranch-dryer-not-spinning.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/highlands-ranch-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "highlands-ranch-dryer-making-loud-noise.html",
+    "output_filename": "highlands-ranch-dryer-making-loud-noise.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/highlands-ranch-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "highlands-ranch-dryer-not-starting.html",
+    "output_filename": "highlands-ranch-dryer-not-starting.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/highlands-ranch-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "highlands-ranch-refrigerator-not-cooling.html",
+    "output_filename": "highlands-ranch-refrigerator-not-cooling.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/highlands-ranch-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "highlands-ranch-refrigerator-leaking-water.html",
+    "output_filename": "highlands-ranch-refrigerator-leaking-water.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/highlands-ranch-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "highlands-ranch-refrigerator-ice-maker-not-working.html",
+    "output_filename": "highlands-ranch-refrigerator-ice-maker-not-working.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/highlands-ranch-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "highlands-ranch-refrigerator-not-running.html",
+    "output_filename": "highlands-ranch-refrigerator-not-running.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/highlands-ranch-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "highlands-ranch-dishwasher-not-draining.html",
+    "output_filename": "highlands-ranch-dishwasher-not-draining.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/highlands-ranch-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "highlands-ranch-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "highlands-ranch-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/highlands-ranch-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "highlands-ranch-dishwasher-leaking.html",
+    "output_filename": "highlands-ranch-dishwasher-leaking.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/highlands-ranch-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "highlands-ranch-dishwasher-not-starting.html",
+    "output_filename": "highlands-ranch-dishwasher-not-starting.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/highlands-ranch-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "highlands-ranch-oven-not-heating.html",
+    "output_filename": "highlands-ranch-oven-not-heating.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/highlands-ranch-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "highlands-ranch-oven-not-turning-on.html",
+    "output_filename": "highlands-ranch-oven-not-turning-on.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/highlands-ranch-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Highlands Ranch",
+    "city_slug": "highlands-ranch",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "highlands-ranch-oven-temperature-inaccurate.html",
+    "output_filename": "highlands-ranch-oven-temperature-inaccurate.html",
+    "parent_page": "highlands-ranch.html",
+    "parents": {
+      "city_page": "/highlands-ranch.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Highlands Ranch",
+        "url": "/highlands-ranch.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/highlands-ranch-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/highlands-ranch.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "greenwood-village-washer-not-draining.html",
+    "output_filename": "greenwood-village-washer-not-draining.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/greenwood-village-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "greenwood-village-washer-not-spinning.html",
+    "output_filename": "greenwood-village-washer-not-spinning.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/greenwood-village-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "greenwood-village-washer-leaking.html",
+    "output_filename": "greenwood-village-washer-leaking.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/greenwood-village-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "greenwood-village-washer-not-starting.html",
+    "output_filename": "greenwood-village-washer-not-starting.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/greenwood-village-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "greenwood-village-dryer-not-heating.html",
+    "output_filename": "greenwood-village-dryer-not-heating.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/greenwood-village-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "greenwood-village-dryer-not-spinning.html",
+    "output_filename": "greenwood-village-dryer-not-spinning.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/greenwood-village-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "greenwood-village-dryer-making-loud-noise.html",
+    "output_filename": "greenwood-village-dryer-making-loud-noise.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/greenwood-village-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "greenwood-village-dryer-not-starting.html",
+    "output_filename": "greenwood-village-dryer-not-starting.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/greenwood-village-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "greenwood-village-refrigerator-not-cooling.html",
+    "output_filename": "greenwood-village-refrigerator-not-cooling.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/greenwood-village-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "greenwood-village-refrigerator-leaking-water.html",
+    "output_filename": "greenwood-village-refrigerator-leaking-water.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/greenwood-village-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "greenwood-village-refrigerator-ice-maker-not-working.html",
+    "output_filename": "greenwood-village-refrigerator-ice-maker-not-working.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/greenwood-village-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "greenwood-village-refrigerator-not-running.html",
+    "output_filename": "greenwood-village-refrigerator-not-running.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/greenwood-village-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "greenwood-village-dishwasher-not-draining.html",
+    "output_filename": "greenwood-village-dishwasher-not-draining.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/greenwood-village-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "greenwood-village-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "greenwood-village-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/greenwood-village-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "greenwood-village-dishwasher-leaking.html",
+    "output_filename": "greenwood-village-dishwasher-leaking.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/greenwood-village-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "greenwood-village-dishwasher-not-starting.html",
+    "output_filename": "greenwood-village-dishwasher-not-starting.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/greenwood-village-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "greenwood-village-oven-not-heating.html",
+    "output_filename": "greenwood-village-oven-not-heating.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/greenwood-village-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "greenwood-village-oven-not-turning-on.html",
+    "output_filename": "greenwood-village-oven-not-turning-on.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/greenwood-village-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Greenwood Village",
+    "city_slug": "greenwood-village",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "greenwood-village-oven-temperature-inaccurate.html",
+    "output_filename": "greenwood-village-oven-temperature-inaccurate.html",
+    "parent_page": "greenwood-village.html",
+    "parents": {
+      "city_page": "/greenwood-village.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Greenwood Village",
+        "url": "/greenwood-village.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/greenwood-village-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/greenwood-village.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "lone-tree-washer-not-draining.html",
+    "output_filename": "lone-tree-washer-not-draining.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/lone-tree-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "lone-tree-washer-not-spinning.html",
+    "output_filename": "lone-tree-washer-not-spinning.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/lone-tree-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "lone-tree-washer-leaking.html",
+    "output_filename": "lone-tree-washer-leaking.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/lone-tree-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lone-tree-washer-not-starting.html",
+    "output_filename": "lone-tree-washer-not-starting.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/lone-tree-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "lone-tree-dryer-not-heating.html",
+    "output_filename": "lone-tree-dryer-not-heating.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/lone-tree-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "lone-tree-dryer-not-spinning.html",
+    "output_filename": "lone-tree-dryer-not-spinning.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/lone-tree-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "lone-tree-dryer-making-loud-noise.html",
+    "output_filename": "lone-tree-dryer-making-loud-noise.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/lone-tree-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lone-tree-dryer-not-starting.html",
+    "output_filename": "lone-tree-dryer-not-starting.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/lone-tree-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "lone-tree-refrigerator-not-cooling.html",
+    "output_filename": "lone-tree-refrigerator-not-cooling.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/lone-tree-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "lone-tree-refrigerator-leaking-water.html",
+    "output_filename": "lone-tree-refrigerator-leaking-water.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/lone-tree-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "lone-tree-refrigerator-ice-maker-not-working.html",
+    "output_filename": "lone-tree-refrigerator-ice-maker-not-working.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/lone-tree-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "lone-tree-refrigerator-not-running.html",
+    "output_filename": "lone-tree-refrigerator-not-running.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/lone-tree-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "lone-tree-dishwasher-not-draining.html",
+    "output_filename": "lone-tree-dishwasher-not-draining.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/lone-tree-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "lone-tree-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "lone-tree-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/lone-tree-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "lone-tree-dishwasher-leaking.html",
+    "output_filename": "lone-tree-dishwasher-leaking.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/lone-tree-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "lone-tree-dishwasher-not-starting.html",
+    "output_filename": "lone-tree-dishwasher-not-starting.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/lone-tree-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "lone-tree-oven-not-heating.html",
+    "output_filename": "lone-tree-oven-not-heating.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/lone-tree-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "lone-tree-oven-not-turning-on.html",
+    "output_filename": "lone-tree-oven-not-turning-on.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/lone-tree-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Lone Tree",
+    "city_slug": "lone-tree",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "lone-tree-oven-temperature-inaccurate.html",
+    "output_filename": "lone-tree-oven-temperature-inaccurate.html",
+    "parent_page": "lone-tree.html",
+    "parents": {
+      "city_page": "/lone-tree.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Lone Tree",
+        "url": "/lone-tree.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/lone-tree-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/lone-tree.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "castle-pines-washer-not-draining.html",
+    "output_filename": "castle-pines-washer-not-draining.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/castle-pines-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "castle-pines-washer-not-spinning.html",
+    "output_filename": "castle-pines-washer-not-spinning.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/castle-pines-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "castle-pines-washer-leaking.html",
+    "output_filename": "castle-pines-washer-leaking.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/castle-pines-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "castle-pines-washer-not-starting.html",
+    "output_filename": "castle-pines-washer-not-starting.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/castle-pines-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "castle-pines-dryer-not-heating.html",
+    "output_filename": "castle-pines-dryer-not-heating.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/castle-pines-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "castle-pines-dryer-not-spinning.html",
+    "output_filename": "castle-pines-dryer-not-spinning.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/castle-pines-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "castle-pines-dryer-making-loud-noise.html",
+    "output_filename": "castle-pines-dryer-making-loud-noise.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/castle-pines-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "castle-pines-dryer-not-starting.html",
+    "output_filename": "castle-pines-dryer-not-starting.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/castle-pines-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "castle-pines-refrigerator-not-cooling.html",
+    "output_filename": "castle-pines-refrigerator-not-cooling.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/castle-pines-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "castle-pines-refrigerator-leaking-water.html",
+    "output_filename": "castle-pines-refrigerator-leaking-water.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/castle-pines-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "castle-pines-refrigerator-ice-maker-not-working.html",
+    "output_filename": "castle-pines-refrigerator-ice-maker-not-working.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/castle-pines-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "castle-pines-refrigerator-not-running.html",
+    "output_filename": "castle-pines-refrigerator-not-running.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/castle-pines-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "castle-pines-dishwasher-not-draining.html",
+    "output_filename": "castle-pines-dishwasher-not-draining.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/castle-pines-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "castle-pines-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "castle-pines-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/castle-pines-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "castle-pines-dishwasher-leaking.html",
+    "output_filename": "castle-pines-dishwasher-leaking.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/castle-pines-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "castle-pines-dishwasher-not-starting.html",
+    "output_filename": "castle-pines-dishwasher-not-starting.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/castle-pines-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "castle-pines-oven-not-heating.html",
+    "output_filename": "castle-pines-oven-not-heating.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/castle-pines-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "castle-pines-oven-not-turning-on.html",
+    "output_filename": "castle-pines-oven-not-turning-on.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/castle-pines-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Castle Pines",
+    "city_slug": "castle-pines",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "castle-pines-oven-temperature-inaccurate.html",
+    "output_filename": "castle-pines-oven-temperature-inaccurate.html",
+    "parent_page": "castle-pines.html",
+    "parents": {
+      "city_page": "/castle-pines.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Castle Pines",
+        "url": "/castle-pines.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/castle-pines-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/castle-pines.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "evergreen-washer-not-draining.html",
+    "output_filename": "evergreen-washer-not-draining.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Draining",
+        "url": "/evergreen-washer-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "evergreen-washer-not-spinning.html",
+    "output_filename": "evergreen-washer-not-spinning.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Spinning",
+        "url": "/evergreen-washer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "evergreen-washer-leaking.html",
+    "output_filename": "evergreen-washer-leaking.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Leaking",
+        "url": "/evergreen-washer-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Washer",
+    "appliance_slug": "washer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "evergreen-washer-not-starting.html",
+    "output_filename": "evergreen-washer-not-starting.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/washer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Washer Repair",
+        "url": "/washer-repair-denver.html"
+      },
+      {
+        "label": "Washer Not Starting",
+        "url": "/evergreen-washer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/washer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "evergreen-dryer-not-heating.html",
+    "output_filename": "evergreen-dryer-not-heating.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Heating",
+        "url": "/evergreen-dryer-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Spinning",
+    "problem_slug": "not-spinning",
+    "slug": "evergreen-dryer-not-spinning.html",
+    "output_filename": "evergreen-dryer-not-spinning.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Spinning",
+        "url": "/evergreen-dryer-not-spinning.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Making Loud Noise",
+    "problem_slug": "making-loud-noise",
+    "slug": "evergreen-dryer-making-loud-noise.html",
+    "output_filename": "evergreen-dryer-making-loud-noise.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Making Loud Noise",
+        "url": "/evergreen-dryer-making-loud-noise.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dryer",
+    "appliance_slug": "dryer",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "evergreen-dryer-not-starting.html",
+    "output_filename": "evergreen-dryer-not-starting.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dryer-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dryer Repair",
+        "url": "/dryer-repair-denver.html"
+      },
+      {
+        "label": "Dryer Not Starting",
+        "url": "/evergreen-dryer-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dryer-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Cooling",
+    "problem_slug": "not-cooling",
+    "slug": "evergreen-refrigerator-not-cooling.html",
+    "output_filename": "evergreen-refrigerator-not-cooling.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Cooling",
+        "url": "/evergreen-refrigerator-not-cooling.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Leaking Water",
+    "problem_slug": "leaking-water",
+    "slug": "evergreen-refrigerator-leaking-water.html",
+    "output_filename": "evergreen-refrigerator-leaking-water.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Leaking Water",
+        "url": "/evergreen-refrigerator-leaking-water.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Ice Maker Not Working",
+    "problem_slug": "ice-maker-not-working",
+    "slug": "evergreen-refrigerator-ice-maker-not-working.html",
+    "output_filename": "evergreen-refrigerator-ice-maker-not-working.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Ice Maker Not Working",
+        "url": "/evergreen-refrigerator-ice-maker-not-working.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Refrigerator",
+    "appliance_slug": "refrigerator",
+    "problem": "Not Running",
+    "problem_slug": "not-running",
+    "slug": "evergreen-refrigerator-not-running.html",
+    "output_filename": "evergreen-refrigerator-not-running.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/fridge-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Refrigerator Repair",
+        "url": "/fridge-repair-denver.html"
+      },
+      {
+        "label": "Refrigerator Not Running",
+        "url": "/evergreen-refrigerator-not-running.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/fridge-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Draining",
+    "problem_slug": "not-draining",
+    "slug": "evergreen-dishwasher-not-draining.html",
+    "output_filename": "evergreen-dishwasher-not-draining.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Draining",
+        "url": "/evergreen-dishwasher-not-draining.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Cleaning Dishes",
+    "problem_slug": "not-cleaning-dishes",
+    "slug": "evergreen-dishwasher-not-cleaning-dishes.html",
+    "output_filename": "evergreen-dishwasher-not-cleaning-dishes.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Cleaning Dishes",
+        "url": "/evergreen-dishwasher-not-cleaning-dishes.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Leaking",
+    "problem_slug": "leaking",
+    "slug": "evergreen-dishwasher-leaking.html",
+    "output_filename": "evergreen-dishwasher-leaking.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Leaking",
+        "url": "/evergreen-dishwasher-leaking.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Dishwasher",
+    "appliance_slug": "dishwasher",
+    "problem": "Not Starting",
+    "problem_slug": "not-starting",
+    "slug": "evergreen-dishwasher-not-starting.html",
+    "output_filename": "evergreen-dishwasher-not-starting.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/dishwasher-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Dishwasher Repair",
+        "url": "/dishwasher-repair-denver.html"
+      },
+      {
+        "label": "Dishwasher Not Starting",
+        "url": "/evergreen-dishwasher-not-starting.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/dishwasher-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Heating",
+    "problem_slug": "not-heating",
+    "slug": "evergreen-oven-not-heating.html",
+    "output_filename": "evergreen-oven-not-heating.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Heating",
+        "url": "/evergreen-oven-not-heating.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Not Turning On",
+    "problem_slug": "not-turning-on",
+    "slug": "evergreen-oven-not-turning-on.html",
+    "output_filename": "evergreen-oven-not-turning-on.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Not Turning On",
+        "url": "/evergreen-oven-not-turning-on.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  },
+  {
+    "city": "Evergreen",
+    "city_slug": "evergreen",
+    "state": "CO",
+    "tier": 2,
+    "category": "Oven",
+    "appliance_slug": "oven",
+    "problem": "Temperature Inaccurate",
+    "problem_slug": "temperature-inaccurate",
+    "slug": "evergreen-oven-temperature-inaccurate.html",
+    "output_filename": "evergreen-oven-temperature-inaccurate.html",
+    "parent_page": "evergreen.html",
+    "parents": {
+      "city_page": "/evergreen.html",
+      "appliance_page": "/oven-repair-denver.html"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Evergreen",
+        "url": "/evergreen.html"
+      },
+      {
+        "label": "Oven Repair",
+        "url": "/oven-repair-denver.html"
+      },
+      {
+        "label": "Oven Temperature Inaccurate",
+        "url": "/evergreen-oven-temperature-inaccurate.html"
+      }
+    ],
+    "internal_links": [
+      "/evergreen.html",
+      "/oven-repair-denver.html",
+      "/book.html"
+    ]
+  }
+]
