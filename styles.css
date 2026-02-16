@@ -678,6 +678,63 @@ h3 {
     display: block;
 }
 
+/* === Problems Accordion === */
+.problems-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.problem-category {
+    background: #fff;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.problem-category-btn {
+    width: 100%;
+    padding: 16px 18px;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    color: #1f2937;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.problem-category-btn:hover {
+    background: #f9fafb;
+}
+
+.problem-toggle {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: #9ca3af;
+    transition: transform 0.3s;
+}
+
+.problem-category-btn.open .problem-toggle {
+    transform: rotate(0deg);
+}
+
+.problem-items {
+    display: none;
+    padding: 0 18px 16px;
+}
+
+.problem-category-btn.open + .problem-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 /* === Booking Form === */
 .booking-form {
     max-width: 500px;
