@@ -477,12 +477,12 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .city-link {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: #fff;
     border: 2px solid #2563eb;
     border-radius: 25px;
@@ -490,13 +490,14 @@ h3 {
     font-weight: 500;
     font-size: 15px;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .city-link:hover,
 .city-link.active {
     background: #2563eb;
     color: #fff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .city-tag {
