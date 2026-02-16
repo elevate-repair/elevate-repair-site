@@ -1,0 +1,580 @@
+{
+  "meta": {
+    "description": "Problem pages batch — 30 entries across 5 cities × 1 appliance × 6 problems each.",
+    "canonicalBase": "https://elevaterepair.com",
+    "generated": false,
+    "note": "Fill heroText + bodyHtml per entry before running generate-problem-pages.mjs --write"
+  },
+  "pages": [
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-not-heating.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Not Heating",
+      "title": "Dryer Not Heating – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer not heating in Aurora? Professional dryer repair with same-day service and 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dryer Not Heating in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-wont-start.html", "label": "Dryer Won't Start" },
+        { "href": "/dryer-repair-aurora/dryer-making-noise.html", "label": "Dryer Making Noise" },
+        { "href": "/dryer-repair-aurora/dryer-overheating.html", "label": "Dryer Overheating" }
+      ]
+    },
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-wont-start.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Won't Start",
+      "title": "Dryer Won't Start – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer won't start in Aurora? Our technicians diagnose and fix dryer startup failures same-day. 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dryer Won't Start in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-not-heating.html", "label": "Dryer Not Heating" },
+        { "href": "/dryer-repair-aurora/dryer-takes-too-long.html", "label": "Dryer Takes Too Long" },
+        { "href": "/dryer-repair-aurora/dryer-wont-tumble.html", "label": "Dryer Won't Tumble" }
+      ]
+    },
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-takes-too-long.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Takes Too Long",
+      "title": "Dryer Takes Too Long to Dry – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer taking forever to dry clothes in Aurora? Same-day dryer repair, 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dryer Takes Too Long to Dry in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-not-heating.html", "label": "Dryer Not Heating" },
+        { "href": "/dryer-repair-aurora/dryer-wont-start.html", "label": "Dryer Won't Start" },
+        { "href": "/dryer-repair-aurora/dryer-making-noise.html", "label": "Dryer Making Noise" }
+      ]
+    },
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-making-noise.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Making Noise",
+      "title": "Dryer Making Noise – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer making loud or unusual noises in Aurora? Professional dryer repair with same-day service. Call (720) 575-8432.",
+      "h1": "Dryer Making Noise in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-not-heating.html", "label": "Dryer Not Heating" },
+        { "href": "/dryer-repair-aurora/dryer-wont-tumble.html", "label": "Dryer Won't Tumble" },
+        { "href": "/dryer-repair-aurora/dryer-overheating.html", "label": "Dryer Overheating" }
+      ]
+    },
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-wont-tumble.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Won't Tumble",
+      "title": "Dryer Won't Tumble – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer drum not spinning in Aurora? We fix dryer tumble issues same-day with a 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dryer Won't Tumble in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-wont-start.html", "label": "Dryer Won't Start" },
+        { "href": "/dryer-repair-aurora/dryer-takes-too-long.html", "label": "Dryer Takes Too Long" },
+        { "href": "/dryer-repair-aurora/dryer-overheating.html", "label": "Dryer Overheating" }
+      ]
+    },
+    {
+      "dir": "dryer-repair-aurora",
+      "fileName": "dryer-overheating.html",
+      "city": "Aurora",
+      "cityState": "Aurora, CO",
+      "appliance": "Dryer",
+      "applianceDir": "dryer-repair-denver",
+      "problem": "Overheating",
+      "title": "Dryer Overheating – Aurora, CO | Elevate Repair",
+      "metaDesc": "Dryer overheating or getting too hot in Aurora? Professional repair with same-day service and 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dryer Overheating in Aurora?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dryer-repair-aurora/dryer-not-heating.html", "label": "Dryer Not Heating" },
+        { "href": "/dryer-repair-aurora/dryer-making-noise.html", "label": "Dryer Making Noise" },
+        { "href": "/dryer-repair-aurora/dryer-wont-tumble.html", "label": "Dryer Won't Tumble" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-wont-start.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Won't Start",
+      "title": "Washer Won't Start – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer won't start in Lakewood? Same-day washer repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Washer Won't Start in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-spin.html", "label": "Washer Won't Spin" },
+        { "href": "/washer-repair-lakewood/washer-wont-drain.html", "label": "Washer Won't Drain" },
+        { "href": "/washer-repair-lakewood/washer-leaking-water.html", "label": "Washer Leaking Water" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-wont-spin.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Won't Spin",
+      "title": "Washer Won't Spin – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer not spinning in Lakewood? We fix washer spin issues same-day. 60-day warranty. Call (720) 575-8432.",
+      "h1": "Washer Won't Spin in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-start.html", "label": "Washer Won't Start" },
+        { "href": "/washer-repair-lakewood/washer-leaking-water.html", "label": "Washer Leaking Water" },
+        { "href": "/washer-repair-lakewood/washer-not-filling.html", "label": "Washer Not Filling" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-wont-drain.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Won't Drain",
+      "title": "Washer Won't Drain – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer won't drain in Lakewood? Professional washer repair with same-day service. Call (720) 575-8432.",
+      "h1": "Washer Won't Drain in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-start.html", "label": "Washer Won't Start" },
+        { "href": "/washer-repair-lakewood/washer-wont-spin.html", "label": "Washer Won't Spin" },
+        { "href": "/washer-repair-lakewood/washer-shaking-vibrating.html", "label": "Washer Shaking & Vibrating" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-leaking-water.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Leaking Water",
+      "title": "Washer Leaking Water – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer leaking water in Lakewood? We diagnose and fix washer leaks same-day. 60-day warranty. Call (720) 575-8432.",
+      "h1": "Washer Leaking Water in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-drain.html", "label": "Washer Won't Drain" },
+        { "href": "/washer-repair-lakewood/washer-not-filling.html", "label": "Washer Not Filling" },
+        { "href": "/washer-repair-lakewood/washer-shaking-vibrating.html", "label": "Washer Shaking & Vibrating" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-not-filling.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Not Filling",
+      "title": "Washer Not Filling with Water – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer not filling with water in Lakewood? Same-day repair, 60-day warranty. Call (720) 575-8432.",
+      "h1": "Washer Not Filling with Water in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-start.html", "label": "Washer Won't Start" },
+        { "href": "/washer-repair-lakewood/washer-leaking-water.html", "label": "Washer Leaking Water" },
+        { "href": "/washer-repair-lakewood/washer-wont-spin.html", "label": "Washer Won't Spin" }
+      ]
+    },
+    {
+      "dir": "washer-repair-lakewood",
+      "fileName": "washer-shaking-vibrating.html",
+      "city": "Lakewood",
+      "cityState": "Lakewood, CO",
+      "appliance": "Washer",
+      "applianceDir": "washer-repair-denver",
+      "problem": "Shaking & Vibrating",
+      "title": "Washer Shaking & Vibrating – Lakewood, CO | Elevate Repair",
+      "metaDesc": "Washer shaking or vibrating excessively in Lakewood? Professional repair with same-day service. Call (720) 575-8432.",
+      "h1": "Washer Shaking & Vibrating in Lakewood?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/washer-repair-lakewood/washer-wont-drain.html", "label": "Washer Won't Drain" },
+        { "href": "/washer-repair-lakewood/washer-leaking-water.html", "label": "Washer Leaking Water" },
+        { "href": "/washer-repair-lakewood/washer-not-filling.html", "label": "Washer Not Filling" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-wont-start.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Won't Start",
+      "title": "Dishwasher Won't Start – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher won't start in Boulder? Same-day dishwasher repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dishwasher Won't Start in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-cleaning.html", "label": "Dishwasher Not Cleaning" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-drain.html", "label": "Dishwasher Won't Drain" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-leaking.html", "label": "Dishwasher Leaking" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-not-cleaning.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Not Cleaning",
+      "title": "Dishwasher Not Cleaning – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher not cleaning dishes properly in Boulder? Professional repair with same-day service. Call (720) 575-8432.",
+      "h1": "Dishwasher Not Cleaning in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-start.html", "label": "Dishwasher Won't Start" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-drain.html", "label": "Dishwasher Won't Drain" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-drying.html", "label": "Dishwasher Not Drying" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-wont-drain.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Won't Drain",
+      "title": "Dishwasher Won't Drain – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher won't drain in Boulder? We fix drainage issues same-day with a 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dishwasher Won't Drain in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-start.html", "label": "Dishwasher Won't Start" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-leaking.html", "label": "Dishwasher Leaking" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-making-noise.html", "label": "Dishwasher Making Noise" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-leaking.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Leaking",
+      "title": "Dishwasher Leaking Water – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher leaking water in Boulder? Same-day professional repair, 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dishwasher Leaking Water in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-cleaning.html", "label": "Dishwasher Not Cleaning" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-drain.html", "label": "Dishwasher Won't Drain" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-drying.html", "label": "Dishwasher Not Drying" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-not-drying.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Not Drying",
+      "title": "Dishwasher Not Drying – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher not drying dishes in Boulder? Professional repair with same-day service and 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dishwasher Not Drying in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-start.html", "label": "Dishwasher Won't Start" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-leaking.html", "label": "Dishwasher Leaking" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-making-noise.html", "label": "Dishwasher Making Noise" }
+      ]
+    },
+    {
+      "dir": "dishwasher-repair-boulder",
+      "fileName": "dishwasher-making-noise.html",
+      "city": "Boulder",
+      "cityState": "Boulder, CO",
+      "appliance": "Dishwasher",
+      "applianceDir": "dishwasher-repair-denver",
+      "problem": "Making Noise",
+      "title": "Dishwasher Making Noise – Boulder, CO | Elevate Repair",
+      "metaDesc": "Dishwasher making unusual noises in Boulder? Same-day repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Dishwasher Making Noise in Boulder?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-cleaning.html", "label": "Dishwasher Not Cleaning" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-wont-drain.html", "label": "Dishwasher Won't Drain" },
+        { "href": "/dishwasher-repair-boulder/dishwasher-not-drying.html", "label": "Dishwasher Not Drying" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "refrigerator-not-cooling.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Not Cooling",
+      "title": "Refrigerator Not Cooling – Arvada, CO | Elevate Repair",
+      "metaDesc": "Refrigerator not cooling in Arvada? Same-day fridge repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Refrigerator Not Cooling in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/freezer-not-freezing.html", "label": "Freezer Not Freezing" },
+        { "href": "/fridge-repair-arvada/fridge-leaking-water.html", "label": "Fridge Leaking Water" },
+        { "href": "/fridge-repair-arvada/ice-maker-not-making-ice.html", "label": "Ice Maker Not Making Ice" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "freezer-not-freezing.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Freezer Not Freezing",
+      "title": "Freezer Not Freezing – Arvada, CO | Elevate Repair",
+      "metaDesc": "Freezer not freezing in Arvada? Professional refrigerator repair with same-day service. Call (720) 575-8432.",
+      "h1": "Freezer Not Freezing in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/refrigerator-not-cooling.html", "label": "Refrigerator Not Cooling" },
+        { "href": "/fridge-repair-arvada/fridge-making-noise.html", "label": "Fridge Making Noise" },
+        { "href": "/fridge-repair-arvada/water-dispenser-not-working.html", "label": "Water Dispenser Not Working" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "fridge-leaking-water.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Leaking Water",
+      "title": "Fridge Leaking Water – Arvada, CO | Elevate Repair",
+      "metaDesc": "Fridge leaking water in Arvada? We fix refrigerator leaks same-day. 60-day warranty. Call (720) 575-8432.",
+      "h1": "Fridge Leaking Water in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/refrigerator-not-cooling.html", "label": "Refrigerator Not Cooling" },
+        { "href": "/fridge-repair-arvada/ice-maker-not-making-ice.html", "label": "Ice Maker Not Making Ice" },
+        { "href": "/fridge-repair-arvada/fridge-making-noise.html", "label": "Fridge Making Noise" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "ice-maker-not-making-ice.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Ice Maker Not Making Ice",
+      "title": "Ice Maker Not Making Ice – Arvada, CO | Elevate Repair",
+      "metaDesc": "Ice maker not working in Arvada? Same-day fridge repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Ice Maker Not Making Ice in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/refrigerator-not-cooling.html", "label": "Refrigerator Not Cooling" },
+        { "href": "/fridge-repair-arvada/fridge-leaking-water.html", "label": "Fridge Leaking Water" },
+        { "href": "/fridge-repair-arvada/water-dispenser-not-working.html", "label": "Water Dispenser Not Working" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "fridge-making-noise.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Making Noise",
+      "title": "Fridge Making Noise – Arvada, CO | Elevate Repair",
+      "metaDesc": "Fridge making unusual noises in Arvada? Professional refrigerator repair, same-day service. Call (720) 575-8432.",
+      "h1": "Fridge Making Noise in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/freezer-not-freezing.html", "label": "Freezer Not Freezing" },
+        { "href": "/fridge-repair-arvada/fridge-leaking-water.html", "label": "Fridge Leaking Water" },
+        { "href": "/fridge-repair-arvada/water-dispenser-not-working.html", "label": "Water Dispenser Not Working" }
+      ]
+    },
+    {
+      "dir": "fridge-repair-arvada",
+      "fileName": "water-dispenser-not-working.html",
+      "city": "Arvada",
+      "cityState": "Arvada, CO",
+      "appliance": "Refrigerator",
+      "applianceDir": "fridge-repair-denver",
+      "problem": "Water Dispenser Not Working",
+      "title": "Water Dispenser Not Working – Arvada, CO | Elevate Repair",
+      "metaDesc": "Water dispenser not working in Arvada? Same-day refrigerator repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Water Dispenser Not Working in Arvada?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/fridge-repair-arvada/refrigerator-not-cooling.html", "label": "Refrigerator Not Cooling" },
+        { "href": "/fridge-repair-arvada/freezer-not-freezing.html", "label": "Freezer Not Freezing" },
+        { "href": "/fridge-repair-arvada/ice-maker-not-making-ice.html", "label": "Ice Maker Not Making Ice" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "oven-not-heating.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Not Heating",
+      "title": "Oven Not Heating – Littleton, CO | Elevate Repair",
+      "metaDesc": "Oven not heating in Littleton? Same-day oven repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Oven Not Heating in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/burner-not-working.html", "label": "Burner Not Working" },
+        { "href": "/oven-repair-littleton/oven-temperature-inaccurate.html", "label": "Oven Temperature Inaccurate" },
+        { "href": "/oven-repair-littleton/oven-door-wont-close.html", "label": "Oven Door Won't Close" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "burner-not-working.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Burner Not Working",
+      "title": "Burner Not Working – Littleton, CO | Elevate Repair",
+      "metaDesc": "Stove burner not working in Littleton? Professional oven and range repair, same-day service. Call (720) 575-8432.",
+      "h1": "Burner Not Working in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/oven-not-heating.html", "label": "Oven Not Heating" },
+        { "href": "/oven-repair-littleton/oven-temperature-inaccurate.html", "label": "Oven Temperature Inaccurate" },
+        { "href": "/oven-repair-littleton/oven-wont-turn-off.html", "label": "Oven Won't Turn Off" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "oven-temperature-inaccurate.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Temperature Inaccurate",
+      "title": "Oven Temperature Inaccurate – Littleton, CO | Elevate Repair",
+      "metaDesc": "Oven temperature inaccurate in Littleton? We diagnose and fix oven temp issues same-day. Call (720) 575-8432.",
+      "h1": "Oven Temperature Inaccurate in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/oven-not-heating.html", "label": "Oven Not Heating" },
+        { "href": "/oven-repair-littleton/burner-not-working.html", "label": "Burner Not Working" },
+        { "href": "/oven-repair-littleton/self-clean-not-working.html", "label": "Self-Clean Not Working" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "oven-door-wont-close.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Door Won't Close",
+      "title": "Oven Door Won't Close – Littleton, CO | Elevate Repair",
+      "metaDesc": "Oven door won't close properly in Littleton? Same-day repair with 60-day warranty. Call (720) 575-8432.",
+      "h1": "Oven Door Won't Close in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/oven-not-heating.html", "label": "Oven Not Heating" },
+        { "href": "/oven-repair-littleton/self-clean-not-working.html", "label": "Self-Clean Not Working" },
+        { "href": "/oven-repair-littleton/oven-wont-turn-off.html", "label": "Oven Won't Turn Off" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "self-clean-not-working.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Self-Clean Not Working",
+      "title": "Self-Clean Not Working – Littleton, CO | Elevate Repair",
+      "metaDesc": "Oven self-clean not working in Littleton? Professional oven repair, same-day service and 60-day warranty. Call (720) 575-8432.",
+      "h1": "Self-Clean Not Working in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/oven-not-heating.html", "label": "Oven Not Heating" },
+        { "href": "/oven-repair-littleton/oven-temperature-inaccurate.html", "label": "Oven Temperature Inaccurate" },
+        { "href": "/oven-repair-littleton/oven-door-wont-close.html", "label": "Oven Door Won't Close" }
+      ]
+    },
+    {
+      "dir": "oven-repair-littleton",
+      "fileName": "oven-wont-turn-off.html",
+      "city": "Littleton",
+      "cityState": "Littleton, CO",
+      "appliance": "Oven",
+      "applianceDir": "oven-repair-denver",
+      "problem": "Won't Turn Off",
+      "title": "Oven Won't Turn Off – Littleton, CO | Elevate Repair",
+      "metaDesc": "Oven won't turn off in Littleton? We fix oven control issues same-day. 60-day warranty. Call (720) 575-8432.",
+      "h1": "Oven Won't Turn Off in Littleton?",
+      "heroText": "",
+      "bodyHtml": "",
+      "relatedLinks": [
+        { "href": "/oven-repair-littleton/burner-not-working.html", "label": "Burner Not Working" },
+        { "href": "/oven-repair-littleton/oven-temperature-inaccurate.html", "label": "Oven Temperature Inaccurate" },
+        { "href": "/oven-repair-littleton/oven-door-wont-close.html", "label": "Oven Door Won't Close" }
+      ]
+    }
+  ]
+}
