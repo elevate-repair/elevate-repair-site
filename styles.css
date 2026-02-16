@@ -545,6 +545,16 @@ h3 {
     color: #9ca3af;
 }
 
+.area-card-img img {
+    display: block;
+    width: 68px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
 .area-card-featured .area-card-img {
     background: #eff6ff;
     color: #2563eb;
@@ -1270,5 +1280,10 @@ h3 {
 
     .area-card-img {
         height: 100px;
+    }
+
+    .area-card-img img {
+        width: 76px;
+        height: 54px;
     }
 }
