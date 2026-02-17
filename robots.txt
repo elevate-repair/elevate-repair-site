@@ -1,0 +1,19 @@
+# robots.txt for Elevate Repair
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /assets/
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (5 seconds between requests)
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://elevaterepair.com/sitemap.xml
