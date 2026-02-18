@@ -155,17 +155,12 @@ header {
 
 .hero-image {
     order: -1;
-    border-radius: 16px;
-    overflow: hidden;
     line-height: 0;
 }
 
 .hero-image img {
     width: 100%;
-    height: clamp(220px, 55vw, 460px);
-    object-fit: cover;
-    object-position: 70% 40%;
-    border-radius: 16px;
+    height: auto;
     display: block;
 }
 
@@ -1359,10 +1354,6 @@ details.problem-category[open] summary .problem-toggle::after {
 
     .hero-image {
         order: 0;
-    }
-
-    .hero-image img {
-        height: clamp(280px, 40vw, 560px);
     }
 
     .page-hero {
