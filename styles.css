@@ -130,7 +130,6 @@ header {
         linear-gradient(135deg, #0f2a6b 0%, #1e40af 40%, #3b82f6 100%);
     color: #fff;
     padding: 48px 0 40px;
-    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -147,6 +146,29 @@ header {
     pointer-events: none;
 }
 
+/* Two-column grid: image stacks above text on mobile */
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.hero-image {
+    order: -1;
+    border-radius: 16px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: clamp(220px, 55vw, 460px);
+    object-fit: cover;
+    object-position: 70% 40%;
+    border-radius: 16px;
+    display: block;
+}
+
 h1 {
     font-size: 28px;
     margin-bottom: 16px;
@@ -158,15 +180,13 @@ h1 {
     margin-bottom: 20px;
     opacity: 0.95;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.5;
 }
 
 .hero-highlights {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
     margin-bottom: 24px;
 }
@@ -188,7 +208,7 @@ h1 {
 .cta-buttons {
     display: flex;
     gap: 12px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -346,6 +366,26 @@ h3 {
 .service-icon {
     font-size: 36px;
     margin-bottom: 8px;
+}
+
+.appliance-card-img {
+    width: 100%;
+    max-width: 240px;
+    height: 180px;
+    display: block;
+    margin: 0 auto 12px;
+    object-fit: contain;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .appliance-card-img {
+        max-width: 100%;
+        height: 160px;
+        padding: 8px;
+    }
 }
 
 .service-card h3 {
@@ -1243,6 +1283,56 @@ details.problem-category[open] summary .problem-toggle::after {
     color: #fff;
 }
 
+/* === CTA button alignment === */
+
+/* Hero: left-aligned on desktop */
+.hero .cta-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Hero: centered column on mobile */
+@media (max-width: 900px) {
+    .hero .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero .cta-buttons a {
+        width: 100%;
+        max-width: 420px;
+        text-align: center;
+    }
+}
+
+/* Mid-page + footer CTA sections: centered on all screens */
+.mid-cta .cta-buttons,
+.final-cta .cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mid-cta .cta-buttons a,
+.final-cta .cta-buttons a {
+    min-width: 220px;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .mid-cta .cta-buttons,
+    .final-cta .cta-buttons {
+        flex-direction: column;
+    }
+    .mid-cta .cta-buttons a,
+    .final-cta .cta-buttons a {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
 /* === Desktop (min-width: 769px) === */
 @media (min-width: 769px) {
     body {
@@ -1259,6 +1349,20 @@ details.problem-category[open] summary .problem-toggle::after {
 
     .hero {
         padding: 80px 0 60px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-image {
+        order: 0;
+    }
+
+    .hero-image img {
+        height: clamp(280px, 40vw, 560px);
     }
 
     .page-hero {
@@ -1376,5 +1480,44 @@ details.problem-category[open] summary .problem-toggle::after {
     /* Desktop: full-size image cards */
     img.area-card-img {
         height: 180px;
+    }
+}
+
+/* === No-hero-image pages: centered hero layout === */
+.no-hero-image .hero .container {
+    text-align: center;
+}
+.no-hero-image .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+.no-hero-image .hero-highlights {
+    justify-content: center;
+}
+.no-hero-image .hero .cta-buttons {
+    justify-content: center;
+    align-items: center;
+}
+.no-hero-image .hero .cta-buttons a {
+    width: min(520px, 100%);
+}
+
+/* === Mobile: centered hero for all pages === */
+@media (max-width: 768px) {
+    .hero .hero-content,
+    .hero .hero-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero .hero-highlights {
+        justify-content: center;
+    }
+    .hero .cta-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .cta-buttons a {
+        width: min(520px, 100%);
     }
 }
