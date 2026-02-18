@@ -269,6 +269,34 @@
             </div>        </div>
     </section>
 
+    <!-- Recent Repairs Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Recent Appliance Repairs in Arvada, CO</h2>
+            <p class="section-intro">The photos below document a selection of appliance repair jobs Elevate Repair has completed in Arvada over the past several months. Arvada's housing spans everything from the century-old craftsman bungalows near Olde Town to the large contemporary homes in Leyden Rock and Candelas, and the appliances inside reflect that range. Older Arvada homes frequently require heating element replacements, belt repairs, and gasket work on well-used Whirlpool and GE appliances. Newer Arvada subdivisions, particularly those built after 2010, tend to present electronic control board failures and sealed-system refrigerant issues in Samsung and LG models. Our technicians carry parts for both scenarios and can generally complete Arvada repairs on the first visit. Every job shown here was paired with an honest written quote and is backed by our 60-day warranty on parts and labor. Book online or call to schedule service.</p>
+        </div>
+        <div class="gallery-carousel">
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <img src="/assets/images/problems/gas-range-repair-denver.jpeg" alt="Gas range repair in Arvada, CO" loading="lazy">
+                    <div class="gallery-caption">Gas Range Repair — Arvada, CO</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/problems/dryer-not-heating-denver.jpg" alt="Dryer not heating repair in Arvada, CO" loading="lazy">
+                    <div class="gallery-caption">Dryer Not Heating — Arvada, CO</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/problems/top-load-washer-repair-denver.jpeg" alt="Top-load washer repair in Arvada, CO" loading="lazy">
+                    <div class="gallery-caption">Top-Load Washer Repair — Arvada, CO</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/images/problems/double-wall-oven-repair-denver.jpeg" alt="Double wall oven repair in Arvada, CO" loading="lazy">
+                    <div class="gallery-caption">Double Wall Oven Repair — Arvada, CO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-alt" id="book">
         <div class="container">
             <h2>Schedule Appliance Repair in Arvada</h2>
@@ -473,7 +501,30 @@
                 window.location.href = '/thank-you.html';
             });
         })();
-    
+
+        // Gallery modal (click-to-enlarge)
+        (function() {
+            if (!document.getElementById('galleryModal')) {
+                var el = document.createElement('div');
+                el.id = 'galleryModal'; el.className = 'gallery-modal';
+                el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-label', 'Image Viewer');
+                el.innerHTML = '<div class="gallery-modal-content"><button class="gallery-modal-close" id="galleryModalClose" aria-label="Close">\u00d7<\/button><img id="galleryModalImage" src="" alt="Enlarged gallery image"><\/div>';
+                document.body.appendChild(el);
+            }
+            var modal = document.getElementById('galleryModal');
+            var modalImage = document.getElementById('galleryModalImage');
+            var closeBtn = document.getElementById('galleryModalClose');
+            if (!modal || !modalImage || !closeBtn) return;
+            var openModal = function(src) { modalImage.src = src; modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+            var closeModal = function() { modal.classList.remove('open'); document.body.style.overflow = ''; };
+            document.querySelectorAll('.gallery-item img').forEach(function(img) {
+                img.addEventListener('click', function() { openModal(this.src); });
+                img.style.cursor = 'pointer';
+            });
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+        })();
 
         // Burger menu
         (function() {
