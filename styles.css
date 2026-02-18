@@ -1501,3 +1501,23 @@ details.problem-category[open] summary .problem-toggle::after {
 .no-hero-image .hero .cta-buttons a {
     width: min(520px, 100%);
 }
+
+/* === Mobile: centered hero for all pages === */
+@media (max-width: 768px) {
+    .hero .hero-content,
+    .hero .hero-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero .hero-highlights {
+        justify-content: center;
+    }
+    .hero .cta-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .cta-buttons a {
+        width: min(520px, 100%);
+    }
+}
