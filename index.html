@@ -928,6 +928,14 @@
         <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
     </div>
 
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Image Viewer">
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-close" id="galleryModalClose" aria-label="Close">×</button>
+            <img id="galleryModalImage" src="" alt="Enlarged gallery image">
+        </div>
+    </div>
+
     <script>
         // Form submission
         (function() {
@@ -982,6 +990,50 @@
             });
             next.addEventListener('click', function() {
                 track.scrollBy({ left: cardWidth(), behavior: 'smooth' });
+            });
+        })();
+
+        // Gallery modal (click-to-enlarge)
+        (function() {
+            var modal = document.getElementById('galleryModal');
+            var modalImage = document.getElementById('galleryModalImage');
+            var closeBtn = document.getElementById('galleryModalClose');
+            if (!modal || !modalImage || !closeBtn) return;
+
+            var openModal = function(src) {
+                modalImage.src = src;
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+
+            var closeModal = function() {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+
+            // Click images to enlarge
+            document.querySelectorAll('.gallery-item img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    openModal(this.src);
+                });
+                img.style.cursor = 'pointer';
+            });
+
+            // Close button
+            closeBtn.addEventListener('click', closeModal);
+
+            // Click outside modal content to close
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // ESC key to close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('open')) {
+                    closeModal();
+                }
             });
         })();
 
