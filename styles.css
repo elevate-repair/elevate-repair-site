@@ -1263,6 +1263,24 @@ details.problem-category[open] summary .problem-toggle::after {
     color: #fff;
 }
 
+/* === Mobile CTA centering (max-width: 900px) === */
+@media (max-width: 900px) {
+    .hero-cta,
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    .hero-cta a,
+    .cta-buttons a {
+        width: 100%;
+        max-width: 420px;
+        text-align: center;
+    }
+}
+
 /* === Desktop (min-width: 769px) === */
 @media (min-width: 769px) {
     body {
@@ -1376,6 +1394,20 @@ details.problem-category[open] summary .problem-toggle::after {
 
     .sticky-bottom-bar {
         display: none;
+    }
+
+    /* Restore horizontal CTA layout on desktop (overrides max-width:900px block) */
+    .hero-cta,
+    .cta-buttons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .hero-cta a,
+    .cta-buttons a {
+        width: auto;
+        max-width: none;
+        text-align: left;
     }
 
     .final-cta {
