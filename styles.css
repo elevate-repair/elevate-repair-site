@@ -1482,3 +1482,22 @@ details.problem-category[open] summary .problem-toggle::after {
         height: 180px;
     }
 }
+
+/* === No-hero-image pages: centered hero layout === */
+.no-hero-image .hero .container {
+    text-align: center;
+}
+.no-hero-image .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+.no-hero-image .hero-highlights {
+    justify-content: center;
+}
+.no-hero-image .hero .cta-buttons {
+    justify-content: center;
+    align-items: center;
+}
+.no-hero-image .hero .cta-buttons a {
+    width: min(520px, 100%);
+}
