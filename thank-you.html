@@ -119,7 +119,7 @@
         <p>We'll call you shortly to confirm details.</p>
         <a href="tel:7205758432" class="btn">Call now: (720) 575-8432</a>
         <br>
-        <a href="/" class="link">← Return to home</a>
+        <a href="/" class="link" onclick="event.preventDefault(); history.length > 1 ? history.back() : window.location.href='/';">← Back to previous page</a>
     </div>
 </body>
 </html>
