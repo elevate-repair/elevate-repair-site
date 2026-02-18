@@ -1333,10 +1333,128 @@ details.problem-category[open] summary .problem-toggle::after {
     }
 }
 
+/* === Gallery Section === */
+.gallery-section {
+    padding: 60px 0 48px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.gallery-section .section-intro {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 28px;
+}
+
+.gallery-carousel {
+    position: relative;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 20px 12px;
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    flex: 0 0 272px;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 204px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 14px 14px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.62));
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.gallery-arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    transition: background 0.18s, color 0.18s;
+}
+
+.gallery-arrow:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+.gallery-arrow-prev {
+    left: 10px;
+}
+
+.gallery-arrow-next {
+    right: 10px;
+}
+
 /* === Desktop (min-width: 769px) === */
 @media (min-width: 769px) {
     body {
         padding-bottom: 0;
+    }
+
+    /* Gallery */
+    .gallery-section h2 {
+        font-size: 36px;
+    }
+
+    .gallery-item {
+        flex: 0 0 330px;
+    }
+
+    .gallery-item img {
+        height: 248px;
+    }
+
+    .gallery-arrow {
+        display: flex;
     }
 
     .logo {
