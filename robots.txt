@@ -2,7 +2,6 @@
 User-agent: *
 Allow: /
 Disallow: /tools/
-Disallow: /assets/
 
 # Google specific
 User-agent: Googlebot
