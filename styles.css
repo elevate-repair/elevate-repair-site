@@ -1697,4 +1697,7 @@ details.problem-category[open] summary .problem-toggle::after {
     .hero .cta-buttons a {
         width: min(520px, 100%);
     }
+    .mid-cta {
+        display: none !important;
+    }
 }
