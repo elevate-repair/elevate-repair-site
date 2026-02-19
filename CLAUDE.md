@@ -54,10 +54,10 @@
 │
 ├── [brand]-appliance-repair-denver.html   # Standard brand pages (15)
 ├── [brand].html                           # Short-name brand pages (16)
-├── [city/neighborhood].html               # City & neighborhood pages (~65)
-├── [city]-[appliance]-[problem].html      # City-specific problem pages (~153)
-├── denver-[appliance]-[problem].html      # Denver-specific problem pages (~47)
-├── denver-[brand]-[appliance]-[problem].html  # Brand+city problem pages (~5)
+├── [city/neighborhood].html               # City & neighborhood pages (63)
+├── [city]-[appliance]-[problem].html      # City-specific problem pages (103)
+├── denver-[appliance]-[problem].html      # Denver-specific problem pages (40)
+├── denver-[brand]-[appliance]-[problem].html  # Brand+city problem pages (10)
 ├── [appliance]-repair-denver.html         # Service landing pages (5)
 │
 ├── dishwasher-repair-denver/         # Problem subpages (6)
@@ -86,9 +86,9 @@
 | City/neighborhood page | `aurora.html`, `capitol-hill.html` | Yes |
 | City+appliance+problem page | `aurora-dishwasher-not-starting.html` | Yes |
 | Denver+appliance+problem page | `denver-dishwasher-not-starting.html` | Yes |
-| Brand+city+problem page | `denver-bosch-dryer-not-starting.html` | Yes |
+| Brand+city+problem page | `denver-bosch-dryer-not-starting.html` | Yes (embedded form) |
 | Service landing page | `dishwasher-repair-denver.html` | No |
-| Problem subpage | `dishwasher-repair-denver/dishwasher-wont-start.html` | No |
+| Problem subpage | `dishwasher-repair-denver/dishwasher-wont-start.html` | No (informational/diagnostic) |
 | Info page | `faq.html`, `warranty.html`, `contact.html` | Varies |
 | Book page | `book.html` | Yes |
 | Thank-you page | `thank-you.html` | No |
@@ -101,12 +101,33 @@ amana, bosch, electrolux, frigidaire, ge, kenmore, kitchenaid, lg, maytag, miele
 **Short naming** (`[brand].html`, 16 pages):
 asko, beko, bertazzoni, bluestar, dacor, fisher-paykel, gaggenau, haier, hisense, hotpoint, insignia, jenn-air, magic-chef, speed-queen, thermador, wolf
 
-### City/Neighborhood Pages (~65 pages)
+### Denver Brand+City+Problem Pages (10 pages)
 
-City problem pages exist for: arvada, aurora, highlands-ranch, lakewood, westminster (20 problems each)
-Denver problem pages cover all appliance+problem combos (~47 pages)
+`denver-[brand]-[appliance]-[problem].html` — all have embedded booking forms:
+- denver-bosch-dryer-not-starting.html
+- denver-bosch-refrigerator-leaking-water.html
+- denver-lg-dryer-not-heating.html
+- denver-miele-dryer-not-heating.html
+- denver-miele-refrigerator-ice-maker-not-working.html
+- denver-samsung-dryer-not-heating.html
+- denver-sub-zero-refrigerator-not-cooling.html
+- denver-thermador-refrigerator-not-cooling.html
+- denver-viking-refrigerator-not-cooling.html
+- denver-whirlpool-dryer-not-spinning.html
+
+### City/Neighborhood Pages (63 standalone pages)
+
+City problem pages exist for: arvada (20), aurora (21), highlands-ranch (20), lakewood (21), westminster (21)
+- The extra page each for aurora, lakewood, and westminster is `[city]-oven-not-heating.html`
+- Arvada and highlands-ranch cover: dishwasher (5) + dryer (5) + refrigerator (5) + washer (5) = 20
+- Aurora, lakewood, westminster cover the same plus oven-not-heating = 21
+
+Denver plain problem pages: 40 (covering dishwasher, dryer, oven, refrigerator, washer combos)
+Denver brand+city problem pages: 10 (bosch×2, lg, miele×2, samsung, sub-zero, thermador, viking, whirlpool)
 
 ### Problem Subpages (30 total, 6 per service directory)
+
+These are informational/diagnostic pages — no inline booking form. CTAs link to `/book.html`.
 
 | Directory | Subpages |
 |-----------|---------|
@@ -180,7 +201,7 @@ Script blocks used across pages:
 
 ## CSS Architecture (`/styles.css`)
 
-Single file, ~1,700 lines, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
+Single file, exactly 1,700 lines, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
 
 ### Key sections (approximate line ranges):
 - Reset & base typography (1–30)
@@ -212,7 +233,8 @@ Single file, ~1,700 lines, mobile-first with `@media (min-width: 769px)` and `@m
 - Footer (1192–1241)
 - Sticky bottom bar (1242–1287)
 - CTA button alignment helpers (1288–1335)
-- Gallery section & carousel (1336–1495)
+- Gallery section & carousel (1336–1436)
+- Gallery modal (1437–1495)
 - Desktop overrides `@media (min-width: 769px)` (1496–1661)
 - No-hero-image layout (1663–1681)
 - Mobile-only overrides `@media (max-width: 768px)` (1682–1700)
