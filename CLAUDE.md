@@ -76,7 +76,7 @@
 └── privacy-policy.html               # Privacy policy
 ```
 
-### Page Types (~295 HTML files total)
+### Page Types (~293 HTML files total)
 
 | Type | Example | Has Form? |
 |------|---------|-----------|
@@ -117,12 +117,26 @@ asko, beko, bertazzoni, bluestar, dacor, fisher-paykel, gaggenau, haier, hisense
 
 ### City/Neighborhood Pages (63 standalone pages)
 
+All 63 standalone city and neighborhood pages:
+arvada, auraria, aurora, baker, berkeley, boulder, broomfield, capitol-hill, castle-pines, castle-rock, centennial, central-park, chautauqua-park, cheesman-park, cherry-creek, city-park-west, cole, commerce-city, congress-park, country-club, curtis-park, downtown-denver, englewood, erie, evergreen, federal-heights, five-points, golden, golden-triangle, greenwood-village, highland, highlands, highlands-ranch, jefferson-park, ken-caryl, lafayette, lakewood, littleton, lodo, lone-tree, louisville, mapleton-hill, north-boulder, north-park-hill, northglenn, park-hill, parker, pearl-street, platt-park, rino, speer, sunnyside, superior, thornton, union-station, university-hill, university-park, washington-park, welby, wellshire, west-highland, westminster, wheat-ridge
+
 City problem pages exist for: arvada (20), aurora (21), highlands-ranch (20), lakewood (21), westminster (21)
 - The extra page each for aurora, lakewood, and westminster is `[city]-oven-not-heating.html`
 - Arvada and highlands-ranch cover: dishwasher (5) + dryer (5) + refrigerator (5) + washer (5) = 20
 - Aurora, lakewood, westminster cover the same plus oven-not-heating = 21
 
-Denver plain problem pages: 40 (covering dishwasher, dryer, oven, refrigerator, washer combos)
+Denver plain problem pages: 40 (8 per appliance type × 5 types: dishwasher, dryer, oven, refrigerator, washer)
+
+**Denver dishwasher (8):** denver-dishwasher-door-wont-close, denver-dishwasher-leaking-water, denver-dishwasher-making-noise, denver-dishwasher-not-cleaning-dishes, denver-dishwasher-not-draining, denver-dishwasher-not-drying, denver-dishwasher-not-starting, denver-dishwasher-wont-fill
+
+**Denver dryer (8):** denver-dryer-making-loud-noise, denver-dryer-not-drying, denver-dryer-not-heating, denver-dryer-not-spinning, denver-dryer-not-starting, denver-dryer-overheating, denver-dryer-takes-too-long, denver-dryer-wont-tumble
+
+**Denver oven (8):** denver-oven-burner-not-working, denver-oven-door-wont-close, denver-oven-not-heating, denver-oven-not-turning-on, denver-oven-self-clean-not-working, denver-oven-temperature-inaccurate, denver-oven-uneven-heating, denver-oven-wont-turn-off
+
+**Denver refrigerator (8):** denver-refrigerator-freezer-not-freezing, denver-refrigerator-ice-maker-not-working, denver-refrigerator-leaking-water, denver-refrigerator-making-noise, denver-refrigerator-not-cooling, denver-refrigerator-not-running, denver-refrigerator-too-cold, denver-refrigerator-water-dispenser-not-working
+
+**Denver washer (8):** denver-washer-leaking-water, denver-washer-making-loud-noise, denver-washer-not-draining, denver-washer-not-filling, denver-washer-not-spinning, denver-washer-not-starting, denver-washer-shaking-vibrating, denver-washer-wont-agitate
+
 Denver brand+city problem pages: 10 (bosch×2, lg, miele×2, samsung, sub-zero, thermador, viking, whirlpool)
 
 ### Problem Subpages (30 total, 6 per service directory)
@@ -177,10 +191,11 @@ Pages without a full-width hero background image use `<body class="no-hero-image
 
 Forms appear on: homepage, city/neighborhood pages, city+appliance+problem pages, denver+appliance+problem pages, brand+city+problem pages, and `book.html`. Structure:
 
-- **Fields:** Name (required), Phone (required), ZIP (optional), Message/Description (optional)
+- **Standard fields (most pages):** Name (required), Phone (required), Problem Description/Message (optional)
+- **Extended fields (`book.html` only):** Name (required), Phone (required), ZIP (optional), Problem Description (optional)
 - **Action:** Google Apps Script endpoint (Google Sheets backend)
 - **Target:** `hidden_iframe` (prevents page navigation on submit)
-- **Hidden field:** `<input type="hidden" name="source" value="website-[location]">` for lead tracking
+- **Hidden field:** `<input type="hidden" name="source" value="website-[city]">` for lead tracking — value is city name only (e.g., `website-aurora`, `website-denver`), not the full page slug
 - **Post-submit:** JavaScript redirects to `/thank-you.html`
 
 Do NOT add forms to standard/short brand pages, service landing pages, or problem subpages (in service directories).
@@ -201,7 +216,7 @@ Script blocks used across pages:
 
 ## CSS Architecture (`/styles.css`)
 
-Single file, exactly 1,700 lines, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
+Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
 
 ### Key sections (approximate line ranges):
 - Reset & base typography (1–30)
@@ -217,7 +232,7 @@ Single file, exactly 1,700 lines, mobile-first with `@media (min-width: 769px)` 
 - Benefits list (425–463)
 - Cost table (464–514)
 - Service areas / city links (515–552)
-- Area cards with images (553–626)
+- Area cards with images (553–626) — includes `img.area-card-img` full-size style at 599
 - Coupon grid — homepage compact (627–639)
 - Process steps (640–677)
 - FAQ accordion (678–729)
@@ -237,7 +252,7 @@ Single file, exactly 1,700 lines, mobile-first with `@media (min-width: 769px)` 
 - Gallery modal (1437–1495)
 - Desktop overrides `@media (min-width: 769px)` (1496–1661)
 - No-hero-image layout (1663–1681)
-- Mobile-only overrides `@media (max-width: 768px)` (1682–1700)
+- Mobile-only overrides `@media (max-width: 768px)` (1682–1703)
 
 ### Design tokens:
 - **Primary blue:** `#2563eb`
