@@ -672,18 +672,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://elevaterepair.com/cancellation-policy.html</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://elevaterepair.com/privacy-policy.html</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+
   <url>
     <loc>https://elevaterepair.com/castle-rock.html</loc>
     <lastmod>2026-02-13</lastmod>
