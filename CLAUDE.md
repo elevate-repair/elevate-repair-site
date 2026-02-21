@@ -68,7 +68,7 @@
 │
 ├── brands.html                       # Brand directory
 ├── service-areas.html                # Service area directory
-├── contact.html                      # Contact page
+├── contact.html                      # Contact page (has form)
 ├── faq.html                          # FAQ page
 ├── coupons.html                      # Coupons/promotions
 ├── warranty.html                     # Warranty info
@@ -76,22 +76,24 @@
 └── privacy-policy.html               # Privacy policy
 ```
 
-### Page Types (~293 HTML files total)
+### Page Types (293 HTML files total)
 
-| Type | Example | Has Form? |
-|------|---------|-----------|
-| Homepage | `index.html` | Yes |
-| Standard brand page | `bosch-appliance-repair-denver.html` | No |
-| Short brand page | `asko.html`, `wolf.html` | No |
-| City/neighborhood page | `aurora.html`, `capitol-hill.html` | Yes |
-| City+appliance+problem page | `aurora-dishwasher-not-starting.html` | Yes |
-| Denver+appliance+problem page | `denver-dishwasher-not-starting.html` | Yes |
-| Brand+city+problem page | `denver-bosch-dryer-not-starting.html` | Yes (embedded form) |
-| Service landing page | `dishwasher-repair-denver.html` | No |
-| Problem subpage | `dishwasher-repair-denver/dishwasher-wont-start.html` | No (informational/diagnostic) |
-| Info page | `faq.html`, `warranty.html`, `contact.html` | Varies |
-| Book page | `book.html` | Yes |
-| Thank-you page | `thank-you.html` | No |
+| Type | Count | Example | Has Form? |
+|------|-------|---------|-----------|
+| Homepage | 1 | `index.html` | Yes |
+| Standard brand page | 15 | `bosch-appliance-repair-denver.html` | No |
+| Short brand page | 16 | `asko.html`, `wolf.html` | No |
+| City/neighborhood page | 63 | `aurora.html`, `capitol-hill.html` | Yes |
+| City+appliance+problem page | 103 | `aurora-dishwasher-not-starting.html` | Yes |
+| Denver+appliance+problem page | 40 | `denver-dishwasher-not-starting.html` | Yes |
+| Brand+city+problem page | 10 | `denver-bosch-dryer-not-starting.html` | Yes (embedded form) |
+| Service landing page | 5 | `dishwasher-repair-denver.html` | No |
+| Problem subpage | 30 | `dishwasher-repair-denver/dishwasher-wont-start.html` | No (informational/diagnostic) |
+| Info page | 10 | `faq.html`, `warranty.html`, `contact.html` | Varies (`contact.html` has form) |
+| Book page | 1 | `book.html` | Yes |
+| Thank-you page | 1 | `thank-you.html` | No |
+
+**Total: 263 root HTML + 30 subpage HTML = 293 files**
 
 ### Brand Pages
 
@@ -161,7 +163,10 @@ Every page includes an identical `<header>` with:
 - Logo link (`<a href="/" class="logo">Elevate Repair</a>`)
 - Phone number link (`(720) 575-8432`)
 - Burger menu button (mobile)
-- `<nav class="nav-menu" id="navMenu">` with three nav groups: Services, Service Areas, More
+- `<nav class="nav-menu" id="navMenu">` with three nav groups:
+  - **Services:** Refrigerator Repair, Washer Repair, Dryer Repair, Dishwasher Repair, Oven & Range Repair
+  - **Service Areas:** Downtown Denver, Capitol Hill, Cherry Creek, Highlands, Aurora, Lakewood, Boulder, Evergreen, All Areas →
+  - **More:** Brands, Coupons, FAQ, Warranty, Contact
 
 ### Footer (all pages)
 
@@ -189,16 +194,57 @@ Pages without a full-width hero background image use `<body class="no-hero-image
 
 ## Form Pattern
 
-Forms appear on: homepage, city/neighborhood pages, city+appliance+problem pages, denver+appliance+problem pages, brand+city+problem pages, and `book.html`. Structure:
+Forms appear on: homepage, city/neighborhood pages, city+appliance+problem pages, denver+appliance+problem pages, brand+city+problem pages, `contact.html`, and `book.html`. Structure:
 
 - **Standard fields (most pages):** Name (required), Phone (required), Problem Description/Message (optional)
 - **Extended fields (`book.html` only):** Name (required), Phone (required), ZIP (optional), Problem Description (optional)
-- **Action:** Google Apps Script endpoint (Google Sheets backend)
+- **Action:** `https://script.google.com/macros/s/AKfycbxEVeK-JRHfVoX4oSmsJcuYF5wqn62Zi5qkm_1YmfNpVMkiSdrUBFxNb7cieJ7aCiUEvw/exec` (Google Sheets backend)
 - **Target:** `hidden_iframe` (prevents page navigation on submit)
 - **Hidden field:** `<input type="hidden" name="source" value="website-[city]">` for lead tracking — value is city name only (e.g., `website-aurora`, `website-denver`), not the full page slug
 - **Post-submit:** JavaScript redirects to `/thank-you.html`
 
 Do NOT add forms to standard/short brand pages, service landing pages, or problem subpages (in service directories).
+
+---
+
+## Internal Linking Sections
+
+These sections were added as part of SEO improvements. When creating or editing pages, preserve this pattern:
+
+### Problem pages (Denver, city, and brand+city)
+
+All 153 problem pages (40 Denver + 103 city + 10 brand+city) include a "Related Problems" section after the main content. It appears after a `<!-- related-links-inserted -->` HTML comment and lists sibling problem pages of the same appliance type:
+
+- **Denver problem pages:** "Other [Appliance] Problems We Fix in Denver" — links to all 7 sibling Denver problem pages of that appliance type
+- **City problem pages:** "Other [Appliance] Problems We Fix in [City]" — links to sibling city problem pages, plus a link to the city's Denver counterparts
+- **Brand+city problem pages:** "Related [Appliance] Repair Issues in Denver" — links to 5 Denver problem pages of that appliance type plus the service hub
+
+```html
+<!-- related-links-inserted -->
+<section class="section-alt">
+    <div class="container">
+        <h2>Other Dishwasher Problems We Fix in Denver</h2>
+        <div class="footer-links">
+            <a href="/denver-dishwasher-door-wont-close.html">dishwasher door won't close</a>
+            ...
+        </div>
+    </div>
+</section>
+```
+
+### City/neighborhood pages
+
+**Cities WITH dedicated problem pages** (aurora, arvada, highlands-ranch, lakewood, westminster):
+- Include a "Common Appliance Problems in [City]" section with a `<div class="problems-accordion">` using native `<details>`/`<summary>` HTML
+- Links to that city's own problem pages, organized by appliance type
+
+**All other city/neighborhood pages** (58 pages):
+- Include a "Common Appliance Issues We Fix in [City]" section with a `<div class="footer-links">`
+- Links to 5 Denver problem pages (mixed appliance types, rotated by city to avoid duplicate link sets)
+
+### Service landing pages (5 pages)
+
+Each service hub includes a "Common [Appliance] Problems in Denver" section with links to all 8 Denver problem pages for that appliance type.
 
 ---
 
@@ -226,7 +272,7 @@ Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@me
 - Sub-page hero — compact, no image (219–237)
 - Buttons: `.btn-primary` (red `#ef4444`), `.btn-secondary`, `.btn-outline` (238–280)
 - Sections & backgrounds: `.section-alt`, `.section-blue` (281–316)
-- Mid-page CTA band (317–333)
+- Mid-page CTA band `.mid-cta` (317–333) — CSS retained but HTML removed from most pages
 - Services grid (334–402)
 - Service detail blocks (403–424)
 - Benefits list (425–463)
@@ -271,13 +317,15 @@ Images are referenced with root-relative paths. Do not move or rename image file
 
 | Directory | Contents |
 |-----------|---------|
-| `assets/images/appliances/` | Appliance-type JPGs (refrigerator, washer, dryer, dishwasher, oven, stove) |
+| `assets/images/appliances/` | Appliance-type JPGs: dishwasher-repair-denver.jpg, dryer-repair-denver.jpg, oven-repair-denver.jpg, refrigerator-repair-denver.jpg, stove-repair-denver.jpg, washer-repair-denver.jpg |
 | `assets/images/brands/` | Brand logos (empty — gitkeep only) |
 | `assets/images/cities banner/` | City hero banners — `[city]-desktop.webp` and `[city]-mobile.webp` pairs |
 | `assets/images/hero/` | `appliance-repair-denver-hero.webp` (homepage hero), `og-image.jpg` (OG/social) |
 | `assets/images/problems/` | Problem-page JPG/WebP images used in gallery and content sections |
 
 City banner images exist for: arvada, aurora, boulder, centennial, denver, englewood, evergreen, golden, highlands-ranch, lakewood, littleton, parker, thornton, westminster, wheat ridge
+
+Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher-repair-denver.jpeg, double-wall-oven-repair-denver.jpeg, dryer-not-heating-denver.jpg, fridge-repair-aurora.jpeg, front-load-washer-drum-repair-denver.jpg, front-load-washer-repair-denver.jpeg, gas-range-repair-denver.jpeg, microwave-repair-denver.jpeg, oven-interior-repair-denver.jpeg, stainless-dishwasher-repair-denver.jpeg, stainless-steel-refrigerator-repair-denver.jpeg, top-load-washer-repair-denver.jpeg
 
 ---
 
@@ -286,10 +334,18 @@ City banner images exist for: arvada, aurora, boulder, centennial, denver, engle
 - Every page includes `<title>`, `<meta name="description">`, and `<link rel="canonical">` tags
 - Every page includes Open Graph meta tags (`og:title`, `og:description`, `og:type`, `og:url`, `og:image`, `og:image:width`, `og:image:height`, `og:site_name`)
 - OG image: `https://elevaterepair.com/assets/images/hero/og-image.jpg` (1200×630)
-- Homepage includes Schema.org `LocalBusiness` structured data (JSON-LD)
+- Canonical URLs use `https://elevaterepair.com/` (non-www)
 - `sitemap.xml` lists all pages with `lastmod`, `changefreq`, and `priority`
 - Priority tiers: homepage (1.0), services (0.9), cities (0.8), subpages/brands (0.7), info (0.3–0.8)
-- Canonical URLs use `https://elevaterepair.com/` (non-www)
+
+### Schema.org Structured Data (JSON-LD)
+
+- **Homepage:** `LocalBusiness` schema only
+- **City/neighborhood pages (63):** `LocalBusiness` + `BreadcrumbList` schema
+- **City+problem pages (103):** `LocalBusiness` + `BreadcrumbList` schema
+- **Denver+problem pages (40):** `BreadcrumbList` schema
+- **Brand+city problem pages (10):** `BreadcrumbList` schema (where present)
+- **Standard/short brand pages, service landing pages, problem subpages:** no structured data
 
 ---
 
@@ -314,12 +370,13 @@ City banner images exist for: arvada, aurora, boulder, centennial, denver, engle
 7. Add a link in `brands.html` and footer brand lists
 
 ### Adding a new city/neighborhood page
-1. Copy an existing city page (e.g., `aurora.html`)
+1. Copy an existing city page (e.g., `aurora.html` for cities with problem pages, `boulder.html` for cities without)
 2. Update content, title, meta, headings, canonical, and `source` hidden field value
 3. Keep the booking form and all shared components
 4. Add `<body class="no-hero-image">` (unless adding a city hero banner image)
 5. Add the page to `sitemap.xml`
 6. Add a link in `service-areas.html` and footer area lists
+7. Maintain correct internal linking section (problems accordion if city has problem pages; 5-link section otherwise)
 
 ### Adding a new city+appliance+problem page
 1. Copy an existing city problem page (e.g., `aurora-dishwasher-not-starting.html`)
@@ -327,6 +384,17 @@ City banner images exist for: arvada, aurora, boulder, centennial, denver, engle
 3. Keep the booking form and all shared components
 4. Use `<body class="no-hero-image">`
 5. Add the page to `sitemap.xml`
+6. Include both `BreadcrumbList` and `LocalBusiness` schema JSON-LD
+7. Add the `<!-- related-links-inserted -->` comment and sibling links section
+
+### Adding a new Denver+appliance+problem page
+1. Copy an existing Denver problem page (e.g., `denver-dishwasher-not-starting.html`)
+2. Update content, title, meta, canonical, and `source` hidden field (`website-denver`)
+3. Keep the booking form and all shared components
+4. Use `<body class="no-hero-image">`
+5. Add to `sitemap.xml`
+6. Include `BreadcrumbList` schema JSON-LD
+7. Add the `<!-- related-links-inserted -->` comment and sibling Denver problem links section
 
 ### Adding a new problem subpage (in service directories)
 1. Copy an existing subpage from the relevant service directory
@@ -354,5 +422,7 @@ City banner images exist for: arvada, aurora, boulder, centennial, denver, engle
 - Form submissions go to Google Sheets via Apps Script
 - All internal links use root-relative paths (e.g., `/faq.html`, `/dishwasher-repair-denver/`)
 - `tools/` directory contains dev scripts only — not deployed, do not reference from HTML pages
-- Problems accordion on service landing pages uses native `<details>`/`<summary>` HTML (no JavaScript required)
+- Problems accordion on city pages and service landing pages uses native `<details>`/`<summary>` HTML (no JavaScript required)
 - Gallery carousel on homepage uses inline JS for arrow navigation
+- Gallery images on homepage are click-to-enlarge (modal via inline JS)
+- `<!-- related-links-inserted -->` HTML comment is a marker on problem pages — always keep it in place when editing those pages
