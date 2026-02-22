@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^dishwasher-repair-denver/(.*)$ /dishwasher-repair/$1 [R=301,L]
+RewriteRule ^dryer-repair-denver/(.*)$      /dryer-repair/$1      [R=301,L]
+RewriteRule ^fridge-repair-denver/(.*)$     /fridge-repair/$1     [R=301,L]
+RewriteRule ^oven-repair-denver/(.*)$       /oven-repair/$1       [R=301,L]
+RewriteRule ^washer-repair-denver/(.*)$     /washer-repair/$1     [R=301,L]
