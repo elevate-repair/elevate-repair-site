@@ -172,8 +172,12 @@ Every page includes an identical `<header>` with:
 
 Every page includes an identical `<footer class="site-footer">` with:
 - Business name and address (1500 N Grant St, Denver, CO 80203)
-- Link sections for services, areas, brands, info
-- Copyright line: `2026 Elevate Repair`
+- **Denver Neighborhoods** link section (13 links: Denver, Capitol Hill, Cherry Creek, Downtown, Five Points, Highlands, LoDo, RiNo, Sunnyside, Union Station, University Hill, University Park, Wash Park)
+- **Nearby Cities** link section (12 city links + "View All Service Areas" → `/service-areas.html`)
+- **Appliance Repair** link section (5 service landing pages)
+- Info links section (Brands, Coupons, FAQ, Warranty, Contact, Privacy Policy)
+- Phone and hours line: `(720) 575-8432 | Open 7 Days, 7am – 7pm`
+- Copyright line: `© 2026 Elevate Repair. All rights reserved.`
 
 ### Sticky Bottom Bar (all pages, mobile only)
 
@@ -242,6 +246,11 @@ All 153 problem pages (40 Denver + 103 city + 10 brand+city) include a "Related 
 - Include a "Common Appliance Issues We Fix in [City]" section with a `<div class="footer-links">`
 - Links to 5 Denver problem pages (mixed appliance types, rotated by city to avoid duplicate link sets)
 
+**All 63 city/neighborhood pages** also include:
+- A gallery section (`<section class="gallery-section">`) with 8 photo cards and arrow-navigation JS
+- A "Frequently Asked Questions" section (`<section class="section-alt">`) with 3 city-specific Q&As in `<div class="content-body">` format
+- Corresponding `FAQPage` JSON-LD schema in `<head>`
+
 ### Service landing pages (5 pages)
 
 Each service hub includes a "Common [Appliance] Problems in Denver" section with links to all 8 Denver problem pages for that appliance type.
@@ -256,7 +265,7 @@ Script blocks used across pages:
 2. **Burger menu toggle** — all pages. IIFE toggling `.nav-open` class
 3. **Form submit handler** — only pages with a form. Disables button, shows "Sending...", listens for iframe load, redirects to `/thank-you.html`
 4. **FAQ accordion** — homepage only. Toggles `.open` class on `.faq-item`
-5. **Gallery carousel** — homepage only. Arrow-button scrolling of `.gallery-track`
+5. **Gallery carousel** — homepage and all 63 city/neighborhood pages. Arrow-button scrolling of `.gallery-track`
 
 ---
 
@@ -272,7 +281,7 @@ Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@me
 - Sub-page hero — compact, no image (219–237)
 - Buttons: `.btn-primary` (red `#ef4444`), `.btn-secondary`, `.btn-outline` (238–280)
 - Sections & backgrounds: `.section-alt`, `.section-blue` (281–316)
-- Mid-page CTA band `.mid-cta` (317–333) — CSS retained but HTML removed from most pages
+- Mid-page CTA band `.mid-cta` (317–333) — present in HTML on city pages and Denver problem pages
 - Services grid (334–402)
 - Service detail blocks (403–424)
 - Benefits list (425–463)
@@ -340,12 +349,18 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 
 ### Schema.org Structured Data (JSON-LD)
 
-- **Homepage:** `LocalBusiness` schema only
-- **City/neighborhood pages (63):** `LocalBusiness` + `BreadcrumbList` schema
-- **City+problem pages (103):** `LocalBusiness` + `BreadcrumbList` schema
-- **Denver+problem pages (40):** `BreadcrumbList` schema
-- **Brand+city problem pages (10):** `BreadcrumbList` schema (where present)
-- **Standard/short brand pages, service landing pages, problem subpages:** no structured data
+- **Homepage:** `LocalBusiness` schema (includes `AggregateRating`)
+- **City/neighborhood pages (63):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
+- **City+problem pages (103):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
+- **Denver+problem pages (40):** `BreadcrumbList` + `FAQPage` schemas
+- **Brand+city problem pages (10):** `BreadcrumbList` schema
+- **Standard brand pages (15):** `LocalBusiness` + `BreadcrumbList` schemas
+- **Short brand pages (16):** `LocalBusiness` + `BreadcrumbList` schemas
+- **Service landing pages (5):** `Service` + `BreadcrumbList` + `LocalBusiness` (with `AggregateRating`) schemas
+- **Problem subpages (30):** `BreadcrumbList` schema only
+- **`faq.html`:** `FAQPage` schema
+
+Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevaterepair.com`; homepage schema uses `elevateappliancellc@gmail.com`. Both include `sameAs` links to Google Maps CID, Yelp, Nextdoor, and Facebook.
 
 ---
 
@@ -354,20 +369,22 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 ### Adding a new standard brand page
 1. Copy an existing standard brand page (e.g., `bosch-appliance-repair-denver.html`)
 2. Update content, `<title>`, `<meta description>`, headings, and canonical URL
-3. Keep shared header, footer, sticky bar, and burger script identical
-4. Do NOT add a booking form
-5. Add `<body class="no-hero-image">`
-6. Add the page to `sitemap.xml`
-7. Add a link in `brands.html` and footer brand lists
+3. Update `LocalBusiness` and `BreadcrumbList` JSON-LD schema (brand name, `@id`, `url`, `name`, breadcrumb item)
+4. Keep shared header, footer, sticky bar, and burger script identical
+5. Do NOT add a booking form
+6. Add `<body class="no-hero-image">`
+7. Add the page to `sitemap.xml`
+8. Add a link in `brands.html` and footer brand lists
 
 ### Adding a new short-name brand page
 1. Copy an existing short brand page (e.g., `asko.html`)
 2. Update content, title, meta, headings, and canonical URL
-3. Keep shared header, footer, sticky bar, and burger script identical
-4. Do NOT add a booking form
-5. Add `<body class="no-hero-image">`
-6. Add the page to `sitemap.xml`
-7. Add a link in `brands.html` and footer brand lists
+3. Update `LocalBusiness` and `BreadcrumbList` JSON-LD schema (brand name, `@id`, `url`, `name`, breadcrumb item)
+4. Keep shared header, footer, sticky bar, and burger script identical
+5. Do NOT add a booking form
+6. Add `<body class="no-hero-image">`
+7. Add the page to `sitemap.xml`
+8. Add a link in `brands.html` and footer brand lists
 
 ### Adding a new city/neighborhood page
 1. Copy an existing city page (e.g., `aurora.html` for cities with problem pages, `boulder.html` for cities without)
@@ -377,6 +394,7 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 5. Add the page to `sitemap.xml`
 6. Add a link in `service-areas.html` and footer area lists
 7. Maintain correct internal linking section (problems accordion if city has problem pages; 5-link section otherwise)
+8. Keep the gallery section and FAQ section — update city name references in both HTML and the `FAQPage` JSON-LD schema
 
 ### Adding a new city+appliance+problem page
 1. Copy an existing city problem page (e.g., `aurora-dishwasher-not-starting.html`)
@@ -384,7 +402,7 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 3. Keep the booking form and all shared components
 4. Use `<body class="no-hero-image">`
 5. Add the page to `sitemap.xml`
-6. Include both `BreadcrumbList` and `LocalBusiness` schema JSON-LD
+6. Include `LocalBusiness` + `BreadcrumbList` + `FAQPage` schema JSON-LD
 7. Add the `<!-- related-links-inserted -->` comment and sibling links section
 
 ### Adding a new Denver+appliance+problem page
@@ -393,7 +411,7 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 3. Keep the booking form and all shared components
 4. Use `<body class="no-hero-image">`
 5. Add to `sitemap.xml`
-6. Include `BreadcrumbList` schema JSON-LD
+6. Include `BreadcrumbList` + `FAQPage` schema JSON-LD
 7. Add the `<!-- related-links-inserted -->` comment and sibling Denver problem links section
 
 ### Adding a new problem subpage (in service directories)
@@ -423,6 +441,7 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 - All internal links use root-relative paths (e.g., `/faq.html`, `/dishwasher-repair-denver/`)
 - `tools/` directory contains dev scripts only — not deployed, do not reference from HTML pages
 - Problems accordion on city pages and service landing pages uses native `<details>`/`<summary>` HTML (no JavaScript required)
-- Gallery carousel on homepage uses inline JS for arrow navigation
-- Gallery images on homepage are click-to-enlarge (modal via inline JS)
+- Gallery carousel on homepage and all 63 city pages uses inline JS for arrow navigation; `.gallery-track` with `.gallery-item` divs
+- Gallery images are click-to-enlarge on the homepage (modal via inline JS); city page galleries do not use the modal
+- All 63 city/neighborhood pages include a 3-question FAQ section (`<section class="section-alt">` with `<div class="content-body">`) and corresponding `FAQPage` JSON-LD schema
 - `<!-- related-links-inserted -->` HTML comment is a marker on problem pages — always keep it in place when editing those pages
