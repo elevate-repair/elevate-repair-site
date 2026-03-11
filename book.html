@@ -88,43 +88,45 @@
             <h2>Book Your Repair</h2>
             <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or fill out the form below.</p>
 
-            <div class="service-selector" id="serviceSelector">
-                <p class="selector-prompt">What appliance needs repair?</p>
-                <div class="selector-options">
-                    <button type="button" class="selector-btn" data-service="Washer Repair">Washer Repair</button>
-                    <button type="button" class="selector-btn" data-service="Dryer Repair">Dryer Repair</button>
-                    <button type="button" class="selector-btn" data-service="Refrigerator Repair">Refrigerator Repair</button>
-                    <button type="button" class="selector-btn" data-service="Dishwasher Repair">Dishwasher Repair</button>
-                    <button type="button" class="selector-btn" data-service="Oven / Stove Repair">Oven / Stove Repair</button>
-                    <button type="button" class="selector-btn" data-service="Microwave Repair">Microwave Repair</button>
-                    <button type="button" class="selector-btn" data-service="Appliance Installation">Appliance Installation</button>
+            <div class="booking-block">
+                <div class="service-selector" id="serviceSelector">
+                    <p class="selector-prompt">What appliance needs repair?</p>
+                    <div class="selector-options">
+                        <button type="button" class="selector-btn" data-service="Washer Repair">Washer Repair</button>
+                        <button type="button" class="selector-btn" data-service="Dryer Repair">Dryer Repair</button>
+                        <button type="button" class="selector-btn" data-service="Refrigerator Repair">Refrigerator Repair</button>
+                        <button type="button" class="selector-btn" data-service="Dishwasher Repair">Dishwasher Repair</button>
+                        <button type="button" class="selector-btn" data-service="Oven / Stove Repair">Oven / Stove Repair</button>
+                        <button type="button" class="selector-btn" data-service="Microwave Repair">Microwave Repair</button>
+                        <button type="button" class="selector-btn" data-service="Appliance Installation">Appliance Installation</button>
+                    </div>
                 </div>
+
+                <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
+                    <input type="hidden" name="source" value="website-book">
+                    <input type="hidden" name="service" id="serviceField" value="">
+
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(720) 000-0000" pattern="[\d\s\(\)\-\+]+" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" name="address" placeholder="80203" pattern="[0-9]{5}" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Problem Description</label>
+                        <textarea id="message" name="message" placeholder="Briefly describe the issue (optional)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
+                    <p class="form-note">We'll call you shortly to confirm. No spam.</p>
+                </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
             </div>
-
-            <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
-                <input type="hidden" name="source" value="website-book">
-                <input type="hidden" name="service" id="serviceField" value="">
-
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" placeholder="John" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(720) 000-0000" pattern="[\d\s\(\)\-\+]+" required>
-                </div>
-                <div class="form-group">
-                    <label for="zip">ZIP Code</label>
-                    <input type="text" id="zip" name="address" placeholder="80203" pattern="[0-9]{5}" maxlength="5">
-                </div>
-                <div class="form-group">
-                    <label for="message">Problem Description</label>
-                    <textarea id="message" name="message" placeholder="Briefly describe the issue (optional)" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
-                <p class="form-note">We'll call you shortly to confirm. No spam.</p>
-            </form>
-            <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
     </section>
 
