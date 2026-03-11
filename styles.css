@@ -1701,3 +1701,22 @@ details.problem-category[open] summary .problem-toggle::after {
         display: none !important;
     }
 }
+
+/* Service selector — book.html step 1 */
+.service-selector { margin-bottom: 1.5rem; }
+.selector-prompt { font-weight: 600; margin-bottom: 0.75rem; color: #1f2937; }
+.selector-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.selector-btn {
+    padding: 0.55rem 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+    background: #fff;
+    color: #2563eb;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    font-family: inherit;
+}
+.selector-btn:hover { background: #eff6ff; }
+.selector-btn.selected { background: #2563eb; color: #fff; }
