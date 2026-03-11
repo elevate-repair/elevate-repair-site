@@ -1708,6 +1708,16 @@ details.problem-category[open] summary .problem-toggle::after {
     .mid-cta {
         display: none !important;
     }
+    .sms-disclaimer {
+        font-size: 10px;
+        color: #888;
+        text-align: center;
+        line-height: 1.3;
+        margin-top: 8px;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Service selector — 2-step booking (book.html + all form pages) */
