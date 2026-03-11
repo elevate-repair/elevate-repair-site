@@ -206,9 +206,9 @@
 
     <section class="section-alt" id="book">
         <div class="container">
-            <h2>Broken Appliance in Lakewood? Let's Fix It Today.</h2>
-            <p class="section-intro">Upfront pricing. Local technicians. Most repairs completed in one visit.</p>
-            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <h2>Broken Appliance in <span class="city-highlight">Lakewood</span>? Let's Fix It Today.</h2>
+            <p class="section-intro">Upfront pricing &bull; Local technicians &bull; Most repairs completed in one visit.</p>
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
                 <div class="selector-options">
@@ -237,7 +237,7 @@
                     <textarea id="message" name="message" placeholder="What's wrong? (optional)" rows="3"></textarea>
                 </div>
                 <p class="form-reassurance">Takes less than 30 seconds.</p>
-                <button type="submit" class="btn btn-primary" style="width:100%;">Book Repair Now &mdash; $25 Off</button>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
                 <p class="form-note">We'll call you within minutes to confirm. No spam.</p>
             </form>
             <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -390,7 +390,7 @@
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
-                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });

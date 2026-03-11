@@ -1718,6 +1718,9 @@ details.problem-category[open] summary .problem-toggle::after {
     max-width: 500px;
     margin: 0 auto;
 }
+.city-highlight {
+    color: #ef4444;
+}
 .form-reassurance {
     font-size: 13px;
     color: #6b7280;
