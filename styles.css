@@ -847,6 +847,14 @@ details.problem-category[open] summary .problem-toggle::after {
     color: #6b7280;
 }
 
+.sms-disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
 /* === Reviews === */
 .reviews-grid {
     display: grid;
