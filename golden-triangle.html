@@ -344,8 +344,22 @@
         <div class="container">
             <h2>Broken Appliance in Golden Triangle? Let's Fix It Today.</h2>
             <p class="section-intro">Upfront pricing. Local technicians. Most repairs completed in one visit.</p>
-            <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe">
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <div class="service-selector" id="serviceSelector">
+                <p class="selector-prompt">What appliance needs repair?</p>
+                <div class="selector-options">
+                    <button type="button" class="selector-btn" data-service="Washer Repair">Washer Repair</button>
+                    <button type="button" class="selector-btn" data-service="Dryer Repair">Dryer Repair</button>
+                    <button type="button" class="selector-btn" data-service="Refrigerator Repair">Refrigerator Repair</button>
+                    <button type="button" class="selector-btn" data-service="Dishwasher Repair">Dishwasher Repair</button>
+                    <button type="button" class="selector-btn" data-service="Oven / Stove Repair">Oven / Stove Repair</button>
+                    <button type="button" class="selector-btn" data-service="Microwave Repair">Microwave Repair</button>
+                    <button type="button" class="selector-btn" data-service="Appliance Installation">Appliance Installation</button>
+                </div>
+            </div>
+            <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
                 <input type="hidden" name="source" value="website-golden-triangle">
+                <input type="hidden" name="service" id="serviceField" value="">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" placeholder="John" required>
@@ -362,8 +376,9 @@
                     <label for="message">Problem Description</label>
                     <textarea id="message" name="message" placeholder="Briefly describe the issue (optional)" rows="3"></textarea>
                 </div>
+                <p class="form-reassurance">Takes less than 30 seconds.</p>
                 <button type="submit" class="btn btn-primary" style="width:100%;">Book Repair Now &mdash; $25 Off</button>
-                <p class="form-note">Quick callback. No hidden fees. 60-Day warranty included.</p>
+                <p class="form-note">We'll call you within minutes to confirm. No spam.</p>
             </form>
             <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
@@ -504,6 +519,24 @@
     </div>
 
     <script>
+        // Step 1: service selector
+        (function() {
+            var btns = document.querySelectorAll('.selector-btn');
+            var form = document.getElementById('bookingForm');
+            var serviceField = document.getElementById('serviceField');
+            var indicator = document.getElementById('bookingStepIndicator');
+            btns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    btns.forEach(function(b) { b.classList.remove('selected'); });
+                    btn.classList.add('selected');
+                    serviceField.value = btn.getAttribute('data-service');
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    form.style.display = '';
+                    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+        })();
+
         (function() {
             var submitted = false;
             var form = document.getElementById("bookingForm");

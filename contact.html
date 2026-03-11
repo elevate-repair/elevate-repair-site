@@ -110,8 +110,22 @@
         <div class="container">
             <h2>Send Us a Message</h2>
             <p class="section-intro">Fill out the form below and we will get back to you as soon as possible. Or call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> for immediate help.</p>
-            <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe">
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <div class="service-selector" id="serviceSelector">
+                <p class="selector-prompt">What appliance needs repair?</p>
+                <div class="selector-options">
+                    <button type="button" class="selector-btn" data-service="Washer Repair">Washer Repair</button>
+                    <button type="button" class="selector-btn" data-service="Dryer Repair">Dryer Repair</button>
+                    <button type="button" class="selector-btn" data-service="Refrigerator Repair">Refrigerator Repair</button>
+                    <button type="button" class="selector-btn" data-service="Dishwasher Repair">Dishwasher Repair</button>
+                    <button type="button" class="selector-btn" data-service="Oven / Stove Repair">Oven / Stove Repair</button>
+                    <button type="button" class="selector-btn" data-service="Microwave Repair">Microwave Repair</button>
+                    <button type="button" class="selector-btn" data-service="Appliance Installation">Appliance Installation</button>
+                </div>
+            </div>
+            <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
                 <input type="hidden" name="source" value="website-contact">
+                <input type="hidden" name="service" id="serviceField" value="">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" placeholder="John" required>
@@ -132,8 +146,9 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Tell us about the issue you're experiencing..." rows="4"></textarea>
                 </div>
+                <p class="form-reassurance">Takes less than 30 seconds.</p>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                <p class="form-note">We will get back to you shortly. No spam, ever.</p>
+                <p class="form-note">We'll get back to you within minutes. No spam.</p>
             </form>
             <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
@@ -212,6 +227,24 @@
 
     <script>
         // Form submission
+        // Step 1: service selector
+        (function() {
+            var btns = document.querySelectorAll('.selector-btn');
+            var form = document.getElementById('bookingForm');
+            var serviceField = document.getElementById('serviceField');
+            var indicator = document.getElementById('bookingStepIndicator');
+            btns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    btns.forEach(function(b) { b.classList.remove('selected'); });
+                    btn.classList.add('selected');
+                    serviceField.value = btn.getAttribute('data-service');
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    form.style.display = '';
+                    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+        })();
+
         (function() {
             var submitted = false;
             var form = document.getElementById("bookingForm");
