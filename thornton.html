@@ -342,9 +342,9 @@
 
     <section class="section-alt" id="book">
         <div class="container">
-            <h2>Broken Appliance in Thornton? Let's Fix It Today.</h2>
-            <p class="section-intro">Upfront pricing. Local technicians. Most repairs completed in one visit.</p>
-            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <h2>Broken Appliance in <span class="city-highlight">Thornton</span>? Let's Fix It Today.</h2>
+            <p class="section-intro">Upfront pricing &bull; Local technicians &bull; Most repairs completed in one visit.</p>
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
                 <div class="selector-options">
@@ -540,7 +540,7 @@
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
-                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });

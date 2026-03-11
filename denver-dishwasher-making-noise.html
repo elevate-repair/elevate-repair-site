@@ -249,9 +249,9 @@
 <p>In Denver, Elevate Repair has become the trusted choice for homeowners seeking reliable appliance repair without surprises. Our licensed and insured team brings professional expertise to every job, backed by our industry-leading 60-day warranty on all work. We prioritize honesty and transparency, with upfront pricing that never surprises.</p>
 <p>Denver residents appreciate our flexible scheduling from 7am to 7pm, seven days a week, because they know we're always ready to help when appliances fail.</p><section class="section-alt" id="book">
         <div class="container">
-            <h2>Schedule Appliance Repair in Denver</h2>
+            <h2>Schedule Appliance Repair in <span class="city-highlight">Denver</span></h2>
             <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or fill out the form below.</p>
-            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
                 <div class="selector-options">
@@ -436,7 +436,7 @@
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
-                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });
