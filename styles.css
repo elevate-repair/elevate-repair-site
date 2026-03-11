@@ -1703,6 +1703,21 @@ details.problem-category[open] summary .problem-toggle::after {
 }
 
 /* Service selector — book.html 2-step booking */
+.booking-step-indicator {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2563eb;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.form-reassurance {
+    font-size: 13px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 12px;
+}
 .booking-block {
     max-width: 460px;
     margin: 0 auto;

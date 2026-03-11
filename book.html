@@ -89,6 +89,7 @@
             <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or fill out the form below.</p>
 
             <div class="booking-block">
+                <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
                 <div class="service-selector" id="serviceSelector">
                     <p class="selector-prompt">What appliance needs repair?</p>
                     <div class="selector-options">
@@ -122,6 +123,7 @@
                         <label for="message">Problem Description</label>
                         <textarea id="message" name="message" placeholder="Briefly describe the issue (optional)" rows="3"></textarea>
                     </div>
+                    <p class="form-reassurance">Takes less than 30 seconds. We'll call you shortly to confirm.</p>
                     <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
                     <p class="form-note">We'll call you shortly to confirm. No spam.</p>
                 </form>
@@ -208,11 +210,13 @@
             var btns = document.querySelectorAll('.selector-btn');
             var form = document.getElementById('bookingForm');
             var serviceField = document.getElementById('serviceField');
+            var indicator = document.getElementById('bookingStepIndicator');
             btns.forEach(function(btn) {
                 btn.addEventListener('click', function() {
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
                     form.style.display = '';
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });
