@@ -28,6 +28,8 @@
 ├── README.md                         # Minimal readme
 ├── thank-you.html                    # Post-form-submit redirect
 ├── book.html                         # Standalone booking page (has form)
+├── .htaccess                         # Apache redirect rules (subdir rename 301s)
+├── _redirects                        # Netlify redirect rules (subdir rename 301s)
 ├── favicon.ico / favicon-*.png       # Favicons
 ├── android-chrome-*.png              # PWA icons
 ├── apple-touch-icon.png              # iOS icon
@@ -60,11 +62,17 @@
 ├── denver-[brand]-[appliance]-[problem].html  # Brand+city problem pages (10)
 ├── [appliance]-repair-denver.html         # Service landing pages (5)
 │
-├── dishwasher-repair-denver/         # Problem subpages (6)
-├── dryer-repair-denver/              # Problem subpages (6)
-├── fridge-repair-denver/             # Problem subpages (6)
-├── oven-repair-denver/               # Problem subpages (6)
-└── washer-repair-denver/             # Problem subpages (6)
+├── dishwasher-repair/                # Problem subpages (6) — canonical
+├── dryer-repair/                     # Problem subpages (6) — canonical
+├── fridge-repair/                    # Problem subpages (6) — canonical
+├── oven-repair/                      # Problem subpages (6) — canonical
+├── washer-repair/                    # Problem subpages (6) — canonical
+│
+├── dishwasher-repair-denver/         # LEGACY — 301 redirects to dishwasher-repair/
+├── dryer-repair-denver/              # LEGACY — 301 redirects to dryer-repair/
+├── fridge-repair-denver/             # LEGACY — 301 redirects to fridge-repair/
+├── oven-repair-denver/               # LEGACY — 301 redirects to oven-repair/
+└── washer-repair-denver/             # LEGACY — 301 redirects to washer-repair/
 │
 ├── brands.html                       # Brand directory
 ├── service-areas.html                # Service area directory
@@ -88,7 +96,7 @@
 | Denver+appliance+problem page | 40 | `denver-dishwasher-not-starting.html` | Yes |
 | Brand+city+problem page | 10 | `denver-bosch-dryer-not-starting.html` | Yes (embedded form) |
 | Service landing page | 5 | `dishwasher-repair-denver.html` | No |
-| Problem subpage | 30 | `dishwasher-repair-denver/dishwasher-wont-start.html` | No (informational/diagnostic) |
+| Problem subpage | 30 | `dishwasher-repair/dishwasher-wont-start.html` | No (informational/diagnostic) |
 | Info page | 10 | `faq.html`, `warranty.html`, `contact.html` | Varies (`contact.html` has form) |
 | Book page | 1 | `book.html` | Yes |
 | Thank-you page | 1 | `thank-you.html` | No |
@@ -145,13 +153,17 @@ Denver brand+city problem pages: 10 (bosch×2, lg, miele×2, samsung, sub-zero, 
 
 These are informational/diagnostic pages — no inline booking form. CTAs link to `/book.html`.
 
-| Directory | Subpages |
+The canonical directories are the **de-geo'd** names (without "-denver"). The legacy `-repair-denver/` directories still exist on disk and serve 301 redirects (managed by `.htaccess` for Apache and `_redirects` for Netlify) pointing to the canonical paths.
+
+| Directory (canonical) | Subpages |
 |-----------|---------|
-| `dishwasher-repair-denver/` | dishwasher-leaking, dishwasher-making-noise, dishwasher-not-cleaning, dishwasher-not-drying, dishwasher-wont-drain, dishwasher-wont-start |
-| `dryer-repair-denver/` | dryer-making-noise, dryer-not-heating, dryer-overheating, dryer-takes-too-long, dryer-wont-start, dryer-wont-tumble |
-| `fridge-repair-denver/` | freezer-not-freezing, fridge-leaking-water, fridge-making-noise, ice-maker-not-making-ice, refrigerator-not-cooling, water-dispenser-not-working |
-| `oven-repair-denver/` | burner-not-working, oven-door-wont-close, oven-not-heating, oven-temperature-inaccurate, oven-wont-turn-off, self-clean-not-working |
-| `washer-repair-denver/` | washer-leaking-water, washer-not-filling, washer-shaking-vibrating, washer-wont-drain, washer-wont-spin, washer-wont-start |
+| `dishwasher-repair/` | dishwasher-leaking, dishwasher-making-noise, dishwasher-not-cleaning, dishwasher-not-drying, dishwasher-wont-drain, dishwasher-wont-start |
+| `dryer-repair/` | dryer-making-noise, dryer-not-heating, dryer-overheating, dryer-takes-too-long, dryer-wont-start, dryer-wont-tumble |
+| `fridge-repair/` | freezer-not-freezing, fridge-leaking-water, fridge-making-noise, ice-maker-not-making-ice, refrigerator-not-cooling, water-dispenser-not-working |
+| `oven-repair/` | burner-not-working, oven-door-wont-close, oven-not-heating, oven-temperature-inaccurate, oven-wont-turn-off, self-clean-not-working |
+| `washer-repair/` | washer-leaking-water, washer-not-filling, washer-shaking-vibrating, washer-wont-drain, washer-wont-spin, washer-wont-start |
+
+**Do NOT create new pages in the legacy `-repair-denver/` directories.** All new subpages go in the canonical `-repair/` directories.
 
 ---
 
@@ -415,12 +427,12 @@ Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevate
 7. Add the `<!-- related-links-inserted -->` comment and sibling Denver problem links section
 
 ### Adding a new problem subpage (in service directories)
-1. Copy an existing subpage from the relevant service directory
-2. Update content, title, meta, and canonical
+1. Copy an existing subpage from the relevant **canonical** service directory (e.g., `dishwasher-repair/`, NOT `dishwasher-repair-denver/`)
+2. Update content, title, meta, and canonical URL (use `/dishwasher-repair/` path, not `-denver/`)
 3. Keep shared header/footer and burger script
 4. Do NOT add a booking form
 5. Update sibling links in the "Related Problems" section
-6. Add to `sitemap.xml`
+6. Add to `sitemap.xml` using the canonical path
 
 ### Modifying styles
 - Edit `/styles.css` only — never create new CSS files
@@ -438,7 +450,7 @@ Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevate
 - Business address: 1500 N Grant St, Denver, CO 80203
 - CTA copy pattern: "Book Online — Save $25"
 - Form submissions go to Google Sheets via Apps Script
-- All internal links use root-relative paths (e.g., `/faq.html`, `/dishwasher-repair-denver/`)
+- All internal links use root-relative paths (e.g., `/faq.html`, `/dishwasher-repair/`)
 - `tools/` directory contains dev scripts only — not deployed, do not reference from HTML pages
 - Problems accordion on city pages and service landing pages uses native `<details>`/`<summary>` HTML (no JavaScript required)
 - Gallery carousel on homepage and all 63 city pages uses inline JS for arrow navigation; `.gallery-track` with `.gallery-item` divs
