@@ -342,9 +342,9 @@
 
     <section class="section-alt" id="book">
         <div class="container">
-            <h2>Broken Appliance in RiNo? Let's Fix It Today.</h2>
-            <p class="section-intro">Upfront pricing. Local technicians. Most repairs completed in one visit.</p>
-            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &ndash; Select appliance</p>
+            <h2>Broken Appliance in <span class="city-highlight">RiNo</span>? Let's Fix It Today.</h2>
+            <p class="section-intro">Upfront pricing &bull; Local technicians &bull; Most repairs completed in one visit.</p>
+            <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
                 <div class="selector-options">
@@ -369,15 +369,11 @@
                     <input type="tel" id="phone" name="phone" placeholder="(720) 000-0000" pattern="[\d\s\(\)\-\+]+" required>
                 </div>
                 <div class="form-group">
-                    <label for="zip">ZIP Code</label>
-                    <input type="text" id="zip" name="address" placeholder="80216" pattern="[0-9]{5}" maxlength="5">
-                </div>
-                <div class="form-group">
                     <label for="message">Problem Description</label>
                     <textarea id="message" name="message" placeholder="Briefly describe the issue (optional)" rows="3"></textarea>
                 </div>
                 <p class="form-reassurance">Takes less than 30 seconds.</p>
-                <button type="submit" class="btn btn-primary" style="width:100%;">Book Repair Now &mdash; $25 Off</button>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
                 <p class="form-note">We'll call you within minutes to confirm. No spam.</p>
             </form>
             <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -528,7 +524,7 @@
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
-                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2013 Almost done';
+                    if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });
