@@ -1702,7 +1702,7 @@ details.problem-category[open] summary .problem-toggle::after {
     }
 }
 
-/* Service selector — book.html 2-step booking */
+/* Service selector — 2-step booking (book.html + all form pages) */
 .booking-step-indicator {
     font-size: 13px;
     font-weight: 600;
@@ -1710,7 +1710,13 @@ details.problem-category[open] summary .problem-toggle::after {
     letter-spacing: 0.05em;
     color: #2563eb;
     text-align: center;
-    margin-bottom: 18px;
+    max-width: 500px;
+    margin: 0 auto 18px;
+    display: block;
+}
+.service-selector {
+    max-width: 500px;
+    margin: 0 auto;
 }
 .form-reassurance {
     font-size: 13px;
