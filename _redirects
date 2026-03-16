@@ -1,5 +1,9 @@
+# Legacy subdir renames (must come first to avoid .html rule matching legacy paths first)
 /dishwasher-repair-denver/*  /dishwasher-repair/:splat  301
 /dryer-repair-denver/*       /dryer-repair/:splat       301
 /fridge-repair-denver/*      /fridge-repair/:splat      301
 /oven-repair-denver/*        /oven-repair/:splat        301
 /washer-repair-denver/*      /washer-repair/:splat      301
+
+# Redirect all .html URLs to clean URLs
+/*.html  /:splat  301
