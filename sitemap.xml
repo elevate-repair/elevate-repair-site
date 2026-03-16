@@ -8,7 +8,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/book.html</loc>
+    <loc>https://elevaterepair.com/book</loc>
     <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -16,61 +16,61 @@
 
   <!-- Denver Neighborhoods -->
   <url>
-    <loc>https://elevaterepair.com/downtown-denver.html</loc>
+    <loc>https://elevaterepair.com/downtown-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/capitol-hill.html</loc>
+    <loc>https://elevaterepair.com/capitol-hill</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/cherry-creek.html</loc>
+    <loc>https://elevaterepair.com/cherry-creek</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/five-points.html</loc>
+    <loc>https://elevaterepair.com/five-points</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands.html</loc>
+    <loc>https://elevaterepair.com/highlands</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washington-park.html</loc>
+    <loc>https://elevaterepair.com/washington-park</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/university-park.html</loc>
+    <loc>https://elevaterepair.com/university-park</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/wellshire.html</loc>
+    <loc>https://elevaterepair.com/wellshire</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/country-club.html</loc>
+    <loc>https://elevaterepair.com/country-club</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/speer.html</loc>
+    <loc>https://elevaterepair.com/speer</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -78,80 +78,80 @@
 
   <!-- Nearby Cities -->
   <url>
-    <loc>https://elevaterepair.com/aurora.html</loc>
+    <loc>https://elevaterepair.com/aurora</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood.html</loc>
+    <loc>https://elevaterepair.com/lakewood</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/wheat-ridge.html</loc>
+    <loc>https://elevaterepair.com/wheat-ridge</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster.html</loc>
+    <loc>https://elevaterepair.com/westminster</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada.html</loc>
+    <loc>https://elevaterepair.com/arvada</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/littleton.html</loc>
+    <loc>https://elevaterepair.com/littleton</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/centennial.html</loc>
+    <loc>https://elevaterepair.com/centennial</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/englewood.html</loc>
+    <loc>https://elevaterepair.com/englewood</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://elevaterepair.com/boulder.html</loc>
+    <loc>https://elevaterepair.com/boulder</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/mapleton-hill.html</loc>
+    <loc>https://elevaterepair.com/mapleton-hill</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/chautauqua-park.html</loc>
+    <loc>https://elevaterepair.com/chautauqua-park</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/north-boulder.html</loc>
+    <loc>https://elevaterepair.com/north-boulder</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/evergreen.html</loc>
+    <loc>https://elevaterepair.com/evergreen</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -159,31 +159,31 @@
 
   <!-- South Metro / Douglas County -->
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/greenwood-village.html</loc>
+    <loc>https://elevaterepair.com/greenwood-village</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/castle-pines.html</loc>
+    <loc>https://elevaterepair.com/castle-pines</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/parker.html</loc>
+    <loc>https://elevaterepair.com/parker</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lone-tree.html</loc>
+    <loc>https://elevaterepair.com/lone-tree</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -191,13 +191,13 @@
 
   <!-- West Metro / Foothills -->
   <url>
-    <loc>https://elevaterepair.com/golden.html</loc>
+    <loc>https://elevaterepair.com/golden</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/ken-caryl.html</loc>
+    <loc>https://elevaterepair.com/ken-caryl</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -205,19 +205,19 @@
 
   <!-- North Metro -->
   <url>
-    <loc>https://elevaterepair.com/broomfield.html</loc>
+    <loc>https://elevaterepair.com/broomfield</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/erie.html</loc>
+    <loc>https://elevaterepair.com/erie</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/federal-heights.html</loc>
+    <loc>https://elevaterepair.com/federal-heights</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -225,31 +225,31 @@
 
   <!-- Appliance Repair Pages -->
   <url>
-    <loc>https://elevaterepair.com/fridge-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair-denver</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/washer-repair-denver</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair-denver</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair-denver</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/oven-repair-denver</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -257,37 +257,37 @@
 
   <!-- Fridge Problem Pages -->
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/refrigerator-not-cooling</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/water-dispenser-not-working.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/water-dispenser-not-working</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/ice-maker-not-making-ice.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/ice-maker-not-making-ice</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/fridge-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/fridge-leaking-water</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/freezer-not-freezing.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/freezer-not-freezing</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fridge-repair/fridge-making-noise.html</loc>
+    <loc>https://elevaterepair.com/fridge-repair/fridge-making-noise</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -295,37 +295,37 @@
 
   <!-- Washer Problem Pages -->
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-wont-drain.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-wont-drain</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-wont-spin.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-wont-spin</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-leaking-water</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-wont-start.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-wont-start</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-shaking-vibrating.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-shaking-vibrating</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/washer-repair/washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/washer-repair/washer-not-filling</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -333,37 +333,37 @@
 
   <!-- Dryer Problem Pages -->
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-not-heating</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-wont-start.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-wont-start</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-takes-too-long.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-takes-too-long</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-making-noise.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-making-noise</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-wont-tumble.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-wont-tumble</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dryer-repair/dryer-overheating.html</loc>
+    <loc>https://elevaterepair.com/dryer-repair/dryer-overheating</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -371,37 +371,37 @@
 
   <!-- Dishwasher Problem Pages -->
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-not-cleaning.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-not-cleaning</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-wont-drain.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-wont-drain</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-leaking.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-leaking</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-wont-start.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-wont-start</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-not-drying</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-making-noise.html</loc>
+    <loc>https://elevaterepair.com/dishwasher-repair/dishwasher-making-noise</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -409,37 +409,37 @@
 
   <!-- Oven Problem Pages -->
   <url>
-    <loc>https://elevaterepair.com/oven-repair/oven-not-heating.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/oven-not-heating</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair/oven-temperature-inaccurate.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/oven-temperature-inaccurate</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair/oven-wont-turn-off.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/oven-wont-turn-off</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair/burner-not-working.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/burner-not-working</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair/oven-door-wont-close.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/oven-door-wont-close</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/oven-repair/self-clean-not-working.html</loc>
+    <loc>https://elevaterepair.com/oven-repair/self-clean-not-working</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -447,91 +447,91 @@
 
   <!-- Brand Pages -->
   <url>
-    <loc>https://elevaterepair.com/whirlpool-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/whirlpool-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/samsung-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/samsung-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lg-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/lg-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/ge-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/ge-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/maytag-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/maytag-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/kitchenaid-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/kitchenaid-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/bosch-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/bosch-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/frigidaire-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/frigidaire-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/kenmore-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/kenmore-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/electrolux-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/electrolux-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/amana-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/amana-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/panasonic-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/panasonic-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/miele-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/miele-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/sub-zero-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/sub-zero-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/viking-appliance-repair-denver.html</loc>
+    <loc>https://elevaterepair.com/viking-appliance-repair-denver</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -539,97 +539,97 @@
 
   <!-- New Brand Pages -->
   <url>
-    <loc>https://elevaterepair.com/hotpoint.html</loc>
+    <loc>https://elevaterepair.com/hotpoint</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/haier.html</loc>
+    <loc>https://elevaterepair.com/haier</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/fisher-paykel.html</loc>
+    <loc>https://elevaterepair.com/fisher-paykel</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/thermador.html</loc>
+    <loc>https://elevaterepair.com/thermador</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/wolf.html</loc>
+    <loc>https://elevaterepair.com/wolf</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/jenn-air.html</loc>
+    <loc>https://elevaterepair.com/jenn-air</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/dacor.html</loc>
+    <loc>https://elevaterepair.com/dacor</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/speed-queen.html</loc>
+    <loc>https://elevaterepair.com/speed-queen</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/bertazzoni.html</loc>
+    <loc>https://elevaterepair.com/bertazzoni</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/bluestar.html</loc>
+    <loc>https://elevaterepair.com/bluestar</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/gaggenau.html</loc>
+    <loc>https://elevaterepair.com/gaggenau</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/asko.html</loc>
+    <loc>https://elevaterepair.com/asko</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/beko.html</loc>
+    <loc>https://elevaterepair.com/beko</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/hisense.html</loc>
+    <loc>https://elevaterepair.com/hisense</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/insignia.html</loc>
+    <loc>https://elevaterepair.com/insignia</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/magic-chef.html</loc>
+    <loc>https://elevaterepair.com/magic-chef</loc>
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -637,1136 +637,1136 @@
 
   <!-- Info Pages -->
   <url>
-    <loc>https://elevaterepair.com/brands.html</loc>
+    <loc>https://elevaterepair.com/brands</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/coupons.html</loc>
+    <loc>https://elevaterepair.com/coupons</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/faq.html</loc>
+    <loc>https://elevaterepair.com/faq</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/warranty.html</loc>
+    <loc>https://elevaterepair.com/warranty</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/contact.html</loc>
+    <loc>https://elevaterepair.com/contact</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/service-areas.html</loc>
+    <loc>https://elevaterepair.com/service-areas</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://elevaterepair.com/castle-rock.html</loc>
+    <loc>https://elevaterepair.com/castle-rock</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/commerce-city.html</loc>
+    <loc>https://elevaterepair.com/commerce-city</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lafayette.html</loc>
+    <loc>https://elevaterepair.com/lafayette</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/louisville.html</loc>
+    <loc>https://elevaterepair.com/louisville</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/northglenn.html</loc>
+    <loc>https://elevaterepair.com/northglenn</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/pearl-street.html</loc>
+    <loc>https://elevaterepair.com/pearl-street</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/superior.html</loc>
+    <loc>https://elevaterepair.com/superior</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/thornton.html</loc>
+    <loc>https://elevaterepair.com/thornton</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/university-hill.html</loc>
+    <loc>https://elevaterepair.com/university-hill</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/welby.html</loc>
+    <loc>https://elevaterepair.com/welby</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lodo.html</loc>
+    <loc>https://elevaterepair.com/lodo</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/auraria.html</loc>
+    <loc>https://elevaterepair.com/auraria</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/curtis-park.html</loc>
+    <loc>https://elevaterepair.com/curtis-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/cole.html</loc>
+    <loc>https://elevaterepair.com/cole</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/golden-triangle.html</loc>
+    <loc>https://elevaterepair.com/golden-triangle</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/baker.html</loc>
+    <loc>https://elevaterepair.com/baker</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highland.html</loc>
+    <loc>https://elevaterepair.com/highland</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/platt-park.html</loc>
+    <loc>https://elevaterepair.com/platt-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/rino.html</loc>
+    <loc>https://elevaterepair.com/rino</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/north-park-hill.html</loc>
+    <loc>https://elevaterepair.com/north-park-hill</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/park-hill.html</loc>
+    <loc>https://elevaterepair.com/park-hill</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/congress-park.html</loc>
+    <loc>https://elevaterepair.com/congress-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/cheesman-park.html</loc>
+    <loc>https://elevaterepair.com/cheesman-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/city-park-west.html</loc>
+    <loc>https://elevaterepair.com/city-park-west</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/central-park.html</loc>
+    <loc>https://elevaterepair.com/central-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/sunnyside.html</loc>
+    <loc>https://elevaterepair.com/sunnyside</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/west-highland.html</loc>
+    <loc>https://elevaterepair.com/west-highland</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/berkeley.html</loc>
+    <loc>https://elevaterepair.com/berkeley</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/jefferson-park.html</loc>
+    <loc>https://elevaterepair.com/jefferson-park</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/union-station.html</loc>
+    <loc>https://elevaterepair.com/union-station</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-not-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/aurora-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/aurora-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/aurora-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-oven-not-heating.html</loc>
+    <loc>https://elevaterepair.com/aurora-oven-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/lakewood-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/lakewood-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-oven-not-heating.html</loc>
+    <loc>https://elevaterepair.com/lakewood-oven-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/westminster-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/westminster-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/westminster-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/westminster-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-oven-not-heating.html</loc>
+    <loc>https://elevaterepair.com/westminster-oven-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/aurora-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-shaking-vibrating.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-shaking-vibrating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-washer-wont-agitate.html</loc>
+    <loc>https://elevaterepair.com/denver-washer-wont-agitate</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-takes-too-long.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-takes-too-long</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-overheating.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-overheating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-wont-tumble.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-wont-tumble</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/denver-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-freezer-not-freezing.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-freezer-not-freezing</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-too-cold.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-too-cold</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-refrigerator-water-dispenser-not-working.html</loc>
+    <loc>https://elevaterepair.com/denver-refrigerator-water-dispenser-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-making-noise.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-wont-fill.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-wont-fill</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-dishwasher-door-wont-close.html</loc>
+    <loc>https://elevaterepair.com/denver-dishwasher-door-wont-close</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-not-turning-on.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-not-turning-on</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-temperature-inaccurate.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-temperature-inaccurate</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-burner-not-working.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-burner-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-wont-turn-off.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-wont-turn-off</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-self-clean-not-working.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-self-clean-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-door-wont-close.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-door-wont-close</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-oven-uneven-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-oven-uneven-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/aurora-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/aurora-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/aurora-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/aurora-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/aurora-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/aurora-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/aurora-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/aurora-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/aurora-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/aurora-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/aurora-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/aurora-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/aurora-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/aurora-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/aurora-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/aurora-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/aurora-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/highlands-ranch-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/lakewood-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/lakewood-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/lakewood-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/lakewood-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/lakewood-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/lakewood-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/lakewood-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/lakewood-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/lakewood-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/lakewood-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-washer-not-draining.html</loc>
+    <loc>https://elevaterepair.com/arvada-washer-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/arvada-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/arvada-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/arvada-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/arvada-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/arvada-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/arvada-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/arvada-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/arvada-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/arvada-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/arvada-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/arvada-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/arvada-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/arvada-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/arvada-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dishwasher-not-draining.html</loc>
+    <loc>https://elevaterepair.com/arvada-dishwasher-not-draining</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/arvada-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/arvada-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/arvada-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/arvada-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/arvada-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-washer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/westminster-washer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-washer-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/westminster-washer-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-washer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/westminster-washer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-washer-not-filling.html</loc>
+    <loc>https://elevaterepair.com/westminster-washer-not-filling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/westminster-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/westminster-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dryer-making-loud-noise.html</loc>
+    <loc>https://elevaterepair.com/westminster-dryer-making-loud-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dryer-not-drying.html</loc>
+    <loc>https://elevaterepair.com/westminster-dryer-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/westminster-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/westminster-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-refrigerator-not-running.html</loc>
+    <loc>https://elevaterepair.com/westminster-refrigerator-not-running</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-refrigerator-making-noise.html</loc>
+    <loc>https://elevaterepair.com/westminster-refrigerator-making-noise</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dishwasher-not-cleaning-dishes.html</loc>
+    <loc>https://elevaterepair.com/westminster-dishwasher-not-cleaning-dishes</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dishwasher-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/westminster-dishwasher-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dishwasher-not-starting.html</loc>
+    <loc>https://elevaterepair.com/westminster-dishwasher-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/westminster-dishwasher-not-drying.html</loc>
+    <loc>https://elevaterepair.com/westminster-dishwasher-not-drying</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-sub-zero-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/denver-sub-zero-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-viking-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/denver-viking-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-thermador-refrigerator-not-cooling.html</loc>
+    <loc>https://elevaterepair.com/denver-thermador-refrigerator-not-cooling</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-bosch-refrigerator-leaking-water.html</loc>
+    <loc>https://elevaterepair.com/denver-bosch-refrigerator-leaking-water</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-miele-refrigerator-ice-maker-not-working.html</loc>
+    <loc>https://elevaterepair.com/denver-miele-refrigerator-ice-maker-not-working</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-samsung-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-samsung-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-lg-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-lg-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-miele-dryer-not-heating.html</loc>
+    <loc>https://elevaterepair.com/denver-miele-dryer-not-heating</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-bosch-dryer-not-starting.html</loc>
+    <loc>https://elevaterepair.com/denver-bosch-dryer-not-starting</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elevaterepair.com/denver-whirlpool-dryer-not-spinning.html</loc>
+    <loc>https://elevaterepair.com/denver-whirlpool-dryer-not-spinning</loc>
     <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
