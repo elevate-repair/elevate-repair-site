@@ -1802,3 +1802,10 @@ details.problem-category[open] summary .problem-toggle::after {
     .selector-options { grid-template-columns: repeat(3, 1fr); }
     .selector-btn:last-child { grid-column: auto; }
 }
+.section-photo {
+    width: 100%;
+    max-width: 580px;
+    border-radius: 8px;
+    display: block;
+    margin: 24px auto 0;
+}
