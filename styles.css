@@ -1801,6 +1801,7 @@ details.problem-category[open] summary .problem-toggle::after {
 @media (min-width: 769px) {
     .selector-options { grid-template-columns: repeat(3, 1fr); }
     .selector-btn:last-child { grid-column: auto; }
+    .section-photo { max-width: 720px; }
 }
 .section-photo {
     width: 100%;
