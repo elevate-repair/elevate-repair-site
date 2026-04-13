@@ -461,7 +461,9 @@
             iframe.addEventListener("load", function() {
                 if (!submitted) return;
                 submitted = false;
-                sessionStorage.removeItem('conversion_fired');
+                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
+                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
+                sessionStorage.setItem('lead_submitted', '1');
                 window.location.href = '/thank-you.html';
             });
         })();
