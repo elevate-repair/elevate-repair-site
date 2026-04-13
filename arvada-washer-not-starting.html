@@ -103,7 +103,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -145,7 +145,7 @@
             <h1>Washer Not Starting Repair in Arvada</h1>
             <p class="hero-text">If your washer in Arvada won't start, Elevate Repair is here to help. We offer same-day service and a 60-day warranty to ensure your appliance is up and running in no time.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge">Same-Day Service</a>
+                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -194,7 +194,7 @@
      alt="Appliance repair technician finishing a service call"
      class="section-photo" loading="lazy">
 <h2>Schedule Your Washer Repair Today</h2>
-<p>If your washer not starting, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Arvada with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee. For a full list of our services, visit our <a href="/washer-repair-denver">washer repair service in Denver</a> page.</p><p><a href="/arvada">Back to Arvada appliance repair</a></p>
+<p>If your washer not starting, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Arvada with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})" onclick="gtag('event','book_click',{'location':'cta'})">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee. For a full list of our services, visit our <a href="/washer-repair-denver">washer repair service in Denver</a> page.</p><p><a href="/arvada">Back to Arvada appliance repair</a></p>
 <h2>Washer Repair Considerations for Arvada Homes</h2>
 <p>Arvada's older ranch and split-level homes typically have laundry hookups in the basement or a main-floor utility area. Basement laundry installations in Arvada frequently have standpipe heights and drain configurations that were set up for top-load washers from the 1970s and 1980s. When homeowners upgrade to modern front-load high-efficiency machines, drain hose compatibility and flood stop valve placement sometimes need adjustment—issues that can surface as drainage errors that look like washer failures.</p>
 <p>Hard water in Arvada's older sections contributes to scale buildup in washer inlet screens, dispenser drawers, and pump filters. In top-load agitator washers that are common in Arvada's older homes, hard water deposits can cause the agitator coupler to stick or the clutch assembly to wear prematurely. We inspect and clean water supply components before assuming pump or motor failure.</p>
@@ -344,8 +344,8 @@
             <h3>Need Appliance Repair in Arvada?</h3>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>
         </div>
     </section>
@@ -417,14 +417,14 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
     </div>
 
     <script>
@@ -459,7 +459,9 @@
             iframe.addEventListener("load", function() {
                 if (!submitted) return;
                 submitted = false;
-                sessionStorage.removeItem('conversion_fired');
+                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
+                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
+                sessionStorage.setItem('lead_submitted', '1');
                 window.location.href = '/thank-you.html';
             });
         })();

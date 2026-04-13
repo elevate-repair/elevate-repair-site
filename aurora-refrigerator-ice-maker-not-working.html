@@ -147,7 +147,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -189,7 +189,7 @@
             <h1>Refrigerator Ice Maker Not Working Repair in Aurora</h1>
             <p class="hero-text">Experiencing issues with your refrigerator's ice maker in Aurora? Elevate Repair is here to help with same-day service and a 60-day warranty. Call us today to get your appliance back on track.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge">Same-Day Service</a>
+                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -237,7 +237,7 @@
      alt="Refrigerator compressor repair by Elevate Repair"
      class="section-photo" loading="lazy">
 <h2>Schedule Your Refrigerator Repair Today</h2>
-<p>If your fridge ice maker not working, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Aurora with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee.</p><p><a href="/aurora">Back to Aurora appliance repair</a></p>
+<p>If your fridge ice maker not working, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Aurora with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})" onclick="gtag('event','book_click',{'location':'cta'})">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee.</p><p><a href="/aurora">Back to Aurora appliance repair</a></p>
 <h2>Refrigerator Repair Considerations for Aurora Homes</h2>
 <p>Aurora's summer temperatures regularly reach the mid-90s, which places substantial stress on residential refrigerator compressors—especially in units installed in kitchens with south- or west-facing sun exposure and limited ventilation clearance. French-door and side-by-side models from Samsung and LG, common builder choices in Aurora's 2000s-era housing developments, show elevated compressor failure rates when ambient kitchen temperatures run consistently high.</p>
 <p>Ice maker problems are the single most common refrigerator service call in Aurora. The city's moderately hard municipal water leaves calcium and magnesium deposits in ice maker water lines, inlet valves, and molds. A refrigerator that makes small, hollow, or misshapen cubes—or stops making ice entirely—often needs a descaling and valve inspection rather than full component replacement. Our technicians confirm water hardness contribution before recommending parts.</p>
@@ -339,8 +339,8 @@
             <h3>Need Appliance Repair in Aurora?</h3>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>
         </div>
     </section>
@@ -412,14 +412,14 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
     </div>
 
     <script>
@@ -454,7 +454,9 @@
             iframe.addEventListener("load", function() {
                 if (!submitted) return;
                 submitted = false;
-                sessionStorage.removeItem('conversion_fired');
+                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
+                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
+                sessionStorage.setItem('lead_submitted', '1');
                 window.location.href = '/thank-you.html';
             });
         })();

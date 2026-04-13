@@ -140,7 +140,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -183,14 +183,14 @@
             <h1>Appliance Repair in Westminster, CO</h1>
             <p class="hero-text">Westminster stretches between Denver and Boulder along the US-36 corridor, anchored by landmarks like the Butterfly Pavilion and Standley Lake Regional Park. Elevate Repair offers same-day appliance service to Westminster residents from the Promenade shopping district to the neighborhoods surrounding City Park. All repairs are backed by our 60-day warranty.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge">Same-Day Service</a>
+                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
             </div>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>            </div>
             <div class="hero-image">
                 <img src="/assets/images/hero/appliance-repair-denver-hero.webp"
@@ -246,8 +246,8 @@
         <div class="container">
             <p>Same-day appointments available in Westminster. Call or text now.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="/book" class="btn btn-outline">Book Appliance Repair Online</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="/book" class="btn btn-outline" onclick="gtag('event','book_click',{'location':'cta'})">Book Appliance Repair Online</a>
             </div>
         </div>
     </section>
@@ -520,8 +520,8 @@
             <h2>Need Appliance Repair in Westminster?</h2>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>
         </div>
     </section>
@@ -580,14 +580,14 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
     </div>
 
     <script>
@@ -622,7 +622,9 @@
             iframe.addEventListener("load", function() {
                 if (!submitted) return;
                 submitted = false;
-                sessionStorage.removeItem('conversion_fired');
+                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
+                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
+                sessionStorage.setItem('lead_submitted', '1');
                 window.location.href = '/thank-you.html';
             });
         })();

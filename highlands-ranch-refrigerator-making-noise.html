@@ -155,7 +155,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -197,7 +197,7 @@
             <h1>Refrigerator Making Noise Repair in Highlands Ranch</h1>
             <p class="hero-text">Experiencing unusual noises from your refrigerator in Highlands Ranch? Elevate Repair specializes in diagnosing and fixing these issues with same-day service and a 60-day warranty, ensuring your peace of mind.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge">Same-Day Service</a>
+                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -246,7 +246,7 @@
      alt="Refrigerator compressor repair by Elevate Repair"
      class="section-photo" loading="lazy">
 <h2>Schedule Your Refrigerator Repair Today</h2>
-<p>If your fridge making noise, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Highlands Ranch with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee.</p><p><a href="/highlands-ranch">Back to Highlands Ranch appliance repair</a></p>
+<p>If your fridge making noise, don't put it off—professional repair is the smart choice. Elevate Repair offers same-day service throughout Highlands Ranch with upfront pricing and expert technicians. Contact us at <a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})" onclick="gtag('event','book_click',{'location':'cta'})">(720) 575-8432</a> or <a href="#book">book a repair online</a>. Your $89 service call applies to the final cost, backed by our 60-day satisfaction guarantee.</p><p><a href="/highlands-ranch">Back to Highlands Ranch appliance repair</a></p>
 <h2>Refrigerator Repair Considerations for Highlands Ranch Homes</h2>
 <p>Highlands Ranch's higher elevation (5,800–6,000 feet) means refrigerant operates in slightly lower ambient pressure conditions than at sea level. While modern refrigerators are designed with tolerances that accommodate Front Range altitudes, compressors in older units at or past 15 years may show reduced efficiency at this elevation that would not be as apparent in lower-altitude locations. Refrigerators running slightly warm that have clean condenser coils and correct door seals may have a compressor that is failing to maintain adequate pressure at altitude.</p>
 <p>Many Highlands Ranch kitchens were built with refrigerator enclosures sized precisely to the refrigerator that was installed by the builder in the early 2000s. When homeowners upgrade to a new refrigerator that is slightly wider or taller, the unit may be installed with reduced clearance on the sides or top. Side clearance below one inch can restrict airflow enough to affect condenser performance in side-by-side and French-door models.</p>
@@ -348,8 +348,8 @@
             <h3>Need Appliance Repair in Highlands Ranch?</h3>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>
         </div>
     </section>
@@ -421,14 +421,14 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
     </div>
 
     <script>
@@ -463,7 +463,9 @@
             iframe.addEventListener("load", function() {
                 if (!submitted) return;
                 submitted = false;
-                sessionStorage.removeItem('conversion_fired');
+                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
+                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
+                sessionStorage.setItem('lead_submitted', '1');
                 window.location.href = '/thank-you.html';
             });
         })();
