@@ -36,7 +36,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -85,7 +85,7 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <h3>Call Us</h3>
-                    <p><a href="tel:7205758432">(720) 575-8432</a></p>
+                    <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a></p>
                     <p>7am &ndash; 7pm, 7 days a week</p>
                 </div>
                 <div class="contact-card">
@@ -110,7 +110,7 @@
     <section class="section-alt" id="book">
         <div class="container">
             <h2>Send Us a Message</h2>
-            <p class="section-intro">Fill out the form below and we will get back to you as soon as possible. Or call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> for immediate help.</p>
+            <p class="section-intro">Fill out the form below and we will get back to you as soon as possible. Or call <a href="tel:7205758432" style="color:#2563eb;" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> for immediate help.</p>
             <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
@@ -218,14 +218,14 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Request Service</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Request Service</a>
     </div>
 
     <script>

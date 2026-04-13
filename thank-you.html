@@ -44,6 +44,10 @@
                 'send_to': 'AW-17878510208/__r8COvo8-obEIDVkc1C',
                 'user_data': userData
             });
+            gtag('event', 'generate_lead', {
+                'form_type': 'website_form',
+                'method': 'book_form'
+            });
             sessionStorage.removeItem('ec_name');
             sessionStorage.removeItem('ec_phone');
             sessionStorage.removeItem('lead_submitted');
@@ -134,7 +138,7 @@
         <h1>Thank You!</h1>
         <p>We received your request.</p>
         <p>We'll call you shortly to confirm details.</p>
-        <a href="tel:7205758432" class="btn">Call now: (720) 575-8432</a>
+        <a href="tel:7205758432" class="btn" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call now: (720) 575-8432</a>
         <br>
         <a href="/" class="link" onclick="event.preventDefault(); history.length > 1 ? history.back() : window.location.href='/';">← Back to previous page</a>
     </div>

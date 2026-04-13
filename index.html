@@ -177,7 +177,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
-                    <a href="tel:7205758432" class="header-phone">(720) 575-8432</a>
+                    <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -220,15 +220,15 @@
                 <h1>Appliance Repair in Denver, CO</h1>
                 <p class="hero-text">Denver's trusted appliance repair service. Same-day appointments, upfront pricing, and a 60-day warranty on every repair. Our licensed technicians fix washers, dryers, refrigerators, dishwashers, ovens, and ranges &mdash; quickly and correctly.</p>
                 <div class="hero-highlights">
-                    <a href="/book" class="hero-badge">Same-Day Service</a>
+                    <a href="/book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
                     <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                     <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                     <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
                     <a href="/brands" class="hero-badge">All Major Brands</a>
                 </div>
                 <div class="cta-buttons">
-                    <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
-                    <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                    <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
+                    <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -362,8 +362,8 @@
         <div class="container">
             <p>Same-day appointments available. Call or text now.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="/book" class="btn btn-outline">Book Appliance Repair Online</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="/book" class="btn btn-outline" onclick="gtag('event','book_click',{'location':'cta'})">Book Appliance Repair Online</a>
             </div>
         </div>
     </section>
@@ -401,7 +401,7 @@
         <div class="container">
             <h2>Current Specials</h2>
             <div class="coupons-grid coupons-grid-home">
-                <a href="#book" class="coupon-card coupon-featured">
+                <a href="#book" class="coupon-card coupon-featured" onclick="gtag('event','book_click',{'location':'coupon'})">
                     <div class="coupon-card-top">
                         <div class="coupon-amount">$25 OFF</div>
                         <div class="coupon-label">Online Booking Discount</div>
@@ -411,7 +411,7 @@
                         <p>Schedule your repair through our website and save $25 on any service.</p>
                     </div>
                 </a>
-                <a href="#book" class="coupon-card">
+                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
                     <div class="coupon-card-top">
                         <div class="coupon-amount">$89</div>
                         <div class="coupon-label">Service Call Waived</div>
@@ -421,7 +421,7 @@
                         <p>Our $89 service call fee is applied toward your repair when you proceed.</p>
                     </div>
                 </a>
-                <a href="#book" class="coupon-card">
+                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
                     <div class="coupon-card-top">
                         <div class="coupon-amount">10% OFF</div>
                         <div class="coupon-label">Senior &amp; Military</div>
@@ -513,7 +513,7 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Contact Us</h3>
-                    <p>Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or book online. Describe the issue and we'll schedule a convenient time.</p>
+                    <p>Call <a href="tel:7205758432" style="color:#2563eb;" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> or book online. Describe the issue and we'll schedule a convenient time.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
@@ -770,7 +770,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">How do I schedule a repair?</div>
-                    <div class="faq-answer">Just call us at <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or fill out our online booking form below. We'll arrange a convenient appointment and send a confirmation.</div>
+                    <div class="faq-answer">Just call us at <a href="tel:7205758432" style="color:#2563eb;" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> or fill out our online booking form below. We'll arrange a convenient appointment and send a confirmation.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">What is the service call / diagnostic fee?</div>
@@ -963,7 +963,7 @@
     <section class="section-alt" id="book">
         <div class="container">
             <h2>Book Appliance Repair Today</h2>
-            <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;">(720) 575-8432</a> or book online to schedule same-day appliance repair in Denver. Save $25 when you book online.</p>
+            <p class="section-intro">Call <a href="tel:7205758432" style="color:#2563eb;" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> or book online to schedule same-day appliance repair in Denver. Save $25 when you book online.</p>
             <p class="booking-step-indicator" id="bookingStepIndicator">Step 1 of 2 &mdash; Select your appliance</p>
             <div class="service-selector" id="serviceSelector">
                 <p class="selector-prompt">What appliance needs repair?</p>
@@ -1008,8 +1008,8 @@
             <h2>Need Fast Appliance Repair in Denver?</h2>
             <p>Call now or book online. Most repairs completed same-day. Open 7 days a week, 7am &ndash; 7pm.</p>
             <div class="cta-buttons">
-                <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
             </div>
         </div>
     </section>
@@ -1092,15 +1092,15 @@
                 <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms &amp; Conditions</a>
             </div>
-            <p><a href="tel:7205758432">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
+            <p><a href="tel:7205758432" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> | Open 7 Days, 7am &ndash; 7pm</p>
             <p>&copy; 2026 Elevate Repair. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Sticky Bottom Bar (Mobile) -->
     <div class="sticky-bottom-bar">
-        <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
     </div>
 
     <!-- Gallery Modal -->
