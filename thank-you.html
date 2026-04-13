@@ -31,7 +31,23 @@
     
     <!-- Event snippet for Submit lead form conversion page -->
     <script>
-        gtag('event', 'conversion', {'send_to': 'AW-17878510208/__r8COvo8-obEIDVkc1C'});
+        (function() {
+            if (sessionStorage.getItem('lead_submitted') !== '1') return;
+            var rawName  = sessionStorage.getItem('ec_name')  || '';
+            var rawPhone = sessionStorage.getItem('ec_phone') || '';
+            var parts    = rawName.trim().split(/\s+/);
+            var userData = {};
+            if (rawPhone)        userData.phone_number = rawPhone;
+            if (parts[0])        userData.first_name   = parts[0];
+            if (parts.length > 1) userData.last_name   = parts.slice(1).join(' ');
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17878510208/__r8COvo8-obEIDVkc1C',
+                'user_data': userData
+            });
+            sessionStorage.removeItem('ec_name');
+            sessionStorage.removeItem('ec_phone');
+            sessionStorage.removeItem('lead_submitted');
+        })();
     </script>
     
     <style>
