@@ -465,7 +465,29 @@
             var form = document.getElementById("bookingForm");
             var iframe = document.querySelector('iframe[name="hidden_iframe"]');
             if (!form || !iframe) return;
-            form.addEventListener("submit", function() {
+            form.addEventListener("submit", function(e) {
+                var phoneInput = form.querySelector('[name="phone"]');
+                var raw = phoneInput ? phoneInput.value : '';
+                var d = String(raw || '').replace(/\D/g, '');
+                if (d.length === 11 && d.charAt(0) === '1') d = d.substring(1);
+                var valid = d.length === 10 && !/^(\d)\1{9}$/.test(d) && /^[2-9]\d{2}[2-9]\d{6}$/.test(d);
+                if (!valid) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    var err = document.getElementById('phone-error');
+                    if (!err) {
+                        err = document.createElement('div');
+                        err.id = 'phone-error';
+                        err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.25rem;';
+                        err.textContent = 'Please enter a valid US phone number.';
+                        if (phoneInput && phoneInput.parentNode) phoneInput.parentNode.insertBefore(err, phoneInput.nextSibling);
+                    }
+                    err.style.display = 'block';
+                    if (phoneInput) phoneInput.focus();
+                    return false;
+                }
+                var existingErr = document.getElementById('phone-error');
+                if (existingErr) existingErr.style.display = 'none';
                 submitted = true;
                 var btn = form.querySelector("button[type=submit]");
                 if (btn) { btn.disabled = true; btn.innerText = "Sending..."; }
