@@ -946,6 +946,43 @@ details.problem-category[open] summary .problem-toggle::after {
     width: 100%;
 }
 
+/* === Book Online upgrade card (book.html) === */
+.book-upgrade-card {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.book-upgrade-badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.book-upgrade-heading {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.book-upgrade-text {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
 /* === Reviews === */
 .reviews-grid {
     display: grid;
