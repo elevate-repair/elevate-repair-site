@@ -983,6 +983,17 @@ details.problem-category[open] summary .problem-toggle::after {
     margin-bottom: 14px;
 }
 
+.book-upgrade-card .btn-outline {
+    background: #2563eb;
+    color: #fff;
+    border: 2px solid #2563eb;
+}
+
+.book-upgrade-card .btn-outline:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
 /* === Reviews === */
 .reviews-grid {
     display: grid;
