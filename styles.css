@@ -988,6 +988,10 @@ details.problem-category[open] summary .problem-toggle::after {
     font-weight: 700;
 }
 
+.hero-title-accent {
+    color: #f87171;
+}
+
 .book-upgrade-card .btn-outline {
     background: #2563eb;
     color: #fff;
