@@ -1958,3 +1958,48 @@ details.problem-category[open] summary .problem-toggle::after {
     display: block;
     margin: 24px auto 0;
 }
+
+/* === Inline address autocomplete: /book-online only === */
+.address-field {
+    position: relative;
+}
+
+.address-suggestions {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.address-suggestion {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-bottom: 1px solid #f3f4f6;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+}
+
+.address-suggestion:last-child {
+    border-bottom: 0;
+}
+
+.address-suggestion:hover,
+.address-suggestion.active,
+.address-suggestion:focus {
+    background: #eff6ff;
+    outline: none;
+}
