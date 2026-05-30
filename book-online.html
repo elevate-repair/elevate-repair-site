@@ -484,6 +484,8 @@
                     pac.style.display = 'block';
                     pac.style.width = '100%';
                     container.appendChild(pac);
+                    // Places backend request denied (API restriction, REQUEST_DENIED, etc.) -> manual fallback.
+                    pac.addEventListener('gmp-error', showManualFallback);
 
                     var justSelected = false;
 
