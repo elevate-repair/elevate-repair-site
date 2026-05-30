@@ -276,15 +276,8 @@
 
             var ENDPOINT = 'https://jrihukhsootsnlrqaupu.supabase.co/functions/v1/available-booking-windows';
             var OTHER_LABEL = 'Other / Not sure';
-            // Static fallback windows (en dash –), used if the endpoint fails/times out/returns nothing.
-            var STATIC_WINDOWS = [
-                '8:00 AM – 9:00 AM',
-                '10:00 AM – 11:00 AM',
-                '12:00 PM – 1:00 PM',
-                '2:00 PM – 3:00 PM',
-                '4:00 PM – 5:00 PM',
-                '6:00 PM – 7:00 PM'
-            ];
+            var activeController = null;
+            var reqSeq = 0;
 
             function clearOptions() { windowSelect.innerHTML = ''; }
 
@@ -334,9 +327,8 @@
             function renderFallback() {
                 clearOptions();
                 addPlaceholder('Select your preferred time');
-                STATIC_WINDOWS.forEach(addAvailableOption);
                 addOtherOption();
-                setStatus('We’ll confirm the final time by text.');
+                setStatus('We’re having trouble checking available windows. Select “Other / Not sure” and we’ll confirm the time by text.');
             }
             function renderFromBackend(windows) {
                 clearOptions();
@@ -357,8 +349,12 @@
             }
 
             function loadWindows(date) {
-                renderLoading();
+                if (activeController) activeController.abort();
                 var controller = new AbortController();
+                activeController = controller;
+                reqSeq += 1;
+                var mySeq = reqSeq;
+                renderLoading();
                 var timer = setTimeout(function() { controller.abort(); }, 5000);
                 fetch(ENDPOINT, {
                     method: 'POST',
@@ -367,9 +363,11 @@
                     signal: controller.signal
                 }).then(function(res) {
                     clearTimeout(timer);
+                    if (reqSeq !== mySeq) return;
                     if (!res.ok) throw new Error('bad status');
                     return res.json();
                 }).then(function(data) {
+                    if (reqSeq !== mySeq) return;
                     if (!data || !Array.isArray(data.windows) || data.windows.length === 0) {
                         renderFallback();
                         return;
@@ -377,13 +375,27 @@
                     renderFromBackend(data.windows);
                 }).catch(function() {
                     clearTimeout(timer);
+                    if (reqSeq !== mySeq) return;
                     renderFallback();
+                }).finally(function() {
+                    if (reqSeq === mySeq) activeController = null;
                 });
             }
 
             dateInput.addEventListener('change', function() {
                 var date = dateInput.value;
-                if (!date) return;
+                if (!date) {
+                    reqSeq += 1;
+                    if (activeController) {
+                        activeController.abort();
+                        activeController = null;
+                    }
+                    clearOptions();
+                    addPlaceholder('Select your preferred time');
+                    addOtherOption();
+                    setStatus('');
+                    return;
+                }
                 loadWindows(date);
             });
         })();
