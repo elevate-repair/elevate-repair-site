@@ -145,6 +145,7 @@
                             <option value="Other / Not sure">Other / Not sure</option>
                         </select>
                         <p class="form-hint">Choose your preferred arrival window. This is not a final appointment &mdash; we&rsquo;ll confirm the exact time by text.</p>
+                        <p class="form-hint" id="windowStatus" style="display:none;"></p>
                     </div>
                     <div class="form-group">
                         <label for="message">Problem Description *</label>
@@ -263,6 +264,128 @@
             var m = String(now.getMonth() + 1).padStart(2, '0');
             var d = String(now.getDate()).padStart(2, '0');
             dateInput.min = y + '-' + m + '-' + d;
+        })();
+
+        // Preferred windows: fetch live availability from the booking endpoint, with static fallback.
+        // The Edge Function is the source of truth; this only renders what it returns (or a static fallback).
+        (function() {
+            var dateInput = document.getElementById('preferred_date');
+            var windowSelect = document.getElementById('preferred_window');
+            var statusEl = document.getElementById('windowStatus');
+            if (!dateInput || !windowSelect) return;
+
+            var ENDPOINT = 'https://jrihukhsootsnlrqaupu.supabase.co/functions/v1/available-booking-windows';
+            var OTHER_LABEL = 'Other / Not sure';
+            // Static fallback windows (en dash –), used if the endpoint fails/times out/returns nothing.
+            var STATIC_WINDOWS = [
+                '8:00 AM – 9:00 AM',
+                '10:00 AM – 11:00 AM',
+                '12:00 PM – 1:00 PM',
+                '2:00 PM – 3:00 PM',
+                '4:00 PM – 5:00 PM',
+                '6:00 PM – 7:00 PM'
+            ];
+
+            function clearOptions() { windowSelect.innerHTML = ''; }
+
+            function addPlaceholder(text) {
+                var opt = document.createElement('option');
+                opt.value = '';
+                opt.disabled = true;
+                opt.selected = true;
+                opt.textContent = text;
+                windowSelect.appendChild(opt);
+            }
+            function addAvailableOption(label) {
+                var opt = document.createElement('option');
+                opt.value = label;
+                opt.textContent = label;
+                windowSelect.appendChild(opt);
+            }
+            function addUnavailableOption(label) {
+                var opt = document.createElement('option');
+                opt.value = '';
+                opt.disabled = true;
+                opt.textContent = label + ' — Unavailable';
+                windowSelect.appendChild(opt);
+            }
+            function addOtherOption() {
+                var opt = document.createElement('option');
+                opt.value = OTHER_LABEL;
+                opt.textContent = OTHER_LABEL;
+                windowSelect.appendChild(opt);
+            }
+            function setStatus(msg) {
+                if (!statusEl) return;
+                if (msg) {
+                    statusEl.textContent = msg;
+                    statusEl.style.display = '';
+                } else {
+                    statusEl.textContent = '';
+                    statusEl.style.display = 'none';
+                }
+            }
+
+            function renderLoading() {
+                clearOptions();
+                addPlaceholder('Checking available times…');
+                setStatus('');
+            }
+            function renderFallback() {
+                clearOptions();
+                addPlaceholder('Select your preferred time');
+                STATIC_WINDOWS.forEach(addAvailableOption);
+                addOtherOption();
+                setStatus('We’ll confirm the final time by text.');
+            }
+            function renderFromBackend(windows) {
+                clearOptions();
+                addPlaceholder('Select your preferred time');
+                var anyAvailable = false;
+                windows.forEach(function(w) {
+                    var label = (w && w.label) ? String(w.label) : '';
+                    if (!label) return;
+                    if (w.available) { addAvailableOption(label); anyAvailable = true; }
+                    else { addUnavailableOption(label); }
+                });
+                addOtherOption();
+                if (!anyAvailable) {
+                    setStatus('No standard windows are available for this date. Choose another date or select “Other / Not sure” and we’ll confirm by text.');
+                } else {
+                    setStatus('');
+                }
+            }
+
+            function loadWindows(date) {
+                renderLoading();
+                var controller = new AbortController();
+                var timer = setTimeout(function() { controller.abort(); }, 5000);
+                fetch(ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ date: date }),
+                    signal: controller.signal
+                }).then(function(res) {
+                    clearTimeout(timer);
+                    if (!res.ok) throw new Error('bad status');
+                    return res.json();
+                }).then(function(data) {
+                    if (!data || !Array.isArray(data.windows) || data.windows.length === 0) {
+                        renderFallback();
+                        return;
+                    }
+                    renderFromBackend(data.windows);
+                }).catch(function() {
+                    clearTimeout(timer);
+                    renderFallback();
+                });
+            }
+
+            dateInput.addEventListener('change', function() {
+                var date = dateInput.value;
+                if (!date) return;
+                loadWindows(date);
+            });
         })();
 
         // Booking request: validate -> confirmation modal -> submit (no appointment is created)
