@@ -2081,8 +2081,8 @@ details.problem-category[open] summary .problem-toggle::after {
         pointer-events: none;
     }
 }
-/* Mobile: 3 form birds per side + 2 hero birds per side at safe screen edges */
-@media (max-width: 1023px) {
+/* Mobile (<=768px): subtle birds at section edges + form-field overflow fix */
+@media (max-width: 768px) {
     .book-online-page .form-decor,
     .book-online-page .hero-decor {
         display: block;
@@ -2091,20 +2091,35 @@ details.problem-category[open] summary .problem-toggle::after {
         z-index: 0;
         pointer-events: none;
     }
-    /* Hide every-other form bird — keep l1/l3/l5 and r1/r3/r5 */
+    /* Form birds: 6 total (l1/l3/l5 + r1/r3/r5); rest hidden */
     .db-l2, .db-l4, .db-l6,
     .db-r2, .db-r4, .db-r6 { display: none; }
-    /* Reposition visible form birds to safe screen edges */
-    .db-l1 { top: 8%;  left: 3px; width: 34px; }
-    .db-l3 { top: 42%; left: 3px; width: 32px; }
-    .db-l5 { top: 75%; left: 3px; width: 35px; }
-    .db-r1 { top: 8%;  left: auto; right: 3px; width: 34px; }
-    .db-r3 { top: 42%; left: auto; right: 3px; width: 32px; }
-    .db-r5 { top: 75%; left: auto; right: 3px; width: 35px; }
-    /* Hero: 2 per side, hide middle bird */
+    /* Flush to section edges; overflow:hidden on #book clips excess */
+    .db-l1 { top: 4%;  left: 0; width: 52px; opacity: 0.18; transform: scaleX(-1) rotate(10deg); }
+    .db-l3 { top: 40%; left: 0; width: 46px; opacity: 0.15; transform: scaleX(-1) rotate(-6deg); }
+    .db-l5 { top: 78%; left: 0; width: 50px; opacity: 0.17; transform: scaleX(-1) rotate(8deg);  }
+    .db-r1 { top: 7%;  left: auto; right: 0; width: 52px; opacity: 0.18; transform: rotate(-10deg); }
+    .db-r3 { top: 44%; left: auto; right: 0; width: 46px; opacity: 0.15; transform: rotate(6deg);  }
+    .db-r5 { top: 82%; left: auto; right: 0; width: 50px; opacity: 0.17; transform: rotate(-8deg); }
+    /* Hero: 4 birds (l1/l3 + r1/r3); hide middle pair */
     .hb-l2, .hb-r2 { display: none; }
-    .hb-l1 { top: 18%; left: 3px; width: 38px; }
-    .hb-l3 { top: 72%; left: 3px; width: 34px; }
-    .hb-r1 { top: 18%; left: auto; right: 3px; width: 38px; }
-    .hb-r3 { top: 72%; left: auto; right: 3px; width: 34px; }
+    .hb-l1 { top: 14%; left: 0; width: 48px; opacity: 0.20; transform: scaleX(-1) rotate(10deg); }
+    .hb-l3 { top: 68%; left: 0; width: 42px; opacity: 0.18; transform: scaleX(-1) rotate(-6deg); }
+    .hb-r1 { top: 17%; left: auto; right: 0; width: 48px; opacity: 0.20; transform: rotate(-10deg); }
+    .hb-r3 { top: 72%; left: auto; right: 0; width: 42px; opacity: 0.18; transform: rotate(6deg);  }
+    /* Prevent form fields from overflowing the card on narrow screens */
+    #bookingForm input,
+    #bookingForm select,
+    #bookingForm textarea {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .address-field {
+        min-width: 0;
+        max-width: 100%;
+    }
+    .address-suggestions {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 }
