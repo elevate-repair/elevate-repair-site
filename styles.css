@@ -859,6 +859,150 @@ details.problem-category[open] summary .problem-toggle::after {
     line-height: 1.4;
 }
 
+.form-hint {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+/* === Booking Confirmation Modal === */
+.booking-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(17, 24, 39, 0.6);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-modal-overlay.open {
+    display: flex;
+}
+
+.booking-modal {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 460px;
+    width: 100%;
+    padding: 28px 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.booking-modal h3 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.booking-modal-fee {
+    background: #eff6ff;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.booking-modal-fee p {
+    margin: 0;
+    color: #1f2937;
+    font-size: 15px;
+}
+
+.booking-modal-points {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.booking-modal-points li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.booking-modal-points li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.booking-modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-modal-actions .btn {
+    width: 100%;
+}
+
+/* === Book Online upgrade card (book.html) === */
+.book-upgrade-card {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.book-upgrade-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.book-upgrade-heading {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.book-upgrade-text {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.book-upgrade-name {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.hero-title-accent {
+    color: #f87171;
+}
+
+.book-upgrade-card .btn-outline {
+    background: #2563eb;
+    color: #fff;
+    border: 2px solid #2563eb;
+}
+
+.book-upgrade-card .btn-outline:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
 /* === Reviews === */
 .reviews-grid {
     display: grid;
@@ -1813,4 +1957,154 @@ details.problem-category[open] summary .problem-toggle::after {
     border-radius: 8px;
     display: block;
     margin: 24px auto 0;
+}
+
+/* === Inline address autocomplete: /book-online only === */
+.address-field {
+    position: relative;
+}
+
+.address-suggestions {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.address-suggestion {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-bottom: 1px solid #f3f4f6;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+}
+
+.address-suggestion:last-child {
+    border-bottom: 0;
+}
+
+.address-suggestion:hover,
+.address-suggestion.active,
+.address-suggestion:focus {
+    background: #eff6ff;
+    outline: none;
+}
+
+/* === /book-online field helper text only === */
+.book-online-page .form-hint {
+    color: #2563eb;
+}
+
+/* === /book-online form-section heading only === */
+.book-online-page .booking-section-title {
+    color: #ef4444;
+}
+
+/* === /book-online decorative hummingbirds === */
+.book-online-page #book {
+    position: relative;
+    overflow: hidden;
+}
+.book-online-page #book .container {
+    position: relative;
+    z-index: 1;
+}
+.book-online-page .hero .container {
+    position: relative;
+    z-index: 1;
+}
+.form-decor,
+.hero-decor {
+    display: none;
+}
+.form-decor .decor-bird,
+.hero-decor .hero-bird {
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+.form-decor .decor-bird {
+    width: 63px;
+    opacity: 0.6;
+    filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.14));
+}
+.hero-decor .hero-bird {
+    width: 60px;
+    opacity: 0.68;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+/* Left column (blue): flipped to face LEFT / outward, away from the form */
+.db-l1 { top: 4%;  left: calc(50% - 322px); width: 63px; transform: scaleX(-1) rotate(8deg);   opacity: 0.6; }
+.db-l2 { top: 20%; left: calc(50% - 380px); width: 81px; transform: scaleX(-1) rotate(-6deg);  opacity: 0.75; }
+.db-l3 { top: 37%; left: calc(50% - 320px); width: 58px; transform: scaleX(-1) rotate(12deg);  opacity: 0.55; }
+.db-l4 { top: 54%; left: calc(50% - 384px); width: 74px; transform: scaleX(-1) rotate(-4deg);  opacity: 0.7; }
+.db-l5 { top: 70%; left: calc(50% - 324px); width: 67px; transform: scaleX(-1) rotate(7deg);   opacity: 0.6; }
+.db-l6 { top: 86%; left: calc(50% - 378px); width: 60px; transform: scaleX(-1) rotate(-10deg); opacity: 0.55; }
+/* Right column (blue): natural orientation faces RIGHT / outward, away from the form */
+.db-r1 { top: 6%;  left: calc(50% + 322px); width: 63px; transform: rotate(-8deg);  opacity: 0.6; }
+.db-r2 { top: 22%; left: calc(50% + 380px); width: 78px; transform: rotate(6deg);   opacity: 0.75; }
+.db-r3 { top: 39%; left: calc(50% + 320px); width: 58px; transform: rotate(-12deg); opacity: 0.55; }
+.db-r4 { top: 56%; left: calc(50% + 384px); width: 74px; transform: rotate(4deg);   opacity: 0.7; }
+.db-r5 { top: 72%; left: calc(50% + 324px); width: 67px; transform: rotate(-7deg);  opacity: 0.6; }
+.db-r6 { top: 88%; left: calc(50% + 378px); width: 60px; transform: rotate(10deg);  opacity: 0.55; }
+/* Hero red birds — left flipped to face LEFT / outward */
+.hb-l1 { top: 12%; left: calc(50% - 430px); width: 60px; transform: scaleX(-1) rotate(8deg);   opacity: 0.65; }
+.hb-l2 { top: 46%; left: calc(50% - 474px); width: 74px; transform: scaleX(-1) rotate(-6deg);  opacity: 0.78; }
+.hb-l3 { top: 78%; left: calc(50% - 426px); width: 55px; transform: scaleX(-1) rotate(11deg);  opacity: 0.63; }
+/* Hero red birds — right natural orientation faces RIGHT / outward */
+.hb-r1 { top: 14%; left: calc(50% + 430px); width: 60px; transform: rotate(-8deg);  opacity: 0.65; }
+.hb-r2 { top: 48%; left: calc(50% + 474px); width: 72px; transform: rotate(6deg);   opacity: 0.78; }
+.hb-r3 { top: 80%; left: calc(50% + 426px); width: 55px; transform: rotate(-11deg); opacity: 0.63; }
+/* Desktop: show birds where gutters are wide enough */
+@media (min-width: 1024px) {
+    .book-online-page .form-decor,
+    .book-online-page .hero-decor {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+/* Mobile: 3 form birds per side + 2 hero birds per side at safe screen edges */
+@media (max-width: 1023px) {
+    .book-online-page .form-decor,
+    .book-online-page .hero-decor {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+    /* Hide every-other form bird — keep l1/l3/l5 and r1/r3/r5 */
+    .db-l2, .db-l4, .db-l6,
+    .db-r2, .db-r4, .db-r6 { display: none; }
+    /* Reposition visible form birds to safe screen edges */
+    .db-l1 { top: 8%;  left: 3px; width: 34px; }
+    .db-l3 { top: 42%; left: 3px; width: 32px; }
+    .db-l5 { top: 75%; left: 3px; width: 35px; }
+    .db-r1 { top: 8%;  left: auto; right: 3px; width: 34px; }
+    .db-r3 { top: 42%; left: auto; right: 3px; width: 32px; }
+    .db-r5 { top: 75%; left: auto; right: 3px; width: 35px; }
+    /* Hero: 2 per side, hide middle bird */
+    .hb-l2, .hb-r2 { display: none; }
+    .hb-l1 { top: 18%; left: 3px; width: 38px; }
+    .hb-l3 { top: 72%; left: 3px; width: 34px; }
+    .hb-r1 { top: 18%; left: auto; right: 3px; width: 38px; }
+    .hb-r3 { top: 72%; left: auto; right: 3px; width: 34px; }
 }
