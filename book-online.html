@@ -576,7 +576,7 @@
                     hideSuggestions();
                     var value = input.value.trim();
                     if (debounceTimer) clearTimeout(debounceTimer);
-                    if (value.length < 3) {
+                    if (value.length < 2) {
                         if (!value) sessionToken = null;
                         return;
                     }
