@@ -2013,3 +2013,49 @@ details.problem-category[open] summary .problem-toggle::after {
 .book-online-page .booking-section-title {
     color: #ef4444;
 }
+
+/* === /book-online decorative hummingbirds (desktop only) === */
+.book-online-page #book {
+    position: relative;
+    overflow: hidden;
+}
+.book-online-page #book .container {
+    position: relative;
+    z-index: 1;
+}
+.form-decor {
+    display: none;
+}
+.form-decor .decor-bird {
+    position: absolute;
+    width: 48px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.6;
+    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.12));
+}
+/* Left column: birds face right (inward toward the form) */
+.db-l1 { top: 5%;  left: calc(50% - 300px); width: 40px; transform: rotate(-8deg);  opacity: 0.5; }
+.db-l2 { top: 21%; left: calc(50% - 344px); width: 52px; transform: rotate(6deg);   opacity: 0.7; }
+.db-l3 { top: 39%; left: calc(50% - 292px); width: 36px; transform: rotate(-12deg); opacity: 0.5; }
+.db-l4 { top: 56%; left: calc(50% - 348px); width: 48px; transform: rotate(4deg);   opacity: 0.65; }
+.db-l5 { top: 72%; left: calc(50% - 300px); width: 44px; transform: rotate(-6deg);  opacity: 0.6; }
+.db-l6 { top: 88%; left: calc(50% - 342px); width: 38px; transform: rotate(10deg);  opacity: 0.5; }
+/* Right column: mirrored to face left (inward toward the form) */
+.db-r1 { top: 9%;  left: calc(50% + 300px); width: 42px; transform: scaleX(-1) rotate(-7deg);  opacity: 0.6; }
+.db-r2 { top: 25%; left: calc(50% + 344px); width: 50px; transform: scaleX(-1) rotate(5deg);   opacity: 0.7; }
+.db-r3 { top: 42%; left: calc(50% + 292px); width: 36px; transform: scaleX(-1) rotate(-11deg); opacity: 0.5; }
+.db-r4 { top: 59%; left: calc(50% + 348px); width: 46px; transform: scaleX(-1) rotate(8deg);   opacity: 0.65; }
+.db-r5 { top: 75%; left: calc(50% + 300px); width: 54px; transform: scaleX(-1) rotate(-5deg);  opacity: 0.6; }
+.db-r6 { top: 90%; left: calc(50% + 342px); width: 38px; transform: scaleX(-1) rotate(10deg);  opacity: 0.5; }
+/* Show only where the gutters are wide enough (desktop). Hidden on tablet/mobile. */
+@media (min-width: 1024px) {
+    .book-online-page .form-decor {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+}
