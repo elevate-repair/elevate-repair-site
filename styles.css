@@ -2003,3 +2003,8 @@ details.problem-category[open] summary .problem-toggle::after {
     background: #eff6ff;
     outline: none;
 }
+
+/* === /book-online field helper text only === */
+.book-online-page .form-hint {
+    color: #2563eb;
+}
