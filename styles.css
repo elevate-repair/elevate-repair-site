@@ -2023,35 +2023,58 @@ details.problem-category[open] summary .problem-toggle::after {
     position: relative;
     z-index: 1;
 }
-.form-decor {
+/* Hero content must sit above the hero decorations */
+.book-online-page .hero .container {
+    position: relative;
+    z-index: 1;
+}
+.form-decor,
+.hero-decor {
     display: none;
 }
-.form-decor .decor-bird {
+.form-decor .decor-bird,
+.hero-decor .hero-bird {
     position: absolute;
-    width: 48px;
     height: auto;
     pointer-events: none;
     user-select: none;
-    opacity: 0.6;
-    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.12));
 }
-/* Left column: birds face right (inward toward the form) */
-.db-l1 { top: 5%;  left: calc(50% - 300px); width: 40px; transform: rotate(-8deg);  opacity: 0.5; }
-.db-l2 { top: 21%; left: calc(50% - 344px); width: 52px; transform: rotate(6deg);   opacity: 0.7; }
-.db-l3 { top: 39%; left: calc(50% - 292px); width: 36px; transform: rotate(-12deg); opacity: 0.5; }
-.db-l4 { top: 56%; left: calc(50% - 348px); width: 48px; transform: rotate(4deg);   opacity: 0.65; }
-.db-l5 { top: 72%; left: calc(50% - 300px); width: 44px; transform: rotate(-6deg);  opacity: 0.6; }
-.db-l6 { top: 88%; left: calc(50% - 342px); width: 38px; transform: rotate(10deg);  opacity: 0.5; }
-/* Right column: mirrored to face left (inward toward the form) */
-.db-r1 { top: 9%;  left: calc(50% + 300px); width: 42px; transform: scaleX(-1) rotate(-7deg);  opacity: 0.6; }
-.db-r2 { top: 25%; left: calc(50% + 344px); width: 50px; transform: scaleX(-1) rotate(5deg);   opacity: 0.7; }
-.db-r3 { top: 42%; left: calc(50% + 292px); width: 36px; transform: scaleX(-1) rotate(-11deg); opacity: 0.5; }
-.db-r4 { top: 59%; left: calc(50% + 348px); width: 46px; transform: scaleX(-1) rotate(8deg);   opacity: 0.65; }
-.db-r5 { top: 75%; left: calc(50% + 300px); width: 54px; transform: scaleX(-1) rotate(-5deg);  opacity: 0.6; }
-.db-r6 { top: 90%; left: calc(50% + 342px); width: 38px; transform: scaleX(-1) rotate(10deg);  opacity: 0.5; }
+.form-decor .decor-bird {
+    width: 56px;
+    opacity: 0.6;
+    filter: drop-shadow(0 2px 5px rgba(37, 99, 235, 0.14));
+}
+.hero-decor .hero-bird {
+    width: 50px;
+    opacity: 0.65;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+/* Left column (blue): flipped to face LEFT / outward, away from the form */
+.db-l1 { top: 4%;  left: calc(50% - 322px); width: 56px; transform: scaleX(-1) rotate(8deg);   opacity: 0.6; }
+.db-l2 { top: 20%; left: calc(50% - 380px); width: 72px; transform: scaleX(-1) rotate(-6deg);  opacity: 0.75; }
+.db-l3 { top: 37%; left: calc(50% - 320px); width: 52px; transform: scaleX(-1) rotate(12deg);  opacity: 0.55; }
+.db-l4 { top: 54%; left: calc(50% - 384px); width: 66px; transform: scaleX(-1) rotate(-4deg);  opacity: 0.7; }
+.db-l5 { top: 70%; left: calc(50% - 324px); width: 60px; transform: scaleX(-1) rotate(7deg);   opacity: 0.6; }
+.db-l6 { top: 86%; left: calc(50% - 378px); width: 54px; transform: scaleX(-1) rotate(-10deg); opacity: 0.55; }
+/* Right column (blue): natural orientation faces RIGHT / outward, away from the form */
+.db-r1 { top: 6%;  left: calc(50% + 322px); width: 56px; transform: rotate(-8deg);  opacity: 0.6; }
+.db-r2 { top: 22%; left: calc(50% + 380px); width: 70px; transform: rotate(6deg);   opacity: 0.75; }
+.db-r3 { top: 39%; left: calc(50% + 320px); width: 52px; transform: rotate(-12deg); opacity: 0.55; }
+.db-r4 { top: 56%; left: calc(50% + 384px); width: 66px; transform: rotate(4deg);   opacity: 0.7; }
+.db-r5 { top: 72%; left: calc(50% + 324px); width: 60px; transform: rotate(-7deg);  opacity: 0.6; }
+.db-r6 { top: 88%; left: calc(50% + 378px); width: 54px; transform: rotate(10deg);  opacity: 0.55; }
+/* Hero red birds — left flipped to face LEFT / outward */
+.hb-l1 { top: 12%; left: calc(50% - 430px); width: 50px; transform: scaleX(-1) rotate(8deg);   opacity: 0.6; }
+.hb-l2 { top: 46%; left: calc(50% - 474px); width: 62px; transform: scaleX(-1) rotate(-6deg);  opacity: 0.72; }
+.hb-l3 { top: 78%; left: calc(50% - 426px); width: 46px; transform: scaleX(-1) rotate(11deg);  opacity: 0.58; }
+/* Hero red birds — right natural orientation faces RIGHT / outward */
+.hb-r1 { top: 14%; left: calc(50% + 430px); width: 50px; transform: rotate(-8deg);  opacity: 0.6; }
+.hb-r2 { top: 48%; left: calc(50% + 474px); width: 60px; transform: rotate(6deg);   opacity: 0.72; }
+.hb-r3 { top: 80%; left: calc(50% + 426px); width: 46px; transform: rotate(-11deg); opacity: 0.58; }
 /* Show only where the gutters are wide enough (desktop). Hidden on tablet/mobile. */
 @media (min-width: 1024px) {
-    .book-online-page .form-decor {
+    .book-online-page .form-decor,
+    .book-online-page .hero-decor {
         display: block;
         position: absolute;
         inset: 0;
