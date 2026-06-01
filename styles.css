@@ -2062,14 +2062,14 @@ details.problem-category[open] summary .problem-toggle::after {
 .db-r4 { top: 56%; left: calc(50% + 384px); width: 74px; transform: rotate(4deg);   opacity: 0.7; }
 .db-r5 { top: 72%; left: calc(50% + 324px); width: 67px; transform: rotate(-7deg);  opacity: 0.6; }
 .db-r6 { top: 88%; left: calc(50% + 378px); width: 60px; transform: rotate(10deg);  opacity: 0.55; }
-/* Hero red birds — left flipped to face LEFT / outward */
-.hb-l1 { top: 12%; left: calc(50% - 430px); width: 60px; transform: scaleX(-1) rotate(8deg);   opacity: 0.65; }
-.hb-l2 { top: 46%; left: calc(50% - 474px); width: 74px; transform: scaleX(-1) rotate(-6deg);  opacity: 0.78; }
-.hb-l3 { top: 78%; left: calc(50% - 426px); width: 55px; transform: scaleX(-1) rotate(11deg);  opacity: 0.63; }
-/* Hero red birds — right natural orientation faces RIGHT / outward */
-.hb-r1 { top: 14%; left: calc(50% + 430px); width: 60px; transform: rotate(-8deg);  opacity: 0.65; }
-.hb-r2 { top: 48%; left: calc(50% + 474px); width: 72px; transform: rotate(6deg);   opacity: 0.78; }
-.hb-r3 { top: 80%; left: calc(50% + 426px); width: 55px; transform: rotate(-11deg); opacity: 0.63; }
+/* Hero red birds — left: flipped to face outward; staggered, not evenly spaced */
+.hb-l1 { top: 7%;  left: calc(50% - 438px); width: 56px; transform: scaleX(-1) rotate(13deg);  opacity: 0.60; }
+.hb-l2 { top: 41%; left: calc(50% - 492px); width: 76px; transform: scaleX(-1) rotate(-5deg);  opacity: 0.74; }
+.hb-l3 { top: 76%; left: calc(50% - 420px); width: 50px; transform: scaleX(-1) rotate(10deg);  opacity: 0.61; }
+/* Hero red birds — right: faces outward; offset from left rhythm */
+.hb-r1 { top: 18%; left: calc(50% + 454px); width: 64px; transform: rotate(-15deg); opacity: 0.67; }
+.hb-r2 { top: 52%; left: calc(50% + 412px); width: 70px; transform: rotate(4deg);   opacity: 0.76; }
+.hb-r3 { top: 83%; left: calc(50% + 468px); width: 48px; transform: rotate(-10deg); opacity: 0.59; }
 /* Desktop: show birds where gutters are wide enough */
 @media (min-width: 1024px) {
     .book-online-page .form-decor,
@@ -2101,18 +2101,23 @@ details.problem-category[open] summary .problem-toggle::after {
     .db-r1 { top: 7%;  left: auto; right: 0; width: 52px; opacity: 0.18; transform: rotate(-10deg); }
     .db-r3 { top: 44%; left: auto; right: 0; width: 46px; opacity: 0.15; transform: rotate(6deg);  }
     .db-r5 { top: 82%; left: auto; right: 0; width: 50px; opacity: 0.17; transform: rotate(-8deg); }
-    /* Hero: 4 birds (l1/l3 + r1/r3); hide middle pair */
+    /* Hero: 4 birds (l1/l3 + r1/r3); hide middle pair; staggered for natural look */
     .hb-l2, .hb-r2 { display: none; }
-    .hb-l1 { top: 14%; left: 0; width: 48px; opacity: 0.20; transform: scaleX(-1) rotate(10deg); }
-    .hb-l3 { top: 68%; left: 0; width: 42px; opacity: 0.18; transform: scaleX(-1) rotate(-6deg); }
-    .hb-r1 { top: 17%; left: auto; right: 0; width: 48px; opacity: 0.20; transform: rotate(-10deg); }
-    .hb-r3 { top: 72%; left: auto; right: 0; width: 42px; opacity: 0.18; transform: rotate(6deg);  }
+    .hb-l1 { top: 10%; left: 0; width: 50px; opacity: 0.20; transform: scaleX(-1) rotate(13deg); }
+    .hb-l3 { top: 62%; left: 0; width: 40px; opacity: 0.17; transform: scaleX(-1) rotate(-9deg); }
+    .hb-r1 { top: 24%; left: auto; right: 0; width: 46px; opacity: 0.20; transform: rotate(-15deg); }
+    .hb-r3 { top: 74%; left: auto; right: 0; width: 44px; opacity: 0.18; transform: rotate(7deg);  }
     /* Prevent form fields from overflowing the card on narrow screens */
     #bookingForm input,
     #bookingForm select,
     #bookingForm textarea {
         min-width: 0;
         max-width: 100%;
+    }
+    /* iOS Safari date input: remove native picker chrome so width is CSS-controlled */
+    #bookingForm input[type="date"] {
+        -webkit-appearance: none;
+        appearance: none;
     }
     .address-field {
         min-width: 0;
