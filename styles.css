@@ -955,6 +955,30 @@ details.problem-category[open] summary .problem-toggle::after {
     border-radius: 12px;
     padding: 18px 20px;
     text-align: center;
+    position: relative;
+}
+
+/* Decorative hummingbirds flanking the upgrade card — desktop only */
+.book-upgrade-card::before,
+.book-upgrade-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+.book-upgrade-card::before {
+    right: calc(100% + 12px);
+    background-image: url(/assets/images/Forms/blue-colibri.webp);
+}
+.book-upgrade-card::after {
+    left: calc(100% + 12px);
+    background-image: url(/assets/images/Forms/red-colibri.webp);
 }
 
 .book-upgrade-badge {
@@ -2126,5 +2150,9 @@ details.problem-category[open] summary .problem-toggle::after {
     .address-suggestions {
         max-width: 100%;
         overflow-x: hidden;
+    }
+    .book-upgrade-card::before,
+    .book-upgrade-card::after {
+        display: none;
     }
 }
