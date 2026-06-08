@@ -148,6 +148,14 @@
   ]
 }
 </script>
+
+    <!-- Google Maps JS bootstrap loader (Places API New). Async; form works without it. -->
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+            key: "AIzaSyBDuRdbtcqv-18LuGiIG-LaJyYeyn1jfZU",
+            v: "weekly"
+        });
+    </script>
 </head>
 <body class="no-hero-image">
     <header>
@@ -284,6 +292,10 @@
             <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
                 <input type="hidden" name="source" value="website-aurora">
                 <input type="hidden" name="service" id="serviceField" value="">
+                <input type="hidden" id="place_id" name="place_id" value="">
+                <input type="hidden" id="zip" name="zip" value="">
+                <input type="hidden" id="city" name="city" value="">
+                <input type="hidden" id="state" name="state" value="">
                                                                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" placeholder="John" required>
@@ -291,6 +303,31 @@
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
                     <input type="tel" id="phone" name="phone" placeholder="(720) 000-0000" autocomplete="tel" inputmode="tel" pattern="\+?1?[-.\s]?\(?[2-9][0-9]{2}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}" required title="Please enter a valid phone number.">
+                </div>
+                <div class="form-group">
+                    <label for="address">Full Service Address *</label>
+                    <div class="address-field">
+                        <input
+                            type="text"
+                            id="address"
+                            name="address"
+                            placeholder="1500 N Grant St, Denver, CO 80203"
+                            autocomplete="street-address"
+                            required
+                        >
+                        <div id="addressSuggestions" class="address-suggestions" hidden></div>
+                    </div>
+                    <p class="form-hint">Start typing your address — we'll help you enter the correct service location.</p>
+                </div>
+                <div class="form-group">
+                    <label for="unit">Apt / Unit / Suite (optional)</label>
+                    <input
+                        type="text"
+                        id="unit"
+                        name="unit"
+                        placeholder="Apartment, unit, suite, floor, etc."
+                        autocomplete="address-line2"
+                    >
                 </div>
                 <div class="form-group">
                     <label for="message">Problem Description</label>
@@ -556,6 +593,187 @@
 
 
         // Burger menu
+        // Inline address autocomplete (Place Autocomplete Data API). The visible
+        // #address input is the only source of truth and posts directly. Google
+        // suggestions are optional assistance; if Google is unavailable, manual
+        // typing works normally and is never blocked.
+        (function() {
+            var input = document.getElementById('address');
+            var box = document.getElementById('addressSuggestions');
+            var placeIdField = document.getElementById('place_id');
+            var zipField = document.getElementById('zip');
+            var cityField = document.getElementById('city');
+            var stateField = document.getElementById('state');
+            if (!input || !box) return;
+
+            function clearMetadata() {
+                if (placeIdField) placeIdField.value = '';
+                if (zipField) zipField.value = '';
+                if (cityField) cityField.value = '';
+                if (stateField) stateField.value = '';
+            }
+            function hideSuggestions() {
+                box.hidden = true;
+                box.innerHTML = '';
+                activeIndex = -1;
+            }
+
+            // No Google available -> input still fully functional; just no suggestions.
+            if (!(window.google && google.maps && google.maps.importLibrary)) return;
+
+            var debounceTimer = null;
+            var sessionToken = null;
+            var suggestionSeq = 0;
+            var activeIndex = -1;
+            var suppressNextInput = false;
+
+            google.maps.importLibrary('places').then(function(places) {
+                var AutocompleteSuggestion = places.AutocompleteSuggestion;
+                var AutocompleteSessionToken = places.AutocompleteSessionToken;
+                if (!AutocompleteSuggestion || !AutocompleteSessionToken) return;
+
+                function rows() {
+                    return box.querySelectorAll('.address-suggestion');
+                }
+                function setActive(i) {
+                    var r = rows();
+                    if (!r.length) { activeIndex = -1; return; }
+                    if (i < 0) i = r.length - 1;
+                    if (i >= r.length) i = 0;
+                    activeIndex = i;
+                    for (var j = 0; j < r.length; j++) {
+                        if (j === activeIndex) r[j].classList.add('active');
+                        else r[j].classList.remove('active');
+                    }
+                }
+
+                function predictionText(prediction) {
+                    try {
+                        if (prediction && prediction.text && typeof prediction.text.text === 'string') {
+                            return prediction.text.text;
+                        }
+                    } catch (e) {}
+                    return '';
+                }
+
+                async function selectSuggestion(suggestion) {
+                    var prediction = suggestion && suggestion.placePrediction;
+                    if (!prediction) return;
+                    // Invalidate any in-flight prediction requests.
+                    suggestionSeq += 1;
+                    try {
+                        var place = prediction.toPlace();
+                        await place.fetchFields({ fields: ['formattedAddress', 'addressComponents', 'id'] });
+                        suppressNextInput = true;
+                        input.value = place.formattedAddress || input.value;
+                        var comps = place.addressComponents || [];
+                        var zip = '', city = '', state = '';
+                        comps.forEach(function(c) {
+                            var t = c.types || [];
+                            if (t.indexOf('postal_code') !== -1) zip = c.longText || zip;
+                            if (t.indexOf('locality') !== -1) city = c.longText || city;
+                            if (!city && t.indexOf('sublocality_level_1') !== -1) city = c.longText || city;
+                            if (!city && t.indexOf('sublocality') !== -1) city = c.longText || city;
+                            if (t.indexOf('administrative_area_level_1') !== -1) state = c.shortText || state;
+                        });
+                        if (placeIdField) placeIdField.value = place.id || '';
+                        if (zipField) zipField.value = zip;
+                        if (cityField) cityField.value = city;
+                        if (stateField) stateField.value = state;
+                    } catch (e) {
+                        // Lookup failed; keep the user's typed text untouched.
+                    } finally {
+                        hideSuggestions();
+                        sessionToken = null; // end the billing session; fresh token on next typing
+                    }
+                }
+
+                function renderSuggestions(suggestions) {
+                    box.innerHTML = '';
+                    activeIndex = -1;
+                    if (!suggestions || !suggestions.length) { hideSuggestions(); return; }
+                    var shown = suggestions.slice(0, 5);
+                    var added = 0;
+                    shown.forEach(function(suggestion) {
+                        var prediction = suggestion && suggestion.placePrediction;
+                        if (!prediction) return;
+                        var label = predictionText(prediction);
+                        if (!label) return;
+                        var row = document.createElement('button');
+                        row.type = 'button';
+                        row.className = 'address-suggestion';
+                        row.textContent = label;
+                        // pointerdown fires before blur, covering mouse + touch.
+                        row.addEventListener('pointerdown', function(event) {
+                            event.preventDefault();
+                            selectSuggestion(suggestion);
+                        });
+                        box.appendChild(row);
+                        added += 1;
+                    });
+                    if (!added) { hideSuggestions(); return; }
+                    box.hidden = false;
+                }
+
+                async function fetchSuggestions(value) {
+                    if (!sessionToken) sessionToken = new AutocompleteSessionToken();
+                    var mySeq = ++suggestionSeq;
+                    try {
+                        var result = await AutocompleteSuggestion.fetchAutocompleteSuggestions({
+                            input: value,
+                            sessionToken: sessionToken,
+                            includedRegionCodes: ['us'],
+                            locationBias: {
+                                center: { lat: 39.7392, lng: -104.9903 },
+                                radius: 40000
+                            }
+                        });
+                        if (mySeq !== suggestionSeq) return; // stale response
+                        renderSuggestions(result && result.suggestions);
+                    } catch (e) {
+                        if (mySeq !== suggestionSeq) return;
+                        hideSuggestions(); // silent
+                    }
+                }
+
+                input.addEventListener('input', function() {
+                    if (suppressNextInput) { suppressNextInput = false; return; }
+                    // Editing invalidates any previously selected place.
+                    clearMetadata();
+                    suggestionSeq += 1;
+                    hideSuggestions();
+                    var value = input.value.trim();
+                    if (debounceTimer) clearTimeout(debounceTimer);
+                    if (value.length < 2) {
+                        if (!value) sessionToken = null;
+                        return;
+                    }
+                    debounceTimer = setTimeout(function() { fetchSuggestions(value); }, 300);
+                });
+
+                input.addEventListener('keydown', function(e) {
+                    if (box.hidden) return;
+                    if (e.key === 'ArrowDown') { e.preventDefault(); setActive(activeIndex + 1); }
+                    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(activeIndex - 1); }
+                    else if (e.key === 'Enter') {
+                        var r = rows();
+                        if (activeIndex >= 0 && r[activeIndex]) {
+                            e.preventDefault();
+                            r[activeIndex].dispatchEvent(new Event('pointerdown'));
+                        }
+                    } else if (e.key === 'Escape') {
+                        hideSuggestions();
+                    }
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (e.target !== input && !box.contains(e.target)) hideSuggestions();
+                });
+            }).catch(function() {
+                // importLibrary failed; manual typing still works.
+            });
+        })();
+
         (function() {
             var btn = document.querySelector('.burger-btn');
             var nav = document.getElementById('navMenu');
