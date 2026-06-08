@@ -2151,8 +2151,18 @@ details.problem-category[open] summary .problem-toggle::after {
         max-width: 100%;
         overflow-x: hidden;
     }
+    /* Shrink birds and move them inside the card edges to avoid overflow */
     .book-upgrade-card::before,
     .book-upgrade-card::after {
-        display: none;
+        width: 28px;
+        height: 28px;
+    }
+    .book-upgrade-card::before {
+        right: auto;
+        left: 6px;
+    }
+    .book-upgrade-card::after {
+        left: auto;
+        right: 6px;
     }
 }
