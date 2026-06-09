@@ -326,7 +326,7 @@
                     <textarea id="message" name="message" placeholder="What's wrong? (optional)" rows="3"></textarea>
                 </div>
                 <p class="form-reassurance">Takes less than 30 seconds.</p>
-                <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; Save $25</button>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Book Online &mdash; $25 Off</button>
                 <p class="sms-disclaimer">By submitting this form, you agree to receive SMS messages from Elevate Repair regarding your service request and appointment updates. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out.</p>
                 <p class="form-note">We'll call you within minutes to confirm. No spam.</p>
             </form>
@@ -387,7 +387,7 @@
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>
-                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; Save $25</a>
+                <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; $25 Off</a>
             </div>
         </div>
     </section>
@@ -471,7 +471,7 @@
 
     <div class="sticky-bottom-bar">
         <a href="tel:7205758432" class="sticky-btn sticky-btn-call" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now</a>
-        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; Save $25</a>
+        <a href="#book" class="sticky-btn sticky-btn-text" onclick="gtag('event','book_click',{'location':'sticky_bar'})">Book Online &mdash; $25 Off</a>
     </div>
 
     <script>
@@ -732,6 +732,14 @@
                     nav.classList.remove('nav-open');
                     btn.setAttribute('aria-expanded', 'false');
                     btn.textContent = '\u2630';
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+                    nav.classList.remove('nav-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = '\u2630';
+                    btn.focus();
                 }
             });
         })();

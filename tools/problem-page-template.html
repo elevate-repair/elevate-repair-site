@@ -79,7 +79,7 @@
             <p class="hero-text">{{HERO_TEXT}}</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary">Call Now: (720) 575-8432</a>
-                <a href="/book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="/book" class="btn btn-secondary">Book Online &mdash; $25 Off</a>
             </div>
         </div>
     </section>
@@ -97,7 +97,7 @@
             <p>Dealing with this issue? We can help today.</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="/book" class="btn btn-outline">Book Online &mdash; Save $25</a>
+                <a href="/book" class="btn btn-outline">Book Online &mdash; $25 Off</a>
             </div>
         </div>
     </section>
@@ -118,7 +118,7 @@
             <p>Same-day service available. Call or text now.</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary">Call (720) 575-8432</a>
-                <a href="/book" class="btn btn-secondary">Book Online &mdash; Save $25</a>
+                <a href="/book" class="btn btn-secondary">Book Online &mdash; $25 Off</a>
             </div>
         </div>
     </section>
@@ -182,7 +182,7 @@
 
     <div class="sticky-bottom-bar">
         <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-        <a href="/book" class="sticky-btn sticky-btn-text">Book Online &mdash; Save $25</a>
+        <a href="/book" class="sticky-btn sticky-btn-text">Book Online &mdash; $25 Off</a>
     </div>
     <script>
         (function() {
@@ -199,6 +199,14 @@
                     nav.classList.remove('nav-open');
                     btn.setAttribute('aria-expanded', 'false');
                     btn.textContent = '\u2630';
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+                    nav.classList.remove('nav-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = '\u2630';
+                    btn.focus();
                 }
             });
         })();
