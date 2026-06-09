@@ -749,6 +749,14 @@
                     btn.textContent = '\u2630';
                 }
             });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+                    nav.classList.remove('nav-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = '\u2630';
+                    btn.focus();
+                }
+            });
         })();
     </script>
 </body>

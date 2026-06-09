@@ -90,7 +90,7 @@
                 </div>
                 <div class="contact-card">
                     <h3>Text Us</h3>
-                    <p><a href="sms:7205758432">Text (720) 575-8432</a></p>
+                    <p><a href="sms:7205758432" onclick="gtag('event','sms_click',{'phone_number':'(720) 575-8432','location':'contact_page'})">Text (720) 575-8432</a></p>
                     <p>For a quick response</p>
                 </div>
                 <div class="contact-card">
@@ -315,6 +315,14 @@
                     nav.classList.remove('nav-open');
                     btn.setAttribute('aria-expanded', 'false');
                     btn.textContent = '\u2630';
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+                    nav.classList.remove('nav-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = '\u2630';
+                    btn.focus();
                 }
             });
         })();

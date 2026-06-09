@@ -5,7 +5,6 @@
 - This repository is the single source of truth.
 - Do not create artifacts or side files.
 - Follow existing file structure.
-- One simple form (Name + Phone) per page — only on pages that need one.
 - No duplicate forms on any single page.
 - Shared header and footer across all pages (copy exactly from an existing page).
 - All CSS lives in `/styles.css` (root). Do not create additional stylesheets.
@@ -28,6 +27,8 @@
 ├── README.md                         # Minimal readme
 ├── thank-you.html                    # Post-form-submit redirect
 ├── book.html                         # Standalone booking page (has form)
+├── book-online.html                  # Book-It-Now flow — separate endpoint (see Form Pattern below)
+├── terms-and-conditions.html         # Customer terms page
 ├── .htaccess                         # Apache redirect rules (subdir rename 301s)
 ├── _redirects                        # Netlify redirect rules (subdir rename 301s)
 ├── favicon.ico / favicon-*.png       # Favicons
@@ -84,7 +85,7 @@
 └── privacy-policy.html               # Privacy policy
 ```
 
-### Page Types (293 HTML files total)
+### Page Types (327 HTML files total)
 
 | Type | Count | Example | Has Form? |
 |------|-------|---------|-----------|
@@ -97,11 +98,11 @@
 | Brand+city+problem page | 10 | `denver-bosch-dryer-not-starting.html` | Yes (embedded form) |
 | Service landing page | 5 | `dishwasher-repair-denver.html` | No |
 | Problem subpage | 30 | `dishwasher-repair/dishwasher-wont-start.html` | No (informational/diagnostic) |
-| Info page | 10 | `faq.html`, `warranty.html`, `contact.html` | Varies (`contact.html` has form) |
+| Info page | 12 | `faq.html`, `warranty.html`, `contact.html`, `book-online.html`, `terms-and-conditions.html` | Varies |
 | Book page | 1 | `book.html` | Yes |
 | Thank-you page | 1 | `thank-you.html` | No |
 
-**Total: 263 root HTML + 30 subpage HTML = 293 files**
+**Total: 265 root HTML + 30 canonical subpage HTML + 30 legacy redirect subpage HTML = 325 root-equivalent files**
 
 ### Brand Pages
 
@@ -196,11 +197,21 @@ Every page includes an identical `<footer class="site-footer">` with:
 ```html
 <div class="sticky-bottom-bar">
     <a href="tel:7205758432" class="sticky-btn sticky-btn-call">Call Now</a>
-    <a href="#book" class="sticky-btn sticky-btn-text">Book Online — Save $25</a>
+    <a href="#book" class="sticky-btn sticky-btn-text">Book Online — $25 Off</a>
 </div>
 ```
 
-Hidden at 769px+ via CSS.
+- Visible at `≤768px` (mobile); hidden at `≥769px` (desktop).
+- The sticky CTA is the **primary mobile call and booking action** — it replaces the hero and final-CTA button groups on mobile.
+- Do NOT modify the sticky bar copy, styling, or destinations.
+
+### Mobile CTA Architecture
+
+- `.hero .cta-buttons` — hidden on mobile (`display: none` at `max-width: 768px`). Desktop CTAs remain visible.
+- `.final-cta .cta-buttons` — hidden on mobile (`display: none` at `max-width: 768px`). Desktop CTAs remain visible.
+- `.mid-cta` — already hidden on mobile via existing CSS (`display: none !important`).
+- The fixed sticky bottom bar provides "Call Now" (`tel:`) and "Book Online — $25 Off" (`#book`) on all mobile pages and is the only persistent mobile CTA.
+- Do NOT restore hidden mobile CTA groups.
 
 ### Body Class
 
@@ -210,14 +221,35 @@ Pages without a full-width hero background image use `<body class="no-hero-image
 
 ## Form Pattern
 
-Forms appear on: homepage, city/neighborhood pages, city+appliance+problem pages, denver+appliance+problem pages, brand+city+problem pages, `contact.html`, and `book.html`. Structure:
+### Standard booking form (220 pages)
 
-- **Standard fields (most pages):** Name (required), Phone (required), Problem Description/Message (optional)
-- **Extended fields (`book.html` only):** Name (required), Phone (required), ZIP (optional), Problem Description (optional)
-- **Action:** `https://script.google.com/macros/s/AKfycbxEVeK-JRHfVoX4oSmsJcuYF5wqn62Zi5qkm_1YmfNpVMkiSdrUBFxNb7cieJ7aCiUEvw/exec` (Google Sheets backend)
-- **Target:** `hidden_iframe` (prevents page navigation on submit)
-- **Hidden field:** `<input type="hidden" name="source" value="website-[city]">` for lead tracking — value is city name only (e.g., `website-aurora`, `website-denver`), not the full page slug
-- **Post-submit:** JavaScript redirects to `/thank-you.html`
+Used on: homepage, all 63 city/neighborhood pages, all 103 city+appliance+problem pages, all 40 Denver+appliance+problem pages, all 10 brand+city+problem pages, and `book.html`.
+
+**Two-step UI on most pages:**
+1. **Step 1 — Appliance selector:** customer taps an appliance type (Washer, Dryer, Refrigerator, Dishwasher, Oven/Stove, Microwave, Appliance Installation, Coffee Machine, Commercial, Other)
+2. **Step 2 — Details form:**
+   - Name (required)
+   - Phone (required, pattern-validated)
+   - Full Service Address (required) — with Google Places autocomplete
+   - Apt / Unit / Suite (optional)
+   - Problem Description (optional)
+
+**`book.html` form fields:** Name (required), Phone (required), ZIP (optional), Problem Description (optional) — no appliance selector, no address autocomplete.
+
+**Shared form attributes:**
+- **Action (standard):** `https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec`
+- **Method:** POST
+- **Target:** `hidden_iframe` — prevents page navigation on submit
+- **Hidden fields:** `source` (e.g., `website-aurora`, `website-denver`), `service`, `place_id`, `zip`, `city`, `state`
+- **Post-submit redirect:** JavaScript listens for iframe load → `window.location.href = '/thank-you.html'`
+
+### Book-It-Now form (`book-online.html`)
+
+`/book-online.html` is a **separate booking flow** with its own Apps Script endpoint. This endpoint is intentionally distinct and must **not** be bulk-replaced when copying the standard form to other pages or markets. Preserve its workflow unless explicitly instructed otherwise.
+
+### contact.html form
+
+Fields: Name (required), Phone (required), Address, Appliance Type (select), Message. Source: `website-contact`.
 
 Do NOT add forms to standard/short brand pages, service landing pages, or problem subpages (in service directories).
 
@@ -283,7 +315,7 @@ Script blocks used across pages:
 
 ## CSS Architecture (`/styles.css`)
 
-Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
+Single file, mobile-first with `@media (min-width: 769px)` and `@media (max-width: 768px)` breakpoints.
 
 ### Key sections (approximate line ranges):
 - Reset & base typography (1–30)
@@ -299,7 +331,7 @@ Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@me
 - Benefits list (425–463)
 - Cost table (464–514)
 - Service areas / city links (515–552)
-- Area cards with images (553–626) — includes `img.area-card-img` full-size style at 599
+- Area cards with images (553–626)
 - Coupon grid — homepage compact (627–639)
 - Process steps (640–677)
 - FAQ accordion (678–729)
@@ -319,7 +351,7 @@ Single file, 1,703 lines, mobile-first with `@media (min-width: 769px)` and `@me
 - Gallery modal (1437–1495)
 - Desktop overrides `@media (min-width: 769px)` (1496–1661)
 - No-hero-image layout (1663–1681)
-- Mobile-only overrides `@media (max-width: 768px)` (1682–1703)
+- Mobile-only overrides `@media (max-width: 768px)` (1682+)
 
 ### Design tokens:
 - **Primary blue:** `#2563eb`
@@ -341,8 +373,18 @@ Images are referenced with root-relative paths. Do not move or rename image file
 | `assets/images/appliances/` | Appliance-type JPGs: dishwasher-repair-denver.jpg, dryer-repair-denver.jpg, oven-repair-denver.jpg, refrigerator-repair-denver.jpg, stove-repair-denver.jpg, washer-repair-denver.jpg |
 | `assets/images/brands/` | Brand logos (empty — gitkeep only) |
 | `assets/images/cities banner/` | City hero banners — `[city]-desktop.webp` and `[city]-mobile.webp` pairs |
-| `assets/images/hero/` | `appliance-repair-denver-hero.webp` (homepage hero), `og-image.jpg` (OG/social) |
+| `assets/images/hero/` | `appliance-repair-denver-hero.webp` (homepage + all city pages hero), `og-image.jpg` (OG/social) |
 | `assets/images/problems/` | Problem-page JPG/WebP images used in gallery and content sections |
+
+**Hero image:** `assets/images/hero/appliance-repair-denver-hero.webp`
+- Intrinsic dimensions: **1022 × 1538** (portrait WebP)
+- Used on: homepage (`index.html`) and all 63 city/neighborhood pages
+- HTML `width`/`height` attributes are set to `1022` / `1538` to match actual dimensions (prevents layout shift)
+- Rendered with `object-fit: cover; object-position: 70% 40%`
+
+**OG image:** `assets/images/hero/og-image.jpg`
+- Dimensions: **1200 × 630** (landscape JPEG — intentional, optimized for social sharing)
+- Do NOT change to match the hero WebP dimensions
 
 City banner images exist for: arvada, aurora, boulder, centennial, denver, englewood, evergreen, golden, highlands-ranch, lakewood, littleton, parker, thornton, westminster, wheat ridge
 
@@ -361,10 +403,10 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 
 ### Schema.org Structured Data (JSON-LD)
 
-- **Homepage:** `LocalBusiness` schema (includes `AggregateRating`)
+- **Homepage:** `FAQPage` + `LocalBusiness` (includes `AggregateRating`) schemas
 - **City/neighborhood pages (63):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
 - **City+problem pages (103):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
-- **Denver+problem pages (40):** `BreadcrumbList` + `FAQPage` schemas
+- **Denver+problem pages (40):** `BreadcrumbList` + `LocalBusiness` + `FAQPage` schemas
 - **Brand+city problem pages (10):** `BreadcrumbList` schema
 - **Standard brand pages (15):** `LocalBusiness` + `BreadcrumbList` schemas
 - **Short brand pages (16):** `LocalBusiness` + `BreadcrumbList` schemas
@@ -423,7 +465,7 @@ Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevate
 3. Keep the booking form and all shared components
 4. Use `<body class="no-hero-image">`
 5. Add to `sitemap.xml`
-6. Include `BreadcrumbList` + `FAQPage` schema JSON-LD
+6. Include `BreadcrumbList` + `LocalBusiness` + `FAQPage` schema JSON-LD
 7. Add the `<!-- related-links-inserted -->` comment and sibling Denver problem links section
 
 ### Adding a new problem subpage (in service directories)
@@ -448,8 +490,8 @@ Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevate
 - No external JavaScript libraries or frameworks
 - Phone number across the site: `(720) 575-8432` / `tel:7205758432`
 - Business address: 1500 N Grant St, Denver, CO 80203
-- CTA copy pattern: "Book Online — Save $25"
-- Form submissions go to Google Sheets via Apps Script
+- CTA copy pattern: "Book Online — $25 Off"
+- Form submissions go to Google Sheets via Apps Script (standard endpoint)
 - All internal links use root-relative paths (e.g., `/faq.html`, `/dishwasher-repair/`)
 - `tools/` directory contains dev scripts only — not deployed, do not reference from HTML pages
 - Problems accordion on city pages and service landing pages uses native `<details>`/`<summary>` HTML (no JavaScript required)
