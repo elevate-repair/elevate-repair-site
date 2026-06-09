@@ -2191,6 +2191,14 @@ details.problem-category[open] summary .problem-toggle::after {
     }
 }
 
+/* === Keep logo on one line at very narrow viewports === */
+@media (max-width: 342px) {
+    .logo {
+        font-size: 17px;
+        white-space: nowrap;
+    }
+}
+
 /* === Hide redundant large CTA button groups on mobile === */
 /* The fixed sticky bottom bar already provides Call + Book on mobile,
    so the large hero and final-CTA button pairs are duplicative.
