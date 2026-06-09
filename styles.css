@@ -2210,3 +2210,25 @@ details.problem-category[open] summary .problem-toggle::after {
         display: none;
     }
 }
+
+/* === Back-to-step-1 link injected by booking form JS === */
+.back-to-step1 {
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0;
+    margin-bottom: 8px;
+    display: block;
+}
+.back-to-step1:hover,
+.back-to-step1:focus { text-decoration: underline; }
+
+/* === Hide sticky bar on dedicated booking pages and when step 2 is active === */
+@media (max-width: 768px) {
+    body.booking-flow-page .sticky-bottom-bar,
+    body.booking-form-active .sticky-bottom-bar { display: none; }
+    body.booking-flow-page,
+    body.booking-form-active { padding-bottom: 0; }
+}

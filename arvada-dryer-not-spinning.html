@@ -534,6 +534,23 @@
                     serviceField.value = btn.getAttribute('data-service');
                     if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
+                    document.body.classList.add('booking-form-active');
+                    if (!document.getElementById('backToStep1')) {
+                        var back = document.createElement('button');
+                        back.type = 'button';
+                        back.id = 'backToStep1';
+                        back.className = 'back-to-step1';
+                        back.textContent = '\u2190 Change appliance';
+                        back.addEventListener('click', function() {
+                            form.style.display = 'none';
+                            if (indicator) indicator.textContent = 'Step 1 of 2 \u2014 Select your appliance';
+                            document.body.classList.remove('booking-form-active');
+                            back.style.display = 'none';
+                        });
+                        form.parentNode.insertBefore(back, form);
+                    } else {
+                        document.getElementById('backToStep1').style.display = '';
+                    }
                     form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 });
             });
