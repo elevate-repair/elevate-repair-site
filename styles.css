@@ -2194,7 +2194,7 @@ details.problem-category[open] summary .problem-toggle::after {
 /* === Keep logo on one line at very narrow viewports === */
 @media (max-width: 342px) {
     .logo {
-        font-size: 17px;
+        font-size: 15px;
         white-space: nowrap;
     }
 }
