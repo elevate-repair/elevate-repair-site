@@ -2169,3 +2169,24 @@ details.problem-category[open] summary .problem-toggle::after {
         right: 6px;
     }
 }
+
+/* === Booking anchor offset (sticky header clearance) === */
+#book {
+    scroll-margin-top: 80px;
+}
+
+/* === Header phone tap target (mobile) === */
+@media (max-width: 768px) {
+    .header-phone {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+}
+
+/* === Brands grid: 2-col on very narrow viewports === */
+@media (max-width: 360px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
