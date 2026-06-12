@@ -404,6 +404,7 @@
                 </div>
             </div>
             <form class="booking-form" id="bookingForm" method="POST" action="https://script.google.com/macros/s/AKfycbzCuzqtswIhfkEbAGiOeJr0K747SwHFF79NiB0esI7xtbp7tACAyxUFrJ5LuAo6T0gy7Q/exec" target="hidden_iframe" style="display:none;">
+                    <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
                 <input type="hidden" name="source" value="website-thornton">
                 <input type="hidden" name="service" id="serviceField" value="">
                 <input type="hidden" id="place_id" name="place_id" value="">
@@ -890,6 +891,82 @@
                     btn.focus();
                 }
             });
+        })();
+    </script>
+    <script>
+        // Anti-spam guard: blocks links in name/address/message and bot-filled
+        // honeypot submissions before any endpoint call. Capture-phase listeners
+        // run ahead of each page's own submit/review handlers.
+        (function() {
+            function containsBlockedLink(value) {
+                var text = String(value || '').toLowerCase();
+                return (
+                    /https?:\/\//i.test(text) ||
+                    /\bwww\./i.test(text) ||
+                    /\bt\.me\//i.test(text) ||
+                    /\btelegram\.me\//i.test(text) ||
+                    /\bbit\.ly\//i.test(text) ||
+                    /\btinyurl\.com\//i.test(text) ||
+                    /\b[a-z0-9-]+\.(com|net|org|io|biz|info|ru|xyz|top|online|site|shop|live|click|link|co)\b/i.test(text) ||
+                    /<[^>]+>/i.test(text) ||
+                    /\[[^\]]+\]\([^)]+\)/i.test(text)
+                );
+            }
+            function spamCheck(form) {
+                var hp = form.querySelector('input[name="website"]');
+                if (hp && hp.value) return { blocked: true, silent: true };
+                var names = ['name', 'address', 'message'];
+                for (var i = 0; i < names.length; i++) {
+                    var el = form.querySelector('[name="' + names[i] + '"]');
+                    if (el && containsBlockedLink(el.value)) return { blocked: true, field: el };
+                }
+                return { blocked: false };
+            }
+            function showLinkError(form, field) {
+                var err = form.querySelector('.link-error');
+                if (!err) {
+                    err = document.createElement('div');
+                    err.className = 'link-error';
+                    err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.5rem;';
+                    err.textContent = 'Links are not allowed in this form. Please remove the link and try again.';
+                    var btn = form.querySelector('button');
+                    if (btn && btn.parentNode === form) form.insertBefore(err, btn);
+                    else form.appendChild(err);
+                }
+                err.style.display = 'block';
+                if (field) {
+                    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    try { field.focus({ preventScroll: true }); } catch (e) { field.focus(); }
+                }
+            }
+            // Returns true when the event was blocked.
+            function guard(form, e) {
+                if (!form || !form.getAttribute) return false;
+                var action = form.getAttribute('action') || '';
+                if (action.indexOf('script.google.com') === -1) return false;
+                var res = spamCheck(form);
+                if (!res.blocked) {
+                    var err = form.querySelector('.link-error');
+                    if (err) err.style.display = 'none';
+                    return false;
+                }
+                e.preventDefault();
+                e.stopPropagation();
+                if (!res.silent) showLinkError(form, res.field);
+                return true;
+            }
+            // All standard forms submit via a native submit event.
+            document.addEventListener('submit', function(e) {
+                guard(e.target, e);
+            }, true);
+            // The book-online flow submits programmatically (no submit event):
+            // gate the Review/Confirm buttons before the modal opens instead.
+            document.addEventListener('click', function(e) {
+                var t = e.target;
+                var btn = t && t.closest ? t.closest('#reviewBtn, #confirmBookingBtn') : null;
+                if (!btn) return;
+                guard(document.getElementById('bookingForm'), e);
+            }, true);
         })();
     </script>
 </body>
