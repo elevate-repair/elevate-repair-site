@@ -447,10 +447,11 @@
             });
         })();
 
-        // Inline address autocomplete (Place Autocomplete Data API). The visible
-        // #address input is the only source of truth and posts directly. Google
-        // suggestions are optional assistance; if Google is unavailable, manual
-        // typing works normally and is never blocked.
+        // Inline address autocomplete (Place Autocomplete Data API). A street-level
+        // suggestion must be selected (data-address-ok + place_id/city/state/zip
+        // captured) before the booking can be submitted — typed-only addresses are
+        // never accepted. If Google fails to load or returns no suggestions,
+        // submission stays blocked and the inline error directs the customer to call.
         (function() {
             var input = document.getElementById('address');
             var box = document.getElementById('addressSuggestions');
@@ -465,6 +466,8 @@
                 if (zipField) zipField.value = '';
                 if (cityField) cityField.value = '';
                 if (stateField) stateField.value = '';
+                delete input.dataset.addressOk;
+                delete input.dataset.selectedAddress;
             }
             function hideSuggestions() {
                 box.hidden = true;
@@ -480,6 +483,7 @@
             var suggestionSeq = 0;
             var activeIndex = -1;
             var suppressNextInput = false;
+            var lastProgrammaticValue = '';
 
             google.maps.importLibrary('places').then(function(places) {
                 var AutocompleteSuggestion = places.AutocompleteSuggestion;
@@ -520,10 +524,12 @@
                         await place.fetchFields({ fields: ['formattedAddress', 'addressComponents', 'id'] });
                         suppressNextInput = true;
                         input.value = place.formattedAddress || input.value;
+                        lastProgrammaticValue = input.value;
                         var comps = place.addressComponents || [];
-                        var zip = '', city = '', state = '';
+                        var zip = '', city = '', state = '', street = '';
                         comps.forEach(function(c) {
                             var t = c.types || [];
+                            if (t.indexOf('street_number') !== -1 || t.indexOf('route') !== -1 || t.indexOf('premise') !== -1) street = c.longText || street;
                             if (t.indexOf('postal_code') !== -1) zip = c.longText || zip;
                             if (t.indexOf('locality') !== -1) city = c.longText || city;
                             if (!city && t.indexOf('sublocality_level_1') !== -1) city = c.longText || city;
@@ -534,6 +540,17 @@
                         if (zipField) zipField.value = zip;
                         if (cityField) cityField.value = city;
                         if (stateField) stateField.value = state;
+                        // Validated only for a complete street-level result; partial
+                        // picks (city, neighborhood, ZIP-only) stay unvalidated.
+                        if (place.formattedAddress && place.id && street && city && state && zip) {
+                            input.dataset.addressOk = '1';
+                            input.dataset.selectedAddress = input.value.trim();
+                            var addrErr = document.getElementById('address-error');
+                            if (addrErr) addrErr.style.display = 'none';
+                        } else {
+                            delete input.dataset.addressOk;
+                            delete input.dataset.selectedAddress;
+                        }
                     } catch (e) {
                         // Lookup failed; keep the user's typed text untouched.
                     } finally {
@@ -567,6 +584,9 @@
                     });
                     if (!added) { hideSuggestions(); return; }
                     box.hidden = false;
+                    // Suggestions were shown at least once this session — used
+                    // only to pick the right inline error wording at submit time.
+                    input.dataset.acShown = '1';
                 }
 
                 async function fetchSuggestions(value) {
@@ -591,7 +611,13 @@
                 }
 
                 input.addEventListener('input', function() {
-                    if (suppressNextInput) { suppressNextInput = false; return; }
+                    if (suppressNextInput) {
+                        suppressNextInput = false;
+                        // Only swallow the event if it matches the value we set
+                        // programmatically; a real user edit must fall through
+                        // so stale place metadata is cleared.
+                        if (input.value === lastProgrammaticValue) return;
+                    }
                     // Editing invalidates any previously selected place.
                     clearMetadata();
                     suggestionSeq += 1;
@@ -637,8 +663,44 @@
             var confirmBtn = document.getElementById('confirmBookingBtn');
             var cancelBtn = document.getElementById('cancelBookingBtn');
             var feeField = document.getElementById('feeAcknowledged');
+            var addressInput = document.getElementById('address');
             if (!form || !iframe || !reviewBtn || !modal || !confirmBtn) return;
             var submitted = false;
+
+            function addressIsValid() {
+                if (!addressInput) return false;
+                var placeIdEl = document.getElementById('place_id');
+                var zipEl = document.getElementById('zip');
+                var cityEl = document.getElementById('city');
+                var stateEl = document.getElementById('state');
+                return addressInput.dataset.addressOk === '1' &&
+                    addressInput.value.trim() === (addressInput.dataset.selectedAddress || '') &&
+                    !!(placeIdEl && placeIdEl.value) &&
+                    !!(zipEl && zipEl.value) &&
+                    !!(cityEl && cityEl.value) &&
+                    !!(stateEl && stateEl.value);
+            }
+
+            function showAddressError() {
+                // data-ac-shown only selects the wording — it never bypasses validation.
+                var msg = (addressInput && addressInput.dataset.acShown === '1')
+                    ? 'Please select your full address from the suggestions.'
+                    : 'Address suggestions are temporarily unavailable. Please try again or call us at (720) 575-8432.';
+                var err = document.getElementById('address-error');
+                if (!err) {
+                    err = document.createElement('div');
+                    err.id = 'address-error';
+                    err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.25rem;';
+                    var wrap = addressInput ? addressInput.closest('.address-field') : null;
+                    if (wrap && wrap.parentNode) wrap.parentNode.insertBefore(err, wrap.nextSibling);
+                }
+                err.textContent = msg;
+                err.style.display = 'block';
+                if (addressInput) {
+                    addressInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    try { addressInput.focus({ preventScroll: true }); } catch (e) { addressInput.focus(); }
+                }
+            }
 
             function phoneIsValid() {
                 var phoneInput = form.querySelector('[name="phone"]');
@@ -672,12 +734,17 @@
             }
 
             reviewBtn.addEventListener('click', function() {
+                if (submitted) return;
                 // Native required/pattern validation for all fields
                 if (!form.reportValidity()) return;
                 // Deeper phone validation
                 if (!phoneIsValid()) { showPhoneError(); return; }
                 var existingErr = document.getElementById('phone-error');
                 if (existingErr) existingErr.style.display = 'none';
+                // Address must come from a selected, complete Google suggestion
+                if (!addressIsValid()) { showAddressError(); return; }
+                var addrErr = document.getElementById('address-error');
+                if (addrErr) addrErr.style.display = 'none';
                 openModal();
             });
 
@@ -687,6 +754,7 @@
             });
 
             confirmBtn.addEventListener('click', function() {
+                if (submitted) return;
                 feeField.value = 'yes';
                 // Normalize phone to (NXX) NXX-XXXX from the stripped 10 digits before submit
                 var phoneInput = form.querySelector('[name="phone"]');
@@ -703,9 +771,13 @@
                 form.submit();
             });
 
-            // Defensive guard: never submit without fee acknowledgment
+            // Block every native submission (Enter key, implicit submit,
+            // autofill). The only valid path is Review -> Confirm, which uses
+            // form.submit() and therefore never fires this event. Enter is
+            // routed into the same validation flow as the Review button.
             form.addEventListener('submit', function(e) {
-                if (feeField.value !== 'yes') e.preventDefault();
+                e.preventDefault();
+                if (!submitted) reviewBtn.click();
             });
 
             iframe.addEventListener('load', function() {
