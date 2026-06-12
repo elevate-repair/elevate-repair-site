@@ -447,11 +447,11 @@
             });
         })();
 
-        // Inline address autocomplete (Place Autocomplete Data API). Once Google
-        // suggestions have been shown (data-ac-shown), a street-level suggestion
-        // must be selected (data-address-ok + place_id/city/state/zip captured)
-        // before the booking can be submitted. If Google never loads or never
-        // returns suggestions, manual typing still works as a fallback.
+        // Inline address autocomplete (Place Autocomplete Data API). A street-level
+        // suggestion must be selected (data-address-ok + place_id/city/state/zip
+        // captured) before the booking can be submitted — typed-only addresses are
+        // never accepted. If Google fails to load or returns no suggestions,
+        // submission stays blocked and the inline error directs the customer to call.
         (function() {
             var input = document.getElementById('address');
             var box = document.getElementById('addressSuggestions');
@@ -584,8 +584,8 @@
                     });
                     if (!added) { hideSuggestions(); return; }
                     box.hidden = false;
-                    // Suggestions were shown at least once: from here on, a
-                    // selected suggestion is required before submit.
+                    // Suggestions were shown at least once this session — used
+                    // only to pick the right inline error wording at submit time.
                     input.dataset.acShown = '1';
                 }
 
@@ -669,10 +669,6 @@
 
             function addressIsValid() {
                 if (!addressInput) return false;
-                // Fallback: if Google suggestions never appeared this session
-                // (script blocked or service down), accept typed text so booking
-                // stays possible; structured fields stay empty downstream.
-                if (addressInput.dataset.acShown !== '1') return addressInput.value.trim().length > 0;
                 var placeIdEl = document.getElementById('place_id');
                 var zipEl = document.getElementById('zip');
                 var cityEl = document.getElementById('city');
@@ -686,15 +682,19 @@
             }
 
             function showAddressError() {
+                // data-ac-shown only selects the wording — it never bypasses validation.
+                var msg = (addressInput && addressInput.dataset.acShown === '1')
+                    ? 'Please select your full address from the suggestions.'
+                    : 'Address suggestions are temporarily unavailable. Please try again or call us at (720) 575-8432.';
                 var err = document.getElementById('address-error');
                 if (!err) {
                     err = document.createElement('div');
                     err.id = 'address-error';
                     err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.25rem;';
-                    err.textContent = 'Please select your full address from the suggestions.';
                     var wrap = addressInput ? addressInput.closest('.address-field') : null;
                     if (wrap && wrap.parentNode) wrap.parentNode.insertBefore(err, wrap.nextSibling);
                 }
+                err.textContent = msg;
                 err.style.display = 'block';
                 if (addressInput) {
                     addressInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
