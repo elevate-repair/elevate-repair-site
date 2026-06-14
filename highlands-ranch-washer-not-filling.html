@@ -197,7 +197,7 @@
             <h1>Washer Not Filling Repair in Highlands Ranch</h1>
             <p class="hero-text">Experiencing a washer that won’t fill in Highlands Ranch? Elevate Repair offers prompt, same-day service, ensuring your laundry routine returns to normal quickly. Enjoy peace of mind with our 60-day warranty.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
+                <a href="#book" class="hero-badge">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -481,14 +481,28 @@
             var form = document.getElementById('bookingForm');
             var serviceField = document.getElementById('serviceField');
             var indicator = document.getElementById('bookingStepIndicator');
+            function trackBookingReveal(appliance) {
+                if (typeof gtag !== 'function') return;
+                var srcField = form ? form.querySelector('[name="source"]') : null;
+                var params = {
+                    appliance: appliance || '',
+                    source: srcField ? srcField.value : 'website-denver',
+                    source_page: location.pathname || '/',
+                    form_type: (form && form.getAttribute('data-form-type')) || 'website_form'
+                };
+                gtag('event', 'booking_step1_selected', params);
+                gtag('event', 'booking_form_view', params);
+            }
             btns.forEach(function(btn) {
                 btn.addEventListener('click', function() {
+                    var formWasHidden = !form || form.style.display === 'none';
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
                     if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     document.body.classList.add('booking-form-active');
+                    if (formWasHidden) trackBookingReveal(btn.getAttribute('data-service'));
                     if (!document.getElementById('backToStep1')) {
                         var back = document.createElement('button');
                         back.type = 'button';
