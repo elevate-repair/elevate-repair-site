@@ -626,7 +626,8 @@
                 var srcField = form ? form.querySelector('[name="source"]') : null;
                 var params = {
                     appliance: appliance || '',
-                    source_page: srcField ? srcField.value : (location.pathname || ''),
+                    source: srcField ? srcField.value : 'website-denver',
+                    source_page: location.pathname || '/',
                     form_type: (form && form.getAttribute('data-form-type')) || 'website_form'
                 };
                 gtag('event', 'booking_step1_selected', params);
