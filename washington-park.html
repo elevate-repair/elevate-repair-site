@@ -191,7 +191,7 @@
             <h1>Appliance Repair in Washington Park, CO</h1>
             <p class="hero-text">Washington Park is one of Denver's most beloved neighborhoods, centered around the 165-acre park with its flower gardens, lakes, and running paths. Elevate Repair offers same-day appliance service to Wash Park residents in the charming bungalows and Tudor homes that line these tree-shaded streets. All repairs include our 60-day warranty.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
+                <a href="#book" class="hero-badge">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -611,14 +611,27 @@
             var form = document.getElementById('bookingForm');
             var serviceField = document.getElementById('serviceField');
             var indicator = document.getElementById('bookingStepIndicator');
+            function trackBookingReveal(appliance) {
+                if (typeof gtag !== 'function') return;
+                var srcField = form ? form.querySelector('[name="source"]') : null;
+                var params = {
+                    appliance: appliance || '',
+                    source_page: srcField ? srcField.value : (location.pathname || ''),
+                    form_type: (form && form.getAttribute('data-form-type')) || 'website_form'
+                };
+                gtag('event', 'booking_step1_selected', params);
+                gtag('event', 'booking_form_view', params);
+            }
             btns.forEach(function(btn) {
                 btn.addEventListener('click', function() {
+                    var formWasHidden = !form || form.style.display === 'none';
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
                     if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     document.body.classList.add('booking-form-active');
+                    if (formWasHidden) trackBookingReveal(btn.getAttribute('data-service'));
                     if (!document.getElementById('backToStep1')) {
                         var back = document.createElement('button');
                         back.type = 'button';

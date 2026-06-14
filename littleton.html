@@ -191,7 +191,7 @@
             <h1>Appliance Repair in Littleton, CO</h1>
             <p class="hero-text">Littleton sits along the South Platte River south of Denver, known for its walkable Historic Downtown Main Street and proximity to Chatfield Reservoir and the foothills. Elevate Repair delivers same-day appliance service to Littleton households, from the tree-lined neighborhoods near Hudson Gardens to the communities along South Santa Fe Drive. All repairs include our 60-day warranty.</p>
             <div class="hero-highlights">
-                <a href="#book" class="hero-badge" onclick="gtag('event','book_click',{'location':'hero'})">Same-Day Service</a>
+                <a href="#book" class="hero-badge">Same-Day Service</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
@@ -613,14 +613,27 @@
             var form = document.getElementById('bookingForm');
             var serviceField = document.getElementById('serviceField');
             var indicator = document.getElementById('bookingStepIndicator');
+            function trackBookingReveal(appliance) {
+                if (typeof gtag !== 'function') return;
+                var srcField = form ? form.querySelector('[name="source"]') : null;
+                var params = {
+                    appliance: appliance || '',
+                    source_page: srcField ? srcField.value : (location.pathname || ''),
+                    form_type: (form && form.getAttribute('data-form-type')) || 'website_form'
+                };
+                gtag('event', 'booking_step1_selected', params);
+                gtag('event', 'booking_form_view', params);
+            }
             btns.forEach(function(btn) {
                 btn.addEventListener('click', function() {
+                    var formWasHidden = !form || form.style.display === 'none';
                     btns.forEach(function(b) { b.classList.remove('selected'); });
                     btn.classList.add('selected');
                     serviceField.value = btn.getAttribute('data-service');
                     if (indicator) indicator.textContent = 'Step 2 of 2 \u2014 Almost done';
                     form.style.display = '';
                     document.body.classList.add('booking-form-active');
+                    if (formWasHidden) trackBookingReveal(btn.getAttribute('data-service'));
                     if (!document.getElementById('backToStep1')) {
                         var back = document.createElement('button');
                         back.type = 'button';
