@@ -13,6 +13,7 @@ body {
     line-height: 1.6;
     color: #333;
     padding-bottom: 60px;
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
 }
 
 html {
@@ -1430,6 +1431,7 @@ details.problem-category[open] summary .problem-toggle::after {
     background: #fff;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
     padding: 6px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom));
     gap: 8px;
 }
 
@@ -2231,4 +2233,61 @@ details.problem-category[open] summary .problem-toggle::after {
     body.booking-form-active .sticky-bottom-bar { display: none; }
     body.booking-flow-page,
     body.booking-form-active { padding-bottom: 0; }
+}
+
+/* === Narrow phones (<=360px): keep sticky bar buttons on one line === */
+@media (max-width: 360px) {
+    .sticky-bottom-bar {
+        gap: 6px;
+    }
+    .sticky-btn {
+        font-size: 13px;
+    }
+}
+
+/* S-Protocol footer credit */
+.powered-by-sprotocol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.powered-by-sprotocol .powered-by-label {
+    color: #9ca3af;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.powered-by-sprotocol .sprotocol-name {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.powered-by-sprotocol .sprotocol-s,
+.powered-by-sprotocol .sprotocol-protocol {
+    color: #60a5fa;
+}
+
+.powered-by-sprotocol .sprotocol-accent {
+    font-size: 9px;
+    color: #60a5fa;
+    opacity: 0.55;
+    line-height: 1;
+}
+
+.powered-by-sprotocol:hover .sprotocol-name {
+    text-decoration: underline;
+}
+
+.powered-by-sprotocol:hover .powered-by-label {
+    color: #cbd5e1;
+}
+
+.powered-by-sprotocol:hover .sprotocol-accent {
+    opacity: 0.85;
 }
