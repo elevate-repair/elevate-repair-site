@@ -2244,3 +2244,50 @@ details.problem-category[open] summary .problem-toggle::after {
         font-size: 13px;
     }
 }
+
+/* S-Protocol footer credit */
+.powered-by-sprotocol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.powered-by-sprotocol .powered-by-label {
+    color: #9ca3af;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.powered-by-sprotocol .sprotocol-name {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.powered-by-sprotocol .sprotocol-s,
+.powered-by-sprotocol .sprotocol-protocol {
+    color: #60a5fa;
+}
+
+.powered-by-sprotocol .sprotocol-accent {
+    font-size: 9px;
+    color: #60a5fa;
+    opacity: 0.55;
+    line-height: 1;
+}
+
+.powered-by-sprotocol:hover .sprotocol-name {
+    text-decoration: underline;
+}
+
+.powered-by-sprotocol:hover .powered-by-label {
+    color: #cbd5e1;
+}
+
+.powered-by-sprotocol:hover .sprotocol-accent {
+    opacity: 0.85;
+}
