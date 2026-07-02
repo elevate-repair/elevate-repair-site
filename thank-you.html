@@ -130,6 +130,28 @@
             margin-top: 4px;
             margin-bottom: 8px;
         }
+        .app-cta {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .app-store-badge {
+            display: inline-block;
+            line-height: 0;
+            border-radius: 8px;
+            transition: opacity 0.2s;
+        }
+        .app-store-badge:hover { opacity: 0.85; }
+        .app-store-badge img {
+            display: block;
+            height: 44px;
+            width: auto;
+            max-width: 100%;
+        }
+        .app-cta .note {
+            margin-top: 14px;
+            margin-bottom: 0;
+        }
         @media (max-width: 768px) {
             .card { padding: 40px 30px; }
             h1 { font-size: 26px; }
@@ -151,6 +173,12 @@
         <a href="tel:7205758432" class="btn" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call now: (720) 575-8432</a>
         <br>
         <a href="/" class="link">Continue Browsing</a>
+        <div class="app-cta">
+            <a class="app-store-badge" href="https://apps.apple.com/us/app/elevate-repair/id6784927392" target="_blank" rel="noopener noreferrer" aria-label="Download Elevate Repair on the App Store">
+                <img src="/assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" width="132" height="44">
+            </a>
+            <p class="note">Download the Elevate Repair app to track your repair, manage your booking, pay online, earn rewards, and view your warranty.</p>
+        </div>
     </div>
 </body>
 </html>

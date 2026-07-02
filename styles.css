@@ -1186,6 +1186,35 @@ details.problem-category[open] summary .problem-toggle::after {
     margin-right: auto;
 }
 
+/* === App Store CTA === */
+.app-cta {
+    text-align: center;
+    margin-top: 24px;
+}
+.app-store-badge {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+}
+.app-store-badge:hover {
+    opacity: 0.85;
+}
+.app-store-badge img {
+    display: block;
+    height: 44px;
+    width: auto;
+    max-width: 100%;
+}
+.app-cta__note {
+    margin: 14px auto 0;
+    max-width: 480px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
 /* === Content Body (prose pages) === */
 .content-body {
     max-width: 800px;
