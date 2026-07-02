@@ -1188,9 +1188,8 @@ details.problem-category[open] summary .problem-toggle::after {
 
 /* === App Store CTA === */
 .app-cta {
-    background: #f9fafb;
     text-align: center;
-    padding: 32px 0;
+    margin-top: 24px;
 }
 .app-store-badge {
     display: inline-flex;
