@@ -751,6 +751,9 @@
 
             reviewBtn.addEventListener('click', function() {
                 if (submitted) return;
+                // The Review button is not a submit button, so mark the form as
+                // attempted before native validation to show inline red feedback.
+                form.classList.add('validation-attempted');
                 // Native required/pattern validation for all fields
                 if (!form.reportValidity()) return;
                 // Deeper phone validation
