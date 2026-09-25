@@ -9,6 +9,7 @@ jobs:
   google-tag:
     name: Denver Google tag architecture
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -16,8 +17,10 @@ jobs:
         with:
           node-version: '20'
 
-      # Static check: every tagged page must load GT-PBSXVWKK as its single
-      # base gtag.js loader and configure GT-PBSXVWKK + AW-17878510208.
+      # Exhaustive static check across every HTML page: exactly one base
+      # gtag.js loader, it must be GT-PBSXVWKK, both GT-PBSXVWKK and
+      # AW-17878510208 must be configured, and G-YJVEJZRS5W must never be
+      # used as a loader or a direct config.
       - name: Check Google tag architecture
         run: node tools/check-google-tag.mjs
 
@@ -26,7 +29,9 @@ jobs:
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
 
-      # Runtime check: render every page in Chromium and assert the correct
-      # loader request and dataLayer config commands actually fire.
+      # Runtime check across every page: asserts the loader request and the
+      # dataLayer config commands that actually fire in a browser. Third-party
+      # requests are stubbed, so this needs no outbound network. Drop --all to
+      # render one page per page type instead.
       - name: Render smoke test
         run: node tools/render-smoke-test.mjs --all

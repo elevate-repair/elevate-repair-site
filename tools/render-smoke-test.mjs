@@ -104,21 +104,29 @@ const browser = await chromium.launch();
 const failures = [];
 let passed = 0;
 
-for (const page of pages) {
-  const ctx = await browser.newContext();
-  const tab = await ctx.newPage();
+// One context for the whole run. Pages are rendered sequentially and each gets
+// a fresh tab, so window.dataLayer is always page-scoped.
+const ctx = await browser.newContext();
 
-  const tagRequests = [];
-  const consoleErrors = [];
+let tagRequests = [];
 
-  // Stub every third-party request so the suite is hermetic and never depends
-  // on outbound network access. Same-origin (local) requests are served normally.
-  await tab.route('**/*', (route) => {
+// Stub every third-party request so the suite is hermetic and never depends on
+// outbound network access. The URL predicate means same-origin requests are
+// never routed through Node, which keeps local asset loading fast.
+await ctx.route(
+  (url) => url.hostname !== '127.0.0.1',
+  (route) => {
     const url = route.request().url();
-    if (url.startsWith(base)) return route.continue();
     if (url.includes('googletagmanager.com')) tagRequests.push(url);
     return route.fulfill({ status: 200, contentType: 'text/javascript', body: '/* stubbed third party */' });
-  });
+  }
+);
+
+for (const page of pages) {
+  const tab = await ctx.newPage();
+
+  tagRequests = [];
+  const consoleErrors = [];
 
   tab.on('console', (m) => { if (m.type() === 'error') consoleErrors.push(m.text()); });
   tab.on('pageerror', (e) => consoleErrors.push(String(e)));
@@ -177,11 +185,14 @@ for (const page of pages) {
     if (consoleErrors.length) fail(`console errors: ${consoleErrors.slice(0, 2).join(' | ')}`);
 
     passed++;
+  } catch (err) {
+    fail(`render threw: ${String(err).split('\n')[0]}`);
   } finally {
-    await ctx.close();
+    await tab.close();
   }
 }
 
+await ctx.close();
 await browser.close();
 server.close();
 
