@@ -845,6 +845,22 @@ details.problem-category[open] summary .problem-toggle::after {
     min-height: 80px;
 }
 
+/* Show clear field feedback only after an invalid entry or submit attempt. */
+.booking-form .form-group :is(input, select, textarea):user-invalid,
+.booking-form.validation-attempted .form-group :is(input, select, textarea):invalid {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 1px #dc2626;
+}
+
+.booking-form .form-group:has(:user-invalid)::after,
+.booking-form.validation-attempted .form-group:has(:invalid)::after {
+    content: "Please complete or correct this field.";
+    display: block;
+    color: #b91c1c;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
 .form-note {
     text-align: center;
     font-size: 14px;
