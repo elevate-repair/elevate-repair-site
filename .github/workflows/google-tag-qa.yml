@@ -1,0 +1,32 @@
+name: Google Tag QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  google-tag:
+    name: Denver Google tag architecture
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Static check: every tagged page must load GT-PBSXVWKK as its single
+      # base gtag.js loader and configure GT-PBSXVWKK + AW-17878510208.
+      - name: Check Google tag architecture
+        run: node tools/check-google-tag.mjs
+
+      - name: Install Chromium for render smoke test
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+
+      # Runtime check: render every page in Chromium and assert the correct
+      # loader request and dataLayer config commands actually fire.
+      - name: Render smoke test
+        run: node tools/render-smoke-test.mjs --all
