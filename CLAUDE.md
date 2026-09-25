@@ -305,7 +305,15 @@ Each service hub includes a "Common [Appliance] Problems in Denver" section with
 
 Script blocks used across pages:
 
-1. **Google Analytics / Ads** — all pages. Tag ID: `AW-17878510208`
+1. **Google Analytics / Ads** — all pages. Base Google tag: `GT-PBSXVWKK`
+   - One gtag.js loader per page: `gtag/js?id=GT-PBSXVWKK`
+   - Configured: `gtag('config', 'GT-PBSXVWKK')` then `gtag('config', 'AW-17878510208')`
+   - GA4 destination `G-YJVEJZRS5W` sits behind `GT-PBSXVWKK` on Google's side — never use it
+     as a gtag.js loader or a direct `gtag('config', ...)` target
+   - Google Ads `AW-17878510208` stays as a config (and in the `thank-you.html` conversion
+     `send_to`), never as the base loader
+   - Enforced by `tools/check-google-tag.mjs` + `tools/render-smoke-test.mjs`
+     (CI: `.github/workflows/google-tag-qa.yml`)
 2. **Burger menu toggle** — all pages. IIFE toggling `.nav-open` class
 3. **Form submit handler** — only pages with a form. Disables button, shows "Sending...", listens for iframe load, redirects to `/thank-you.html`
 4. **FAQ accordion** — homepage only. Toggles `.open` class on `.faq-item`
