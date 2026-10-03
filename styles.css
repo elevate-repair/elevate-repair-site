@@ -66,6 +66,11 @@ header {
     white-space: nowrap;
 }
 
+/* Header Book Online button — desktop only (shown in min-width: 769px block) */
+.header-book-btn {
+    display: none;
+}
+
 /* === Burger Menu === */
 .burger-btn {
     display: flex;
@@ -1723,6 +1728,26 @@ details.problem-category[open] summary .problem-toggle::after {
 
     .header-phone {
         font-size: 20px;
+    }
+
+    .header-book-btn {
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 20px;
+        margin-left: 4px;
+        background: #2563eb;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+        border-radius: 8px;
+    }
+
+    .header-book-btn:hover,
+    .header-book-btn:focus-visible {
+        background: #1d4ed8;
     }
 
     .hero {
