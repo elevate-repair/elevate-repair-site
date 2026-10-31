@@ -2743,3 +2743,22 @@ a[href^="tel:"]:not(.btn):not(.sticky-btn) {
 .book-card-details:focus-visible {
     text-decoration: underline;
 }
+
+/* --- Service-area blocks: four photo cards and one "See All Service Areas" link --- */
+.area-cards-more {
+    text-align: center;
+    margin: 16px 0 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+.area-cards-more a {
+    color: #2563eb;
+    text-decoration: none;
+}
+.area-cards-more a:hover,
+.area-cards-more a:focus-visible {
+    text-decoration: underline;
+}
+img.area-card-img {
+    border-radius: 10px 10px 0 0;
+}
