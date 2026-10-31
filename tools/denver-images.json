@@ -125,7 +125,8 @@
     "bf816420b3ec91864b96746e524c8528",
     "4b74aa83583668431464780575bd9de6"
    ],
-   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city.",
+   "group": "tech-home"
   },
   "tech-kitchen": {
    "sources": [
@@ -146,7 +147,9 @@
     "dd689664c69ad764a9f6da80c29e3818",
     "7e40d5a77b3e49a843d76ba5e7cd2c20"
    ],
-   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city.",
+   "group": "tech-home",
+   "note": "Same technician and kitchen as tech-cooktop-repair: never both on one page (group tech-home)."
   },
   "terminal-block-burnt": {
    "sources": [
