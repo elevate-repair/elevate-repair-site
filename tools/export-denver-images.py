@@ -10,7 +10,8 @@ Sources of truth: tools/denver-images.json (renders, photos, logos) and tools/de
 
 - renders  -> assets/images/appliances/<appliance>-repair-denver.webp, trimmed to the appliance,
               560px on the long side (the same treatment as the Buffalo card renders)
-- photos   -> assets/images/photos/<id>.webp, at most 1200px on the long side, EXIF orientation applied
+- photos   -> assets/images/photos/<id>.webp, at most 1200px on the long side, EXIF orientation applied,
+              and <id>-tile.webp, the 4:3 gallery tile (800x600, cropped around photos[].crop, default centre)
 - logos    -> assets/images/brands/<slug>.webp at the native 172x65, never upscaled
 - areas    -> assets/images/areas/<frame>-card.webp (16:10, up to 800x500) and <frame>-card-sm.webp (400x250)
 
@@ -30,6 +31,7 @@ RENDER_LONG = 560
 PHOTO_LONG = 1200
 CARD = (800, 500)
 CARD_SM = (400, 250)
+TILE = (800, 600)
 
 
 def load(name):
@@ -93,6 +95,22 @@ def jobs():
         def b(p=p):
             return encode(fit_long(rgb(Image.open(os.path.join(ROOT, p['sources'][0]))), PHOTO_LONG), 78)
         yield p['out'], b
+
+        def tile(p=p):
+            im = rgb(Image.open(os.path.join(ROOT, p['sources'][0])))
+            crop = p.get('crop', {})
+            if im.width / im.height >= 4 / 3:
+                h = im.height
+                w = round(h * 4 / 3)
+            else:
+                w = im.width
+                h = round(w * 3 / 4)
+            x = round((im.width - w) * float(crop.get('x', 0.5)))
+            y = round((im.height - h) * float(crop.get('y', 0.5)))
+            im = im.crop((x, y, x + w, y + h))
+            size = TILE if w >= TILE[0] else (w - w % 4, (w - w % 4) * 3 // 4)
+            return encode(im.resize(size, Image.LANCZOS), 76)
+        yield p['out'].replace('.webp', '-tile.webp'), tile
     for slug, l in cat['logos'].items():
         if l['status'] != 'use':
             continue

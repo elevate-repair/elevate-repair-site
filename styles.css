@@ -1253,75 +1253,145 @@ details.problem-category[open] summary .problem-toggle::after {
     text-decoration: underline;
 }
 
-/* === Coupon Cards (Visual) === */
+/* === Coupon tickets (homepage "Current Specials" and /coupons) ===
+   One ticket per offer: a blue stub on the left with the big amount and a short
+   label, a dashed perforation with round notches at both edges, and the title,
+   compact terms and (on /coupons) the CTA on the right. The notches are circles
+   half outside the card (overflow: hidden clips them), filled with the white
+   section background and bordered like the card. The $25 online-booking ticket
+   is the featured one (red stub). Same markup as before: .coupon-card >
+   .coupon-card-top + .coupon-card-body; the offers and their wording are
+   unchanged. Three in a row from 769px, stacked on phones, no slider. */
 .coupons-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 800px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
 .coupon-card {
+    position: relative;
+    display: flex;
+    align-items: stretch;
     background: #fff;
-    border: 2px solid #e5e7eb;
-    border-radius: 16px;
+    border: 2px solid #c7d2e2;
+    border-radius: 14px;
     padding: 0;
     margin-bottom: 0;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    color: inherit;
 }
 
+.coupon-card::before,
+.coupon-card::after {
+    content: "";
+    position: absolute;
+    left: 128px;
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #c7d2e2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.coupon-card::before { top: -13px; }
+.coupon-card::after { bottom: -13px; }
+
 .coupon-card-top {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    color: #fff;
-    padding: 20px 24px;
+    flex: 0 0 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 18px 10px;
+    background: linear-gradient(160deg, #123C69 0%, #1A5FAD 100%);
+    color: #fff;
 }
 
 .coupon-card-top .coupon-amount {
-    font-size: 36px;
+    display: block;
+    font-size: 30px;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 4px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-bottom: 0;
 }
 
 .coupon-card-top .coupon-label {
-    font-size: 15px;
-    opacity: 0.9;
+    display: block;
+    font-size: 11px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.92;
+    margin-top: 8px;
 }
 
 .coupon-card-body {
-    padding: 20px 24px;
-    text-align: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 18px 16px 22px;
+    border-left: 2px dashed #c7d2e2;
+    text-align: left;
 }
 
 .coupon-card-body h3 {
     color: #1f2937;
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 6px;
 }
 
 .coupon-card-body p {
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 16px;
+    color: #4b5563;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 0;
 }
 
 .coupon-card-body .btn {
     width: 100%;
-    font-size: 16px;
-    padding: 12px 20px;
-    min-height: 48px;
+    margin-top: 12px;
+    font-size: 15px;
+    padding: 10px 14px;
+    min-height: 44px;
 }
 
-.coupon-card.coupon-featured {
-    border-color: #2563eb;
+.coupon-card.coupon-featured,
+.coupon-card.coupon-featured::before,
+.coupon-card.coupon-featured::after {
+    border-color: #ef4444;
 }
 
 .coupon-card.coupon-featured .coupon-card-top {
-    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    background: linear-gradient(160deg, #dc2626 0%, #ef4444 100%);
+}
+
+/* Narrow phones: the stub shrinks so the terms keep a readable column */
+@media (max-width: 360px) {
+    .coupon-card::before,
+    .coupon-card::after {
+        left: 104px;
+    }
+    .coupon-card-top {
+        flex-basis: 104px;
+        padding: 14px 6px;
+    }
+    .coupon-card-top .coupon-amount {
+        font-size: 24px;
+    }
+    .coupon-card-body {
+        padding: 12px 12px 12px 16px;
+    }
 }
 
 /* === Brands Grid (Enhanced) === */
@@ -1559,85 +1629,50 @@ details.problem-category[open] summary .problem-toggle::after {
     margin-bottom: 28px;
 }
 
-.gallery-carousel {
-    position: relative;
-}
-
-.gallery-track {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 4px 20px 12px;
-}
-
-.gallery-track::-webkit-scrollbar {
-    display: none;
+/* Static 2 x 2 grid of four job photos (no carousel, no arrows, no autoscroll):
+   equal 4:3 tiles with the caption overlaid; two columns at every width. */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 880px;
+    margin: 0 auto;
 }
 
 .gallery-item {
-    flex: 0 0 272px;
-    scroll-snap-align: start;
-    border-radius: 10px;
-    overflow: hidden;
     position: relative;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f3f4f6;
+    aspect-ratio: 4 / 3;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 204px;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
 }
 
 .gallery-caption {
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
-    padding: 28px 14px 14px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.62));
+    bottom: 0;
+    padding: 18px 10px 8px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
     color: #fff;
     font-size: 13px;
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.3;
+    text-align: left;
 }
 
-.gallery-arrow {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-    font-size: 24px;
-    line-height: 1;
-    cursor: pointer;
-    z-index: 2;
-    align-items: center;
-    justify-content: center;
-    color: #1f2937;
-    transition: background 0.18s, color 0.18s;
-}
-
-.gallery-arrow:hover {
-    background: #2563eb;
-    color: #fff;
-}
-
-.gallery-arrow-prev {
-    left: 10px;
-}
-
-.gallery-arrow-next {
-    right: 10px;
+@media (min-width: 769px) {
+    .gallery-grid { gap: 16px; }
+    .gallery-caption { font-size: 15px; padding: 24px 14px 12px; }
 }
 
 /* === Gallery Modal === */
@@ -1708,18 +1743,6 @@ details.problem-category[open] summary .problem-toggle::after {
     /* Gallery */
     .gallery-section h2 {
         font-size: 36px;
-    }
-
-    .gallery-item {
-        flex: 0 0 330px;
-    }
-
-    .gallery-item img {
-        height: 248px;
-    }
-
-    .gallery-arrow {
-        display: flex;
     }
 
     .logo {
@@ -2622,4 +2645,18 @@ a[href^="tel:"]:not(.btn):not(.sticky-btn) {
     -webkit-line-clamp: 4;
     line-clamp: 4;
     overflow: hidden;
+}
+
+/* --- Homepage coupon tickets: the terms line under the grid --- */
+.coupons-terms {
+    margin: 16px auto 0;
+    font-size: 14px;
+}
+.coupons-grid-home .coupon-card {
+    display: flex;
+}
+.coupon-card-body .btn {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 10px 8px;
 }
