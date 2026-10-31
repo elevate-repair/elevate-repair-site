@@ -2483,3 +2483,143 @@ a[href^="tel:"]:not(.btn):not(.sticky-btn) {
     outline: 3px solid #2563eb;
     outline-offset: 3px;
 }
+
+/* --- Service cards: appliance renders in one fixed stage, problem cards with a CSS icon --- */
+.service-card .appliance-card-img {
+    width: 100%;
+    max-width: 200px;
+    height: 120px;
+    margin: 0 auto 12px;
+    padding: 0;
+    object-fit: contain;
+    background: transparent;
+}
+@media (min-width: 769px) {
+    .service-card .appliance-card-img { height: 150px; }
+}
+.card-icon {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background-color: #eff6ff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px 28px;
+}
+
+.service-card:hover .card-icon,
+.service-card:focus-visible .card-icon {
+    background-color: #dbeafe;
+}
+
+.card-icon--power {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v9'/%3E%3Cpath d='M6.3 6.3a8 8 0 1 0 11.4 0'/%3E%3C/svg%3E");
+}
+
+.card-icon--heat {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z'/%3E%3C/svg%3E");
+}
+
+.card-icon--cold {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2v20M2 12h20M5 5l14 14M19 5L5 19'/%3E%3C/svg%3E");
+}
+
+.card-icon--water {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z'/%3E%3C/svg%3E");
+}
+
+.card-icon--noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 9v6h4l5 4V5L8 9H4z'/%3E%3Cpath d='M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12'/%3E%3C/svg%3E");
+}
+
+.card-icon--time {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E");
+}
+
+.card-icon--motion {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12a8 8 0 1 1-2.3-5.7'/%3E%3Cpath d='M20 4v4h-4'/%3E%3C/svg%3E");
+}
+
+.card-icon--door {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='3' width='14' height='18' rx='1'/%3E%3Ccircle cx='15' cy='12' r='1'/%3E%3C/svg%3E");
+}
+
+.card-icon--flame {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z'/%3E%3C/svg%3E");
+}
+
+.card-icon--clean {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z'/%3E%3Cpath d='M19 17l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z'/%3E%3C/svg%3E");
+}
+
+.card-icon--air {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8h11a3 3 0 1 0-3-3'/%3E%3Cpath d='M3 12h15a3 3 0 1 1-3 3'/%3E%3Cpath d='M3 16h8a2.5 2.5 0 1 1-2.5 2.5'/%3E%3C/svg%3E");
+}
+
+.card-icon--generic {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 7a5 5 0 0 1-6.6 4.7L7 19a2 2 0 0 1-3-3l7.3-7.4A5 5 0 0 1 16 2l-2.5 2.5 2 2L18 4a5 5 0 0 1 3 3z'/%3E%3C/svg%3E");
+}
+
+.card-icon--microwave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2.5' y='5' width='19' height='14' rx='2'/%3E%3Crect x='5' y='8' width='10' height='8' rx='1'/%3E%3Cpath d='M18 9v.01M18 12v.01M18 15v.01'/%3E%3C/svg%3E");
+}
+/* an appliance with no render: the icon fills the same stage as a render */
+.card-icon.card-icon--stage {
+    width: 76px;
+    height: 76px;
+    margin: 22px auto 34px;
+    background-size: 38px 38px;
+}
+@media (min-width: 769px) {
+    .card-icon.card-icon--stage { margin: 34px auto 52px; }
+}
+
+/* --- Compact appliance strip: one row; on phones it scrolls sideways inside the
+       component with the next card peeking in; on desktop several cards at once.
+       No autoplay, and the page itself never scrolls sideways. --- */
+.services-grid.appliance-strip {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    margin: 0 -20px;
+    padding: 4px 20px 16px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+.appliance-strip > .service-card,
+.appliance-strip > .book-card {
+    flex: 0 0 min(62%, 230px);
+    scroll-snap-align: start;
+    min-width: 0;
+}
+.appliance-strip .service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px;
+}
+.appliance-strip .service-card p {
+    font-size: 13.5px;
+}
+@media (min-width: 600px) {
+    .appliance-strip > .service-card,
+    .appliance-strip > .book-card { flex-basis: 212px; }
+}
+@media (min-width: 1100px) {
+    /* up to six cards fit side by side; more keep scrolling inside the strip */
+    .services-grid.appliance-strip { margin: 0; padding: 4px 2px 16px; scroll-padding-inline: 2px; }
+    .appliance-strip > .service-card,
+    .appliance-strip > .book-card { flex: 1 0 168px; }
+}
+/* a long brand description stays a short teaser inside the strip (full text stays in the HTML) */
+.appliance-strip .service-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+}
