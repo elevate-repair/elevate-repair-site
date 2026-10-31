@@ -21,6 +21,13 @@
  * the compact appliance strip (`services-grid appliance-strip`): one row, scrolled sideways inside
  * the component on phones with the next card peeking in, several cards at once on desktop, no
  * autoplay and no page-level horizontal scroll. Problem grids on the hubs stay grids.
+ *
+ * Brand pages book from the card: every appliance card on the 31 brand pages is a `div.book-card`
+ * whose main link opens the booking form with the appliance preselected (/book?service=<alias>, an
+ * alias book.html's preselect script reads — never a brand parameter, the form has no brand field)
+ * and ends with "Book Repair", followed by a compact "Repair details →" link to the hub the card
+ * used to link. A card with no hub of its own (microwaves, ventilation) has no details link;
+ * ventilation books plain /book (the form has no ventilation option).
  */
 import { writeFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -113,6 +120,35 @@ function cards(inner) {
   return out;
 }
 
+// card title → the book.html ?service= alias (the form's own appliance options only)
+const SERVICE_RULES = [
+  [/wine|beverage|refrigerat|fridge|freezer|ice maker/i, 'refrigerator'],
+  [/dishwasher/i, 'dishwasher'],
+  [/washer|washing/i, 'washer'],
+  [/dryer/i, 'dryer'],
+  [/microwave/i, 'microwave'],
+  [/oven|range|stove|cooktop/i, 'oven'],
+];
+const HUB_FOR = { refrigerator: '/fridge-repair-denver', dishwasher: '/dishwasher-repair-denver', washer: '/washer-repair-denver', dryer: '/dryer-repair-denver', oven: '/oven-repair-denver' };
+export const serviceFor = (title) => first(SERVICE_RULES, title);
+
+function bookCard(card, ind) {
+  // the service-card link (or the dead div card) and an existing details link
+  const a = card.match(/<a\b[^>]*class="service-card[^"]*"[^>]*>([\s\S]*?)<\/a>/) || card.match(/<div class="service-card">([\s\S]*?)<\/div>\s*$/);
+  const body = (a ? a[1] : card).replace(/\s*<span class="service-card-cta">[\s\S]*?<\/span>/, '');
+  const title = text((body.match(/<h3[^>]*>([\s\S]*?)<\/h3>/) || [])[1] || '');
+  const svc = serviceFor(title);
+  const oldHref = (card.match(/<a\b[^>]*href="([^"]+)"[^>]*class="service-card/) || card.match(/<a class="service-card" href="([^"]+)"/) || [])[1];
+  let details = (card.match(/<a href="([^"]+)" class="book-card-details"/) || [])[1] || (oldHref && !oldHref.startsWith('/book') ? oldHref : null);
+  if (details && svc && HUB_FOR[svc] && details !== HUB_FOR[svc]) details = HUB_FOR[svc];
+  if (!svc || !HUB_FOR[svc]) details = null; // microwave / ventilation: no hub of their own
+  const href = svc ? `/book?service=${svc}` : '/book';
+  const i2 = ind + '    ';
+  const inner = body.replace(/^\s*\n/, '').replace(/\s+$/, '');
+  return `<div class="book-card">\n${i2}<a href="${href}" class="service-card">\n${inner}\n${i2}    <span class="service-card-cta">Book Repair</span>\n${i2}</a>\n` +
+    (details ? `${i2}<a href="${details}" class="book-card-details">Repair details &rarr;</a>\n` : '') + `${ind}</div>`;
+}
+
 export function renderPage(src, rel) {
   const type = pageType(rel);
   let out = '';
@@ -122,7 +158,7 @@ export function renderPage(src, rel) {
   for (let m; (m = re.exec(src));) {
     const end = balancedDivEnd(src, m.index);
     const openEnd = m.index + m[0].length;
-    let inner = src.slice(openEnd, end - 6);
+    const inner = src.slice(openEnd, end - 6);
     const list = cards(inner);
     let rebuilt = '';
     let p = 0;
@@ -142,6 +178,16 @@ export function renderPage(src, rel) {
     }
     rebuilt += inner.slice(p);
     const strip = ['home', 'city', 'brand'].includes(type) && kinds.length > 0 && kinds.every((k) => k === 'appliance');
+    if (strip && type === 'brand') {
+      const again = cards(rebuilt);
+      let rb = '', q = 0;
+      for (const { start, end: e } of again) {
+        const ind = (rebuilt.slice(0, start).match(/\n([ \t]*)$/) || [])[1] || '                ';
+        rb += rebuilt.slice(q, start) + bookCard(rebuilt.slice(start, e), ind);
+        q = e;
+      }
+      rebuilt = rb + rebuilt.slice(q);
+    }
     const open = strip ? '<div class="services-grid appliance-strip">' : '<div class="services-grid">';
     out += src.slice(pos, m.index) + open + rebuilt + '</div>';
     pos = end;
@@ -163,6 +209,13 @@ if (isMain) {
     const { out, report } = renderPage(src, rel);
     for (const r of report) { grids++; cardsSeen += r.cards; if (r.strip) strips++; }
     if (/class="service-icon"/.test(out)) problems.push(`${rel}: emoji service-icon left`);
+    if (pageType(rel) === 'brand') {
+      const bc = [...out.matchAll(/<div class="book-card">\s*<a href="([^"]+)" class="service-card">[\s\S]*?<span class="service-card-cta">Book Repair<\/span>\s*<\/a>/g)];
+      const total = (out.match(/class="service-card"/g) || []).length;
+      if (!bc.length || bc.length !== total) problems.push(`${rel}: ${total - bc.length} appliance card(s) do not book`);
+      for (const m of bc) if (!/^\/book(\?service=(refrigerator|washer|dryer|dishwasher|oven|microwave))?$/.test(m[1])) problems.push(`${rel}: unsupported booking link ${m[1]}`);
+    }
+    if (rel === 'book.html' && !/Appliance preselection \(\/book\?service=<appliance>\)/.test(out)) problems.push('book.html: ?service= preselect script missing');
     if (/\/assets\/images\/appliances\/[a-z-]+\.jpg/.test(out)) problems.push(`${rel}: retired card JPG referenced`);
     if (out !== src) {
       changed++;

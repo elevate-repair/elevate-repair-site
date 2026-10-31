@@ -2708,3 +2708,38 @@ a[href^="tel:"]:not(.btn):not(.sticky-btn) {
         grid-column: 1 / -1;
     }
 }
+
+/* --- Brand pages: the appliance card books the repair (/book?service=…) and a compact
+       "Repair details →" link under it opens the repair page the card used to link --- */
+.service-card-cta {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 10px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+}
+.service-card-cta::after {
+    content: " \2192";
+}
+.book-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.book-card .service-card {
+    flex: 1 1 auto;
+}
+.book-card-details {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+.book-card-details:hover,
+.book-card-details:focus-visible {
+    text-decoration: underline;
+}

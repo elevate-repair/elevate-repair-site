@@ -606,5 +606,30 @@
             }, true);
         })();
     </script>
+    <script>
+        // Appliance preselection (/book?service=<appliance>): a brand page's appliance card opens
+        // this form with its appliance chosen. Only the form's own appliance options are mapped,
+        // never a brand. It presses the matching selector button, so the page behaves exactly as if
+        // the visitor had chosen it; nothing else about the form changes.
+        (function() {
+            var match = /[?&]service=([^&#]*)/.exec(window.location.search);
+            if (!match) return;
+            var key = decodeURIComponent(match[1]).toLowerCase().replace(/[^a-z]/g, '');
+            var options = {
+                washer: 'Washer Repair', washing: 'Washer Repair', washingmachine: 'Washer Repair',
+                dryer: 'Dryer Repair',
+                refrigerator: 'Refrigerator Repair', fridge: 'Refrigerator Repair', freezer: 'Refrigerator Repair', icemaker: 'Refrigerator Repair',
+                dishwasher: 'Dishwasher Repair',
+                oven: 'Oven / Stove Repair', stove: 'Oven / Stove Repair', range: 'Oven / Stove Repair', cooktop: 'Oven / Stove Repair',
+                microwave: 'Microwave Repair'
+            };
+            var wanted = options[key];
+            if (!wanted) return;
+            var btns = document.querySelectorAll('.selector-btn');
+            for (var i = 0; i < btns.length; i++) {
+                if (btns[i].getAttribute('data-service') === wanted) { btns[i].click(); break; }
+            }
+        })();
+    </script>
 </body>
 </html>
