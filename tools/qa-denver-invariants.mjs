@@ -27,9 +27,10 @@
  *   - the lead-capture migration (tools/apply-lead-capture.mjs migrateLegacy): the legacy submit
  *     handler that treated the hidden iframe's `load` as success is removed, the form-start events
  *     send `form_location` instead of `source`, /book-online confirms through window.erLeadSend;
- *     the managed <script data-er="..."> blocks are stripped from the working page (that tool's
- *     --check and tools/qa-lead-flow.mjs cover them);
- *   - the header booking button gains its book_click onclick (tools/apply-hero-offers.mjs).
+ *     the managed <script data-er="..."> blocks are stripped from the working page and from the base
+ *     (that tool's --check and tools/qa-lead-flow.mjs cover them);
+ *   - the header booking button gains its book_click onclick (tools/apply-hero-offers.mjs);
+ *   - PAGE_EXCEPTIONS: reviewed changes of one page, each an exact before/after pair (printed when used).
  * The form markup (action, method, fields, `source`), tel links, phone text, gtag configs, the
  * thank-you page and the Ads conversion stay under the guard unchanged.
  */
@@ -50,8 +51,63 @@ function git(args) {
 }
 const baseFiles = git(['ls-tree', '-r', '--name-only', BASE]).split('\n').filter(isProd);
 const baseRead = (p) => git(['show', `${BASE}:${p}`]);
-/** The base page with the documented exceptions applied (see the header). */
-const expectedFromBase = (src) => migrateLegacy(src).replace(HEADER_OLD, () => HEADER_WANT);
+/**
+ * Expected, reviewed changes of a single page, as exact before / after strings applied to the BASE
+ * page. Each entry must match exactly once (before in the base, after in the working page); otherwise it
+ * is not applied and the change
+ * fails as drift. Once the base already contains the "after" text the entry is a no-op.
+ */
+const PAGE_EXCEPTIONS = {
+  // /book-online availability request (PR #240): the first answer after the function has been idle
+  // takes 5.3-8.0 s, so the page waits 12 s instead of 5 s, sends a CORS simple request (no
+  // Content-Type header, no preflight) and wakes the function on load. No tracking, form or phone change.
+  'book-online.html': [
+    { why: 'availability request waits TIMEOUT_MS = 12 s (was 5 s)',
+      before: "            var OTHER_LABEL = 'Other / Not sure';\n            var activeController = null;\n",
+      after: "            var OTHER_LABEL = 'Other / Not sure';\n" +
+      "            // Measured 2026-11-01: after the function has been idle its first answer takes 5.3-8.0 s\n" +
+      "            // (cold start + three sequential database reads), a warm answer 1.2-1.5 s. The old 5 s limit\n" +
+      "            // turned the first date pick into the \"trouble checking available windows\" fallback.\n" +
+      "            var TIMEOUT_MS = 12000;\n" +
+      "            var activeController = null;\n" },
+    { why: 'availability request sent without a Content-Type header (no CORS preflight), 12 s abort',
+      before: "                var timer = setTimeout(function() { controller.abort(); }, 5000);\n" +
+      "                fetch(ENDPOINT, {\n" +
+      "                    method: 'POST',\n" +
+      "                    headers: { 'Content-Type': 'application/json' },\n",
+      after: "                var timer = setTimeout(function() { controller.abort(); }, TIMEOUT_MS);\n" +
+      "                // No custom header: a plain-text body is a CORS \"simple\" request, so the browser skips\n" +
+      "                // the preflight round trip; the function parses the body as JSON either way.\n" +
+      "                fetch(ENDPOINT, {\n" +
+      "                    method: 'POST',\n" },
+    { why: 'one warm-up availability request on page load (nothing rendered from it)',
+      before: "                loadWindows(date);\n            });\n        })();\n",
+      after: "                loadWindows(date);\n            });\n\n" +
+      "            // Wake the function while the visitor types name, phone and address, so the date pick gets\n" +
+      "            // a warm answer. Nothing is rendered from this request.\n" +
+      "            try {\n" +
+      "                fetch(ENDPOINT, { method: 'POST', body: JSON.stringify({ date: dateInput.min || '' }) }).catch(function() {});\n" +
+      "            } catch (e) { /* availability stays on its fallback */ }\n" +
+      "        })();\n" },
+  ],
+};
+const appliedExceptions = [];
+const once = (hay, needle) => hay.split(needle).length === 2;
+/** Applies a page's reviewed changes to the base, each only when the base still has the "before" text
+ *  and the working page has exactly the "after" text; any other edit stays drift and fails. */
+function pageExceptions(page, src, work) {
+  for (const x of PAGE_EXCEPTIONS[page] || []) {
+    if (once(src, x.before) && once(work, x.after)) { src = src.replace(x.before, () => x.after); appliedExceptions.push(`${page}: ${x.why}`); }
+  }
+  return src;
+}
+/**
+ * The base page with the documented exceptions applied (see the header). The managed
+ * <script data-er="..."> blocks are stripped from the base exactly as from the working page: since the
+ * lead-capture migration the base pages carry them too, and tools/apply-lead-capture.mjs --check and
+ * tools/qa-lead-flow.mjs cover them.
+ */
+const expectedFromBase = (src, page, work) => pageExceptions(page, migrateLegacy(stripManaged(src)).replace(HEADER_OLD, () => HEADER_WANT), work);
 
 function walk(d, out = []) {
   for (const n of readdirSync(d)) {
@@ -144,8 +200,8 @@ function scriptDrift(page, baseScripts, workScripts) {
 
 for (const p of baseFiles) {
   if (!existsSync(join(ROOT, p))) { err(p, 'page removed'); continue; }
-  const b = facts(expectedFromBase(baseRead(p)));
   const wSrc = readFileSync(join(ROOT, p), 'utf8');
+  const b = facts(expectedFromBase(baseRead(p), p, wSrc));
   const w = facts(stripManaged(wSrc));
   if (p === 'thank-you.html' && wSrc !== baseRead(p)) err(p, 'thank-you page changed (conversion page must stay byte-identical)');
   // the number itself never changes; a FAQ answer made visible may repeat it (as text, never a new tel link)
@@ -178,6 +234,10 @@ for (const p of newPages) {
 
 console.log(`Denver invariants vs ${BASE}: ${baseFiles.length} base pages compared, ${newPages.length} new page(s)` +
   (newPages.length ? ` (${newPages.join(', ')})` : '') + `, ${addedLocs.length} sitemap URL(s) added.`);
+if (appliedExceptions.length) {
+  console.log(`Expected changes of this branch (exact-string exceptions, see PAGE_EXCEPTIONS):`);
+  for (const e of appliedExceptions) console.log('  ' + e);
+}
 if (errors.length) {
   console.log(`FAIL - ${errors.length} problem(s):`);
   for (const e of errors.slice(0, 200)) console.log('  ' + e);

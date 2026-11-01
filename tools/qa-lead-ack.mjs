@@ -11,20 +11,27 @@
  * exactly name, phone, address, appliance, message, source, leadId, priority, flags, dispatcherNote,
  * smsTemplate, telegramText) with the one-line edits the .gs file asks for. It proves the wrapper's
  * behaviour, not the live script: that is still a manual paste plus one controlled end-to-end test.
+ *
+ * Section 10 runs requests concurrently, each in its own thread that blocks on the script lock, the
+ * cache and the channels the way an Apps Script execution does, and checks the timing contract
+ * between the claim / in-flight waits in the .gs and the page's TIMEOUT_MS in lead-send.js.
  */
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { Worker, MessageChannel } from 'node:worker_threads';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const GS = readFileSync(join(ROOT, 'tools', 'lead-capture', 'denver-lead-ack.gs'), 'utf8');
 
 /** A reference Denver handler with the documented edit points (see the .gs header, step 3-4). */
 const REFERENCE_HANDLER = `
+function parseIncoming_(e) { return (e && e.parameter) || {}; }
 function handleLead_(e) {
   var data = e.parameter || {};
-  var leadId = Utilities.getUuid().slice(0, 8).toUpperCase();
+  var leadId = ackLeadId_() || Utilities.getUuid().slice(0, 8).toUpperCase();
   ackLead_(leadId);
   var phone = String(data.phone || "").replace(/[^\\d+]/g, "");
   if (String(data.website || "").trim()) { ackReject_("honeypot"); return ContentService.createTextOutput("rejected"); }
@@ -59,8 +66,14 @@ export function makeWorld() {
       createTextOutput: (t) => ({ text: t, mime: 'text/plain', setMimeType(m) { this.mime = m; return this; }, getContent() { return this.text; } }),
     },
     LockService: { getScriptLock: () => ({ held: false, waitLock() { this.held = true; }, releaseLock() { this.held = false; } }) },
-    CacheService: { getScriptCache: () => ({ get: (k) => (cache.has(k) ? cache.get(k) : null), put: (k, v) => cache.set(k, String(v)) }) },
-    Utilities: { getUuid: () => `${(++uuid).toString(16).padStart(8, '0')}-0000-4000-8000-000000000000` },
+    CacheService: { getScriptCache: () => ({ get: (k) => (cache.has(k) ? cache.get(k) : null), put: (k, v) => cache.set(k, String(v)), remove: (k) => cache.delete(k) }) },
+    Utilities: {
+      getUuid: () => `${(++uuid).toString(16).padStart(8, '0')}-0000-4000-8000-000000000000`,
+      sleep: () => {},
+      DigestAlgorithm: { SHA_256: 'sha256' },
+      Charset: { UTF_8: 'utf8' },
+      computeDigest: (alg, s) => Array.from(createHash(alg).update(String(s), 'utf8').digest()).map((b) => (b > 127 ? b - 256 : b)),
+    },
     Logger: { log: () => {} },
     sendTelegram_: (text) => { world.telegram.push(text); return { ok: world.tgOk }; },
     sendToSProtocol_: (payload) => { world.sprotocol.push(payload); return { ok: world.spCode >= 200 && world.spCode < 300, code: world.spCode, body: world.spAnswer }; },
@@ -148,6 +161,100 @@ const check = (name, cond, detail = '') => { results.push({ name, ok: !!cond, de
   post({ ...LEAD, submission_id: SID, attribution: 'x'.repeat(9000) });
   post({ ...LEAD, submission_id: SID.replace('6f1d', '1111'), attribution: '[1,2]' });
   check('oversized or non-object attribution is dropped, the lead is not', world.sprotocol.length === 2 && world.sprotocol.every((p) => p.attribution === ''));
+}
+
+// 10. Concurrent requests. Each request runs in its own thread and blocks on the lock, the cache and
+//     the stand-in channels exactly like an Apps Script execution does (synchronous calls into this thread).
+{
+  const timeoutMs = Number((readFileSync(join(ROOT, 'tools', 'lead-capture', 'lead-send.js'), 'utf8').match(/TIMEOUT_MS\s*=\s*(\d+)/) || [])[1]);
+  const gsConst = (name) => Number((GS.match(new RegExp('var ' + name + '\\s*=\\s*(\\d+)')) || [])[1]);
+  const lockWait = gsConst('ACK_LOCK_WAIT_MS_'), inflightWait = gsConst('ACK_INFLIGHT_WAIT_MS_');
+  check(`timing contract: claim wait ${lockWait} ms + in-flight wait ${inflightWait} ms + 3000 ms redirect/network margin fits the page's ${timeoutMs} ms`,
+    timeoutMs > 0 && lockWait > 0 && inflightWait > 0 && lockWait + inflightWait + 3000 <= timeoutMs);
+
+  const DELAY = { telegram: 200, sprotocol: 1500, sheet: 300 };
+  const SID2 = SID.replace('6f1d', '8b3f');
+  const world = { telegram: [], sprotocol: [], sheet: [], leads: new Set() };
+  const lock = { owner: null, queue: [] };
+  const cache = new Map();
+  const release = (id) => {
+    if (lock.owner !== id) return;
+    lock.owner = null;
+    const w = lock.queue.shift();
+    if (w) { clearTimeout(w.timer); lock.owner = w.id; w.reply(true); }
+  };
+  const handle = (id, op, a, reply) => {
+    if (op === 'lock') {
+      if (!lock.owner || lock.owner === id) { lock.owner = id; return reply(true); }
+      const w = { id, reply };
+      w.timer = setTimeout(() => { lock.queue.splice(lock.queue.indexOf(w), 1); reply(false); }, a.ms);
+      return lock.queue.push(w);
+    }
+    if (op === 'unlock') { release(id); return reply(null); }
+    if (op === 'get') return reply(cache.has(a.k) ? cache.get(a.k) : null);
+    if (op === 'put') { cache.set(a.k, a.v); return reply(null); }
+    if (op === 'remove') { cache.delete(a.k); return reply(null); }
+    if (op === 'send') {
+      return setTimeout(() => {
+        if (a.ch === 'sprotocol') {
+          const dup = world.leads.has(a.data.leadId);
+          world.leads.add(a.data.leadId); world.sprotocol.push(a.data);
+          return reply(dup ? { ok: true, code: 200, body: '{"deduplicated":true}' } : { ok: true, code: 200, body: '{"ok":true}' });
+        }
+        world[a.ch].push(a.data);
+        return reply({ ok: true });
+      }, DELAY[a.ch]);
+    }
+    return reply(null);
+  };
+  const WORKER = `
+    const { workerData, parentPort, receiveMessageOnPort } = require('node:worker_threads');
+    const vm = require('node:vm'); const { createHash } = require('node:crypto');
+    const { code, params, sab, port } = workerData; const flag = new Int32Array(sab);
+    const rpc = (op, args) => { Atomics.store(flag, 0, 0); port.postMessage({ op, args });
+      for (;;) { Atomics.wait(flag, 0, 0, 60000); const m = receiveMessageOnPort(port); if (m) return m.message; } };
+    const out = (t) => ({ t, m: 'text/plain', setMimeType(x) { this.m = x; return this; }, getContent() { return this.t; } });
+    const ctx = { WORLD: {}, Logger: { log() {} },
+      ContentService: { MimeType: { JSON: 'application/json', TEXT: 'text/plain' }, createTextOutput: out },
+      LockService: { getScriptLock: () => ({ waitLock(ms) { if (!rpc('lock', { ms })) throw new Error('Lock timeout'); }, releaseLock() { rpc('unlock', {}); } }) },
+      CacheService: { getScriptCache: () => ({ get: (k) => rpc('get', { k }), put: (k, v) => rpc('put', { k, v: String(v) }), remove: (k) => rpc('remove', { k }) }) },
+      Utilities: { getUuid: () => require('node:crypto').randomUUID(), sleep: (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms),
+        DigestAlgorithm: { SHA_256: 'sha256' }, Charset: { UTF_8: 'utf8' },
+        computeDigest: (a, s) => Array.from(createHash(a).update(String(s), 'utf8').digest()).map((b) => (b > 127 ? b - 256 : b)) },
+      sendTelegram_: (text) => rpc('send', { ch: 'telegram', data: text }),
+      sendToSProtocol_: (payload) => rpc('send', { ch: 'sprotocol', data: payload }),
+      appendToSheet_: (row) => { rpc('send', { ch: 'sheet', data: row }); } };
+    vm.createContext(ctx); vm.runInContext(code, ctx);
+    const t0 = Date.now(); const text = ctx.doPost({ parameter: params }).getContent();
+    parentPort.postMessage({ text, ms: Date.now() - t0 });`;
+  let seq = 0;
+  const run = (params) => new Promise((resolve, reject) => {
+    const id = ++seq, sab = new SharedArrayBuffer(4), flag = new Int32Array(sab);
+    const { port1, port2 } = new MessageChannel();
+    const w = new Worker(WORKER, { eval: true, workerData: { code: REFERENCE_HANDLER + '\n' + GS, params, sab, port: port1 }, transferList: [port1] });
+    port2.on('message', (m) => handle(id, m.op, m.args, (res) => { port2.postMessage(res); Atomics.store(flag, 0, 1); Atomics.notify(flag, 0); }));
+    w.on('message', (r) => { release(id); port2.close(); let json = null; try { json = JSON.parse(r.text); } catch { /* text */ } resolve({ ...r, json }); });
+    w.on('error', reject);
+  });
+  const one = DELAY.telegram + DELAY.sprotocol + DELAY.sheet;
+
+  const [a, b] = await Promise.all([run({ ...LEAD, submission_id: SID }), run({ ...LEAD, submission_id: SID2 })]);
+  check('concurrent: two visitors at once are both confirmed, with different lead ids', a.json?.ok === true && b.json?.ok === true && !a.json.duplicate && !b.json.duplicate && a.json.lead_id !== b.json.lead_id, `${a.text} | ${b.text}`);
+  check('concurrent: each of the two leads reached Telegram, S Protocol and the Sheet exactly once', world.telegram.length === 2 && world.sprotocol.length === 2 && world.sheet.length === 2 && world.leads.size === 2);
+  check(`concurrent: delivered side by side, not one after the other (${a.ms} / ${b.ms} ms, one delivery = ${one} ms)`, Math.max(a.ms, b.ms) < 2 * one - 300);
+
+  const SID3 = SID.replace('6f1d', '9c4a');
+  const [c, d] = await Promise.all([run({ ...LEAD, submission_id: SID3 }), run({ ...LEAD, submission_id: SID3 })]);
+  check('concurrent: the same submission twice at once -> one ok, one ok duplicate, same lead id', [c, d].every((x) => x.json?.ok === true && x.json.submission_id === SID3) && [c, d].filter((x) => x.json.duplicate).length === 1 && c.json.lead_id === d.json.lead_id, `${c.text} | ${d.text}`);
+  check('concurrent: ... and it was delivered once', world.telegram.length === 3 && world.sheet.length === 3 && world.leads.size === 3 && world.sprotocol.length === 3);
+
+  const SID4 = SID.replace('6f1d', 'ad5b');
+  const first = run({ ...LEAD, submission_id: SID4 });
+  await new Promise((r) => setTimeout(r, 400));
+  const resend = await run({ ...LEAD, submission_id: SID4 });
+  const firstDone = await first;
+  check('concurrent: a resend while the first copy is still delivering waits for it and answers duplicate', firstDone.json?.ok === true && resend.json?.ok === true && resend.json.duplicate === true && resend.json.lead_id === firstDone.json.lead_id, `${firstDone.text} | ${resend.text}`);
+  check('concurrent: ... nothing sent twice', world.telegram.length === 4 && world.sheet.length === 4 && world.sprotocol.length === 4);
 }
 
 let failed = 0;
