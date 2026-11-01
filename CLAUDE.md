@@ -176,7 +176,11 @@ Every page includes an identical `<header>` with:
 - Logo link (`<a href="/" class="logo">Elevate Repair</a>`)
 - Phone number link (`(720) 575-8432`)
 - Burger menu button (mobile)
-- `<nav class="nav-menu" id="navMenu">` with three nav groups:
+- Desktop booking button `<a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>`
+  (shown from 769px; below that the sticky bar is the booking action — there is no room for a
+  third header control at 320–390px). Destination stays `/book-online`.
+- `<nav class="nav-menu" id="navMenu">` with three nav groups (the open menu is capped to the
+  screen and scrolls, so every link is reachable at 320px):
   - **Services:** Refrigerator Repair, Washer Repair, Dryer Repair, Dishwasher Repair, Oven & Range Repair
   - **Service Areas:** Downtown Denver, Capitol Hill, Cherry Creek, Highlands, Aurora, Lakewood, Boulder, Evergreen, All Areas →
   - **More:** Brands, Coupons, FAQ, Warranty, Contact
@@ -291,13 +295,45 @@ All 153 problem pages (40 Denver + 103 city + 10 brand+city) include a "Related 
 - Links to 5 Denver problem pages (mixed appliance types, rotated by city to avoid duplicate link sets)
 
 **All 63 city/neighborhood pages** also include:
-- A gallery section (`<section class="gallery-section">`) with 8 photo cards and arrow-navigation JS
-- A "Frequently Asked Questions" section (`<section class="section-alt">`) with 3 city-specific Q&As in `<div class="content-body">` format
+- The "Recent Appliance Repairs" gallery right after the appliance strip (see "Shared design layer")
+- A "Frequently Asked Questions" section (`<section class="section-alt">`) with 3 city-specific Q&As as a native accordion (see "Shared design layer")
 - Corresponding `FAQPage` JSON-LD schema in `<head>`
 
 ### Service landing pages (5 pages)
 
 Each service hub includes a "Common [Appliance] Problems in Denver" section with links to all 8 Denver problem pages for that appliance type.
+
+---
+
+## Shared design layer (October 2026, ported from the Buffalo site)
+
+The Buffalo site's visual components were ported with **Denver's own terms**: phone
+(720) 575-8432, $109 service call credited toward the repair, Denver coupons, 7-day hours, the
+public address — nothing about them changed. Every layer is rendered by a tool from a data file
+and checked in CI (`sh tools/run-design-tools.sh --check`); never hand-edit one page's copy —
+change the data or the tool and re-run `sh tools/run-design-tools.sh`. Page types come from
+`tools/denver-pages.mjs`.
+
+| Layer | Tool (`--check`) | Data | What it guarantees |
+|---|---|---|---|
+| Hero offers + header button | `apply-hero-offers.mjs` | — | `$0 Diagnostic with Repair` + "Our $109 service call is credited toward your repair when you approve it." and `Average repair costs less than $300` above the hero CTAs on the homepage, hubs, brand, city and every problem / guide page (hubs link `#repair-cost`); never on booking, legal, info or thank-you pages. Header button "Book Online — Save $25" → `/book-online` |
+| Service cards + appliance strip | `apply-appliance-cards.mjs` | `denver-images.json` renders | Every appliance card shows the render that matches its title (refrigerator, washer, dryer, dishwasher, range; freezer / wine / microwave / ventilation get a CSS icon, never another appliance); hub problem cards get CSS icons (no emoji). Appliance grids on the homepage, city and brand pages are the compact `appliance-strip` (one row, sideways scroll inside the component on phones, no autoplay). Brand pages book from the card: `div.book-card` → `/book?service=…` + "Repair details →" to the hub |
+| Galleries | `apply-gallery.mjs` | `denver-images.json` photos | Homepage + 63 city pages only: "Recent Appliance Repairs", four distinct catalogued photos in a static 2×2 grid, right after the appliance strip; captions say what the photo shows and never name a city. Homepage: the coupon tickets follow immediately and carry the /coupons terms |
+| Content photos | `apply-page-photos.mjs` | `denver-images.json` photos | Every `img.section-photo` is a catalogued EXIF-free export with honest alt text (no city, no "Denver customer"), on topic for the page's appliance, no other brand's logo on a brand page, no shot twice on a page (gallery included); retired photos (refrigerators with children's portraits, the washer photo published as a dryer, the range hood) never appear |
+| Brand logos | `apply-brand-logos.mjs` | `denver-images.json` logos | Every content block whose links are all brand pages shows logo + visible name; set and order of brands unchanged; Beko, Hisense, Insignia, Speed Queen stay text (no official file); logo chip before the H1 of the brand's own page |
+| Service-area cards | `apply-area-cards.mjs` (`--report`) | `denver-areas.json` | Every `.area-cards` block: four photo cards, no photo twice on a page, alt describes the photo (only the Denver skyline is a recognisable photo of its place), one "See All Service Areas →" per page, every city page the target of ≥ 2 cards. Add a real city photo as a frame and point the area at it first |
+| FAQ | `apply-faq-accordion.js`, `sync-faq-schema.js` | — | Every FAQ is `details.faq-item` / `summary.faq-question` / `div.faq-answer` (keyboard-operable, closed on load, full answer in HTML); FAQPage JSON-LD mirrors the visible FAQ |
+| Natural headings | `apply-natural-headings.mjs` | — | H2 / H3 no longer repeat the page's place ("Our Dryer Repair Process", "Frequently Asked Questions", "Appliance Brands We Service"); titles, H1s, navigational, CTA, cost and "Why <City> Residents" headings are kept |
+| Estimates | `apply-estimates.mjs` | `denver-estimates.json` | Hub cost section `#repair-cost` with a card of **published Denver prices only** (hub total range + per-repair ranges stated on Denver problem pages, all labelled total cost); every cost-table row links its hub and "See Our Estimates →" to `#repair-cost`. Missing per-repair rows are listed in the JSON, never invented |
+| Repair-or-replace guides | `generate-repair-guides.mjs` | `repair-guides.json` | `/fridge-repair/repair-or-replace-refrigerator`, `/washer-repair/…-washer`, `/dryer-repair/…-dryer`, `/dishwasher-repair/…-dishwasher`, `/oven-repair/…-oven-stove-range`: own title / H1 / canonical / OG / sitemap entry, BreadcrumbList Home → hub → guide, FAQPage = visible FAQ; the hub "Repair or replace your …?" block links each |
+| Images | `export-denver-images.py` | both JSON files | WebP exports without EXIF / XMP / ICC (several originals carry another company's EXIF with GPS); originals are never changed or deleted |
+
+`tools/qa-denver-invariants.mjs --base=<ref>` (CI on pull requests) fails if the phone, tel links,
+Apps Script endpoints, forms, hidden inputs (`source`), gtag / onclick tracking, Clarity, the
+thank-you page or the SEO head (title, meta, canonical, robots, OG, H1, non-FAQ JSON-LD, sitemap
+URLs) change. The generator templates (`tools/template_city_base.html`,
+`tools/problem-page-template.html`) carry the new markup; after generating pages run
+`sh tools/run-design-tools.sh`.
 
 ---
 
@@ -316,8 +352,9 @@ Script blocks used across pages:
      (CI: `.github/workflows/google-tag-qa.yml`)
 2. **Burger menu toggle** — all pages. IIFE toggling `.nav-open` class
 3. **Form submit handler** — only pages with a form. Disables button, shows "Sending...", listens for iframe load, redirects to `/thank-you.html`
-4. **FAQ accordion** — homepage only. Toggles `.open` class on `.faq-item`
-5. **Gallery carousel** — homepage and all 63 city/neighborhood pages. Arrow-button scrolling of `.gallery-track`
+4. **FAQ accordion** — no script: every FAQ is a native `<details>` (the old homepage / faq.html click script was removed)
+5. **Gallery** — no script: static 2×2 grids. The click-to-enlarge modal script stays on the pages that had it
+6. **Booking preselect** — `book.html` only, its own small block after the anti-spam guard: `/book?service=refrigerator|washer|dryer|dishwasher|oven|microwave` presses the matching selector button (the form's own options, never a brand). It does not touch the submit handler, `source`, the endpoint or tracking
 
 ---
 
@@ -420,6 +457,7 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 - **Short brand pages (16):** `LocalBusiness` + `BreadcrumbList` schemas
 - **Service landing pages (5):** `Service` + `BreadcrumbList` + `LocalBusiness` (with `AggregateRating`) schemas
 - **Problem subpages (30):** `BreadcrumbList` schema only
+- **Repair-or-replace guides (5):** `BreadcrumbList` (Home → hub → guide) + `FAQPage` mirroring the visible FAQ
 - **`faq.html`:** `FAQPage` schema
 
 Note: `LocalBusiness` schema on city pages and brand pages uses `contact@elevaterepair.com`; homepage schema uses `elevateappliancellc@gmail.com`. Both include `sameAs` links to Google Maps CID, Yelp, Nextdoor, and Facebook.

@@ -35,3 +35,37 @@ jobs:
       # render one page per page type instead.
       - name: Render smoke test
         run: node tools/render-smoke-test.mjs --all
+
+  design:
+    name: Denver design layers and invariants
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Pillow (with WebP) reads the image exports for tools/export-denver-images.py --check
+      - name: Install Pillow
+        run: pip install --quiet pillow
+
+      # Hero offers, appliance strip, galleries, content photos, brand logos, area cards,
+      # FAQ accordions + schema, natural headings, estimates and repair-or-replace guides:
+      # every layer must match its data file and tool.
+      - name: Check every design layer
+        run: sh tools/run-design-tools.sh --check
+
+      # Phone, tel links, Apps Script endpoints, forms, hidden inputs (source), gtag / onclick
+      # tracking, Clarity, the thank-you page and the SEO head never change in a pull request
+      # unless the guard is updated on purpose.
+      - name: Invariants against the base branch
+        if: github.event_name == 'pull_request'
+        run: node tools/qa-denver-invariants.mjs --base=origin/${{ github.base_ref }}
