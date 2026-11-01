@@ -361,8 +361,10 @@ Apps Script endpoints, forms, hidden inputs (`source`), gtag / onclick tracking,
 thank-you page or the SEO head (title, meta, canonical, robots, OG, H1, non-FAQ JSON-LD, sitemap
 URLs) change. Its only exceptions are applied to the base page as exact strings: the lead-capture
 migration (`migrateLegacy`: the iframe-load handler removed, `form_location`, `/book-online`
-confirming through `erLeadSend`; the managed `<script data-er>` blocks are checked by their own
-tool) and the header button's `book_click` onclick. The generator templates (`tools/template_city_base.html`,
+confirming through `erLeadSend`; the managed `<script data-er>` blocks are stripped from both the base
+and the working page and checked by their own tool), the header button's `book_click` onclick, and
+`PAGE_EXCEPTIONS` — reviewed changes of one page as exact before/after pairs, applied only when the
+working page contains exactly the "after" text and printed in the tool's output. The generator templates (`tools/template_city_base.html`,
 `tools/problem-page-template.html`) carry the new markup; after generating pages run
 `sh tools/run-design-tools.sh`.
 
