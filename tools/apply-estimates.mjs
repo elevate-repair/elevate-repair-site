@@ -1,55 +1,114 @@
 #!/usr/bin/env node
 /**
- * Repair estimates — the cost card on the five hubs and the "See Our Estimates →" links in every
- * cost table. Render + drift check.
+ * Repair estimates — the estimated-labor card on the five hubs (the Buffalo card, ported exactly)
+ * and the "See Our Estimates →" links in every cost table. Render + drift check.
  *
  *   node tools/apply-estimates.mjs           render
  *   node tools/apply-estimates.mjs --check   report drift, exit 1 on any
  *
- * Source of truth: tools/denver-estimates.json — only prices the Denver site already publishes (the
- * hub's own total range and the per-repair ranges stated on Denver problem pages), always labelled
- * as typical total repair cost (parts and labor). No price is invented: a hub without published
- * per-repair prices shows the total range, the service call and the warranty, but no table.
+ * Data: tools/labor-rates.json — the Buffalo labor estimates, which the owner confirmed for Denver
+ * (groups, rows, labels and ranges unchanged; only 'publish' rows render) — and
+ * tools/denver-estimates.json (hub pages, links, the hub's typical total range).
  *
  *   hubs        the existing "<Appliance> Repair Cost in Denver" H2 gets id="repair-cost" (with
- *               scroll-margin so a followed link lands below the sticky header, heading and table
- *               in view) and the card follows the existing cost paragraph, between
- *               <!-- denver-estimates:start --> / end markers
+ *               scroll-margin, so a followed link lands with the heading below the sticky header)
+ *               and, after the hub's existing cost paragraph (Denver's $109 service call wording),
+ *               between <!-- denver-estimates:start --> / end:
+ *                 - "Typical total repair cost (parts + labor): $X–$Y" — the TOTAL, its own line
+ *                 - the card "Estimated labor cost by repair", "Labor only — parts are quoted
+ *                   separately …", group tabs with each group's computed range (ARIA tabs, arrow /
+ *                   Home / End keys, every group visible without JS), one table per group with a
+ *                   caption and "Repair" / "Estimated labor (parts extra)" headers, price chips,
+ *                   the 60-day warranty and "Don't see your repair? Call for a quote."
+ *                 - the note "Estimated labor only. Parts are additional. …"
+ *               The Buffalo card's Call / Book buttons are not ported: they would add tel links
+ *               and click tracking to the hubs, which stay unchanged; the hub's own CTAs remain.
  *   cost tables every row's Service cell links its hub, and the $$ cell carries
  *               "See Our Estimates →" to that hub's #repair-cost (oven and stove / range rows both
- *               go to the oven hub, whose card covers burners, igniters and temperature controls)
+ *               go to the oven hub, whose card covers burners, elements and controls)
  */
-import { writeFileSync, readFileSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT, productionPages, read, GUIDE_DIRS } from './denver-pages.mjs';
+import { ROOT, productionPages, read, pageType, pageAppliance } from './denver-pages.mjs';
 
 const CHECK = process.argv.includes('--check');
 const E = JSON.parse(readFileSync(join(ROOT, 'tools', 'denver-estimates.json'), 'utf8'));
+const L = JSON.parse(readFileSync(join(ROOT, 'tools', 'labor-rates.json'), 'utf8'));
+const GROUP_ORDER = ['controls', 'mechanical', 'teardown'];
 const money = (n) => `$${n}`;
 const range = (a, b) => `${money(a)}&ndash;${money(b)}`;
-const GUIDE_FILES = {
-  fridge: 'fridge-repair/repair-or-replace-refrigerator', washer: 'washer-repair/repair-or-replace-washer',
-  dryer: 'dryer-repair/repair-or-replace-dryer', dishwasher: 'dishwasher-repair/repair-or-replace-dishwasher',
-  oven: 'oven-repair/repair-or-replace-oven-stove-range',
-};
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&rsquo;');
+
+/** published groups of one appliance, with their computed ranges */
+export function laborGroups(appliance) {
+  const rows = L.rows.filter((r) => r.appliance === appliance && r.status === 'publish');
+  return GROUP_ORDER.filter((g) => rows.some((r) => r.group === g)).map((g) => {
+    const gr = rows.filter((r) => r.group === g);
+    return { key: g, name: L.groups[g].name, desc: L.groups[g].desc, rows: gr, low: Math.min(...gr.map((r) => r.low)), high: Math.max(...gr.map((r) => r.high)) };
+  });
+}
+export const laborRow = (appliance, label) => L.rows.find((r) => r.appliance === appliance && r.label === label && r.status === 'publish');
+
+function tabScript(ind) {
+  return [
+    '<script>',
+    '    /* labor-tabs: ARIA tabs for the labor card; every group is visible when JS is off */',
+    '    (function(){',
+    "        var card=document.querySelector('.labor-card');if(!card)return;",
+    "        var tabs=[].slice.call(card.querySelectorAll('[role=\"tab\"]')),panels=[].slice.call(card.querySelectorAll('[role=\"tabpanel\"]'));",
+    '        if(tabs.length<2||tabs.length!==panels.length)return;',
+    "        card.classList.add('is-tabbed');",
+    "        function activate(i,focus){tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;t.classList.toggle('is-active',on);panels[j].hidden=!on;});if(focus)tabs[i].focus();}",
+    '        tabs.forEach(function(t,i){',
+    "            t.addEventListener('click',function(){activate(i,false);});",
+    "            t.addEventListener('keydown',function(e){var k=e.key,n=null;",
+    "                if(k==='ArrowRight'||k==='ArrowDown')n=(i+1)%tabs.length;else if(k==='ArrowLeft'||k==='ArrowUp')n=(i-1+tabs.length)%tabs.length;else if(k==='Home')n=0;else if(k==='End')n=tabs.length-1;",
+    '                if(n!==null){e.preventDefault();activate(n,true);}});',
+    '        });',
+    '        activate(0,false);',
+    '    })();',
+    '</script>',
+  ].map((l) => ind + l).join('\n');
+}
 
 function card(key, ind) {
   const h = E.hubs[key];
-  const i2 = ind + '    ', i3 = ind + '        ';
-  const rows = h.rows.map((r) => `${i3}<tr><td>${r.label}</td><td><span class="price-chip">${range(r.low, r.high)}</span></td></tr>`).join('\n');
-  const table = h.rows.length ? `${i2}<table class="estimates-table">\n${i3}<caption>Typical cost by repair (parts and labor)</caption>\n` +
-    `${i3}<thead><tr><th scope="col">Repair</th><th scope="col">Typical cost</th></tr></thead>\n${i3}<tbody>\n${rows.replace(/^/gm, '    ')}\n${i3}</tbody>\n${i2}</table>\n` : '';
-  const guide = existsSync(join(ROOT, GUIDE_FILES[key] + '.html'))
-    ? `${i2}<p class="estimates-guide"><a href="/${GUIDE_FILES[key]}">Repair or replace? Read our ${h.name} guide &rarr;</a></p>\n` : '';
-  return `${ind}<!-- denver-estimates:start -->\n${ind}<div class="repair-estimates">\n` +
-    `${i2}<h3>Typical repair costs</h3>\n` +
-    `${i2}<p class="estimates-allin"><span class="estimates-allin-label">Typical total repair cost (parts + labor):</span> <strong>${range(...h.total)}</strong></p>\n` +
-    table +
-    `${i2}<p class="estimates-service">Our $${E.serviceCall} service call covers the visit and diagnosis and is credited toward your repair when you approve it.</p>\n` +
-    `${i2}<p class="estimates-trust">60-day parts &amp; labor warranty</p>\n` +
-    `${i2}<p class="estimates-note">Your exact price is quoted after diagnosis, before any work starts. Don't see your repair? Ask us for a quote.</p>\n` +
-    guide +
-    `${ind}</div>\n${ind}<!-- denver-estimates:end -->\n`;
+  const page = L.pages[h.page];
+  const groups = laborGroups(page.appliance);
+  const out = [];
+  out.push('<!-- denver-estimates:start -->');
+  out.push('<div class="labor">');
+  out.push(`    <p class="estimates-allin"><span class="estimates-allin-label">Typical total repair cost (parts + labor):</span> <strong>${range(...h.total)}</strong></p>`);
+  out.push('    <div class="labor-card">');
+  out.push('        <div class="labor-head">');
+  out.push('            <h3>Estimated labor cost by repair</h3>');
+  out.push('            <p class="labor-sub">Labor only &mdash; parts are quoted separately after diagnosis, before any work begins.</p>');
+  out.push('        </div>');
+  out.push('        <div class="labor-tabs" role="tablist" aria-label="Repair groups">');
+  groups.forEach((g, i) => out.push(`            <button type="button" class="labor-tab${i === 0 ? ' is-active' : ''}" role="tab" id="labor-tab-${g.key}" aria-controls="labor-panel-${g.key}" aria-selected="${i === 0 ? 'true' : 'false'}" tabindex="${i === 0 ? '0' : '-1'}"><span class="labor-tab-name">${esc(g.name)}</span><span class="labor-tab-range">${range(g.low, g.high)}</span></button>`));
+  out.push('        </div>');
+  for (const g of groups) {
+    out.push(`        <div class="labor-panel" id="labor-panel-${g.key}" role="tabpanel" aria-labelledby="labor-tab-${g.key}" tabindex="0">`);
+    out.push(`            <p class="labor-desc">${esc(g.desc)}</p>`);
+    out.push('            <table class="labor-table">');
+    out.push(`                <caption><span class="labor-caption">${esc(g.name)} &mdash; estimated labor by repair, ${range(g.low, g.high)}</span></caption>`);
+    out.push('                <thead>');
+    out.push('                    <tr><th scope="col">Repair</th><th scope="col">Estimated labor (parts extra)</th></tr>');
+    out.push('                </thead>');
+    out.push('                <tbody>');
+    for (const r of g.rows) out.push(`                    <tr><td>${esc(r.label)}</td><td><span class="price-chip">${range(r.low, r.high)}</span></td></tr>`);
+    out.push('                </tbody>');
+    out.push('            </table>');
+    out.push('        </div>');
+  }
+  out.push('        <div class="labor-foot">');
+  out.push('            <p class="labor-trust">60-day parts &amp; labor warranty</p>');
+  out.push('            <p class="labor-more">Don&rsquo;t see your repair? Call for a quote.</p>');
+  out.push('        </div>');
+  out.push('    </div>');
+  out.push('    <p class="cost-note labor-note">Estimated labor only. Parts are additional. Your final quote is provided after diagnosis and before any work begins.</p>');
+  out.push('</div>');
+  return out.map((l) => ind + l).join('\n') + '\n' + tabScript(ind) + '\n' + ind + '<!-- denver-estimates:end -->\n';
 }
 
 const MARKED = /[ \t]*<!-- denver-estimates:start -->[\s\S]*?<!-- denver-estimates:end -->\n/;
@@ -100,16 +159,47 @@ if (isMain) {
     }
   }
   for (const [k, h] of Object.entries(E.hubs)) {
-    for (const r of h.rows) {
-      const srcPage = all[r.source.slice(1) + '.html'] || '';
-      const visible = srcPage.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
-      if (!visible.includes(`$${r.low}–$${r.high}`) && !visible.includes(`$${r.low}&ndash;$${r.high}`)) problems.push(`${k}: ${r.label} $${r.low}–$${r.high} is not published on ${r.source}`);
-    }
+    const page = L.pages[h.page];
+    if (!page) { problems.push(`${k}: ${h.page} missing from tools/labor-rates.json pages`); continue; }
+    if (page.allIn.replace(/[–—-]/, '-') !== `$${h.total[0]}-$${h.total[1]}`) problems.push(`${k}: labor-rates allIn ${page.allIn} differs from the hub total`);
     if (!(all[h.page] || '').includes(`between $${h.total[0]} and $${h.total[1]}`)) problems.push(`${k}: total range no longer matches ${h.page}`);
+    if (!laborGroups(page.appliance).length) problems.push(`${k}: no published labor rows`);
+    // a held (owner-review) row never shows up on any page
+    for (const r of L.rows.filter((x) => x.appliance === page.appliance && x.status !== 'publish')) {
+      for (const rel of pages) if (all[rel].includes(esc(r.label))) problems.push(`${rel}: held row "${r.label}" is rendered`);
+    }
+  }
+  // problem-page price statements must agree with the labor estimates:
+  //  - "estimated at $A–$B in labor" must be exactly a published row of the page's appliance;
+  //  - a TOTAL range ("typically range(s) from $A–$B") is only allowed on a registered page and may not
+  //    start below, or end below, the labor alone of the repairs it names (parts are always extra)
+  const TOTAL_CLAIMS = {
+    'denver-refrigerator-leaking-water.html': ['Defrost drain tube clearing (water under crisper drawers)', 'Water inlet valve replacement (leaks or ice problems)', 'Water filter housing replacement'],
+    'denver-washer-leaking-water.html': ['Drain hose replacement', 'Front-load door boot gasket replacement', 'Tub seal replacement', "Drain pump replacement (won't drain)"],
+    'denver-dishwasher-making-noise.html': ['Spray arm replacement', 'Circulation pump or wash motor replacement', 'Drain pump replacement (standing water)'],
+    'denver-oven-temperature-inaccurate.html': ['Oven temperature sensor replacement'],
+    'denver-oven-burner-not-working.html': ['Electric coil burner replacement', 'Glass cooktop (radiant) element replacement', 'Electric burner control switch replacement'],
+  };
+  const APPL = { fridge: 'refrigerator', washer: 'washer', dryer: 'dryer', dishwasher: 'dishwasher', oven: 'oven' };
+  for (const rel of pages) {
+    if (!/^problem|^subpage/.test(pageType(rel))) continue;
+    const text = all[rel].replace(/&ndash;/g, '–');
+    const appliance = APPL[pageAppliance(rel)];
+    for (const m of text.matchAll(/estimated at \$(\d+)–\$(\d+) in labor/g)) {
+      if (!L.rows.some((r) => r.appliance === appliance && r.status === 'publish' && r.low === +m[1] && r.high === +m[2])) problems.push(`${rel}: labor claim $${m[1]}–$${m[2]} is not a published ${appliance} row`);
+    }
+    for (const m of text.matchAll(/\$(\d{2,4})\s*(?:–|-|to)\s*\$(\d{2,4})(?![^<"]*in labor)/g)) {
+      const claim = TOTAL_CLAIMS[rel];
+      if (!claim) { problems.push(`${rel}: unregistered price range $${m[1]}–$${m[2]} (check it against tools/labor-rates.json and register it in TOTAL_CLAIMS)`); continue; }
+      const rows = claim.map((label) => laborRow(appliance, label));
+      if (rows.some((r) => !r)) { problems.push(`${rel}: TOTAL_CLAIMS names a row that is not published`); continue; }
+      const minLabor = Math.min(...rows.map((r) => r.low)), maxLabor = Math.max(...rows.map((r) => r.high));
+      if (+m[1] < minLabor || +m[2] < maxLabor) problems.push(`${rel}: total $${m[1]}–$${m[2]} contradicts labor-only $${minLabor}–$${maxLabor}`);
+    }
   }
   if (CHECK) {
     if (problems.length) { console.log('FAIL - estimates:'); problems.slice(0, 60).forEach((p) => console.log('  ' + p)); process.exit(1); }
-    console.log(`PASS - estimates cards on the five hubs from published Denver prices only; ${tables} cost table(s), ${links} "See Our Estimates" link(s), every anchor exists.`);
+    console.log(`PASS - estimated-labor cards on the five hubs from tools/labor-rates.json (labor only, parts extra; totals labelled); ${tables} cost table(s), ${links} "See Our Estimates" link(s), every anchor exists.`);
   } else {
     problems.forEach((p) => console.log('  ' + p));
     console.log(`apply-estimates: ${changed} page(s) updated.`);
