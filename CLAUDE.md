@@ -257,9 +257,13 @@ Used on: homepage, all 63 city/neighborhood pages, all 103 city+appliance+proble
   is in flight does nothing. Never treat the hidden iframe's `load`, an opaque `no-cors` answer or a
   finished request as success. `target="hidden_iframe"` stays in the markup but is no longer used.
 - **Apps Script dependency:** the live Denver Apps Scripts must answer that JSON. Their source is
-  not in a repository; the change to paste into both is `tools/lead-capture/denver-lead-ack.gs`
-  (tested by `tools/qa-lead-ack.mjs`). Deploy it as a new version of the same deployment BEFORE
-  the site change goes live — the old scripts answer plain "ok", which the site does not accept.
+  not in a repository; `tools/lead-capture/denver-lead-ack.gs` is their "CONFIRMED LEAD RECEIPT"
+  section verbatim (tested by `tools/qa-lead-ack.mjs`, including concurrent requests). A change is
+  pasted into both and deployed as a new version of the same deployment, so the URLs stay the same.
+  The script lock guards only the per-`submission_id` claim, never the deliveries, so visitors are
+  not queued behind each other. Timing contract, checked by `qa-lead-ack.mjs`: claim wait
+  (`ACK_LOCK_WAIT_MS_`, 5 s) + wait for a copy still being delivered (`ACK_INFLIGHT_WAIT_MS_`, 15 s)
+  + 3 s redirect/network margin ≤ `TIMEOUT_MS` in `lead-send.js` (25 s).
 - **Attribution:** the `attribution` block (`tools/lead-capture/attribution.js`, in `<head>` of
   every page except `thank-you.html`) keeps raw facts only — click ids, UTMs, referrer host,
   landing path — as a first touch and a last non-direct touch in `localStorage['er_attr_v1']`

@@ -419,6 +419,10 @@
 
             var ENDPOINT = 'https://jrihukhsootsnlrqaupu.supabase.co/functions/v1/available-booking-windows';
             var OTHER_LABEL = 'Other / Not sure';
+            // Measured 2026-11-01: after the function has been idle its first answer takes 5.3-8.0 s
+            // (cold start + three sequential database reads), a warm answer 1.2-1.5 s. The old 5 s limit
+            // turned the first date pick into the "trouble checking available windows" fallback.
+            var TIMEOUT_MS = 12000;
             var activeController = null;
             var reqSeq = 0;
 
@@ -498,10 +502,11 @@
                 reqSeq += 1;
                 var mySeq = reqSeq;
                 renderLoading();
-                var timer = setTimeout(function() { controller.abort(); }, 5000);
+                var timer = setTimeout(function() { controller.abort(); }, TIMEOUT_MS);
+                // No custom header: a plain-text body is a CORS "simple" request, so the browser skips
+                // the preflight round trip; the function parses the body as JSON either way.
                 fetch(ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ date: date }),
                     signal: controller.signal
                 }).then(function(res) {
@@ -541,6 +546,12 @@
                 }
                 loadWindows(date);
             });
+
+            // Wake the function while the visitor types name, phone and address, so the date pick gets
+            // a warm answer. Nothing is rendered from this request.
+            try {
+                fetch(ENDPOINT, { method: 'POST', body: JSON.stringify({ date: dateInput.min || '' }) }).catch(function() {});
+            } catch (e) { /* availability stays on its fallback */ }
         })();
 
         // Inline address autocomplete (Place Autocomplete Data API). A street-level
