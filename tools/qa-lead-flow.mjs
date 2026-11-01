@@ -71,6 +71,12 @@ async function session({ viewport = { width: 1440, height: 900 }, clock = false 
       if (mode === 'reset') return route.abort('connectionreset');
       if (mode === 'delay') await new Promise((r) => setTimeout(r, 600));
       if (mode === 'http500') return route.fulfill({ status: 500, headers: { 'access-control-allow-origin': '*', 'content-type': 'text/html' }, body: '<html>Error</html>' });
+      // in_progress: another copy of this submission_id is still being delivered by the Apps Script.
+      // 'inprogress' = that copy delivers the lead; 'inprogress_undelivered' = it has not (and gives up).
+      if (mode === 'inprogress' || mode === 'inprogress_undelivered') {
+        if (mode === 'inprogress') world.post(params);
+        return route.fulfill({ status: 200, headers: { 'access-control-allow-origin': '*', 'content-type': 'application/json' }, body: JSON.stringify({ ok: false, submission_id: params.submission_id, reason: 'in_progress' }) });
+      }
       const answer = mode === 'textok' ? { text: 'ok', mime: 'text/plain' } : world.post(params);
       if (mode === 'lost') return route.abort('connectionreset'); // processed, answer lost
       // The live Apps Script answers through a 302 to script.googleusercontent.com, which serves the
@@ -193,6 +199,32 @@ for (const url of ['/', '/book-online']) {
   await Promise.all([page.waitForURL('**/thank-you*', { timeout: 10000 }), submit(page)]);
   await page.waitForTimeout(300);
   check(`${url} lost answer: the retry is recognised (duplicate), still one lead, one conversion`, st.posts.length === 2 && st.posts[0].params.submission_id === st.posts[1].params.submission_id && st.world.telegram.length === 1 && st.world.sprotocol.length === 1 && named(st, 'conversion').length === 1 && named(st, 'generate_lead').length === 1);
+  await ctx.close();
+}
+
+// ── 3b. the Apps Script answers in_progress (a copy of this submission is still being delivered) ──
+for (const [url, delivered] of [['/book', true], ['/book-online', true], ['/book', false], ['/book-online', false]]) {
+  const label = `${url} in_progress (${delivered ? 'the other copy delivers it' : 'nothing delivered yet'})`;
+  const { ctx, page, st } = await session();
+  await page.goto(BASE + url, { waitUntil: 'load' });
+  await openForm(page); await fill(page);
+  const before = await formValues(page);
+  st.mode = delivered ? 'inprogress' : 'inprogress_undelivered';
+  await submit(page);
+  await page.waitForSelector('.lead-send-error', { state: 'visible', timeout: 10000 });
+  const msg = await page.textContent('.lead-send-error');
+  const sid1 = st.posts[0].params.submission_id;
+  const stored = await page.evaluate(() => [sessionStorage.getItem('er_lead_sid'), sessionStorage.getItem('lead_submitted')]);
+  const usable = await page.evaluate(() => { const b = document.getElementById('confirmBookingBtn') || document.querySelector('#bookingForm button[type=submit]'); return !!b && !b.disabled; });
+  check(`${label}: stays on the page with the message, every field as typed`, !page.url().includes('thank-you') && /could not confirm/i.test(msg) && JSON.stringify(await formValues(page)) === JSON.stringify(before), msg);
+  check(`${label}: the submission_id is kept for the resend; the button works again`, stored[0] === sid1 && usable, JSON.stringify(stored));
+  check(`${label}: no thank-you flag, no conversion, no generate_lead`, stored[1] === null && !named(st, 'conversion').length && !named(st, 'generate_lead').length);
+  st.mode = 'ok';
+  await Promise.all([page.waitForURL('**/thank-you*', { timeout: 10000 }), submit(page)]);
+  await page.waitForTimeout(300);
+  check(`${label}: the resend uses the same submission_id and is confirmed once - one lead, one conversion`,
+    st.posts.length === 2 && st.posts[1].params.submission_id === sid1 && st.world.telegram.length === 1 && st.world.sprotocol.length === 1 &&
+    named(st, 'conversion').length === 1 && named(st, 'generate_lead').length === 1, JSON.stringify({ posts: st.posts.length, tg: st.world.telegram.length }));
   await ctx.close();
 }
 
