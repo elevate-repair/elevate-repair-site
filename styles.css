@@ -2796,3 +2796,120 @@ a[href^="tel:"]:not(.btn):not(.sticky-btn) {
 img.area-card-img {
     border-radius: 10px 10px 0 0;
 }
+
+/* --- Cost tables: the service links its hub, "See Our Estimates →" sits beside $$ --- */
+.cost-table .cost-link {
+    color: #1f2937;
+    font-weight: 600;
+    text-decoration: none;
+}
+.cost-table .cost-link:hover,
+.cost-table .cost-link:focus-visible {
+    color: #2563eb;
+    text-decoration: underline;
+}
+.cost-table .cost-level {
+    font-weight: 600;
+}
+.cost-table .cost-estimate-link {
+    display: inline-block;
+    margin-left: 12px;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.cost-table .cost-estimate-link:hover,
+.cost-table .cost-estimate-link:focus-visible {
+    text-decoration: underline;
+}
+@media (max-width: 480px) {
+    .cost-table .cost-estimate-link {
+        display: block;
+        margin: 4px 0 0;
+    }
+}
+
+/* --- Hub estimates card (#repair-cost): published Denver prices only --- */
+#repair-cost {
+    scroll-margin-top: 92px;
+}
+.repair-estimates {
+    margin: 20px 0 8px;
+    padding: 20px;
+    border: 2px solid #dbeafe;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(18, 60, 105, 0.06);
+}
+.repair-estimates h3 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    color: #1f2937;
+}
+.estimates-allin {
+    margin: 0 0 14px;
+    font-size: 16px;
+}
+.estimates-allin strong {
+    color: #15803d;
+    white-space: nowrap;
+}
+.estimates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 14px;
+    font-size: 15px;
+}
+.estimates-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    color: #4b5563;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+.estimates-table th,
+.estimates-table td {
+    text-align: left;
+    padding: 10px 8px;
+    border-top: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+.estimates-table th {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+}
+.estimates-table td:last-child,
+.estimates-table th:last-child {
+    text-align: right;
+}
+.price-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(22, 163, 74, 0.1);
+    color: #14804a;
+    font-weight: 700;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.estimates-service,
+.estimates-note {
+    margin: 0 0 8px;
+    color: #4b5563;
+    font-size: 15px;
+}
+.estimates-trust {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: #15803d;
+}
+.estimates-guide {
+    margin: 12px 0 0;
+    font-weight: 600;
+}
