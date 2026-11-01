@@ -26,7 +26,7 @@
     },
     {
      "q": "What does refrigerator repair cost in Denver?",
-     "a": "Most refrigerator repairs in Denver cost between $150 and $500, depending on the issue and parts required. Typical published costs by repair include refrigerator leak repair $120–$280; ice maker repair $140–$320. Every completed repair carries our 60-day parts and labor warranty."
+     "a": "Typical total repair cost (parts + labor) is $150–$500 on our refrigerator repair page, depending on the part. The estimated labor by repair is listed there as labor only, parts extra, and every completed repair carries our 60-day parts and labor warranty."
     },
     {
      "q": "Does a built-in, counter-depth or French-door refrigerator change the decision?",
@@ -76,7 +76,8 @@
       "text": "Fridge making noise"
      }
     ]
-   }
+   },
+   "_cost_note": "Cost answers follow the Buffalo guide wording; numbers come from tools/denver-estimates.json totals and tools/labor-rates.json."
   },
   "washer": {
    "path": "washer-repair/repair-or-replace-washer",
@@ -108,7 +109,7 @@
     },
     {
      "q": "What does washer repair cost in Denver?",
-     "a": "Most washer repairs in Denver cost between $150 and $450, depending on the issue and parts required. Typical published costs by repair include washer leak repair $130–$280; water inlet repair $140–$280. Every completed repair carries our 60-day parts and labor warranty."
+     "a": "Typical total repair cost (parts + labor) is $150–$450 on our washer repair page, depending on the part. The estimated labor by repair is listed there as labor only, parts extra, and every completed repair carries our 60-day parts and labor warranty."
     }
    ],
    "hubBlock": {
@@ -150,7 +151,8 @@
       "text": "Washer won't start"
      }
     ]
-   }
+   },
+   "_cost_note": "Cost answers follow the Buffalo guide wording; numbers come from tools/denver-estimates.json totals and tools/labor-rates.json."
   },
   "dryer": {
    "path": "dryer-repair/repair-or-replace-dryer",
@@ -182,7 +184,7 @@
     },
     {
      "q": "What does dryer repair cost in Denver?",
-     "a": "Most dryer repairs in Denver cost between $100 and $400, depending on the issue and parts required. Every completed repair carries our 60-day parts and labor warranty."
+     "a": "Typical total repair cost (parts + labor) is $100–$400 on our dryer repair page, depending on the part. The estimated labor by repair is listed there as labor only, parts extra, and every completed repair carries our 60-day parts and labor warranty."
     }
    ],
    "hubBlock": {
@@ -224,7 +226,8 @@
       "text": "Dryer overheating"
      }
     ]
-   }
+   },
+   "_cost_note": "Cost answers follow the Buffalo guide wording; numbers come from tools/denver-estimates.json totals and tools/labor-rates.json."
   },
   "dishwasher": {
    "path": "dishwasher-repair/repair-or-replace-dishwasher",
@@ -256,7 +259,7 @@
     },
     {
      "q": "What does dishwasher repair cost in Denver?",
-     "a": "Most dishwasher repairs in Denver cost between $100 and $400, depending on the issue and parts required. Typical published costs by repair include dishwasher noise repair $120–$280. Every completed repair carries our 60-day parts and labor warranty."
+     "a": "Typical total repair cost (parts + labor) is $100–$400 on our dishwasher repair page, depending on the part. The estimated labor by repair is listed there as labor only, parts extra, and every completed repair carries our 60-day parts and labor warranty."
     }
    ],
    "hubBlock": {
@@ -298,7 +301,8 @@
       "text": "Dishwasher won't start"
      }
     ]
-   }
+   },
+   "_cost_note": "Cost answers follow the Buffalo guide wording; numbers come from tools/denver-estimates.json totals and tools/labor-rates.json."
   },
   "oven": {
    "path": "oven-repair/repair-or-replace-oven-stove-range",
@@ -334,7 +338,7 @@
     },
     {
      "q": "What does oven repair cost in Denver?",
-     "a": "Most oven, stove and range repairs in Denver cost between $150 and $500, depending on the issue and parts required. Typical published costs by repair include temperature sensor or thermostat repair $160–$320; burner and igniter repair $150–$300. Every completed repair carries our 60-day parts and labor warranty."
+     "a": "Typical total repair cost (parts + labor) is $150–$500 on our oven repair page, depending on the part. The estimated labor by repair is listed there as labor only, parts extra, and every completed repair carries our 60-day parts and labor warranty."
     }
    ],
    "hubBlock": {
@@ -376,7 +380,8 @@
       "text": "Self-clean not working"
      }
     ]
-   }
+   },
+   "_cost_note": "Cost answers follow the Buffalo guide wording; numbers come from tools/denver-estimates.json totals and tools/labor-rates.json."
   }
  }
 }

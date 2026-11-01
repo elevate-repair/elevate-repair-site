@@ -16,7 +16,7 @@
  *   - scripts: a base <script> block may only lose whole lines, and a removed line may not carry
  *     tracking / submit / redirect / storage logic; a new script block may not carry any of it
  *   - SEO: <title>, meta description, robots, canonical, og:* tags, the H1 text, every JSON-LD block
- *     except FAQPage (FAQ schema is reconciled with the visible FAQ by tools/apply-faq.mjs), and no
+ *     except FAQPage (compared without AggregateRating / Review, which may only be removed) (FAQ schema is reconciled with the visible FAQ by tools/apply-faq.mjs), and no
  *     sitemap URL disappears
  *
  * New pages (in the working tree only) are reported, not compared; they must use the canonical phone
@@ -53,6 +53,17 @@ const ms = (arr) => arr.slice().sort().join('\n');
 const all = (re, s) => [...s.matchAll(re)].map((m) => m[0]);
 const PROTECTED_LINE = /gtag|dataLayer|clarity|sessionStorage|localStorage|hidden_iframe|lead_submitted|fetch\(|XMLHttpRequest|submit|location\.href|thank-you|phone|source|script\.google|ec_name|ec_phone|booking_/i;
 
+function withoutRatings(block) {
+  try {
+    const strip = (o) => {
+      if (Array.isArray(o)) return o.filter((x) => !(x && (x['@type'] === 'Review' || x['@type'] === 'AggregateRating'))).map(strip);
+      if (o && typeof o === 'object') { const c = {}; for (const [k, v] of Object.entries(o)) if (k !== 'aggregateRating' && k !== 'review') c[k] = strip(v); return c; }
+      return o;
+    };
+    return JSON.stringify(strip(JSON.parse(block)));
+  } catch (e) { return 'UNPARSEABLE ' + block; }
+}
+
 function facts(src) {
   const scripts = [...src.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].map((m) => ({ attrs: m[1].trim(), body: m[2] }));
   const ld = scripts.filter((s) => /ld\+json/.test(s.attrs)).map((s) => s.body.trim());
@@ -75,7 +86,10 @@ function facts(src) {
     og: ms(all(/<meta property="og:[^"]+" content="[^"]*"/g, src)),
     h1: ((src.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(),
     h1count: (src.match(/<h1[\s>]/g) || []).length,
-    ldNonFaq: ms(ld.filter((b) => !/"FAQPage"/.test(b))),
+    // non-FAQ JSON-LD, compared without AggregateRating / Review: those were removed on purpose
+    // (unverifiable rating claims) and may never come back — everything else must stay identical
+    ldNonFaq: ms(ld.filter((b) => !/"FAQPage"/.test(b)).map(withoutRatings)),
+    ratingSchema: ld.some((b) => /"aggregateRating"|"AggregateRating"|"@type":\s*"Review"/.test(b)),
     scripts: scripts.filter((s) => !/ld\+json/.test(s.attrs)),
   };
 }
@@ -126,6 +140,7 @@ for (const p of baseFiles) {
     'title', 'desc', 'robots', 'canonical', 'og', 'h1', 'h1count', 'ldNonFaq']) {
     if (b[k] !== w[k]) err(p, `${k} changed`);
   }
+  if (w.ratingSchema) err(p, 'AggregateRating / Review schema present');
   scriptDrift(p, b.scripts, w.scripts);
 }
 

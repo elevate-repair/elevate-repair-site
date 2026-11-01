@@ -1,0 +1,1026 @@
+{
+ "_doc": [
+  "Estimated labor by repair for the five Denver appliance hubs. The owner confirmed on 2026-11-01 that the Buffalo site's estimates apply to Denver: groups, rows, labels, low / high and status are copied unchanged from the Buffalo tools/labor-rates.json (Buffalo main fcdd852). Only the pages, links and Denver terms differ.",
+  "Every row is LABOR ONLY, parts extra, and is always labelled so. pages[].allIn is the hub's own typical TOTAL repair cost (parts + labor), already published on the Denver hub and identical to Buffalo's. The $109 Denver service call is credited toward an approved repair; it is not part of these ranges.",
+  "Only rows with status 'publish' are rendered; 'owner-review' rows (gas and sealed-system work) are never rendered anywhere.",
+  "Rendered by node tools/apply-estimates.mjs (hub cards) and node tools/generate-repair-guides.mjs (guide examples)."
+ ],
+ "groups": {
+  "controls": {
+   "name": "Controls & sensors",
+   "desc": "Boards, thermostats, switches and sensors that tell the appliance what to do."
+  },
+  "mechanical": {
+   "name": "Parts & mechanical",
+   "desc": "Pumps, motors, valves, belts, seals and other moving or wear parts."
+  },
+  "teardown": {
+   "name": "Major teardown repairs",
+   "desc": "Jobs that need the tub and drum taken apart."
+  }
+ },
+ "pages": {
+  "fridge-repair-denver.html": {
+   "appliance": "refrigerator",
+   "service": "refrigerator",
+   "allIn": "$150–$500",
+   "guide": "fridge-repair/repair-or-replace-refrigerator"
+  },
+  "washer-repair-denver.html": {
+   "appliance": "washer",
+   "service": "washer",
+   "allIn": "$150–$450",
+   "guide": "washer-repair/repair-or-replace-washer"
+  },
+  "dryer-repair-denver.html": {
+   "appliance": "dryer",
+   "service": "dryer",
+   "allIn": "$100–$400",
+   "guide": "dryer-repair/repair-or-replace-dryer"
+  },
+  "dishwasher-repair-denver.html": {
+   "appliance": "dishwasher",
+   "service": "dishwasher",
+   "allIn": "$100–$400",
+   "guide": "dishwasher-repair/repair-or-replace-dishwasher"
+  },
+  "oven-repair-denver.html": {
+   "appliance": "oven",
+   "service": "oven",
+   "allIn": "$150–$500",
+   "guide": "oven-repair/repair-or-replace-oven-stove-range"
+  }
+ },
+ "rows": [
+  {
+   "appliance": "refrigerator",
+   "id": "defrost-thermostat",
+   "label": "Defrost thermostat replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "start-relay-capacitor",
+   "label": "Compressor start relay or capacitor replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "main-control-board",
+   "label": "Main control board replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "thermistor",
+   "label": "Temperature sensor (thermistor) replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "dispenser-switch-actuator",
+   "label": "Water dispenser switch or actuator repair",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "damper-control",
+   "label": "Damper control assembly replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "led-light-board",
+   "label": "LED light board replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "defrost-heater",
+   "label": "Defrost heater replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "condenser-fan-motor",
+   "label": "Condenser fan motor replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "evaporator-fan-motor",
+   "label": "Evaporator fan motor replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "door-gasket",
+   "label": "Door gasket (seal) replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "water-inlet-valve",
+   "label": "Water inlet valve replacement (leaks or ice problems)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "ice-maker-assembly",
+   "label": "Ice maker assembly repair or replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "defrost-drain-tube",
+   "label": "Defrost drain tube clearing (water under crisper drawers)",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "water-filter-housing",
+   "label": "Water filter housing replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "door-hinge-cam",
+   "label": "Door hinge or cam repair",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "crisper-drawer-track",
+   "label": "Crisper drawer track replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "leveling-vibration",
+   "label": "Leveling or vibration correction",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "refrigerator",
+   "id": "sealed-system-leak",
+   "label": "Sealed-system / refrigerant leak repair",
+   "low": 499,
+   "high": 699,
+   "group": "mechanical",
+   "status": "owner-review",
+   "reviewReason": "Refrigerant work needs confirmed capability and credentials (EPA Section 608); the range also exceeds the page's $150–$500 all-in estimate."
+  },
+  {
+   "appliance": "washer",
+   "id": "lid-switch-door-lock",
+   "label": "Lid switch or door lock replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "timer",
+   "label": "Timer replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "main-motor-control-board",
+   "label": "Main motor control board replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "water-level-pressure-switch",
+   "label": "Water level (pressure) switch replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "shift-actuator",
+   "label": "Shift actuator replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "ui-touchpad-board",
+   "label": "User interface / touchpad board replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "drain-pump",
+   "label": "Drain pump replacement (won't drain)",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "water-inlet-valve",
+   "label": "Water inlet valve replacement (won't fill)",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "drive-belt",
+   "label": "Drive belt replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "shock-absorber",
+   "label": "Shock absorber replacement (heavy shaking)",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "suspension-rod",
+   "label": "Top-load suspension rod replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "agitator-dog-kit",
+   "label": "Agitator dog kit replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "motor-coupling",
+   "label": "Motor coupling replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "door-boot-gasket",
+   "label": "Front-load door boot gasket replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "clutch-assembly",
+   "label": "Clutch assembly replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "drain-hose",
+   "label": "Drain hose replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "coin-trap-filter",
+   "label": "Coin trap / drain filter cleaning",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "tub-bearing",
+   "label": "Tub bearing replacement",
+   "low": 199,
+   "high": 299,
+   "group": "teardown",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "spider-arm",
+   "label": "Front-load spider arm replacement",
+   "low": 199,
+   "high": 299,
+   "group": "teardown",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "washer",
+   "id": "tub-seal",
+   "label": "Tub seal replacement",
+   "low": 179,
+   "high": 249,
+   "group": "teardown",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "high-limit-thermostat",
+   "label": "High-limit thermostat replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "cycling-thermostat",
+   "label": "Cycling thermostat replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "moisture-sensor-bar",
+   "label": "Moisture sensor bar replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "timer",
+   "label": "Timer replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "main-control-board",
+   "label": "Main control board replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "heating-element",
+   "label": "Heating element replacement (electric dryers)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "thermal-fuse",
+   "label": "Thermal fuse replacement (no heat or won't start)",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "drive-belt",
+   "label": "Drive belt replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "drum-roller",
+   "label": "Drum roller replacement (squeaking)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "idler-pulley",
+   "label": "Idler pulley replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "blower-wheel",
+   "label": "Blower wheel cleaning or replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "drive-motor",
+   "label": "Drive motor replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "door-switch",
+   "label": "Door switch replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "power-cord-terminal-block",
+   "label": "Power cord or terminal block repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "drum-felt-seal",
+   "label": "Drum felt seal replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "door-catch-strike",
+   "label": "Door catch or strike replacement",
+   "low": 99,
+   "high": 200,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "exhaust-vent-cleaning",
+   "label": "Internal exhaust vent cleaning",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dryer",
+   "id": "gas-valve-coil",
+   "label": "Gas valve coil replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "owner-review",
+   "reviewReason": "Gas-dryer repair stays off public price tables until capability and credentials are confirmed."
+  },
+  {
+   "appliance": "dryer",
+   "id": "gas-igniter",
+   "label": "Gas igniter replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "owner-review",
+   "reviewReason": "Gas-dryer repair stays off public price tables until capability and credentials are confirmed."
+  },
+  {
+   "appliance": "dryer",
+   "id": "flame-sensor",
+   "label": "Flame sensor replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "owner-review",
+   "reviewReason": "Gas-dryer repair stays off public price tables until capability and credentials are confirmed."
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "electronic-control-board",
+   "label": "Electronic control board replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "ui-touchpad-board",
+   "label": "User interface / touchpad board replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "thermal-fuse-high-limit",
+   "label": "Thermal fuse or high-limit thermostat replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "turbidity-sensor",
+   "label": "Turbidity sensor replacement (dirty-water detection)",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "drain-pump",
+   "label": "Drain pump replacement (standing water)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "circulation-pump",
+   "label": "Circulation pump or wash motor replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "water-inlet-valve",
+   "label": "Water inlet valve replacement (won't fill)",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "heating-element",
+   "label": "Heating element replacement (poor drying)",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "spray-arm",
+   "label": "Spray arm replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "detergent-dispenser",
+   "label": "Detergent dispenser assembly replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "air-gap-check-valve",
+   "label": "Air gap or check valve clearing",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "general-leak",
+   "label": "General leak repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "door-gasket-tub-seal",
+   "label": "Door gasket or tub seal replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "float-switch",
+   "label": "Float switch replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "door-latch-safety-switch",
+   "label": "Door latch or safety switch repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "food-chopper",
+   "label": "Food chopper or macerator repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "drain-hose",
+   "label": "Drain hose replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "rack-adjuster",
+   "label": "Rack adjuster or wheel repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "sump-filter-gasket",
+   "label": "Sump assembly or filter gasket replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "diverter-motor",
+   "label": "Diverter motor replacement",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "tine-row-clip",
+   "label": "Tine row clip or rack bracket replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "dishwasher",
+   "id": "soap-dispenser",
+   "label": "Soap dispenser repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "control-board-clock",
+   "label": "Control board or clock replacement",
+   "low": 199,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "temperature-sensor",
+   "label": "Oven temperature sensor replacement",
+   "low": 99,
+   "high": 199,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "terminal-block-wiring",
+   "label": "Terminal block / wiring replacement",
+   "low": 179,
+   "high": 249,
+   "group": "controls",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "bake-element",
+   "label": "Bake element replacement (no bottom heat)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "broil-element",
+   "label": "Broil element replacement (no top heat)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "coil-burner",
+   "label": "Electric coil burner replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "radiant-element",
+   "label": "Glass cooktop (radiant) element replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "burner-control-switch",
+   "label": "Electric burner control switch replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "door-hinge",
+   "label": "Oven door hinge replacement (door won't close)",
+   "low": 199,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "door-glass",
+   "label": "Oven door glass replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "door-gasket",
+   "label": "Oven door gasket replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "convection-fan-motor",
+   "label": "Convection fan motor replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "indicator-light-switch",
+   "label": "Indicator light or switch assembly repair",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "drip-bowl-receptacle",
+   "label": "Drip bowl or receptacle block replacement",
+   "low": 99,
+   "high": 199,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "cooling-fan-motor",
+   "label": "Cooling fan motor replacement",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "publish",
+   "reviewReason": null
+  },
+  {
+   "appliance": "oven",
+   "id": "spark-electrode",
+   "label": "Surface burner spark electrode replacement (gas cooktops)",
+   "low": 179,
+   "high": 249,
+   "group": "mechanical",
+   "status": "owner-review",
+   "reviewReason": "Gas cooktop repair stays off public price tables until capability and credentials are confirmed."
+  }
+ ]
+}

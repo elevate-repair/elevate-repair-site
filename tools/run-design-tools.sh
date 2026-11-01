@@ -22,6 +22,7 @@ node tools/apply-faq-accordion.js $MODE
 node tools/sync-faq-schema.js $MODE
 node tools/apply-natural-headings.mjs $MODE
 node tools/apply-estimates.mjs $MODE
+node tools/apply-google-reviews.mjs $MODE
 node tools/generate-repair-guides.mjs $MODE
 # the hubs' $300 callout links #repair-cost once the estimates exist
 node tools/apply-hero-offers.mjs $MODE

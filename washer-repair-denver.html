@@ -100,13 +100,6 @@
     "latitude": 39.7392,
     "longitude": -104.9903
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "94",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "sameAs": [
     "https://www.google.com/maps?cid=14387375856879488849",
     "https://www.yelp.com/biz/elevate-repair-westminster-2",
@@ -180,7 +173,7 @@
             </div>
             <div class="hero-offers">
                 <p class="diag-offer"><span class="diag-badge">$0 Diagnostic with Repair</span> <span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span></p>
-                <p class="avg-callout"><span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span> <a href="#repair-cost" class="avg-callout-link">See typical repair costs</a></p>
+                <p class="avg-callout"><span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span> <a href="#repair-cost" class="avg-callout-link">See estimated labor costs by repair</a></p>
             </div>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
@@ -263,22 +256,95 @@
                 <h2 id="repair-cost">Washer Repair Cost in Denver</h2>
                 <p>Most washer repairs in Denver cost between $150 and $450, depending on the issue and parts required. Our $109 service call fee covers the trip and diagnosis, and is applied toward your repair if you proceed. We provide an upfront quote before any work begins. <a href="/coupons">View coupons</a> for additional savings.</p>
                 <!-- denver-estimates:start -->
-                <div class="repair-estimates">
-                    <h3>Typical repair costs</h3>
+                <div class="labor">
                     <p class="estimates-allin"><span class="estimates-allin-label">Typical total repair cost (parts + labor):</span> <strong>$150&ndash;$450</strong></p>
-                    <table class="estimates-table">
-                        <caption>Typical cost by repair (parts and labor)</caption>
-                        <thead><tr><th scope="col">Repair</th><th scope="col">Typical cost</th></tr></thead>
-                        <tbody>
-                            <tr><td>Washer leak repair (hoses, pump, door boot)</td><td><span class="price-chip">$130&ndash;$280</span></td></tr>
-                            <tr><td>Water inlet repair (washer not filling)</td><td><span class="price-chip">$140&ndash;$280</span></td></tr>
-                        </tbody>
-                    </table>
-                    <p class="estimates-service">Our $109 service call covers the visit and diagnosis and is credited toward your repair when you approve it.</p>
-                    <p class="estimates-trust">60-day parts &amp; labor warranty</p>
-                    <p class="estimates-note">Your exact price is quoted after diagnosis, before any work starts. Don't see your repair? Ask us for a quote.</p>
-                    <p class="estimates-guide"><a href="/washer-repair/repair-or-replace-washer">Repair or replace? Read our washer guide &rarr;</a></p>
+                    <div class="labor-card">
+                        <div class="labor-head">
+                            <h3>Estimated labor cost by repair</h3>
+                            <p class="labor-sub">Labor only &mdash; parts are quoted separately after diagnosis, before any work begins.</p>
+                        </div>
+                        <div class="labor-tabs" role="tablist" aria-label="Repair groups">
+                            <button type="button" class="labor-tab is-active" role="tab" id="labor-tab-controls" aria-controls="labor-panel-controls" aria-selected="true" tabindex="0"><span class="labor-tab-name">Controls &amp; sensors</span><span class="labor-tab-range">$99&ndash;$249</span></button>
+                            <button type="button" class="labor-tab" role="tab" id="labor-tab-mechanical" aria-controls="labor-panel-mechanical" aria-selected="false" tabindex="-1"><span class="labor-tab-name">Parts &amp; mechanical</span><span class="labor-tab-range">$99&ndash;$249</span></button>
+                            <button type="button" class="labor-tab" role="tab" id="labor-tab-teardown" aria-controls="labor-panel-teardown" aria-selected="false" tabindex="-1"><span class="labor-tab-name">Major teardown repairs</span><span class="labor-tab-range">$179&ndash;$299</span></button>
+                        </div>
+                        <div class="labor-panel" id="labor-panel-controls" role="tabpanel" aria-labelledby="labor-tab-controls" tabindex="0">
+                            <p class="labor-desc">Boards, thermostats, switches and sensors that tell the appliance what to do.</p>
+                            <table class="labor-table">
+                                <caption><span class="labor-caption">Controls &amp; sensors &mdash; estimated labor by repair, $99&ndash;$249</span></caption>
+                                <thead>
+                                    <tr><th scope="col">Repair</th><th scope="col">Estimated labor (parts extra)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Lid switch or door lock replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Timer replacement</td><td><span class="price-chip">$179&ndash;$249</span></td></tr>
+                                    <tr><td>Main motor control board replacement</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Water level (pressure) switch replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Shift actuator replacement</td><td><span class="price-chip">$179&ndash;$249</span></td></tr>
+                                    <tr><td>User interface / touchpad board replacement</td><td><span class="price-chip">$179&ndash;$249</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="labor-panel" id="labor-panel-mechanical" role="tabpanel" aria-labelledby="labor-tab-mechanical" tabindex="0">
+                            <p class="labor-desc">Pumps, motors, valves, belts, seals and other moving or wear parts.</p>
+                            <table class="labor-table">
+                                <caption><span class="labor-caption">Parts &amp; mechanical &mdash; estimated labor by repair, $99&ndash;$249</span></caption>
+                                <thead>
+                                    <tr><th scope="col">Repair</th><th scope="col">Estimated labor (parts extra)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Drain pump replacement (won&rsquo;t drain)</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Water inlet valve replacement (won&rsquo;t fill)</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Drive belt replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Shock absorber replacement (heavy shaking)</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Top-load suspension rod replacement</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Agitator dog kit replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Motor coupling replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Front-load door boot gasket replacement</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Clutch assembly replacement</td><td><span class="price-chip">$199&ndash;$249</span></td></tr>
+                                    <tr><td>Drain hose replacement</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                    <tr><td>Coin trap / drain filter cleaning</td><td><span class="price-chip">$99&ndash;$199</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="labor-panel" id="labor-panel-teardown" role="tabpanel" aria-labelledby="labor-tab-teardown" tabindex="0">
+                            <p class="labor-desc">Jobs that need the tub and drum taken apart.</p>
+                            <table class="labor-table">
+                                <caption><span class="labor-caption">Major teardown repairs &mdash; estimated labor by repair, $179&ndash;$299</span></caption>
+                                <thead>
+                                    <tr><th scope="col">Repair</th><th scope="col">Estimated labor (parts extra)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Tub bearing replacement</td><td><span class="price-chip">$199&ndash;$299</span></td></tr>
+                                    <tr><td>Front-load spider arm replacement</td><td><span class="price-chip">$199&ndash;$299</span></td></tr>
+                                    <tr><td>Tub seal replacement</td><td><span class="price-chip">$179&ndash;$249</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="labor-foot">
+                            <p class="labor-trust">60-day parts &amp; labor warranty</p>
+                            <p class="labor-more">Don&rsquo;t see your repair? Call for a quote.</p>
+                        </div>
+                    </div>
+                    <p class="cost-note labor-note">Estimated labor only. Parts are additional. Your final quote is provided after diagnosis and before any work begins.</p>
                 </div>
+                <script>
+                    /* labor-tabs: ARIA tabs for the labor card; every group is visible when JS is off */
+                    (function(){
+                        var card=document.querySelector('.labor-card');if(!card)return;
+                        var tabs=[].slice.call(card.querySelectorAll('[role="tab"]')),panels=[].slice.call(card.querySelectorAll('[role="tabpanel"]'));
+                        if(tabs.length<2||tabs.length!==panels.length)return;
+                        card.classList.add('is-tabbed');
+                        function activate(i,focus){tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;t.classList.toggle('is-active',on);panels[j].hidden=!on;});if(focus)tabs[i].focus();}
+                        tabs.forEach(function(t,i){
+                            t.addEventListener('click',function(){activate(i,false);});
+                            t.addEventListener('keydown',function(e){var k=e.key,n=null;
+                                if(k==='ArrowRight'||k==='ArrowDown')n=(i+1)%tabs.length;else if(k==='ArrowLeft'||k==='ArrowUp')n=(i-1+tabs.length)%tabs.length;else if(k==='Home')n=0;else if(k==='End')n=tabs.length-1;
+                                if(n!==null){e.preventDefault();activate(n,true);}});
+                        });
+                        activate(0,false);
+                    })();
+                </script>
                 <!-- denver-estimates:end -->
                 <img src="/assets/images/photos/top-load-washer.webp"
                      alt="Top-load washer in a basement laundry room"

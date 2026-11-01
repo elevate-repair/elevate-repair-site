@@ -1,0 +1,42 @@
+{
+ "_doc": [
+  "Google Business Profile reviews of Elevate Repair (Denver), the single source for every reviews block on the Denver pages. Rendered by node tools/apply-google-reviews.mjs; never hand-edit a block.",
+  "Collected and verified by the owner's Claude in Chrome session on 2026-10-31: every reviewUrl opens its own review, reviewsTabUrl opens the profile's Reviews tab on desktop.",
+  "Texts are verbatim (including paragraph breaks and spacing). Nothing Google does not show is added: no author city, appliance, result or date. No aggregate rating or review count is rendered, and no Review / AggregateRating schema is ever emitted.",
+  "To add a review: append it here exactly as Google shows it, set featured: true to show it, re-run the tool."
+ ],
+ "collectedOn": "2026-10-31",
+ "verifiedBy": "Claude in Chrome (owner session)",
+ "profileUrl": "https://www.google.com/maps?cid=14387375856879488849",
+ "reviewsTabUrl": "https://www.google.com/maps/place/Elevate+Repair/data=!4m8!3m7!1s0xaafd1e0fd7fd8e79:0xc7aa3a1d3f554f51!8m2!3d39.773741!4d-104.9328559!9m1!1b1!16s%2Fg%2F11ywc6n8q8",
+ "reviews": [
+  {
+   "author": "Anthony Boston",
+   "rating": 5,
+   "featured": true,
+   "reviewUrl": "https://maps.app.goo.gl/D4PgkDzL44nRokhx9",
+   "text": "I had a problem with the washing machine vibrating excessively when it reached full speed. Alex diagnosed the problem and found the solution quickly. He also helped repair where the stackable units had separated. Friendly and professional. Would highly recommend."
+  },
+  {
+   "author": "Lauren Korus",
+   "rating": 5,
+   "featured": true,
+   "reviewUrl": "https://maps.app.goo.gl/eDcC2ALZQec3F5Nv8",
+   "text": "Alex was great! He was able to help us the next day. He diagnosed the problem quickly, ordered the part, and returned one day later once the part arrived to install it.\n\nFriendly, timely, and clean. Highly recommend!"
+  },
+  {
+   "author": "Kali Hamilton",
+   "rating": 5,
+   "featured": true,
+   "reviewUrl": "https://maps.app.goo.gl/fFjVNJFYPDqKbpmd8",
+   "text": "Elevate Repair was incredibly flexible for scheduling which was great with my work schedule. I called ahead on my oven issue and Alex came prepared with the parts to repair even before diagnosis. He was so efficient with the work (~ 1hr)!"
+  },
+  {
+   "author": "Cristopher Castro",
+   "rating": 5,
+   "featured": true,
+   "reviewUrl": "https://maps.app.goo.gl/HwAznNseVteGX3kg9",
+   "text": "Washer stopped spinning. Called in the morning and it was fixed the same day. Smooth process and fair price."
+  }
+ ]
+}
