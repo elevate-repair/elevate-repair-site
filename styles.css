@@ -2516,16 +2516,19 @@ details.problem-category[open] summary .problem-toggle::after {
     .selector-btn:last-child { grid-column: 1 / -1; }
 }
 
-/* --- Content photos: a portrait phone photo never fills the screen --- */
+/* --- Content photos: a portrait phone photo never fills the screen. The box is sized
+       from the width / height attributes before the lazy image loads (no layout shift, so
+       in-page anchors land where they should); a tall photo is contained, never distorted. --- */
 .section-photo {
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: min(100%, 580px);
+    max-width: 580px;
     max-height: 460px;
     margin: 24px auto 28px;
+    object-fit: contain;
 }
 @media (min-width: 769px) {
-    .section-photo { max-width: min(100%, 580px); max-height: 520px; }
+    .section-photo { max-width: 580px; max-height: 520px; }
 }
 
 /* --- Readable headings on the dark bands; phone numbers in prose never break --- */
@@ -2912,4 +2915,413 @@ img.area-card-img {
 .estimates-guide {
     margin: 12px 0 0;
     font-weight: 600;
+}
+
+
+/* --- Repair-or-replace guides and the hub guide block (Buffalo layout, Denver class names) --- */
+.guide-ctas .btn {
+    min-height: 44px;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+.guide-section {
+    padding: 40px 0;
+}
+
+.guide-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.guide-media {
+    display: flex;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.guide-media img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+
+.guide-media--render {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: #f3f6fa;
+    border: 1px solid #e5e7eb;
+}
+
+.guide-media--render img {
+    width: auto;
+    max-width: 100%;
+    height: 160px;
+    object-fit: contain;
+}
+
+.guide-body {
+    min-width: 0;
+}
+
+.guide-pill {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.guide-card h2 {
+    text-align: left;
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.guide-intro {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.guide-panels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin: 0 0 10px;
+}
+
+.guide-panel {
+    border-radius: 12px;
+    padding: 12px 14px;
+    border: 1px solid;
+}
+
+.guide-panel--repair {
+    background: #f3fbf6;
+    border-color: #bfe3cb;
+}
+
+.guide-panel--replace {
+    background: #fdfaf2;
+    border-color: #e6d9b8;
+}
+
+.guide-panel h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.guide-panel h3::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.guide-panel--repair h3 {
+    color: #15803d;
+}
+
+.guide-panel--repair h3::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2315803d' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='m8.5 12.2 2.4 2.4 4.6-5'/></svg>");
+}
+
+.guide-panel--replace h3 {
+    color: #b45309;
+}
+
+.guide-panel--replace h3::before {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b45309' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3 2.5 20h19L12 3z'/><path d='M12 9v5'/><circle cx='12' cy='17.2' r='0.6' fill='%23b45309'/></svg>");
+}
+
+.guide-panel ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.guide-panel li {
+    margin: 0 0 3px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: #1f2937;
+}
+
+.guide-note {
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+.guide-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 16px;
+}
+
+.guide-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    flex: 1 1 320px;
+    min-width: 0;
+}
+
+.guide-links-label {
+    margin-right: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.guide-links a {
+    padding: 5px 10px;
+    border: 1px solid #dbe3ee;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.guide-links a:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.guide-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.guide-cta.btn {
+    background: #2563eb;
+    color: #fff;
+}
+
+.guide-cta.btn:hover {
+    background: #1d4ed8;
+}
+
+.rr-hero .cta-buttons {
+    margin-top: 4px;
+}
+
+.content-body .rr-lead {
+    font-size: 17px;
+    color: #1f2937;
+}
+
+.rr-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 20px;
+    background: #fff;
+    border: 1px solid #e3e8ef;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.rr-table caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0 0 8px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.rr-table th,
+.rr-table td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 1.45;
+    border-top: 1px solid #eef2f7;
+}
+
+.rr-table thead th {
+    background: #f3f6fa;
+    border-top: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4b5563;
+}
+
+.rr-table tbody th {
+    width: 26%;
+    font-weight: 700;
+    color: #1f2937;
+    background: #f9fafb;
+}
+
+.rr-table td.rr-repair {
+    color: #166534;
+}
+
+.rr-table td.rr-replace {
+    color: #92400e;
+}
+
+.rr-panels {
+    margin: 0 0 20px;
+}
+
+.content-body .rr-panels ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.content-body .rr-panels li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 6px;
+}
+
+.rr-costs {
+    margin: 0 0 20px;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+}
+
+.content-body .rr-costs p {
+    margin-bottom: 10px;
+}
+
+.rr-costs .estimates-table {
+    margin: 10px 0 12px;
+}
+
+.rr-costs .estimates-table caption {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    padding: 0 0 8px;
+}
+
+.rr-costs .estimates-table td:last-child {
+    white-space: nowrap;
+}
+
+.guide-full {
+    display: inline-block;
+    align-self: center;
+    padding: 10px 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.guide-full:hover {
+    color: #1d4ed8;
+}
+
+@media (max-width: 640px) {
+    .rr-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+    .rr-table,
+.rr-table caption,
+.rr-table tbody,
+.rr-table tr,
+.rr-table th,
+.rr-table tbody th,
+.rr-table td {
+        display: block;
+        width: auto;
+    }
+    .rr-table tr {
+        border-top: 1px solid #e3e8ef;
+    }
+    .rr-table tbody th {
+        border-top: none;
+        padding: 12px 14px 4px;
+    }
+    .rr-table td {
+        border-top: none;
+        padding: 6px 14px;
+    }
+    .rr-table td:last-child {
+        padding-bottom: 12px;
+    }
+    .rr-table td::before {
+        content: attr(data-label) ": ";
+        font-weight: 700;
+        color: #1f2937;
+    }
+    .rr-costs {
+        padding: 14px 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .rr-table td {
+        width: 37%;
+    }
+}
+
+@media (min-width: 769px) {
+    .guide-section {
+        padding: 48px 0;
+    }
+    .guide-card {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 22px;
+        padding: 20px;
+    }
+    .guide-media img {
+        height: 100%;
+        min-height: 280px;
+        max-height: 420px;
+    }
+    .guide-media--render img {
+        height: 220px;
+        min-height: 0;
+    }
+    .guide-card h2 {
+        font-size: 26px;
+    }
+    .guide-panels {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 }

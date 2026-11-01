@@ -35,7 +35,7 @@ const COST_LINK = '<a href="#repair-cost" class="avg-callout-link">See typical r
 const HEADER_OLD = /(<a href="\/book-online" class="header-book-btn">)Book Online(?: &mdash; Save \$25)?(<\/a>)/g;
 const HEADER_WANT = '<a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>';
 
-function offers(indent, withLink) {
+export function offers(indent, withLink) {
   const i2 = indent + '    ';
   return `${indent}<div class="hero-offers">\n` +
     `${i2}<p class="diag-offer">${BADGE} ${NOTE}</p>\n` +
@@ -44,7 +44,7 @@ function offers(indent, withLink) {
 }
 const OFFERS_RE = /[ \t]*<div class="hero-offers">[\s\S]*?\n[ \t]*<\/div>\n/;
 
-function render(src, rel) {
+export function render(src, rel) {
   let out = src.replace(HEADER_OLD, (_, a, b) => `${a}Book Online &mdash; Save $25${b}`);
   const type = pageType(rel);
   const hero = out.match(/<section class="hero[^"]*"[^>]*>[\s\S]*?<\/section>/);
@@ -69,9 +69,10 @@ function render(src, rel) {
   return { out };
 }
 
+const isMain = process.argv[1] && process.argv[1].endsWith('apply-hero-offers.mjs');
 const problems = [];
 let changed = 0;
-for (const rel of productionPages()) {
+for (const rel of isMain ? productionPages() : []) {
   if (rel === 'thank-you.html') continue; // conversion page: never touched
   const src = read(rel);
   const { out, note } = render(src, rel);
@@ -86,10 +87,10 @@ for (const rel of productionPages()) {
     else writeFileSync(join(ROOT, rel), out);
   }
 }
-if (CHECK) {
+if (isMain && CHECK) {
   if (problems.length) { console.log('FAIL - hero offers / header button:'); problems.slice(0, 80).forEach((p) => console.log('  ' + p)); process.exit(1); }
   console.log('PASS - hero offers row on every residential page, none elsewhere; header button reads "Book Online — Save $25".');
-} else {
+} else if (isMain) {
   problems.forEach((p) => console.log('  ' + p));
   console.log(`apply-hero-offers: ${changed} page(s) updated.`);
 }

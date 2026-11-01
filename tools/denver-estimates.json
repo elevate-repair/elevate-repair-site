@@ -105,7 +105,7 @@
    ],
    "rows": [
     {
-     "label": "Noise repair (wash arm, pump, bearing)",
+     "label": "Dishwasher noise repair (wash arm, pump, bearing)",
      "low": 120,
      "high": 280,
      "source": "/denver-dishwasher-making-noise"
