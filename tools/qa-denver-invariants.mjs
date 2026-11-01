@@ -21,11 +21,24 @@
  *
  * New pages (in the working tree only) are reported, not compared; they must use the canonical phone
  * format and may not introduce a second Apps Script endpoint.
+ *
+ * Documented exceptions (each applied to the BASE page before comparing, as exact strings, so any
+ * other change still fails):
+ *   - the lead-capture migration (tools/apply-lead-capture.mjs migrateLegacy): the legacy submit
+ *     handler that treated the hidden iframe's `load` as success is removed, the form-start events
+ *     send `form_location` instead of `source`, /book-online confirms through window.erLeadSend;
+ *     the managed <script data-er="..."> blocks are stripped from the working page (that tool's
+ *     --check and tools/qa-lead-flow.mjs cover them);
+ *   - the header booking button gains its book_click onclick (tools/apply-hero-offers.mjs).
+ * The form markup (action, method, fields, `source`), tel links, phone text, gtag configs, the
+ * thank-you page and the Ads conversion stay under the guard unchanged.
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { migrateLegacy, stripManaged } from './apply-lead-capture.mjs';
+import { HEADER_OLD, HEADER_WANT } from './apply-hero-offers.mjs';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const BASE = (process.argv.find((a) => a.startsWith('--base=')) || '--base=origin/main').slice(7);
@@ -37,6 +50,8 @@ function git(args) {
 }
 const baseFiles = git(['ls-tree', '-r', '--name-only', BASE]).split('\n').filter(isProd);
 const baseRead = (p) => git(['show', `${BASE}:${p}`]);
+/** The base page with the documented exceptions applied (see the header). */
+const expectedFromBase = (src) => migrateLegacy(src).replace(HEADER_OLD, () => HEADER_WANT);
 
 function walk(d, out = []) {
   for (const n of readdirSync(d)) {
@@ -129,9 +144,9 @@ function scriptDrift(page, baseScripts, workScripts) {
 
 for (const p of baseFiles) {
   if (!existsSync(join(ROOT, p))) { err(p, 'page removed'); continue; }
-  const b = facts(baseRead(p));
+  const b = facts(expectedFromBase(baseRead(p)));
   const wSrc = readFileSync(join(ROOT, p), 'utf8');
-  const w = facts(wSrc);
+  const w = facts(stripManaged(wSrc));
   if (p === 'thank-you.html' && wSrc !== baseRead(p)) err(p, 'thank-you page changed (conversion page must stay byte-identical)');
   // the number itself never changes; a FAQ answer made visible may repeat it (as text, never a new tel link)
   if (w.phoneText < b.phoneText) err(p, 'phone number text removed');

@@ -17,8 +17,8 @@
  *   - the callout "Average repair costs less than $300" (an average, not a price cap or guarantee);
  *     on a hub that has a cost section (#repair-cost) it links "See typical repair costs".
  *
- * The desktop header button keeps its Denver destination (/book-online) and reads
- * "Book Online — Save $25" on every page that has it. It is hidden below 769px, where the sticky
+ * The desktop header button keeps its Denver destination (/book-online), reads
+ * "Book Online — Save $25" on every page that has it and sends book_click {location: 'header'}. It is hidden below 769px, where the sticky
  * bottom bar is the booking action (the header has no room for a third control at 320–390px).
  */
 import { writeFileSync } from 'node:fs';
@@ -32,8 +32,10 @@ export const BADGE = '<span class="diag-badge">$0 Diagnostic with Repair</span>'
 export const NOTE = '<span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span>';
 const CALLOUT_LABEL = '<span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span>';
 const COST_LINK = '<a href="#repair-cost" class="avg-callout-link">See estimated labor costs by repair</a>';
-const HEADER_OLD = /(<a href="\/book-online" class="header-book-btn">)Book Online(?: &mdash; Save \$25)?(<\/a>)/g;
-const HEADER_WANT = '<a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>';
+// book_click with location 'header' - the same onclick mechanism as every other booking link, one
+// event per click (the button has no other listener).
+export const HEADER_OLD = /<a href="\/book-online" class="header-book-btn"(?: onclick="[^"]*")?>Book Online(?: &mdash; Save \$25)?<\/a>/g;
+export const HEADER_WANT = '<a href="/book-online" class="header-book-btn" onclick="gtag(\'event\',\'book_click\',{\'location\':\'header\'})">Book Online &mdash; Save $25</a>';
 
 export function offers(indent, withLink) {
   const i2 = indent + '    ';
@@ -45,7 +47,7 @@ export function offers(indent, withLink) {
 const OFFERS_RE = /[ \t]*<div class="hero-offers">[\s\S]*?\n[ \t]*<\/div>\n/;
 
 export function render(src, rel) {
-  let out = src.replace(HEADER_OLD, (_, a, b) => `${a}Book Online &mdash; Save $25${b}`);
+  let out = src.replace(HEADER_OLD, () => HEADER_WANT);
   const type = pageType(rel);
   const hero = out.match(/<section class="hero[^"]*"[^>]*>[\s\S]*?<\/section>/);
   if (!hero) return { out, note: 'no hero' };

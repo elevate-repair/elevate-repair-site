@@ -245,11 +245,33 @@ Used on: homepage, all 63 city/neighborhood pages, all 103 city+appliance+proble
 - **Method:** POST
 - **Target:** `hidden_iframe` — prevents page navigation on submit
 - **Hidden fields:** `source` (e.g., `website-aurora`, `website-denver`), `service`, `place_id`, `zip`, `city`, `state`
-- **Post-submit redirect:** JavaScript listens for iframe load → `window.location.href = '/thank-you.html'`
+- **Sending (all three paths — embedded forms, `/book`, `/book-online`):** the `lead-send` block
+  (`tools/lead-capture/lead-send.js`, rendered by `tools/apply-lead-capture.mjs`) posts the form's
+  own fields with `fetch` to the form's own `action`, plus `submission_id` (one per tab until a
+  request is confirmed) and `attribution`. A request counts as received ONLY when the endpoint
+  answers JSON `{"ok": true, "submission_id": <that id>}`; only then are `lead_submitted` /
+  `ec_name` / `ec_phone` set and the visitor sent to `/thank-you.html`. An HTTP error, a dropped
+  connection, a 25 s timeout or an unconfirmed answer keeps the visitor on the page with every
+  field as typed and a message (`.lead-send-error`); the same button sends again with the same
+  `submission_id`, which the Apps Script recognises as a duplicate. A second click while a request
+  is in flight does nothing. Never treat the hidden iframe's `load`, an opaque `no-cors` answer or a
+  finished request as success. `target="hidden_iframe"` stays in the markup but is no longer used.
+- **Apps Script dependency:** the live Denver Apps Scripts must answer that JSON. Their source is
+  not in a repository; the change to paste into both is `tools/lead-capture/denver-lead-ack.gs`
+  (tested by `tools/qa-lead-ack.mjs`). Deploy it as a new version of the same deployment BEFORE
+  the site change goes live — the old scripts answer plain "ok", which the site does not accept.
+- **Attribution:** the `attribution` block (`tools/lead-capture/attribution.js`, in `<head>` of
+  every page except `thank-you.html`) keeps raw facts only — click ids, UTMs, referrer host,
+  landing path — as a first touch and a last non-direct touch in `localStorage['er_attr_v1']`
+  (about 90 days; a direct or internal visit never erases the last touch). It is posted as one
+  field, `attribution` (`{"v":1,"first":…,"last":…}`), next to the unchanged `source` (where the
+  form was filled in). S Protocol classifies it (`ingest_website_attribution`); the site never
+  names a channel, GBP is only an explicit `utm_source=gbp/gmb`, and a Google referrer without a
+  click id or paid UTM is never Google Ads.
 
 ### Book-It-Now form (`book-online.html`)
 
-`/book-online.html` is a **separate booking flow** with its own Apps Script endpoint. This endpoint is intentionally distinct and must **not** be bulk-replaced when copying the standard form to other pages or markets. Preserve its workflow unless explicitly instructed otherwise.
+`/book-online.html` is a **separate booking flow** with its own Apps Script endpoint. This endpoint is intentionally distinct and must **not** be bulk-replaced when copying the standard form to other pages or markets. Preserve its workflow unless explicitly instructed otherwise. Its Review → Confirm flow sends through `window.erLeadSend.submit()` (same confirmation rules as the standard form); its form-start events are `booking_form_view` on the first interaction and `booking_step1_selected` when the appliance is chosen, with `form_location: 'book_online'`.
 
 ### contact.html form
 
@@ -328,11 +350,15 @@ change the data or the tool and re-run `sh tools/run-design-tools.sh`. Page type
 | Google reviews | `apply-google-reviews.mjs` | `denver-reviews.json` | Every reviews block (homepage + 63 city pages): the featured Google reviews verbatim (exact name, that review's stars, full text with its paragraph breaks, "Read on Google" to the review), then "See All Google Reviews →" to the profile's Reviews tab; external links `target="_blank" rel="noopener"`. No aggregate rating, review count, date or author city; the old placeholder cards, the "Rated 4.9 • 94+ reviews" line and every AggregateRating / Review schema are retired and never come back |
 | Repair-or-replace guides | `generate-repair-guides.mjs` | `repair-guides.json` | `/fridge-repair/repair-or-replace-refrigerator`, `/washer-repair/…-washer`, `/dryer-repair/…-dryer`, `/dishwasher-repair/…-dishwasher`, `/oven-repair/…-oven-stove-range`: own title / H1 / canonical / OG / sitemap entry, BreadcrumbList Home → hub → guide, FAQPage = visible FAQ; the hub "Repair or replace your …?" block links each |
 | Images | `export-denver-images.py` | both JSON files | WebP exports without EXIF / XMP / ICC (several originals carry another company's EXIF with GPS); originals are never changed or deleted |
+| Lead capture | `apply-lead-capture.mjs` (+ `qa-lead-ack.mjs`, `qa-lead-flow.mjs`) | `lead-capture/*.js`, `lead-capture/denver-lead-ack.gs` | The `attribution` block on every page but thank-you and the `lead-send` block on the 220 booking forms (see "Form Pattern"); form-start events send `form_location`, never a parameter named `source` (GA4 reads that as a traffic source); the header "Book Online — Save $25" button sends `book_click {location: 'header'}` (`apply-hero-offers.mjs`). No name, phone, address or message is ever sent to GA4 |
 
 `tools/qa-denver-invariants.mjs --base=<ref>` (CI on pull requests) fails if the phone, tel links,
 Apps Script endpoints, forms, hidden inputs (`source`), gtag / onclick tracking, Clarity, the
 thank-you page or the SEO head (title, meta, canonical, robots, OG, H1, non-FAQ JSON-LD, sitemap
-URLs) change. The generator templates (`tools/template_city_base.html`,
+URLs) change. Its only exceptions are applied to the base page as exact strings: the lead-capture
+migration (`migrateLegacy`: the iframe-load handler removed, `form_location`, `/book-online`
+confirming through `erLeadSend`; the managed `<script data-er>` blocks are checked by their own
+tool) and the header button's `book_click` onclick. The generator templates (`tools/template_city_base.html`,
 `tools/problem-page-template.html`) carry the new markup; after generating pages run
 `sh tools/run-design-tools.sh`.
 
@@ -352,10 +378,11 @@ Script blocks used across pages:
    - Enforced by `tools/check-google-tag.mjs` + `tools/render-smoke-test.mjs`
      (CI: `.github/workflows/google-tag-qa.yml`)
 2. **Burger menu toggle** — all pages. IIFE toggling `.nav-open` class
-3. **Form submit handler** — only pages with a form. Disables button, shows "Sending...", listens for iframe load, redirects to `/thank-you.html`
+3. **Lead sending** (`<script data-er="lead-send">`) — the 220 pages with a booking form. Validates the phone, disables the button, shows "Sending...", posts with `fetch` and redirects to `/thank-you.html` only on the Apps Script's JSON confirmation (see "Form Pattern")
 4. **FAQ accordion** — no script: every FAQ is a native `<details>` (the old homepage / faq.html click script was removed)
 5. **Gallery** — no script: static 2×2 grids. The click-to-enlarge modal script stays on the pages that had it
 6. **Booking preselect** — `book.html` only, its own small block after the anti-spam guard: `/book?service=refrigerator|washer|dryer|dishwasher|oven|microwave` presses the matching selector button (the form's own options, never a brand). It does not touch the submit handler, `source`, the endpoint or tracking
+7. **Attribution** (`<script data-er="attribution">`) — every page except `thank-you.html`, in `<head>`; raw first / last touch for the `attribution` POST field
 
 ---
 
