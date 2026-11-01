@@ -325,6 +325,7 @@ change the data or the tool and re-run `sh tools/run-design-tools.sh`. Page type
 | FAQ | `apply-faq-accordion.js`, `sync-faq-schema.js` | — | Every FAQ is `details.faq-item` / `summary.faq-question` / `div.faq-answer` (keyboard-operable, closed on load, full answer in HTML); FAQPage JSON-LD mirrors the visible FAQ |
 | Natural headings | `apply-natural-headings.mjs` | — | H2 / H3 no longer repeat the page's place ("Our Dryer Repair Process", "Frequently Asked Questions", "Appliance Brands We Service"); titles, H1s, navigational, CTA, cost and "Why <City> Residents" headings are kept |
 | Estimates | `apply-estimates.mjs` | `labor-rates.json`, `denver-estimates.json` | The Buffalo estimated-labor card, ported exactly (owner-confirmed 2026-11-01: Buffalo's groups, rows, labels and ranges apply to Denver; only `publish` rows render, gas / sealed-system rows stay held). Each hub's cost section (`#repair-cost`, lands below the sticky header) shows the hub's typical TOTAL (parts + labor) on its own line, then "Estimated labor cost by repair" — labor only, parts extra — with group tabs, one table per group and the "Estimated labor only…" note; Denver's $109 service call wording stays in the hub paragraph. The Buffalo card's Call / Book buttons are not ported (no new tel links or click tracking). Every cost-table row links its hub and "See Our Estimates →" to `#repair-cost` |
+| Google reviews | `apply-google-reviews.mjs` | `denver-reviews.json` | Every reviews block (homepage + 63 city pages): the featured Google reviews verbatim (exact name, that review's stars, full text with its paragraph breaks, "Read on Google" to the review), then "See All Google Reviews →" to the profile's Reviews tab; external links `target="_blank" rel="noopener"`. No aggregate rating, review count, date or author city; the old placeholder cards, the "Rated 4.9 • 94+ reviews" line and every AggregateRating / Review schema are retired and never come back |
 | Repair-or-replace guides | `generate-repair-guides.mjs` | `repair-guides.json` | `/fridge-repair/repair-or-replace-refrigerator`, `/washer-repair/…-washer`, `/dryer-repair/…-dryer`, `/dishwasher-repair/…-dishwasher`, `/oven-repair/…-oven-stove-range`: own title / H1 / canonical / OG / sitemap entry, BreadcrumbList Home → hub → guide, FAQPage = visible FAQ; the hub "Repair or replace your …?" block links each |
 | Images | `export-denver-images.py` | both JSON files | WebP exports without EXIF / XMP / ICC (several originals carry another company's EXIF with GPS); originals are never changed or deleted |
 
@@ -448,14 +449,14 @@ Problem images include: appliance-repair-service-denver.jpg, built-in-dishwasher
 
 ### Schema.org Structured Data (JSON-LD)
 
-- **Homepage:** `FAQPage` + `LocalBusiness` (includes `AggregateRating`) schemas
+- **Homepage:** `FAQPage` + `LocalBusiness` schemas (no `AggregateRating` / `Review` — retired November 2026, see Google reviews)
 - **City/neighborhood pages (63):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
 - **City+problem pages (103):** `LocalBusiness` + `BreadcrumbList` + `FAQPage` schemas
 - **Denver+problem pages (40):** `BreadcrumbList` + `LocalBusiness` + `FAQPage` schemas
 - **Brand+city problem pages (10):** `BreadcrumbList` schema
 - **Standard brand pages (15):** `LocalBusiness` + `BreadcrumbList` schemas
 - **Short brand pages (16):** `LocalBusiness` + `BreadcrumbList` schemas
-- **Service landing pages (5):** `Service` + `BreadcrumbList` + `LocalBusiness` (with `AggregateRating`) schemas
+- **Service landing pages (5):** `Service` + `BreadcrumbList` + `LocalBusiness` schemas (no `AggregateRating`)
 - **Problem subpages (30):** `BreadcrumbList` schema only
 - **Repair-or-replace guides (5):** `BreadcrumbList` (Home → hub → guide) + `FAQPage` mirroring the visible FAQ
 - **`faq.html`:** `FAQPage` schema
