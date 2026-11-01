@@ -24,6 +24,7 @@ import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, read } from './denver-pages.mjs';
 import { offers } from './apply-hero-offers.mjs';
+import { laborGroups, laborRow } from './apply-estimates.mjs';
 
 const CHECK = process.argv.includes('--check');
 const SITE = 'https://elevaterepair.com';
@@ -75,19 +76,37 @@ function chrome() {
   return { head, header, tail };
 }
 
+// the guide's labor examples: the same four repairs the Buffalo guides show, priced from
+// tools/labor-rates.json (labor only, parts extra), so a guide never disagrees with its hub card
+const EXAMPLES = {
+  fridge: ['Defrost thermostat replacement', 'Evaporator fan motor replacement', 'Compressor start relay or capacitor replacement', 'Door gasket (seal) replacement'],
+  washer: ["Drain pump replacement (won't drain)", 'Lid switch or door lock replacement', 'Front-load door boot gasket replacement', 'Tub bearing replacement'],
+  dryer: ['Heating element replacement (electric dryers)', "Thermal fuse replacement (no heat or won't start)", 'Drive belt replacement', 'Drum roller replacement (squeaking)'],
+  dishwasher: ['Drain pump replacement (standing water)', 'Door latch or safety switch repair', 'Heating element replacement (poor drying)', 'Door gasket or tub seal replacement'],
+  oven: ['Bake element replacement (no bottom heat)', 'Oven temperature sensor replacement', "Oven door hinge replacement (door won't close)", 'Electric burner control switch replacement'],
+};
+const APPLIANCE = { fridge: 'refrigerator', washer: 'washer', dryer: 'dryer', dishwasher: 'dishwasher', oven: 'oven' };
+const PAGE_NAME = { fridge: 'refrigerator repair page', washer: 'washer repair page', dryer: 'dryer repair page', dishwasher: 'dishwasher repair page', oven: 'oven repair page' };
+const escH = (t) => t.replace(/&/g, '&amp;').replace(/'/g, '&rsquo;');
+
 function costs(key, ind) {
   const h = E.hubs[key];
   const i2 = ind + '    ', i3 = ind + '        ';
-  const rows = h.rows.length
-    ? `${i2}<table class="estimates-table">\n${i3}<caption>Typical cost by repair (parts and labor)</caption>\n${i3}<thead><tr><th scope="col">Repair</th><th scope="col">Typical cost</th></tr></thead>\n${i3}<tbody>\n` +
-      h.rows.map((r) => `${i3}    <tr><td>${r.label}</td><td><span class="price-chip">${range(r.low, r.high)}</span></td></tr>\n`).join('') + `${i3}</tbody>\n${i2}</table>\n`
-    : '';
+  const groups = laborGroups(APPLIANCE[key]).map((g) => `${escH(g.name)} ${range(g.low, g.high)}`).join('; ');
+  const rows = EXAMPLES[key].map((label) => {
+    const r = laborRow(APPLIANCE[key], label);
+    if (!r) throw new Error(`labor-rates.json has no published row "${label}"`);
+    return `${i3}    <tr><td>${escH(r.label)}</td><td><span class="price-chip">${range(r.low, r.high)}</span></td></tr>\n`;
+  }).join('');
+  const link = `<a href="${h.href}#repair-cost">${PAGE_NAME[key]}</a>`;
   return `${ind}<h2>What it costs to find out</h2>\n${ind}<div class="rr-costs">\n` +
     `${i2}<p><strong>Our $${E.serviceCall} service call covers the visit and diagnosis and is credited toward your repair when you approve it.</strong> You get the exact repair price after diagnosis, before any work begins.</p>\n` +
     `${i2}<p class="estimates-allin"><span class="estimates-allin-label">Typical total repair cost (parts + labor):</span> <strong>${range(...h.total)}</strong></p>\n` +
-    rows +
-    `${i2}<p class="estimates-trust">60-day parts &amp; labor warranty</p>\n` +
-    `${i2}<p>See the typical costs on our <a href="${h.href}#repair-cost">${HUB_NAME[key].toLowerCase().replace(' & range', ', stove and range')} page</a>. Book online and save $25 on a completed repair.</p>\n` +
+    `${i2}<p>Estimated labor by repair group on our ${link}, labor only, parts extra: ${groups}. Parts are quoted separately after diagnosis.</p>\n` +
+    `${i2}<table class="labor-table">\n${i3}<caption>Examples of estimated labor by repair (labor only, parts extra)</caption>\n` +
+    `${i3}<thead>\n${i3}    <tr><th scope="col">Repair</th><th scope="col">Estimated labor (parts extra)</th></tr>\n${i3}</thead>\n${i3}<tbody>\n${rows}${i3}</tbody>\n${i2}</table>\n` +
+    `${i2}<p class="labor-trust">60-day parts &amp; labor warranty</p>\n` +
+    `${i2}<p class="labor-more">See the full estimated labor table by repair on our ${link}. Book online and save $25 on a completed repair.</p>\n` +
     `${ind}</div>\n`;
 }
 

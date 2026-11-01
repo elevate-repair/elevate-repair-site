@@ -2834,22 +2834,10 @@ img.area-card-img {
     }
 }
 
-/* --- Hub estimates card (#repair-cost): published Denver prices only --- */
+/* --- Hub estimates (#repair-cost): the typical TOTAL line, then the Buffalo estimated-labor
+       card (labor only, parts extra) from tools/labor-rates.json --- */
 #repair-cost {
     scroll-margin-top: 92px;
-}
-.repair-estimates {
-    margin: 20px 0 8px;
-    padding: 20px;
-    border: 2px solid #dbeafe;
-    border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(18, 60, 105, 0.06);
-}
-.repair-estimates h3 {
-    margin: 0 0 10px;
-    font-size: 19px;
-    color: #1f2937;
 }
 .estimates-allin {
     margin: 0 0 14px;
@@ -2858,37 +2846,6 @@ img.area-card-img {
 .estimates-allin strong {
     color: #15803d;
     white-space: nowrap;
-}
-.estimates-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 0 14px;
-    font-size: 15px;
-}
-.estimates-table caption {
-    caption-side: top;
-    text-align: left;
-    font-weight: 600;
-    color: #4b5563;
-    font-size: 14px;
-    padding-bottom: 8px;
-}
-.estimates-table th,
-.estimates-table td {
-    text-align: left;
-    padding: 10px 8px;
-    border-top: 1px solid #e5e7eb;
-    vertical-align: middle;
-}
-.estimates-table th {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #6b7280;
-}
-.estimates-table td:last-child,
-.estimates-table th:last-child {
-    text-align: right;
 }
 .price-chip {
     display: inline-block;
@@ -2901,22 +2858,294 @@ img.area-card-img {
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
-.estimates-service,
-.estimates-note {
-    margin: 0 0 8px;
-    color: #4b5563;
-    font-size: 15px;
-}
-.estimates-trust {
-    margin: 0 0 8px;
-    font-weight: 700;
-    color: #15803d;
-}
-.estimates-guide {
-    margin: 12px 0 0;
-    font-weight: 600;
+
+.labor {
+    margin: 8px 0 24px;
+    scroll-margin-top: 92px; /* clears the sticky header when #labor-costs is followed */
 }
 
+.labor-card {
+    background: #fff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.labor .labor-head h3 {
+    font-size: 20px;
+    margin: 0 0 4px;
+    color: #1f2937;
+}
+
+.content-body .labor-sub {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.labor-tabs {
+    display: none;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.labor-card.is-tabbed .labor-tabs {
+    display: flex;
+}
+
+.labor-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin: 0 0 -1px;
+    padding: 10px 14px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.labor-tab.is-active {
+    color: #1f2937;
+    border-bottom-color: #2563eb;
+}
+
+.labor-tab:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.labor-tab-range {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #15803d;
+}
+
+.labor-panel[hidden] {
+    display: none;
+}
+
+.labor-panel + .labor-panel {
+    margin-top: 18px;
+}
+
+.labor-card.is-tabbed .labor-panel + .labor-panel {
+    margin-top: 0;
+}
+
+.content-body .labor-desc {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.labor-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.labor-table caption {
+    text-align: left;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1f2937;
+    padding: 0 0 8px;
+}
+
+.labor-card.is-tabbed .labor-table caption {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.labor-card.is-tabbed .labor-caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.labor-table th {
+    background: #f3f6fa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4b5563;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.labor-table td {
+    padding: 10px 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #1f2937;
+    border-top: 1px solid #eef2f7;
+    vertical-align: middle;
+}
+
+.labor-table tbody tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.labor-table th:last-child,
+.labor-table td:last-child {
+    text-align: right;
+    width: 36%;
+}
+
+.labor-table td:last-child {
+    white-space: nowrap;
+}
+
+.price-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(22, 163, 74, 0.1);
+    color: #14804a;
+    font-weight: 700;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.labor-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.content-body .labor-trust {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #15803d;
+}
+
+.labor-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.labor-ctas .btn,
+.guide-ctas .btn {
+    min-height: 44px;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+.content-body .labor-more {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 13.5px;
+    color: #4b5563;
+}
+
+.content-body .labor-note {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4b5563;
+    text-align: left;
+}
+
+.rr-costs .labor-table {
+    margin: 10px 0 12px;
+}
+
+.rr-costs .labor-table caption {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    padding: 0 0 8px;
+}
+
+.rr-costs .labor-table td:last-child {
+    white-space: nowrap;
+}
+
+.content-body .rr-costs .labor-trust {
+    margin: 0 0 6px;
+}
+
+.content-body .rr-costs .labor-more {
+    margin: 0;
+    font-size: 13.5px;
+    color: #4b5563;
+}
+
+@media (max-width: 640px) {
+    .labor-card {
+        padding: 16px 12px;
+    }
+    .labor-tabs {
+        flex-direction: column;
+        gap: 6px;
+        border-bottom: none;
+    }
+    .labor-tab {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 10px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+    }
+    .labor-tab.is-active {
+        border-color: #2563eb;
+        background: #eff6ff;
+    }
+    .labor-table th {
+        padding: 8px;
+    }
+    .labor-table td {
+        padding: 9px 8px;
+        font-size: 14px;
+    }
+    .labor-table th:last-child,
+    .labor-table td:last-child {
+        width: 38%;
+    }
+    .price-chip {
+        font-size: 13px;
+        padding: 3px 8px;
+    }
+    .labor-ctas {
+        width: 100%;
+        margin-left: 0;
+    }
+    .labor-ctas .btn {
+        flex: 1 1 auto;
+    }
+    .content-body .labor-trust {
+        width: 100%;
+    }
+}
 
 /* --- Repair-or-replace guides and the hub guide block (Buffalo layout, Denver class names) --- */
 .guide-ctas .btn {

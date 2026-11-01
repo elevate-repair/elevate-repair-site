@@ -31,7 +31,7 @@ const ELIGIBLE = new Set(['home', 'hub', 'brand', 'city', 'problem-denver', 'pro
 export const BADGE = '<span class="diag-badge">$0 Diagnostic with Repair</span>';
 export const NOTE = '<span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span>';
 const CALLOUT_LABEL = '<span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span>';
-const COST_LINK = '<a href="#repair-cost" class="avg-callout-link">See typical repair costs</a>';
+const COST_LINK = '<a href="#repair-cost" class="avg-callout-link">See estimated labor costs by repair</a>';
 const HEADER_OLD = /(<a href="\/book-online" class="header-book-btn">)Book Online(?: &mdash; Save \$25)?(<\/a>)/g;
 const HEADER_WANT = '<a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>';
 
