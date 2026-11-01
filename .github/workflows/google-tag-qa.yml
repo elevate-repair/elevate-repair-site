@@ -36,6 +36,9 @@ jobs:
       - name: Render smoke test
         run: node tools/render-smoke-test.mjs --all
 
+      - name: Booking flow (confirmed sending, retries, thank-you, GA4 form events, attribution)
+        run: node tools/qa-lead-flow.mjs
+
   design:
     name: Denver design layers and invariants
     runs-on: ubuntu-latest
@@ -62,6 +65,9 @@ jobs:
       # every layer must match its data file and tool.
       - name: Check every design layer
         run: sh tools/run-design-tools.sh --check
+
+      - name: Apps Script confirmed-receipt change (stand-ins)
+        run: node tools/qa-lead-ack.mjs
 
       # Phone, tel links, Apps Script endpoints, forms, hidden inputs (source), gtag / onclick
       # tracking, Clarity, the thank-you page and the SEO head never change in a pull request

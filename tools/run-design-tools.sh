@@ -26,3 +26,5 @@ node tools/apply-google-reviews.mjs $MODE
 node tools/generate-repair-guides.mjs $MODE
 # the hubs' $300 callout links #repair-cost once the estimates exist
 node tools/apply-hero-offers.mjs $MODE
+# confirmed form sending + first-party attribution (inline blocks from tools/lead-capture/)
+node tools/apply-lead-capture.mjs $MODE

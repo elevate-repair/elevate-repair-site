@@ -105,6 +105,85 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "xjj6771zl1");
     </script>
+    <script data-er="attribution">
+    /* Elevate Repair Denver - first-party marketing attribution (S Protocol ATTR-2).
+     * Rendered inline into every page by tools/apply-lead-capture.mjs; edit this file, never a page.
+     *
+     * Records RAW facts only - Google click ids (gclid, gbraid, wbraid), fbclid, UTM parameters, the
+     * referring HOST and the landing PATH - never a source label: S Protocol classifies them on its
+     * server (attribution_classify_web_touch). Two touches, about 90 days, in this site's own
+     * localStorage:
+     *   first - the first visit seen (kept while it lives, never overwritten);
+     *   last  - the latest NON-DIRECT visit (a click id, a UTM or an external referrer). A direct or
+     *           internal visit never erases it.
+     * Google Business Profile is only what an explicit UTM says (utm_source=gbp / gmb): Denver has no
+     * confirmed GBP entry route, so nothing is inferred from a path. A Google referrer without paid
+     * evidence stays a referrer; S Protocol files it as Google Organic, never as Google Ads.
+     * No personal data, no full URLs, no query strings, no browsing history, no third-party storage.
+     * The booking forms send it as one POST field, `attribution` (JSON), next to the unchanged
+     * `source` field (where the form was filled in). Nothing here touches gtag, GA4, Clarity or the
+     * Google Ads tags.
+     */
+    (function () {
+        var KEY = 'er_attr_v1';
+        var TTL = 90 * 24 * 60 * 60 * 1000;
+        var CLICK_IDS = ['gclid', 'gbraid', 'wbraid', 'fbclid'];
+        var UTMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'];
+        var OWN_HOST = /(^|\.)elevaterepair\.com$/i;
+        var memory = null;
+
+        function read() {
+            try {
+                var s = JSON.parse(window.localStorage.getItem(KEY) || 'null');
+                return s && s.v === 1 && s.first ? s : null;
+            } catch (e) { return memory; }
+        }
+        function write(s) {
+            memory = s;
+            try { window.localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { /* storage blocked: memory only */ }
+        }
+        function clean(v, max) {
+            v = String(v == null ? '' : v).replace(/[\u0000-\u001f\u007f<>"'`\\]/g, '').replace(/\s+/g, ' ').trim();
+            return v ? v.slice(0, max) : '';
+        }
+        function currentTouch(at) {
+            var t = { ts: new Date(at).toISOString(), path: String(window.location.pathname || '/').slice(0, 300) };
+            var marketing = false, params = null, i, v, host = '';
+            try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
+            if (params) {
+                for (i = 0; i < CLICK_IDS.length; i++) {
+                    v = params.get(CLICK_IDS[i]);
+                    if (v && v.length >= 4 && v.length <= 512 && /^[A-Za-z0-9._~-]+$/.test(v)) { t[CLICK_IDS[i]] = v; marketing = true; }
+                }
+                for (i = 0; i < UTMS.length; i++) {
+                    v = clean(params.get(UTMS[i]), 150);
+                    if (v) { t[UTMS[i]] = v; marketing = true; }
+                }
+            }
+            try { host = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ''; } catch (e) { host = ''; }
+            if (host && host !== String(window.location.hostname || '').toLowerCase() && !OWN_HOST.test(host)) {
+                t.ref = host.slice(0, 253);
+                marketing = true;
+            }
+            return { touch: t, nonDirect: marketing };
+        }
+
+        var at = Date.now();
+        var state = read();
+        if (state && (!state.firstAt || at - state.firstAt > TTL || at < state.firstAt - 86400000)) state = null;
+        if (state && state.lastAt && at - state.lastAt > TTL) { delete state.last; delete state.lastAt; }
+        var cur = currentTouch(at);
+        if (!state) state = { v: 1, firstAt: at, first: cur.touch };
+        if (cur.nonDirect) { state.last = cur.touch; state.lastAt = at; }
+        write(state);
+
+        /* The value the booking forms post as `attribution`: {"v":1,"first":{...},"last":{...}|null}. */
+        window.erAttribution = function () {
+            var s = read() || state;
+            return JSON.stringify({ v: 1, first: s.first, last: s.last || null });
+        };
+    })();
+    </script>
 </head>
 <body>
     <script type="application/ld+json">
@@ -160,7 +239,7 @@
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
                     <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
-                    <a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>
+                    <a href="/book-online" class="header-book-btn" onclick="gtag('event','book_click',{'location':'header'})">Book Online &mdash; Save $25</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -728,7 +807,7 @@ Friendly, timely, and clean. Highly recommend!</div>
                 var srcField = form ? form.querySelector('[name="source"]') : null;
                 var params = {
                     appliance: appliance || '',
-                    source: srcField ? srcField.value : 'website-denver',
+                    form_location: srcField ? srcField.value : 'website-denver',
                     source_page: location.pathname || '/',
                     form_type: (form && form.getAttribute('data-form-type')) || 'website_form'
                 };
@@ -766,47 +845,6 @@ Friendly, timely, and clean. Highly recommend!</div>
             });
         })();
 
-        (function() {
-            var submitted = false;
-            var form = document.getElementById("bookingForm");
-            var iframe = document.querySelector('iframe[name="hidden_iframe"]');
-            if (!form || !iframe) return;
-            form.addEventListener("submit", function(e) {
-                var phoneInput = form.querySelector('[name="phone"]');
-                var raw = phoneInput ? phoneInput.value : '';
-                var d = String(raw || '').replace(/\D/g, '');
-                if (d.length === 11 && d.charAt(0) === '1') d = d.substring(1);
-                var valid = d.length === 10 && !/^(\d)\1{9}$/.test(d) && /^[2-9]\d{2}[2-9]\d{6}$/.test(d);
-                if (!valid) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    var err = document.getElementById('phone-error');
-                    if (!err) {
-                        err = document.createElement('div');
-                        err.id = 'phone-error';
-                        err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.25rem;';
-                        err.textContent = 'Please enter a valid US phone number.';
-                        if (phoneInput && phoneInput.parentNode) phoneInput.parentNode.insertBefore(err, phoneInput.nextSibling);
-                    }
-                    err.style.display = 'block';
-                    if (phoneInput) phoneInput.focus();
-                    return false;
-                }
-                var existingErr = document.getElementById('phone-error');
-                if (existingErr) existingErr.style.display = 'none';
-                submitted = true;
-                var btn = form.querySelector("button[type=submit]");
-                if (btn) { btn.disabled = true; btn.innerText = "Sending..."; }
-            });
-            iframe.addEventListener("load", function() {
-                if (!submitted) return;
-                submitted = false;
-                sessionStorage.setItem('ec_name', form.querySelector('[name="name"]').value || '');
-                sessionStorage.setItem('ec_phone', form.querySelector('[name="phone"]').value || '');
-                sessionStorage.setItem('lead_submitted', '1');
-                window.location.href = '/thank-you.html';
-            });
-        })();
 
         // Gallery modal (click-to-enlarge)
         (function() {
@@ -1115,6 +1153,211 @@ Friendly, timely, and clean. Highly recommend!</div>
                 guard(document.getElementById('bookingForm'), e);
             }, true);
         })();
+    </script>
+    <script data-er="lead-send">
+    /* Elevate Repair Denver - confirmed lead submission.
+     * Rendered inline into every booking-form page by tools/apply-lead-capture.mjs; edit this file,
+     * never a page.
+     *
+     * A request counts as received ONLY when the form's own Apps Script endpoint answers with JSON
+     * {"ok": true, "submission_id": <the id this page sent>}. Neither a loaded iframe, an opaque
+     * no-cors answer nor a finished request is proof. Only then are the thank-you flags set
+     * (lead_submitted / ec_name / ec_phone, read by /thank-you, which fires generate_lead once) and the
+     * visitor sent to /thank-you.html. An HTTP error, a dropped connection, a timeout, a non-JSON or
+     * unconfirmed answer keeps the visitor on the page with every field as typed and a clear message;
+     * the same button sends again.
+     *
+     * Idempotency: every attempt carries `submission_id`, one id per browser tab until a request is
+     * confirmed, so a retry after a lost answer is recognised by the Apps Script (which then answers
+     * {"ok": true, "duplicate": true} without a second lead). A second click while a request is in
+     * flight does nothing.
+     *
+     * The POST keeps the form's own action (endpoint), method and every field as it is - `source`
+     * (where the form was filled in) is unchanged - and adds `submission_id` and `attribution`
+     * (tools/lead-capture/attribution.js). It is a CORS "simple" request (form-encoded body, no custom
+     * headers), so the Apps Script JSON answer is readable without a preflight.
+     */
+    (function () {
+        var TIMEOUT_MS = 25000;
+        var SID_KEY = 'er_lead_sid';
+        var memorySid = '';
+        var FAIL = 'We could not confirm that your request was received. Your details are still here — please try again. If it keeps failing, call us at (720) 575-8432.';
+        var REJECTED = {
+            invalid_phone: 'Please enter a valid US phone number and try again.',
+            blocked_link: 'Links are not allowed in this form. Please remove the link and try again.'
+        };
+
+        function randomId() {
+            try { if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID(); } catch (e) { /* fall through */ }
+            var b = [], i;
+            try { b = Array.prototype.slice.call(window.crypto.getRandomValues(new Uint8Array(16))); } catch (e) { for (i = 0; i < 16; i++) b.push(Math.floor(Math.random() * 256)); }
+            return b.map(function (x) { return (x < 16 ? '0' : '') + x.toString(16); }).join('');
+        }
+        /* One id per tab until a request is confirmed: a retry - on this page or another - reuses it. */
+        function submissionId() {
+            var v = '';
+            try { v = window.sessionStorage.getItem(SID_KEY) || ''; } catch (e) { v = memorySid; }
+            if (!/^[A-Za-z0-9-]{16,64}$/.test(v)) {
+                v = randomId();
+                try { window.sessionStorage.setItem(SID_KEY, v); } catch (e) { /* storage blocked */ }
+            }
+            memorySid = v;
+            return v;
+        }
+        function forgetSubmissionId() {
+            memorySid = '';
+            try { window.sessionStorage.removeItem(SID_KEY); } catch (e) { /* storage blocked */ }
+        }
+
+        function body(form, id) {
+            var p = new URLSearchParams();
+            var fd = new FormData(form);
+            fd.forEach(function (v, k) { if (typeof v === 'string') p.append(k, v); });
+            p.set('submission_id', id);
+            var a = '';
+            try { a = typeof window.erAttribution === 'function' ? window.erAttribution() : ''; } catch (e) { a = ''; }
+            if (a) p.set('attribution', a);
+            return p;
+        }
+
+        /* Resolves {ok: true} only on the endpoint's explicit confirmation of THIS submission. */
+        function post(form) {
+            var id = submissionId();
+            var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+            var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, TIMEOUT_MS);
+            var done = function (r) { clearTimeout(timer); return r; };
+            var req;
+            try {
+                req = fetch(form.getAttribute('action'), {
+                    method: 'POST', body: body(form, id), mode: 'cors', credentials: 'omit',
+                    cache: 'no-store', redirect: 'follow', signal: ctrl ? ctrl.signal : undefined
+                });
+            } catch (e) {
+                return Promise.resolve(done({ ok: false, reason: 'network' }));
+            }
+            return req.then(function (res) {
+                if (!res.ok) return { ok: false, reason: 'http_' + res.status };
+                return res.text().then(function (t) {
+                    var d = null;
+                    try { d = JSON.parse(t); } catch (e) { return { ok: false, reason: 'unconfirmed' }; }
+                    if (d && d.ok === true && d.submission_id === id) return { ok: true };
+                    return { ok: false, reason: (d && typeof d.reason === 'string' && d.reason) || 'unconfirmed' };
+                });
+            }, function (e) {
+                return { ok: false, reason: e && e.name === 'AbortError' ? 'timeout' : 'network' };
+            }).then(done, function () { return done({ ok: false, reason: 'network' }); });
+        }
+
+        function message(form, anchor, text) {
+            var box = form.querySelector('.lead-send-error');
+            if (!text) { if (box) box.style.display = 'none'; return; }
+            if (!box) {
+                box = document.createElement('div');
+                box.className = 'lead-send-error';
+                box.setAttribute('role', 'alert');
+                if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(box, anchor.nextSibling);
+                else form.appendChild(box);
+            }
+            box.textContent = text;
+            box.style.display = 'block';
+        }
+
+        function confirmed(form) {
+            var v = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value || '' : ''; };
+            try {
+                window.sessionStorage.setItem('ec_name', v('name'));
+                window.sessionStorage.setItem('ec_phone', v('phone'));
+                window.sessionStorage.setItem('lead_submitted', '1');
+            } catch (e) { /* storage blocked: the thank-you page simply records nothing */ }
+            forgetSubmissionId();
+            window.location.href = '/thank-you.html';
+        }
+
+        /* Send `form`; on anything but a confirmation call onFail() after showing the message. */
+        function submit(form, anchor, onFail) {
+            message(form, anchor, '');
+            return post(form).then(function (res) {
+                if (res.ok) { confirmed(form); return res; }
+                message(form, anchor, REJECTED[res.reason] || FAIL);
+                if (onFail) onFail(res);
+                return res;
+            });
+        }
+
+        function phoneValid(form) {
+            var input = form.querySelector('[name="phone"]');
+            var d = String(input ? input.value : '').replace(/\D/g, '');
+            if (d.length === 11 && d.charAt(0) === '1') d = d.substring(1);
+            return d.length === 10 && !/^(\d)\1{9}$/.test(d) && /^[2-9]\d{2}[2-9]\d{6}$/.test(d);
+        }
+        function phoneError(form, show) {
+            var input = form.querySelector('[name="phone"]');
+            var err = document.getElementById('phone-error');
+            if (!show) { if (err) err.style.display = 'none'; return; }
+            if (!err) {
+                err = document.createElement('div');
+                err.id = 'phone-error';
+                err.style.cssText = 'color:#dc2626;font-size:0.875rem;margin-top:0.25rem;';
+                err.textContent = 'Please enter a valid US phone number.';
+                if (input && input.parentNode) input.parentNode.insertBefore(err, input.nextSibling);
+            }
+            err.style.display = 'block';
+            if (input) input.focus();
+        }
+
+        /* The standard booking form (homepage, city, problem, /book, /contact): one submit button. */
+        function bindStandard(form) {
+            var pending = false;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (pending) return;
+                if (!phoneValid(form)) { phoneError(form, true); return; }
+                phoneError(form, false);
+                var btn = form.querySelector('button[type=submit]');
+                var label = btn ? btn.innerHTML : '';
+                pending = true;
+                if (btn) { btn.disabled = true; btn.innerText = 'Sending...'; }
+                submit(form, btn, function () {
+                    pending = false;
+                    if (btn) { btn.disabled = false; btn.innerHTML = label; }
+                });
+            });
+        }
+
+        /* /book-online: the page's own Review -> Confirm flow calls erLeadSend.submit(). Its form-start
+           events match the standard form's: booking_form_view on the first interaction with the form,
+           booking_step1_selected when the appliance is chosen, each once, with form_location. */
+        function trackBookOnline(form) {
+            var started = false, chosen = false;
+            var service = form.querySelector('[name="service"]');
+            var src = form.querySelector('[name="source"]');
+            var params = function () {
+                return {
+                    appliance: service ? service.value : '',
+                    form_location: src ? src.value : 'book_online',
+                    source_page: window.location.pathname || '/',
+                    form_type: 'book_online'
+                };
+            };
+            form.addEventListener('focusin', function () {
+                if (started || typeof window.gtag !== 'function') return;
+                started = true;
+                window.gtag('event', 'booking_form_view', params());
+            });
+            if (service) service.addEventListener('change', function () {
+                if (chosen || !service.value || typeof window.gtag !== 'function') return;
+                chosen = true;
+                window.gtag('event', 'booking_step1_selected', params());
+            });
+        }
+
+        window.erLeadSend = { submit: submit };
+
+        var form = document.getElementById('bookingForm');
+        if (!form || (form.getAttribute('action') || '').indexOf('script.google.com') === -1) return;
+        if (document.getElementById('confirmBookingBtn')) trackBookOnline(form);
+        else bindStandard(form);
+    })();
     </script>
 </body>
 </html>
