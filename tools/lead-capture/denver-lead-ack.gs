@@ -14,9 +14,13 @@
  * Telegram, S Protocol (ok = sprotocolStored_(answer)) and the Sheet, and adds market "denver",
  * attributionField_(data.attribution) and submissionId: ackSubmissionId_() to the S Protocol payload.
  *
- * Deliveries no longer run under one script-wide lock (see "Concurrency" below), so the delayed customer
- * SMS queue in both scripts takes each due SMS off the queue under the lock before sending it
- * (claimPendingSms_): two overlapping queue runs never send the same SMS twice.
+ * Deliveries no longer run under one script-wide lock (see "Concurrency" below), so queue runs of the
+ * delayed customer SMS can overlap. In both scripts each due SMS is LEASED under the lock before it is
+ * sent (leasePendingSms_) and only removed after Quo answered 2xx (settlePendingSms_): overlapping runs
+ * skip a leased SMS, a failed send is retried with back-off, a run that died mid-send is resumed after
+ * the lease expires, and a definite rejection or the 5th failed attempt is kept as failed_sms_<leadId>.
+ * Delivery is at-least-once: when the outcome is unknown (Quo accepted it but the answer was lost, or the
+ * run died after Quo accepted it) the retry can send the SMS a second time.
  */
 
 /******************** CONFIRMED LEAD RECEIPT (elevaterepair.com PR #238) ********************/
