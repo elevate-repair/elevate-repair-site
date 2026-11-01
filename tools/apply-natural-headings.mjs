@@ -16,7 +16,7 @@
  *   Frequently Asked Questions — Appliance Repair in … → Frequently Asked Questions
  *   Appliance Brands We Service in Arvada              → Appliance Brands We Service
  *   Schedule Appliance / Bosch / Refrigerator Repair in … → Schedule … Repair
- *   Bosch Repair in Denver — Common Issues             → Common Bosch Repair Issues
+ *   Bosch Repair in Denver — Common Issues             → More Bosch Repair Help
  *   Our Appliance Repair Services in Denver            → Our Appliance Repair Services
  *   Refrigerator Repair in Denver (service H3s)        → Refrigerator Repair
  *
@@ -54,7 +54,7 @@ function rules(p) {
     [new RegExp(`^Frequently Asked Questions (?:&mdash;|—) Appliance Repair in ${P}$`), 'Frequently Asked Questions'],
     [new RegExp(`^Appliance Brands We Service in ${P}$`), 'Appliance Brands We Service'],
     [new RegExp(`^Schedule (.+?) Repair in ${P}$`), 'Schedule $1 Repair'],
-    [new RegExp(`^(.+?) Repair in ${P} (?:&mdash;|—) Common Issues$`), 'Common $1 Repair Issues'],
+    [new RegExp(`^(.+?) Repair in ${P} (?:&mdash;|—) Common Issues$`), 'More $1 Repair Help'],
     [new RegExp(`^Our Appliance Repair Services in ${P}$`), 'Our Appliance Repair Services'],
     [new RegExp(`^(Refrigerator|Washer|Dryer|Dishwasher|Oven|Stove &amp; Range) Repair in ${P}$`), '$1 Repair'],
   ];

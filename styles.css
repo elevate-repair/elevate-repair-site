@@ -3325,3 +3325,17 @@ img.area-card-img {
         gap: 12px;
     }
 }
+
+/* --- /book upgrade card: the button label stays on one or two lines on a 320px phone --- */
+@media (max-width: 360px) {
+    .book-upgrade-card .btn-outline {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 15px;
+        white-space: normal;
+    }
+}
