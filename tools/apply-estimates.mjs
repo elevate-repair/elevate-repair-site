@@ -29,7 +29,7 @@
  */
 import { writeFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT, productionPages, read } from './denver-pages.mjs';
+import { ROOT, productionPages, read, pageType, pageAppliance } from './denver-pages.mjs';
 
 const CHECK = process.argv.includes('--check');
 const E = JSON.parse(readFileSync(join(ROOT, 'tools', 'denver-estimates.json'), 'utf8'));
@@ -167,6 +167,34 @@ if (isMain) {
     // a held (owner-review) row never shows up on any page
     for (const r of L.rows.filter((x) => x.appliance === page.appliance && x.status !== 'publish')) {
       for (const rel of pages) if (all[rel].includes(esc(r.label))) problems.push(`${rel}: held row "${r.label}" is rendered`);
+    }
+  }
+  // problem-page price statements must agree with the labor estimates:
+  //  - "estimated at $A–$B in labor" must be exactly a published row of the page's appliance;
+  //  - a TOTAL range ("typically range(s) from $A–$B") is only allowed on a registered page and may not
+  //    start below, or end below, the labor alone of the repairs it names (parts are always extra)
+  const TOTAL_CLAIMS = {
+    'denver-refrigerator-leaking-water.html': ['Defrost drain tube clearing (water under crisper drawers)', 'Water inlet valve replacement (leaks or ice problems)', 'Water filter housing replacement'],
+    'denver-washer-leaking-water.html': ['Drain hose replacement', 'Front-load door boot gasket replacement', 'Tub seal replacement', "Drain pump replacement (won't drain)"],
+    'denver-dishwasher-making-noise.html': ['Spray arm replacement', 'Circulation pump or wash motor replacement', 'Drain pump replacement (standing water)'],
+    'denver-oven-temperature-inaccurate.html': ['Oven temperature sensor replacement'],
+    'denver-oven-burner-not-working.html': ['Electric coil burner replacement', 'Glass cooktop (radiant) element replacement', 'Electric burner control switch replacement'],
+  };
+  const APPL = { fridge: 'refrigerator', washer: 'washer', dryer: 'dryer', dishwasher: 'dishwasher', oven: 'oven' };
+  for (const rel of pages) {
+    if (!/^problem|^subpage/.test(pageType(rel))) continue;
+    const text = all[rel].replace(/&ndash;/g, '–');
+    const appliance = APPL[pageAppliance(rel)];
+    for (const m of text.matchAll(/estimated at \$(\d+)–\$(\d+) in labor/g)) {
+      if (!L.rows.some((r) => r.appliance === appliance && r.status === 'publish' && r.low === +m[1] && r.high === +m[2])) problems.push(`${rel}: labor claim $${m[1]}–$${m[2]} is not a published ${appliance} row`);
+    }
+    for (const m of text.matchAll(/\$(\d{2,4})\s*(?:–|-|to)\s*\$(\d{2,4})(?![^<"]*in labor)/g)) {
+      const claim = TOTAL_CLAIMS[rel];
+      if (!claim) { problems.push(`${rel}: unregistered price range $${m[1]}–$${m[2]} (check it against tools/labor-rates.json and register it in TOTAL_CLAIMS)`); continue; }
+      const rows = claim.map((label) => laborRow(appliance, label));
+      if (rows.some((r) => !r)) { problems.push(`${rel}: TOTAL_CLAIMS names a row that is not published`); continue; }
+      const minLabor = Math.min(...rows.map((r) => r.low)), maxLabor = Math.max(...rows.map((r) => r.high));
+      if (+m[1] < minLabor || +m[2] < maxLabor) problems.push(`${rel}: total $${m[1]}–$${m[2]} contradicts labor-only $${minLabor}–$${maxLabor}`);
     }
   }
   if (CHECK) {
