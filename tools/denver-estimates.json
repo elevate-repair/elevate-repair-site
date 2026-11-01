@@ -1,0 +1,165 @@
+{
+ "_doc": [
+  "Denver repair estimates: only prices the Denver site already publishes. total = the hub's own 'Most \u2026 repairs in Denver cost between' range; rows = per-repair ranges stated on Denver problem pages (source page given).",
+  "These are total repair costs (parts and labor) as the sources state them, never labor-only rates. No row is invented: an appliance without published per-repair prices shows no table, and the rows a full table would need are listed under missing for the owner.",
+  "Rendered by node tools/apply-estimates.mjs on the five hubs (#repair-cost) and linked from every cost-table row (See Our Estimates)."
+ ],
+ "serviceCall": 109,
+ "hubs": {
+  "fridge": {
+   "page": "fridge-repair-denver.html",
+   "href": "/fridge-repair-denver",
+   "name": "refrigerator",
+   "total": [
+    150,
+    500
+   ],
+   "rows": [
+    {
+     "label": "Refrigerator leak repair (clogged drain, supply line, inlet valve)",
+     "low": 120,
+     "high": 280,
+     "source": "/denver-refrigerator-leaking-water"
+    },
+    {
+     "label": "Ice maker repair (inlet valve, ice maker assembly)",
+     "low": 140,
+     "high": 320,
+     "source": "/denver-refrigerator-ice-maker-not-working"
+    }
+   ],
+   "missing": [
+    "Defrost heater or defrost thermostat",
+    "Evaporator or condenser fan motor",
+    "Compressor start relay or capacitor",
+    "Main control board",
+    "Temperature sensor (thermistor)",
+    "Door gasket",
+    "Damper control",
+    "Water filter housing",
+    "Door hinge or crisper track"
+   ]
+  },
+  "washer": {
+   "page": "washer-repair-denver.html",
+   "href": "/washer-repair-denver",
+   "name": "washer",
+   "total": [
+    150,
+    450
+   ],
+   "rows": [
+    {
+     "label": "Washer leak repair (hoses, pump, door boot)",
+     "low": 130,
+     "high": 280,
+     "source": "/denver-washer-leaking-water"
+    },
+    {
+     "label": "Water inlet repair (washer not filling)",
+     "low": 140,
+     "high": 280,
+     "source": "/denver-washer-not-filling"
+    }
+   ],
+   "missing": [
+    "Lid switch or door lock",
+    "Drain pump",
+    "Drive belt",
+    "Shock absorbers or suspension rods",
+    "Water level (pressure) switch",
+    "Main control board",
+    "Motor coupling or clutch",
+    "Tub bearing / spider arm"
+   ]
+  },
+  "dryer": {
+   "page": "dryer-repair-denver.html",
+   "href": "/dryer-repair-denver",
+   "name": "dryer",
+   "total": [
+    100,
+    400
+   ],
+   "rows": [],
+   "missing": [
+    "Heating element",
+    "Thermal fuse",
+    "High-limit or cycling thermostat",
+    "Drive belt",
+    "Drum rollers or idler pulley",
+    "Blower wheel",
+    "Drive motor",
+    "Door switch",
+    "Moisture sensor",
+    "Timer or control board"
+   ]
+  },
+  "dishwasher": {
+   "page": "dishwasher-repair-denver.html",
+   "href": "/dishwasher-repair-denver",
+   "name": "dishwasher",
+   "total": [
+    100,
+    400
+   ],
+   "rows": [
+    {
+     "label": "Dishwasher noise repair (wash arm, pump, bearing)",
+     "low": 120,
+     "high": 280,
+     "source": "/denver-dishwasher-making-noise"
+    }
+   ],
+   "missing": [
+    "Drain pump",
+    "Circulation pump or wash motor",
+    "Water inlet valve",
+    "Heating element",
+    "Door latch or safety switch",
+    "Control board or touchpad",
+    "Float switch",
+    "Door gasket or general leak repair"
+   ]
+  },
+  "oven": {
+   "page": "oven-repair-denver.html",
+   "href": "/oven-repair-denver",
+   "name": "oven, stove and range",
+   "total": [
+    150,
+    500
+   ],
+   "rows": [
+    {
+     "label": "Temperature sensor or thermostat repair",
+     "low": 160,
+     "high": 320,
+     "source": "/denver-oven-temperature-inaccurate"
+    },
+    {
+     "label": "Burner and igniter repair",
+     "low": 150,
+     "high": 300,
+     "source": "/denver-oven-burner-not-working"
+    }
+   ],
+   "missing": [
+    "Bake or broil element",
+    "Control board or clock",
+    "Door hinge or gasket",
+    "Surface element or infinite switch",
+    "Convection fan motor",
+    "Door lock (self-clean)"
+   ]
+  }
+ },
+ "costTableRows": {
+  "Refrigerator Repair": "fridge",
+  "Washer Repair": "washer",
+  "Dryer Repair": "dryer",
+  "Dishwasher Repair": "dishwasher",
+  "Oven Repair": "oven",
+  "Stove / Range Repair": "oven"
+ }
+}

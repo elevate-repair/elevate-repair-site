@@ -1,0 +1,3136 @@
+{
+ "_doc": [
+  "Service-area photo cards: the frames (photos) and which frames an area card may show, in order of preference.",
+  "Every alt describes the photo, never the card's area: a card labelled Aurora that shows geese says geese. Only denver-skyline is a recognisable photo of its place; every other banner was supplied with the site under a city's file name and is unconfirmed, so it is described, never claimed.",
+  "match: exact = a photo of the place; within = a photo of Denver on a Denver neighborhood card; own-banner = the banner the site supplied for that city (unconfirmed); regional = a generic Front Range / suburban scene with no landmark.",
+  "ownOnly frames (a specific building or object) are only ever shown for their own city, never as a generic scene.",
+  "blocks: the original link list of every area block (October 2026), the candidates the tool picks from; the tool adds same-region areas so every city page keeps inbound card links.",
+  "No new city photos were uploaded with the October 2026 port; add a frame (source under assets/, honest alt), point the area at it first and re-run node tools/apply-area-cards.mjs."
+ ],
+ "frames": {
+  "denver-skyline": {
+   "source": "assets/images/cities banner/denver-desktop.webp",
+   "alt": "Downtown Denver skyline with the Front Range on the horizon",
+   "shows": "the Denver skyline (recognisable)",
+   "place": "Denver",
+   "sourceMd5": "9980ccb39aabd9dbe722cd561bbf599c",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "westminster-castle": {
+   "source": "assets/images/cities banner/westminster-desktop.webp",
+   "alt": "Aerial view of a red-brick, castle-style building beside a water tower",
+   "shows": "red-brick castle-style building and water tower from the air; consistent with the Westminster Castle, not confirmed",
+   "place": "Westminster (unconfirmed)",
+   "ownOnly": true,
+   "sourceMd5": "162f51069ba352724640c8735d8ef690",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "littleton-hall": {
+   "source": "assets/images/cities banner/littleton-desktop.webp",
+   "alt": "Historic red-brick hall with a clock on a small-town street",
+   "shows": "historic red-brick building with a clock; supplied as the Littleton banner, not confirmed",
+   "place": "Littleton (unconfirmed)",
+   "ownOnly": true,
+   "sourceMd5": "0612273641e8715f9fede912a0889b98",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "thornton-elevator": {
+   "source": "assets/images/cities banner/thornton-desktop.webp",
+   "alt": "White grain elevator beside a red caboose",
+   "shows": "grain elevator and caboose; supplied as the Thornton banner, place not confirmed",
+   "place": "unconfirmed",
+   "ownOnly": true,
+   "sourceMd5": "2941fc4005284a44d625cab16a7ab308",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "lakewood-lake": {
+   "source": "assets/images/cities banner/lakewood-desktop.webp",
+   "alt": "Frozen lake with a bare tree and the foothills beyond",
+   "shows": "frozen lake, bare tree, foothills; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "bb5950fd2ef565e43c2b854184d0cf73",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "golden-rail": {
+   "source": "assets/images/cities banner/golden-desktop.webp",
+   "alt": "Snowy railroad tracks leading into a foothills town",
+   "shows": "railroad tracks in snow, small town, mountains; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "6f4ff4996768b7ccf73efe7e83ed8924",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "arvada-barn": {
+   "source": "assets/images/cities banner/arvada-desktop.webp",
+   "alt": "Red-roofed barn on a hillside above the plains",
+   "shows": "red-roofed barn on a hill; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "663c2c225af3389f7221b2b9dd69a64f",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "boulder-peaks": {
+   "source": "assets/images/cities banner/boulder-desktop.webp",
+   "alt": "Forested foothills below snow-capped mountain peaks",
+   "shows": "mountain panorama with forest; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "a0cb7b68af9fb4310189821b088be458",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "mountain-meadow": {
+   "source": "assets/images/cities banner/centennial-desktop.webp",
+   "alt": "Snow-capped peaks above a pine meadow",
+   "shows": "snowy peaks and pine meadow; byte-identical file was also used as the Parker banner",
+   "place": "not Centennial or Parker (mountain scenery)",
+   "sourceMd5": "52ca60d4c9eda77407b083b2140b651a",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "geese-rock": {
+   "source": "assets/images/cities banner/englewood-desktop.webp",
+   "alt": "Canada geese resting on a rock",
+   "shows": "three Canada geese; no place",
+   "place": "none",
+   "sourceMd5": "490125e47e594f6e318c5f3f734283c0",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "mountain-lodge": {
+   "source": "assets/images/cities banner/evergreen-desktop.webp",
+   "alt": "Log and stone mountain house among pine trees",
+   "shows": "log and stone house among pines; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "56147c195823f4b9937645c1c86f19ad",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "hillside-horses": {
+   "source": "assets/images/cities banner/highlands-ranch-desktop.webp",
+   "alt": "Horses grazing on an open hillside above a reservoir",
+   "shows": "horses on a dry hillside, reservoir; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "e38e5ace1032e05279cbcdc1bf68dcb8",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  },
+  "townhouse-rooftops": {
+   "source": "assets/images/cities banner/wheat ridge-desktop.webp",
+   "alt": "Aerial view of townhouse rows along a curving street",
+   "shows": "aerial of new townhouses; no landmark",
+   "place": "unconfirmed",
+   "sourceMd5": "d241ddb81ebc75c280a2e3ee890574de",
+   "credit": "Banner supplied with the Denver site; author and license not recorded."
+  }
+ },
+ "excluded": {
+  "aurora-desktop.webp": "Night view of a town between two flat-topped mesas — resembles Golden, not Aurora; not used.",
+  "parker-desktop.webp": "Byte-identical copy of the Centennial banner; used once, as mountain-meadow.",
+  "*-mobile.webp": "500x500 crops of the same photos; not needed (the card exports are cut from the desktop originals)."
+ },
+ "regions": {
+  "denver": [
+   "downtown-denver",
+   "capitol-hill",
+   "cherry-creek",
+   "five-points",
+   "highlands",
+   "washington-park",
+   "university-park",
+   "wellshire",
+   "country-club",
+   "speer",
+   "lodo",
+   "auraria",
+   "curtis-park",
+   "cole",
+   "golden-triangle",
+   "baker",
+   "highland",
+   "platt-park",
+   "rino",
+   "north-park-hill",
+   "park-hill",
+   "congress-park",
+   "cheesman-park",
+   "city-park-west",
+   "central-park",
+   "sunnyside",
+   "west-highland",
+   "berkeley",
+   "jefferson-park",
+   "union-station"
+  ],
+  "boulder": [
+   "boulder",
+   "pearl-street",
+   "university-hill",
+   "mapleton-hill",
+   "chautauqua-park",
+   "north-boulder",
+   "lafayette",
+   "louisville",
+   "superior",
+   "erie"
+  ],
+  "north": [
+   "westminster",
+   "thornton",
+   "northglenn",
+   "federal-heights",
+   "commerce-city",
+   "welby",
+   "broomfield"
+  ],
+  "west": [
+   "lakewood",
+   "wheat-ridge",
+   "arvada",
+   "golden",
+   "ken-caryl",
+   "evergreen"
+  ],
+  "south": [
+   "englewood",
+   "littleton",
+   "centennial",
+   "highlands-ranch",
+   "greenwood-village",
+   "lone-tree",
+   "castle-pines",
+   "parker",
+   "castle-rock"
+  ],
+  "east": [
+   "aurora"
+  ]
+ },
+ "areas": {
+  "/": {
+   "name": "Denver",
+   "region": "denver",
+   "frames": [
+    "denver-skyline"
+   ],
+   "match": "exact"
+  },
+  "/downtown-denver": {
+   "name": "Downtown Denver",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/capitol-hill": {
+   "name": "Capitol Hill",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/cherry-creek": {
+   "name": "Cherry Creek",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/five-points": {
+   "name": "Five Points",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/highlands": {
+   "name": "Highlands",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/washington-park": {
+   "name": "Washington Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/university-park": {
+   "name": "University Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/wellshire": {
+   "name": "Wellshire",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/country-club": {
+   "name": "Country Club",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/speer": {
+   "name": "Speer",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/lodo": {
+   "name": "LoDo",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/auraria": {
+   "name": "Auraria",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/curtis-park": {
+   "name": "Curtis Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/cole": {
+   "name": "Cole",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/golden-triangle": {
+   "name": "Golden Triangle",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/baker": {
+   "name": "Baker",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/highland": {
+   "name": "Highland",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/platt-park": {
+   "name": "Platt Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/rino": {
+   "name": "RiNo",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/north-park-hill": {
+   "name": "North Park Hill",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/park-hill": {
+   "name": "Park Hill",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/congress-park": {
+   "name": "Congress Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/cheesman-park": {
+   "name": "Cheesman Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/city-park-west": {
+   "name": "City Park West",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/central-park": {
+   "name": "Central Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/sunnyside": {
+   "name": "Sunnyside",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/west-highland": {
+   "name": "West Highland",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/berkeley": {
+   "name": "Berkeley",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/jefferson-park": {
+   "name": "Jefferson Park",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/union-station": {
+   "name": "Union Station",
+   "region": "denver",
+   "frames": [
+    "denver-skyline",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "geese-rock"
+   ],
+   "match": "within"
+  },
+  "/boulder": {
+   "name": "Boulder",
+   "region": "boulder",
+   "frames": [
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn"
+   ],
+   "match": "own-banner"
+  },
+  "/pearl-street": {
+   "name": "Pearl Street",
+   "region": "boulder",
+   "frames": [
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks"
+   ],
+   "match": "regional"
+  },
+  "/university-hill": {
+   "name": "University Hill",
+   "region": "boulder",
+   "frames": [
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow"
+   ],
+   "match": "regional"
+  },
+  "/mapleton-hill": {
+   "name": "Mapleton Hill",
+   "region": "boulder",
+   "frames": [
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge"
+   ],
+   "match": "regional"
+  },
+  "/chautauqua-park": {
+   "name": "Chautauqua Park",
+   "region": "boulder",
+   "frames": [
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail"
+   ],
+   "match": "regional"
+  },
+  "/north-boulder": {
+   "name": "North Boulder",
+   "region": "boulder",
+   "frames": [
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops"
+   ],
+   "match": "regional"
+  },
+  "/lafayette": {
+   "name": "Lafayette",
+   "region": "boulder",
+   "frames": [
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn"
+   ],
+   "match": "regional"
+  },
+  "/louisville": {
+   "name": "Louisville",
+   "region": "boulder",
+   "frames": [
+    "mountain-meadow",
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks"
+   ],
+   "match": "regional"
+  },
+  "/superior": {
+   "name": "Superior",
+   "region": "boulder",
+   "frames": [
+    "mountain-lodge",
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow"
+   ],
+   "match": "regional"
+  },
+  "/erie": {
+   "name": "Erie",
+   "region": "boulder",
+   "frames": [
+    "golden-rail",
+    "townhouse-rooftops",
+    "arvada-barn",
+    "boulder-peaks",
+    "mountain-meadow",
+    "mountain-lodge"
+   ],
+   "match": "regional"
+  },
+  "/westminster": {
+   "name": "Westminster",
+   "region": "north",
+   "frames": [
+    "westminster-castle",
+    "townhouse-rooftops",
+    "geese-rock",
+    "arvada-barn",
+    "lakewood-lake",
+    "hillside-horses"
+   ],
+   "match": "own-banner"
+  },
+  "/thornton": {
+   "name": "Thornton",
+   "region": "north",
+   "frames": [
+    "thornton-elevator",
+    "townhouse-rooftops",
+    "geese-rock",
+    "arvada-barn",
+    "lakewood-lake",
+    "hillside-horses"
+   ],
+   "match": "own-banner"
+  },
+  "/northglenn": {
+   "name": "Northglenn",
+   "region": "north",
+   "frames": [
+    "arvada-barn",
+    "lakewood-lake",
+    "hillside-horses",
+    "townhouse-rooftops",
+    "geese-rock"
+   ],
+   "match": "regional"
+  },
+  "/federal-heights": {
+   "name": "Federal Heights",
+   "region": "north",
+   "frames": [
+    "lakewood-lake",
+    "hillside-horses",
+    "townhouse-rooftops",
+    "geese-rock",
+    "arvada-barn"
+   ],
+   "match": "regional"
+  },
+  "/commerce-city": {
+   "name": "Commerce City",
+   "region": "north",
+   "frames": [
+    "hillside-horses",
+    "townhouse-rooftops",
+    "geese-rock",
+    "arvada-barn",
+    "lakewood-lake"
+   ],
+   "match": "regional"
+  },
+  "/welby": {
+   "name": "Welby",
+   "region": "north",
+   "frames": [
+    "townhouse-rooftops",
+    "geese-rock",
+    "arvada-barn",
+    "lakewood-lake",
+    "hillside-horses"
+   ],
+   "match": "regional"
+  },
+  "/broomfield": {
+   "name": "Broomfield",
+   "region": "north",
+   "frames": [
+    "geese-rock",
+    "arvada-barn",
+    "lakewood-lake",
+    "hillside-horses",
+    "townhouse-rooftops"
+   ],
+   "match": "regional"
+  },
+  "/lakewood": {
+   "name": "Lakewood",
+   "region": "west",
+   "frames": [
+    "lakewood-lake",
+    "mountain-meadow",
+    "golden-rail",
+    "mountain-lodge",
+    "boulder-peaks"
+   ],
+   "match": "own-banner"
+  },
+  "/wheat-ridge": {
+   "name": "Wheat Ridge",
+   "region": "west",
+   "frames": [
+    "townhouse-rooftops",
+    "mountain-meadow",
+    "golden-rail",
+    "lakewood-lake",
+    "mountain-lodge",
+    "boulder-peaks"
+   ],
+   "match": "own-banner"
+  },
+  "/arvada": {
+   "name": "Arvada",
+   "region": "west",
+   "frames": [
+    "arvada-barn",
+    "mountain-meadow",
+    "golden-rail",
+    "lakewood-lake",
+    "mountain-lodge",
+    "boulder-peaks"
+   ],
+   "match": "own-banner"
+  },
+  "/golden": {
+   "name": "Golden",
+   "region": "west",
+   "frames": [
+    "golden-rail",
+    "mountain-meadow",
+    "lakewood-lake",
+    "mountain-lodge",
+    "boulder-peaks"
+   ],
+   "match": "own-banner"
+  },
+  "/ken-caryl": {
+   "name": "Ken Caryl",
+   "region": "west",
+   "frames": [
+    "boulder-peaks",
+    "mountain-meadow",
+    "golden-rail",
+    "lakewood-lake",
+    "mountain-lodge"
+   ],
+   "match": "regional"
+  },
+  "/evergreen": {
+   "name": "Evergreen",
+   "region": "west",
+   "frames": [
+    "mountain-lodge",
+    "mountain-meadow",
+    "golden-rail",
+    "lakewood-lake",
+    "boulder-peaks"
+   ],
+   "match": "own-banner"
+  },
+  "/englewood": {
+   "name": "Englewood",
+   "region": "south",
+   "frames": [
+    "mountain-meadow",
+    "hillside-horses",
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake"
+   ],
+   "match": "regional"
+  },
+  "/littleton": {
+   "name": "Littleton",
+   "region": "south",
+   "frames": [
+    "littleton-hall",
+    "mountain-meadow",
+    "hillside-horses",
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake"
+   ],
+   "match": "own-banner"
+  },
+  "/centennial": {
+   "name": "Centennial",
+   "region": "south",
+   "frames": [
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "mountain-meadow",
+    "hillside-horses"
+   ],
+   "match": "regional"
+  },
+  "/highlands-ranch": {
+   "name": "Highlands Ranch",
+   "region": "south",
+   "frames": [
+    "hillside-horses",
+    "mountain-meadow",
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake"
+   ],
+   "match": "own-banner"
+  },
+  "/greenwood-village": {
+   "name": "Greenwood Village",
+   "region": "south",
+   "frames": [
+    "lakewood-lake",
+    "mountain-meadow",
+    "hillside-horses",
+    "geese-rock",
+    "townhouse-rooftops"
+   ],
+   "match": "regional"
+  },
+  "/lone-tree": {
+   "name": "Lone Tree",
+   "region": "south",
+   "frames": [
+    "mountain-meadow",
+    "hillside-horses",
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake"
+   ],
+   "match": "regional"
+  },
+  "/castle-pines": {
+   "name": "Castle Pines",
+   "region": "south",
+   "frames": [
+    "hillside-horses",
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "mountain-meadow"
+   ],
+   "match": "regional"
+  },
+  "/parker": {
+   "name": "Parker",
+   "region": "south",
+   "frames": [
+    "geese-rock",
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "mountain-meadow",
+    "hillside-horses"
+   ],
+   "match": "regional"
+  },
+  "/castle-rock": {
+   "name": "Castle Rock",
+   "region": "south",
+   "frames": [
+    "townhouse-rooftops",
+    "lakewood-lake",
+    "mountain-meadow",
+    "hillside-horses",
+    "geese-rock"
+   ],
+   "match": "regional"
+  },
+  "/aurora": {
+   "name": "Aurora",
+   "region": "east",
+   "frames": [
+    "townhouse-rooftops",
+    "geese-rock",
+    "lakewood-lake",
+    "mountain-meadow"
+   ],
+   "match": "regional"
+  }
+ },
+ "blocks": {
+  "arvada-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "arvada.html": [
+   [
+    "/",
+    "/westminster",
+    "/wheat-ridge",
+    "/lakewood",
+    "/highlands",
+    "/downtown-denver"
+   ]
+  ],
+  "auraria.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/capitol-hill",
+    "/highlands",
+    "/lakewood",
+    "/wheat-ridge"
+   ]
+  ],
+  "aurora-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-oven-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "aurora.html": [
+   [
+    "/",
+    "/centennial",
+    "/cherry-creek",
+    "/five-points",
+    "/englewood",
+    "/littleton"
+   ]
+  ],
+  "baker.html": [
+   [
+    "/",
+    "/washington-park",
+    "/capitol-hill",
+    "/englewood",
+    "/downtown-denver",
+    "/cherry-creek"
+   ]
+  ],
+  "berkeley.html": [
+   [
+    "/",
+    "/sunnyside",
+    "/highlands",
+    "/west-highland",
+    "/wheat-ridge",
+    "/westminster"
+   ]
+  ],
+  "boulder.html": [
+   [
+    "/",
+    "/lakewood",
+    "/westminster",
+    "/arvada",
+    "/wheat-ridge",
+    "/evergreen"
+   ]
+  ],
+  "broomfield.html": [
+   [
+    "/",
+    "/westminster",
+    "/arvada",
+    "/boulder",
+    "/erie",
+    "/federal-heights"
+   ]
+  ],
+  "capitol-hill.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/cherry-creek",
+    "/washington-park",
+    "/five-points",
+    "/highlands"
+   ]
+  ],
+  "castle-pines.html": [
+   [
+    "/",
+    "/highlands-ranch",
+    "/lone-tree",
+    "/parker",
+    "/littleton",
+    "/centennial"
+   ]
+  ],
+  "castle-rock.html": [
+   [
+    "/",
+    "/highlands-ranch",
+    "/parker",
+    "/lone-tree",
+    "/castle-pines",
+    "/littleton"
+   ]
+  ],
+  "centennial.html": [
+   [
+    "/",
+    "/aurora",
+    "/littleton",
+    "/englewood",
+    "/cherry-creek",
+    "/five-points"
+   ]
+  ],
+  "central-park.html": [
+   [
+    "/",
+    "/park-hill",
+    "/north-park-hill",
+    "/aurora",
+    "/commerce-city",
+    "/five-points"
+   ]
+  ],
+  "chautauqua-park.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "cheesman-park.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/congress-park",
+    "/downtown-denver",
+    "/cherry-creek",
+    "/five-points"
+   ]
+  ],
+  "cherry-creek.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "city-park-west.html": [
+   [
+    "/",
+    "/cheesman-park",
+    "/capitol-hill",
+    "/five-points",
+    "/park-hill",
+    "/congress-park"
+   ]
+  ],
+  "cole.html": [
+   [
+    "/",
+    "/five-points",
+    "/downtown-denver",
+    "/capitol-hill",
+    "/highlands",
+    "/aurora"
+   ]
+  ],
+  "commerce-city.html": [
+   [
+    "/",
+    "/aurora",
+    "/northglenn",
+    "/thornton",
+    "/federal-heights",
+    "/welby"
+   ]
+  ],
+  "congress-park.html": [
+   [
+    "/",
+    "/cherry-creek",
+    "/capitol-hill",
+    "/park-hill",
+    "/washington-park",
+    "/five-points"
+   ]
+  ],
+  "country-club.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "curtis-park.html": [
+   [
+    "/",
+    "/five-points",
+    "/downtown-denver",
+    "/capitol-hill",
+    "/highlands",
+    "/cherry-creek"
+   ]
+  ],
+  "denver-bosch-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-bosch-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-door-wont-close.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dishwasher-wont-fill.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-overheating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-takes-too-long.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-dryer-wont-tumble.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-lg-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-miele-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-miele-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-burner-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-door-wont-close.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-not-turning-on.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-self-clean-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-temperature-inaccurate.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-uneven-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-oven-wont-turn-off.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-freezer-not-freezing.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-too-cold.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-refrigerator-water-dispenser-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-samsung-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-sub-zero-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-thermador-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-viking-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-shaking-vibrating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-washer-wont-agitate.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "denver-whirlpool-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "downtown-denver.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/five-points",
+    "/highlands",
+    "/cherry-creek",
+    "/washington-park"
+   ]
+  ],
+  "englewood.html": [
+   [
+    "/",
+    "/littleton",
+    "/centennial",
+    "/cherry-creek",
+    "/washington-park",
+    "/lakewood"
+   ]
+  ],
+  "erie.html": [
+   [
+    "/",
+    "/boulder",
+    "/broomfield",
+    "/westminster",
+    "/arvada",
+    "/aurora"
+   ]
+  ],
+  "evergreen.html": [
+   [
+    "/",
+    "/lakewood",
+    "/arvada",
+    "/wheat-ridge",
+    "/boulder",
+    "/littleton"
+   ]
+  ],
+  "federal-heights.html": [
+   [
+    "/",
+    "/westminster",
+    "/wheat-ridge",
+    "/arvada",
+    "/broomfield",
+    "/highlands"
+   ]
+  ],
+  "five-points.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/capitol-hill",
+    "/highlands",
+    "/aurora",
+    "/cherry-creek"
+   ]
+  ],
+  "golden-triangle.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/downtown-denver",
+    "/washington-park",
+    "/cherry-creek",
+    "/englewood"
+   ]
+  ],
+  "golden.html": [
+   [
+    "/",
+    "/arvada",
+    "/lakewood",
+    "/wheat-ridge",
+    "/evergreen",
+    "/ken-caryl"
+   ]
+  ],
+  "greenwood-village.html": [
+   [
+    "/",
+    "/centennial",
+    "/cherry-creek",
+    "/englewood",
+    "/highlands-ranch",
+    "/lone-tree"
+   ]
+  ],
+  "highland.html": [
+   [
+    "/",
+    "/highlands",
+    "/downtown-denver",
+    "/arvada",
+    "/wheat-ridge",
+    "/capitol-hill"
+   ]
+  ],
+  "highlands-ranch-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "highlands-ranch.html": [
+   [
+    "/",
+    "/littleton",
+    "/centennial",
+    "/englewood",
+    "/castle-pines",
+    "/lone-tree"
+   ]
+  ],
+  "highlands.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/five-points",
+    "/wheat-ridge",
+    "/arvada",
+    "/lakewood"
+   ]
+  ],
+  "index.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/capitol-hill",
+    "/cherry-creek",
+    "/five-points",
+    "/highlands",
+    "/washington-park"
+   ],
+   [
+    "/aurora",
+    "/lakewood",
+    "/wheat-ridge",
+    "/westminster",
+    "/arvada",
+    "/littleton",
+    "/centennial",
+    "/englewood",
+    "/boulder",
+    "/evergreen"
+   ]
+  ],
+  "jefferson-park.html": [
+   [
+    "/",
+    "/highland",
+    "/lodo",
+    "/downtown-denver",
+    "/sunnyside",
+    "/highlands"
+   ]
+  ],
+  "ken-caryl.html": [
+   [
+    "/",
+    "/littleton",
+    "/lakewood",
+    "/highlands-ranch",
+    "/golden",
+    "/evergreen"
+   ]
+  ],
+  "lafayette.html": [
+   [
+    "/",
+    "/boulder",
+    "/erie",
+    "/broomfield",
+    "/louisville",
+    "/superior"
+   ]
+  ],
+  "lakewood-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-oven-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "lakewood.html": [
+   [
+    "/",
+    "/aurora",
+    "/evergreen",
+    "/boulder",
+    "/westminster",
+    "/littleton"
+   ]
+  ],
+  "littleton.html": [
+   [
+    "/",
+    "/englewood",
+    "/centennial",
+    "/lakewood",
+    "/aurora",
+    "/cherry-creek"
+   ]
+  ],
+  "lodo.html": [
+   [
+    "/",
+    "/downtown-denver",
+    "/highlands",
+    "/capitol-hill",
+    "/five-points",
+    "/cherry-creek"
+   ]
+  ],
+  "lone-tree.html": [
+   [
+    "/",
+    "/greenwood-village",
+    "/highlands-ranch",
+    "/centennial",
+    "/castle-pines",
+    "/parker"
+   ]
+  ],
+  "louisville.html": [
+   [
+    "/",
+    "/boulder",
+    "/superior",
+    "/lafayette",
+    "/broomfield",
+    "/erie"
+   ]
+  ],
+  "mapleton-hill.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "north-boulder.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "north-park-hill.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/cherry-creek",
+    "/five-points",
+    "/aurora",
+    "/downtown-denver"
+   ]
+  ],
+  "northglenn.html": [
+   [
+    "/",
+    "/westminster",
+    "/thornton",
+    "/federal-heights",
+    "/broomfield",
+    "/arvada"
+   ]
+  ],
+  "park-hill.html": [
+   [
+    "/",
+    "/north-park-hill",
+    "/cherry-creek",
+    "/capitol-hill",
+    "/five-points",
+    "/aurora"
+   ]
+  ],
+  "parker.html": [
+   [
+    "/",
+    "/castle-pines",
+    "/lone-tree",
+    "/centennial",
+    "/highlands-ranch",
+    "/aurora"
+   ]
+  ],
+  "pearl-street.html": [
+   [
+    "/boulder",
+    "/university-hill",
+    "/lafayette",
+    "/superior",
+    "/louisville",
+    "/broomfield"
+   ]
+  ],
+  "platt-park.html": [
+   [
+    "/",
+    "/washington-park",
+    "/englewood",
+    "/cherry-creek",
+    "/capitol-hill",
+    "/littleton"
+   ]
+  ],
+  "rino.html": [
+   [
+    "/",
+    "/five-points",
+    "/downtown-denver",
+    "/highlands",
+    "/capitol-hill",
+    "/commerce-city"
+   ]
+  ],
+  "speer.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "sunnyside.html": [
+   [
+    "/",
+    "/highlands",
+    "/highland",
+    "/wheat-ridge",
+    "/westminster",
+    "/downtown-denver"
+   ]
+  ],
+  "superior.html": [
+   [
+    "/",
+    "/boulder",
+    "/louisville",
+    "/lafayette",
+    "/broomfield",
+    "/westminster"
+   ]
+  ],
+  "thornton.html": [
+   [
+    "/",
+    "/northglenn",
+    "/westminster",
+    "/federal-heights",
+    "/broomfield",
+    "/commerce-city"
+   ]
+  ],
+  "union-station.html": [
+   [
+    "/",
+    "/lodo",
+    "/downtown-denver",
+    "/rino",
+    "/highland",
+    "/jefferson-park"
+   ]
+  ],
+  "university-hill.html": [
+   [
+    "/boulder",
+    "/pearl-street",
+    "/lafayette",
+    "/superior",
+    "/louisville",
+    "/broomfield"
+   ]
+  ],
+  "university-park.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "washington-park.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/cherry-creek",
+    "/englewood",
+    "/littleton",
+    "/downtown-denver"
+   ]
+  ],
+  "welby.html": [
+   [
+    "/",
+    "/thornton",
+    "/northglenn",
+    "/federal-heights",
+    "/commerce-city",
+    "/westminster"
+   ]
+  ],
+  "wellshire.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "west-highland.html": [
+   [
+    "/",
+    "/highlands",
+    "/highland",
+    "/lakewood",
+    "/wheat-ridge",
+    "/sunnyside"
+   ]
+  ],
+  "westminster-dishwasher-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dishwasher-not-cleaning-dishes.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dishwasher-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dishwasher-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dishwasher-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dryer-making-loud-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dryer-not-drying.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dryer-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dryer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-dryer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-oven-not-heating.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-refrigerator-ice-maker-not-working.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-refrigerator-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-refrigerator-making-noise.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-refrigerator-not-cooling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-refrigerator-not-running.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-washer-leaking-water.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-washer-not-draining.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-washer-not-filling.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-washer-not-spinning.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster-washer-not-starting.html": [
+   [
+    "/",
+    "/capitol-hill",
+    "/washington-park",
+    "/downtown-denver",
+    "/englewood",
+    "/centennial"
+   ]
+  ],
+  "westminster.html": [
+   [
+    "/",
+    "/arvada",
+    "/wheat-ridge",
+    "/highlands",
+    "/downtown-denver",
+    "/centennial"
+   ]
+  ],
+  "wheat-ridge.html": [
+   [
+    "/",
+    "/lakewood",
+    "/arvada",
+    "/westminster",
+    "/highlands",
+    "/englewood"
+   ]
+  ]
+ }
+}

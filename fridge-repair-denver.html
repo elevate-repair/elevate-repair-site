@@ -131,7 +131,7 @@
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
                     <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
-                    <a href="/book-online" class="header-book-btn">Book Online</a>
+                    <a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -178,6 +178,10 @@
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/coupons" class="hero-badge">Upfront Pricing</a>
             </div>
+            <div class="hero-offers">
+                <p class="diag-offer"><span class="diag-badge">$0 Diagnostic with Repair</span> <span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span></p>
+                <p class="avg-callout"><span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span> <a href="#repair-cost" class="avg-callout-link">See typical repair costs</a></p>
+            </div>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
                 <a href="/book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; $25 Off</a>
@@ -191,32 +195,32 @@
             <p class="section-intro">Click a problem below to learn more about causes and solutions.</p>
             <div class="services-grid">
                 <a href="/denver-refrigerator-not-cooling" class="service-card">
-                    <div class="service-icon">&#x1F321;&#xFE0F;</div>
+                    <span class="card-icon card-icon--cold" aria-hidden="true"></span>
                     <h3>Refrigerator Not Cooling</h3>
                     <p>Warm fridge, food spoiling, compressor running constantly</p>
                 </a>
                 <a href="/denver-refrigerator-water-dispenser-not-working" class="service-card">
-                    <div class="service-icon">&#x1F6B0;</div>
+                    <span class="card-icon card-icon--water" aria-hidden="true"></span>
                     <h3>Water Dispenser Not Working</h3>
                     <p>No water flow, slow trickle, dispenser switch unresponsive</p>
                 </a>
                 <a href="/denver-refrigerator-ice-maker-not-working" class="service-card">
-                    <div class="service-icon">&#x1F9CA;</div>
+                    <span class="card-icon card-icon--cold" aria-hidden="true"></span>
                     <h3>Ice Maker Not Making Ice</h3>
                     <p>No ice production, small or hollow cubes, jammed ice maker</p>
                 </a>
                 <a href="/denver-refrigerator-leaking-water" class="service-card">
-                    <div class="service-icon">&#x1F4A7;</div>
+                    <span class="card-icon card-icon--water" aria-hidden="true"></span>
                     <h3>Fridge Leaking Water</h3>
                     <p>Puddles under the fridge, water inside the unit, drip tray overflow</p>
                 </a>
                 <a href="/denver-refrigerator-freezer-not-freezing" class="service-card">
-                    <img class="appliance-card-img" src="/assets/images/appliances/refrigerator-repair-denver.jpg" alt="Refrigerator Repair in Denver, CO" loading="lazy" decoding="async" />
+                    <span class="card-icon card-icon--cold" aria-hidden="true"></span>
                     <h3>Freezer Not Freezing</h3>
                     <p>Soft ice cream, thawed food, frost buildup on walls</p>
                 </a>
                 <a href="/denver-refrigerator-making-noise" class="service-card">
-                    <div class="service-icon">&#x1F50A;</div>
+                    <span class="card-icon card-icon--noise" aria-hidden="true"></span>
                     <h3>Fridge Making Noise</h3>
                     <p>Buzzing, clicking, humming, rattling, or grinding sounds</p>
                 </a>
@@ -241,38 +245,112 @@
                 <p>Our technicians handle every type of residential refrigerator repair, from standard top-freezer models to French door, side-by-side, and built-in units. We carry common replacement parts on our service vehicles so most repairs can be completed during the first visit, minimizing the time your food spends at risk.</p>
 
                 <p>Compressor and sealed-system repairs are among the most involved refrigerator fixes we perform. When a compressor fails or a refrigerant leak develops, your unit cannot maintain proper temperatures. We test sealed-system components, replace faulty compressors, and recharge refrigerant to factory specifications. We also replace start relays, overload protectors, and run capacitors that support compressor operation.</p>
-                <img src="/assets/images/repairs/happy-fridge-repair-denver.webp"
-                     alt="Denver customer happy after refrigerator repair by Elevate Repair"
-                     class="section-photo" loading="lazy">
+                <img src="/assets/images/photos/customer-fridge-french.webp"
+                     alt="Customer giving a thumbs-up beside a French-door refrigerator"
+                     class="section-photo"
+                     width="545" height="610"
+                     loading="lazy" decoding="async">
 
                 <p>Defrost system failures are another frequent issue. Modern frost-free refrigerators rely on a defrost heater, defrost thermostat, and defrost timer or control board to prevent ice buildup on the evaporator coils. When any of these parts fail, frost accumulates and blocks airflow, causing the refrigerator compartment to warm up. We diagnose which component has failed and replace it to restore proper cooling cycles.</p>
 
                 <p>We also repair and replace evaporator fan motors, condenser fan motors, thermistors, temperature control boards, door gaskets, ice makers, water inlet valves, and water filters. Whether your refrigerator is a Whirlpool, Samsung, LG, GE, Frigidaire, Maytag, KitchenAid, Bosch, Sub-Zero, or any other brand, our team has the training and parts access to get it running correctly..</p>
-                <img src="/assets/images/repairs/GE-Fridge-Repair.webp"
-                     alt="GE refrigerator repair service in Denver by Elevate Repair"
-                     class="section-photo" loading="lazy">
+                <img src="/assets/images/photos/customer-fridge-hisense.webp"
+                     alt="Customer beside a stainless French-door refrigerator"
+                     class="section-photo"
+                     width="545" height="610"
+                     loading="lazy" decoding="async">
 
-                <h2>Refrigerator Repair Cost in Denver</h2>
+                <h2 id="repair-cost">Refrigerator Repair Cost in Denver</h2>
                 <p>Most refrigerator repairs in Denver cost between $150 and $500, depending on the issue and parts required. Our $109 service call fee covers the trip and diagnosis, and is applied toward your repair if you proceed. We provide an upfront quote before any work begins. <a href="/coupons">View coupons</a> for additional savings.</p>
-                <img src="/assets/images/repairs/homepage/appliance-technician-home-service-desktop.webp"
-                     alt="Elevate Repair technician completing a refrigerator repair in a Denver home"
-                     class="section-photo" loading="lazy">
+                <!-- denver-estimates:start -->
+                <div class="repair-estimates">
+                    <h3>Typical repair costs</h3>
+                    <p class="estimates-allin"><span class="estimates-allin-label">Typical total repair cost (parts + labor):</span> <strong>$150&ndash;$500</strong></p>
+                    <table class="estimates-table">
+                        <caption>Typical cost by repair (parts and labor)</caption>
+                        <thead><tr><th scope="col">Repair</th><th scope="col">Typical cost</th></tr></thead>
+                        <tbody>
+                            <tr><td>Refrigerator leak repair (clogged drain, supply line, inlet valve)</td><td><span class="price-chip">$120&ndash;$280</span></td></tr>
+                            <tr><td>Ice maker repair (inlet valve, ice maker assembly)</td><td><span class="price-chip">$140&ndash;$320</span></td></tr>
+                        </tbody>
+                    </table>
+                    <p class="estimates-service">Our $109 service call covers the visit and diagnosis and is credited toward your repair when you approve it.</p>
+                    <p class="estimates-trust">60-day parts &amp; labor warranty</p>
+                    <p class="estimates-note">Your exact price is quoted after diagnosis, before any work starts. Don't see your repair? Ask us for a quote.</p>
+                    <p class="estimates-guide"><a href="/fridge-repair/repair-or-replace-refrigerator">Repair or replace? Read our refrigerator guide &rarr;</a></p>
+                </div>
+                <!-- denver-estimates:end -->
+                <img src="/assets/images/photos/tech-kitchen.webp"
+                     alt="Appliance repair technician working at a kitchen cooktop"
+                     class="section-photo"
+                     width="900" height="1200"
+                     loading="lazy" decoding="async">
             </div>
         </div>
     </section>
 
+    <!-- repair-guide:start -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-card">
+                <figure class="guide-media guide-media--render">
+                    <img width="407" height="560" src="/assets/images/appliances/refrigerator-repair-denver.webp" alt="Refrigerator" loading="lazy" decoding="async">
+                </figure>
+                <div class="guide-body">
+                    <p class="guide-pill">Refrigerator guide</p>
+                    <h2>Repair or replace your refrigerator?</h2>
+                    <p class="guide-intro">Most refrigerator problems come down to one failed part, and we tell you the exact repair price after diagnosis, before any work begins.</p>
+                    <div class="guide-panels">
+                        <div class="guide-panel guide-panel--repair">
+                            <h3>Usually worth repairing</h3>
+                            <ul>
+                                <li>One failed part is the cause: a defrost heater or thermostat, a fan motor, a start relay, a door gasket or a water valve</li>
+                                <li>The ice maker, water dispenser or control board has failed on an otherwise sound refrigerator</li>
+                                <li>A built-in, counter-depth or French-door model that fits your kitchen cutout</li>
+                            </ul>
+                        </div>
+                        <div class="guide-panel guide-panel--replace">
+                            <h3>Consider replacing when</h3>
+                            <ul>
+                                <li>Several major components are failing at the same time</li>
+                                <li>The repair quote comes close to the price of a comparable new refrigerator</li>
+                                <li>Parts for your model are discontinued or on a long backorder</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="guide-note">We quote the exact repair after diagnosis, before any work begins, so you decide with real numbers.</p>
+                    <div class="guide-foot">
+                        <div class="guide-links">
+                            <span class="guide-links-label">Troubleshooting guides:</span>
+                            <a href="/fridge-repair/refrigerator-not-cooling">Refrigerator not cooling</a>
+                            <a href="/fridge-repair/water-dispenser-not-working">Water dispenser not working</a>
+                            <a href="/fridge-repair/ice-maker-not-making-ice">Ice maker not making ice</a>
+                            <a href="/fridge-repair/fridge-leaking-water">Fridge leaking water</a>
+                            <a href="/fridge-repair/freezer-not-freezing">Freezer not freezing</a>
+                            <a href="/fridge-repair/fridge-making-noise">Fridge making noise</a>
+                        </div>
+                        <div class="guide-ctas">
+                            <a class="btn guide-cta" href="/fridge-repair/repair-or-replace-refrigerator">Read the full repair-or-replace guide &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- repair-guide:end -->
+
     <section>
         <div class="container">
             <h2>Brands We Repair</h2>
-            <div class="cities-grid">
-                <a href="/whirlpool-appliance-repair-denver" class="city-link">Whirlpool</a>
-                <a href="/samsung-appliance-repair-denver" class="city-link">Samsung</a>
-                <a href="/lg-appliance-repair-denver" class="city-link">LG</a>
-                <a href="/ge-appliance-repair-denver" class="city-link">GE</a>
-                <a href="/maytag-appliance-repair-denver" class="city-link">Maytag</a>
-                <a href="/bosch-appliance-repair-denver" class="city-link">Bosch</a>
-                <a href="/frigidaire-appliance-repair-denver" class="city-link">Frigidaire</a>
-                <a href="/kitchenaid-appliance-repair-denver" class="city-link">KitchenAid</a>
+            <div class="brands-grid brands-grid--related">
+                <a href="/whirlpool-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/whirlpool.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Whirlpool</span></a>
+                <a href="/samsung-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/samsung.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Samsung</span></a>
+                <a href="/lg-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/lg.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>LG</span></a>
+                <a href="/ge-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/ge.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>GE</span></a>
+                <a href="/maytag-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/maytag.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Maytag</span></a>
+                <a href="/bosch-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/bosch.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Bosch</span></a>
+                <a href="/frigidaire-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/frigidaire.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Frigidaire</span></a>
+                <a href="/kitchenaid-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/kitchenaid.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>KitchenAid</span></a>
             </div>
             <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See all <a href="/brands" style="color:#2563eb;">brands we service</a>.</p>
         </div>
@@ -309,7 +387,7 @@
     </section>
     <section class="final-cta" id="book">
         <div class="container">
-            <h2>Schedule Refrigerator Repair in Denver</h2>
+            <h2>Schedule Refrigerator Repair</h2>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>

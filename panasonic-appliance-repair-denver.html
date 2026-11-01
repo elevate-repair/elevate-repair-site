@@ -117,7 +117,7 @@
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
                     <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
-                    <a href="/book-online" class="header-book-btn">Book Online</a>
+                    <a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -156,6 +156,7 @@
 
     <section class="hero">
         <div class="container">
+            <div class="brand-hero-logo"><img src="/assets/images/brands/panasonic.webp" alt="Panasonic logo" width="172" height="65" decoding="async"></div>
             <h1>Panasonic Appliance Repair in Denver</h1>
             <p class="hero-text">Panasonic is a Japanese electronics manufacturer best known in the home appliance space for their inverter microwave technology, which delivers consistent, even cooking power rather than the on-off cycling used by conventional microwaves. Panasonic also produces compact refrigerators and specialty kitchen appliances. Our technicians are trained on the Panasonic inverter platform and carry common replacement components for their most popular microwave and appliance models.</p>
             <div class="hero-highlights">
@@ -163,6 +164,10 @@
                 <a href="/book" class="hero-badge">Panasonic Certified</a>
                 <a href="/warranty" class="hero-badge">60-Day Warranty</a>
                 <a href="/book" class="hero-badge">All Panasonic Models</a>
+            </div>
+            <div class="hero-offers">
+                <p class="diag-offer"><span class="diag-badge">$0 Diagnostic with Repair</span> <span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span></p>
+                <p class="avg-callout"><span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span></p>
             </div>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
@@ -175,27 +180,42 @@
         <div class="container">
             <h2>Panasonic Appliances We Repair</h2>
             <p class="section-intro">Our technicians service Panasonic appliances across Denver.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">&#x1F4A1;</div>
+            <div class="services-grid appliance-strip">
+                <div class="book-card">
+                    <a href="/book?service=microwave" class="service-card">
+                    <span class="card-icon card-icon--microwave card-icon--stage" aria-hidden="true"></span>
                     <h3>Panasonic Microwaves</h3>
                     <p>Countertop and built-in inverter microwaves with Cyclonic Wave technology, Genius Sensor cooking, and Turbo Defrost.</p>
+                        <span class="service-card-cta">Book Repair</span>
+                    </a>
                 </div>
-                <a href="/fridge-repair-denver" class="service-card">
-                    <div class="service-icon">&#x1F9CA;</div>
+                <div class="book-card">
+                    <a href="/book?service=refrigerator" class="service-card">
+                    <img class="appliance-card-img" src="/assets/images/appliances/refrigerator-repair-denver.webp" alt="Refrigerator" width="407" height="560" loading="lazy" decoding="async">
                     <h3>Panasonic Refrigerators</h3>
                     <p>Compact, mid-size, and full-size refrigerators with Econavi sensor technology and Inverter compressor systems.</p>
-                </a>
-                <a href="/oven-repair-denver" class="service-card">
-                    <img class="appliance-card-img" src="/assets/images/appliances/oven-repair-denver.jpg" alt="Oven Repair in Denver, CO" loading="lazy" decoding="async" />
+                        <span class="service-card-cta">Book Repair</span>
+                    </a>
+                    <a href="/fridge-repair-denver" class="book-card-details">Repair details &rarr;</a>
+                </div>
+                <div class="book-card">
+                    <a href="/book?service=oven" class="service-card">
+                    <img class="appliance-card-img" src="/assets/images/appliances/range-repair-denver.webp" alt="Kitchen range" width="514" height="560" loading="lazy" decoding="async">
                     <h3>Panasonic Ovens</h3>
                     <p>Countertop convection ovens, combination microwave-convection units, and toaster ovens with FlashXpress technology.</p>
-                </a>
-                <a href="/dishwasher-repair-denver" class="service-card">
-                    <img class="appliance-card-img" src="/assets/images/appliances/dishwasher-repair-denver.jpg" alt="Dishwasher Repair in Denver, CO" loading="lazy" decoding="async" />
+                        <span class="service-card-cta">Book Repair</span>
+                    </a>
+                    <a href="/oven-repair-denver" class="book-card-details">Repair details &rarr;</a>
+                </div>
+                <div class="book-card">
+                    <a href="/book?service=dishwasher" class="service-card">
+                    <img class="appliance-card-img" src="/assets/images/appliances/dishwasher-repair-denver.webp" alt="Dishwasher" width="528" height="560" loading="lazy" decoding="async">
                     <h3>Panasonic Dishwashers</h3>
                     <p>Countertop and portable dishwashers with multiple wash cycles, compact design, and efficient water usage for small spaces.</p>
-                </a>
+                        <span class="service-card-cta">Book Repair</span>
+                    </a>
+                    <a href="/dishwasher-repair-denver" class="book-card-details">Repair details &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
@@ -209,16 +229,20 @@
                 <p>The magnetron in Panasonic inverter microwaves can also fail, though this is less common than inverter board failure. A failed magnetron typically presents as the microwave running normally with the turntable spinning and the display counting down, but the food not heating at all. In some cases, a failing magnetron may produce arcing, buzzing, or a burning smell. We test the magnetron with a multimeter to confirm failure before recommending replacement. The high-voltage capacitor in Panasonic microwaves is another component that can fail, and because capacitors store a lethal charge even when the microwave is unplugged, this is not a repair that should be attempted without professional training and equipment.</p>
 
                 <p>Panasonic <a href="/fridge-repair-denver">refrigerators</a> sold in the U.S. market are less common than their microwave products, but we do service them in Denver. Panasonic refrigerators that use inverter compressor technology can develop control board issues that cause the compressor to run continuously or not start at all. The inverter board regulates compressor speed, and when it fails, the refrigerator loses its ability to maintain proper temperature. Standard compressor relay failures also occur, presenting as a clicking sound followed by the compressor shutting off.</p>
-<img src="/assets/images/repairs/homepage/appliance-technician-home-service-desktop.webp"
-     alt="Elevate Repair technician servicing an appliance in a Denver home"
-     class="section-photo" loading="lazy">
+<img src="/assets/images/photos/tech-kitchen.webp"
+     alt="Appliance repair technician working at a kitchen cooktop"
+     class="section-photo"
+     width="900" height="1200"
+     loading="lazy" decoding="async">
 
                 <h2>Why Choose Elevate Repair for Your Panasonic Appliance</h2>
                 <p>Our Denver-based technicians carry common Panasonic replacement parts on every service call, which means most repairs are completed in a single visit. Every repair comes with our 60-day warranty on parts and labor. We service all Panasonic models, from current production to older units that may be harder to find parts for.</p>
                 <p>We charge a flat $109 service call fee that covers the trip and full diagnosis. If you approve the repair, that fee is applied as a credit toward your total cost. <a href="/coupons">View current coupons</a> for additional savings.</p>
-<img src="/assets/images/repairs/Appliance-Repair.webp"
-     alt="Elevate Repair appliance technician completing a repair"
-     class="section-photo" loading="lazy">
+<img src="/assets/images/photos/customer-washer.webp"
+     alt="Customer giving a thumbs-up beside a front-load washer"
+     class="section-photo"
+     width="545" height="610"
+     loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -236,15 +260,15 @@
     <section>
         <div class="container">
             <h2>Other Brands We Service</h2>
-            <div class="cities-grid">
-                <a href="/samsung-appliance-repair-denver" class="city-link">Samsung</a>
-                <a href="/lg-appliance-repair-denver" class="city-link">LG</a>
-                <a href="/whirlpool-appliance-repair-denver" class="city-link">Whirlpool</a>
-                <a href="/bosch-appliance-repair-denver" class="city-link">Bosch</a>
-                <a href="/frigidaire-appliance-repair-denver" class="city-link">Frigidaire</a>
-                <a href="/kitchenaid-appliance-repair-denver" class="city-link">KitchenAid</a>
-                <a href="/miele-appliance-repair-denver" class="city-link">Miele</a>
-                <a href="/viking-appliance-repair-denver" class="city-link">Viking</a>
+            <div class="brands-grid brands-grid--related">
+                <a href="/samsung-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/samsung.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Samsung</span></a>
+                <a href="/lg-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/lg.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>LG</span></a>
+                <a href="/whirlpool-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/whirlpool.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Whirlpool</span></a>
+                <a href="/bosch-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/bosch.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Bosch</span></a>
+                <a href="/frigidaire-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/frigidaire.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Frigidaire</span></a>
+                <a href="/kitchenaid-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/kitchenaid.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>KitchenAid</span></a>
+                <a href="/miele-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/miele.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Miele</span></a>
+                <a href="/viking-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/viking.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Viking</span></a>
             </div>
             <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See all <a href="/brands" style="color:#2563eb;">brands we service</a>.</p>
         </div>
@@ -252,7 +276,7 @@
 
     <section class="final-cta" id="book">
         <div class="container">
-            <h2>Schedule Panasonic Repair in Denver</h2>
+            <h2>Schedule Panasonic Repair</h2>
             <p>Call now or text us. Most repairs completed same-day.</p>
             <div class="cta-buttons">
                 <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call (720) 575-8432</a>

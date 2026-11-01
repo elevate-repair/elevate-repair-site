@@ -194,7 +194,7 @@
                 <a href="/" class="logo">Elevate Repair</a>
                 <div class="header-right">
                     <a href="tel:7205758432" class="header-phone" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a>
-                    <a href="/book-online" class="header-book-btn">Book Online</a>
+                    <a href="/book-online" class="header-book-btn">Book Online &mdash; Save $25</a>
                     <button class="burger-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
                 </div>
             </div>
@@ -243,6 +243,10 @@
                     <a href="/contact" class="hero-badge">Licensed &amp; Insured</a>
                     <a href="/brands" class="hero-badge">All Major Brands</a>
                 </div>
+                <div class="hero-offers">
+                    <p class="diag-offer"><span class="diag-badge">$0 Diagnostic with Repair</span> <span class="diag-note">Our $109 service call is credited toward your repair when you approve it.</span></p>
+                    <p class="avg-callout"><span class="avg-callout-label">Average repair costs less than <strong>$300</strong></span></p>
+                </div>
                 <div class="cta-buttons">
                     <a href="tel:7205758432" class="btn btn-primary" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">Call Now: (720) 575-8432</a>
                     <a href="#book" class="btn btn-secondary" onclick="gtag('event','book_click',{'location':'cta'})">Book Online &mdash; $25 Off</a>
@@ -261,115 +265,168 @@
     <!-- Services -->
     <section id="services">
         <div class="container">
-            <h2>Our Appliance Repair Services in Denver</h2>
+            <h2>Our Appliance Repair Services</h2>
             <p class="section-intro">From kitchens to laundry rooms, we repair all major household appliances across Denver. Our trucks are fully stocked with common parts, so most repairs are completed in a single visit.</p>
-            <div class="services-grid">
+            <div class="services-grid appliance-strip">
                 <a href="/fridge-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/refrigerator-repair-denver.jpg"
-                         alt="Refrigerator Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/refrigerator-repair-denver.webp" alt="Refrigerator" width="407" height="560" loading="lazy" decoding="async">
                     <h3>Refrigerator Repair</h3>
                     <p>Not cooling, leaking, ice maker issues, noisy compressor</p>
                 </a>
                 <a href="/washer-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/washer-repair-denver.jpg"
-                         alt="Washer Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/washer-repair-denver.webp" alt="Washing machine" width="515" height="560" loading="lazy" decoding="async">
                     <h3>Washer Repair</h3>
                     <p>Won't spin, drain issues, leaks, loud vibrations</p>
                 </a>
                 <a href="/dryer-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/dryer-repair-denver.jpg"
-                         alt="Dryer Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/dryer-repair-denver.webp" alt="Clothes dryer" width="517" height="560" loading="lazy" decoding="async">
                     <h3>Dryer Repair</h3>
                     <p>Not heating, won't start, taking too long to dry</p>
                 </a>
                 <a href="/dishwasher-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/dishwasher-repair-denver.jpg"
-                         alt="Dishwasher Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/dishwasher-repair-denver.webp" alt="Dishwasher" width="528" height="560" loading="lazy" decoding="async">
                     <h3>Dishwasher Repair</h3>
                     <p>Not cleaning, won't drain, leaking, door issues</p>
                 </a>
                 <a href="/oven-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/oven-repair-denver.jpg"
-                         alt="Oven Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/range-repair-denver.webp" alt="Kitchen range" width="514" height="560" loading="lazy" decoding="async">
                     <h3>Oven Repair</h3>
                     <p>Not heating, temperature issues, uneven baking</p>
                 </a>
                 <a href="/oven-repair-denver" class="service-card">
-                    <img class="appliance-card-img"
-                         src="/assets/images/appliances/stove-repair-denver.jpg"
-                         alt="Stove &amp; Range Repair in Denver, CO"
-                         loading="lazy"
-                         decoding="async" />
+                    <img class="appliance-card-img" src="/assets/images/appliances/range-repair-denver.webp" alt="Kitchen range" width="514" height="560" loading="lazy" decoding="async">
                     <h3>Stove &amp; Range Repair</h3>
                     <p>Burner problems, igniter issues, gas smell</p>
                 </a>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Recent Appliance Repairs</h2>
+            <p class="section-intro">A few photos from real appliance repair jobs.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="/assets/images/photos/washer-drum-open-tile.webp" alt="Front-load washer drum exposed during a repair" width="800" height="600" loading="lazy" decoding="async">
+                    <figcaption class="gallery-caption">Washer drum repair</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/assets/images/photos/dryer-top-removed-tile.webp" alt="Dryer with its top panel removed during a heating repair" width="800" height="600" loading="lazy" decoding="async">
+                    <figcaption class="gallery-caption">Dryer heating repair</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/assets/images/photos/fridge-compressor-tile.webp" alt="Refrigerator compressor close-up during a diagnosis" width="800" height="600" loading="lazy" decoding="async">
+                    <figcaption class="gallery-caption">Refrigerator compressor check</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/assets/images/photos/tech-cooktop-repair-tile.webp" alt="Technician repairing a gas cooktop" width="800" height="600" loading="lazy" decoding="async">
+                    <figcaption class="gallery-caption">Gas cooktop repair</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupons -->
+    <section>
+        <div class="container">
+            <h2>Current Specials</h2>
+            <div class="coupons-grid coupons-grid-home">
+                <a href="#book" class="coupon-card coupon-featured" onclick="gtag('event','book_click',{'location':'coupon'})">
+                    <div class="coupon-card-top">
+                        <div class="coupon-amount">$25 OFF</div>
+                        <div class="coupon-label">Online Booking Discount</div>
+                    </div>
+                    <div class="coupon-card-body">
+                        <h3>Book Online &amp; Save</h3>
+                        <p>Book online and save $25 on any completed appliance repair. Applied automatically to your final invoice; one-time use per household.</p>
+                    </div>
+                </a>
+                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
+                    <div class="coupon-card-top">
+                        <div class="coupon-amount">$109</div>
+                        <div class="coupon-label">Service Call Waived</div>
+                    </div>
+                    <div class="coupon-card-body">
+                        <h3>$0 Diagnostic with Repair</h3>
+                        <p>Our $109 service call fee is applied toward the cost of your repair when you choose to proceed. You only pay for the repair itself &mdash; the diagnostic visit is on us.</p>
+                    </div>
+                </a>
+                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
+                    <div class="coupon-card-top">
+                        <div class="coupon-amount">10% OFF</div>
+                        <div class="coupon-label">Senior &amp; Military</div>
+                    </div>
+                    <div class="coupon-card-body">
+                        <h3>Thank You Discount</h3>
+                        <p>10% off labor for seniors 65 and older and active-duty or veteran military members. Mention this offer when scheduling your appointment.</p>
+                    </div>
+                </a>
+            </div>
+            <p class="section-intro coupons-terms">Offers cannot be combined. See all <a href="/coupons" style="color:#2563eb;">coupons &amp; offers</a>.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
             <!-- Detailed service descriptions for SEO -->
             <div class="service-details">
                 <div class="service-detail">
-                    <h3>Refrigerator Repair in Denver</h3>
+                    <h3>Refrigerator Repair</h3>
                     <p>Is your refrigerator running warm, making unusual noises, or leaking water onto the kitchen floor? Our Denver technicians handle everything from thermostat failures and compressor problems to ice maker malfunctions and door seal replacements. We service top-freezer, bottom-freezer, side-by-side, and French door models from every major brand.</p>
                 </div>
-                <img src="/assets/images/repairs/happy-fridge-repair-denver.webp"
-                     alt="Denver customer happy after refrigerator repair by Elevate Repair"
+                <img src="/assets/images/photos/customer-fridge-french.webp"
+                     alt="Customer giving a thumbs-up beside a French-door refrigerator"
                      class="section-photo"
-                     loading="lazy">
+                     width="545" height="610"
+                     loading="lazy" decoding="async">
                 <div class="service-detail">
-                    <h3>Washer Repair in Denver</h3>
+                    <h3>Washer Repair</h3>
                     <p>A broken washing machine disrupts your entire routine. Whether it won't start, won't drain, vibrates excessively, or leaks during the spin cycle, our Denver repair team can diagnose and fix it. We work on both top-load and front-load washers, and most washer repairs are completed the same day you call.</p>
                 </div>
-                <img src="/assets/images/repairs/front-load-washer-drum-repair.webp"
-                     alt="Front-load washer drum repair in a Denver home"
+                <img src="/assets/images/photos/top-load-washer.webp"
+                     alt="Top-load washer in a basement laundry room"
                      class="section-photo"
-                     loading="lazy">
+                     width="768" height="1024"
+                     loading="lazy" decoding="async">
                 <div class="service-detail">
-                    <h3>Dryer Repair in Denver</h3>
+                    <h3>Dryer Repair</h3>
                     <p>If your dryer isn't producing heat, takes multiple cycles to dry a load, or shuts off mid-cycle, don't wait. Dryer problems can worsen quickly and even become a safety hazard. Our technicians troubleshoot heating elements, thermostats, belts, drum rollers, and more for fast dryer repair in Denver.</p>
                 </div>
-                <img src="/assets/images/repairs/homepage/Dryer-repair-in-Denver.webp"
-                     alt="Denver customer happy after dryer repair by Elevate Repair"
+                <img src="/assets/images/photos/terminal-block-burnt.webp"
+                     alt="Burnt terminal block found during an appliance repair"
                      class="section-photo"
-                     loading="lazy">
+                     width="1200" height="900"
+                     loading="lazy" decoding="async">
                 <div class="service-detail">
-                    <h3>Dishwasher Repair in Denver</h3>
+                    <h3>Dishwasher Repair</h3>
                     <p>A dishwasher that leaves dishes dirty, won't fill with water, or fails to drain properly is more than an inconvenience. Our Denver technicians repair spray arm issues, clogged drains, faulty pumps, door latch problems, and detergent dispenser failures across all major brands.</p>
                 </div>
-                <img src="/assets/images/repairs/Samsung-Dishwasher.webp"
-                     alt="Samsung dishwasher repair in a Denver home"
+                <img src="/assets/images/photos/samsung-dishwasher-open.webp"
+                     alt="Open Samsung dishwasher during a repair"
                      class="section-photo"
-                     loading="lazy">
+                     width="768" height="1024"
+                     loading="lazy" decoding="async">
                 <div class="service-detail">
-                    <h3>Oven Repair in Denver</h3>
+                    <h3>Oven Repair</h3>
                     <p>An oven that won't heat or heats unevenly can throw off your entire meal schedule. Our team handles gas and electric oven repairs, including igniter replacements, bake element failures, temperature calibration, and control board issues. Denver homeowners count on Elevate Repair for dependable oven service.</p>
                 </div>
-                <img src="/assets/images/repairs/built-in-oven-repair.webp"
-                     alt="Built-in double wall oven repair in a Denver home"
+                <img src="/assets/images/photos/wall-oven-tools.webp"
+                     alt="Built-in wall oven and microwave with tools on the counter"
                      class="section-photo"
-                     loading="lazy">
+                     width="1200" height="900"
+                     loading="lazy" decoding="async">
                 <div class="service-detail">
-                    <h3>Stove &amp; Range Repair in Denver</h3>
+                    <h3>Stove &amp; Range Repair</h3>
                     <p>Gas burner won't light? Electric coil not heating? Stove and range problems are both frustrating and potentially dangerous. Our licensed technicians repair gas leaks, faulty igniters, broken burner elements, and control knob issues safely and efficiently throughout Denver.</p>
                 </div>
-                <img src="/assets/images/repairs/oven-repair-specialists-denver.webp"
-                     alt="Denver customer happy after oven and range repair by Elevate Repair"
+                <img src="/assets/images/photos/customer-range.webp"
+                     alt="Customer beside an electric range"
                      class="section-photo"
-                     loading="lazy">
+                     width="545" height="610"
+                     loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -399,61 +456,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Refrigerator Repair</td><td>$$$</td></tr>
-                        <tr><td>Washer Repair</td><td>$$</td></tr>
-                        <tr><td>Dryer Repair</td><td>$$</td></tr>
-                        <tr><td>Dishwasher Repair</td><td>$$</td></tr>
-                        <tr><td>Oven Repair</td><td>$$</td></tr>
-                        <tr><td>Stove / Range Repair</td><td>$$</td></tr>
+                        <tr><td><a href="/fridge-repair-denver" class="cost-link">Refrigerator Repair</a></td><td><span class="cost-level">$$$</span> <a href="/fridge-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
+                        <tr><td><a href="/washer-repair-denver" class="cost-link">Washer Repair</a></td><td><span class="cost-level">$$</span> <a href="/washer-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
+                        <tr><td><a href="/dryer-repair-denver" class="cost-link">Dryer Repair</a></td><td><span class="cost-level">$$</span> <a href="/dryer-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
+                        <tr><td><a href="/dishwasher-repair-denver" class="cost-link">Dishwasher Repair</a></td><td><span class="cost-level">$$</span> <a href="/dishwasher-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
+                        <tr><td><a href="/oven-repair-denver" class="cost-link">Oven Repair</a></td><td><span class="cost-level">$$</span> <a href="/oven-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
+                        <tr><td><a href="/oven-repair-denver" class="cost-link">Stove / Range Repair</a></td><td><span class="cost-level">$$</span> <a href="/oven-repair-denver#repair-cost" class="cost-estimate-link">See Our Estimates &rarr;</a></td></tr>
                     </tbody>
                 </table>
             </div>
             <p class="cost-note">Final pricing provided after diagnosis.</p>
             <p class="cost-note">Service call fee: <strong>$109</strong> (applied toward repair if you proceed). <a href="/coupons" style="color:#2563eb;">View current coupons</a>.</p>
-        </div>
-    </section>
-
-    <!-- Coupons -->
-    <section>
-        <div class="container">
-            <h2>Current Specials</h2>
-            <div class="coupons-grid coupons-grid-home">
-                <a href="#book" class="coupon-card coupon-featured" onclick="gtag('event','book_click',{'location':'coupon'})">
-                    <div class="coupon-card-top">
-                        <div class="coupon-amount">$25 OFF</div>
-                        <div class="coupon-label">Online Booking Discount</div>
-                    </div>
-                    <div class="coupon-card-body">
-                        <h3>Book Online &amp; Save</h3>
-                        <p>Schedule your repair through our website and save $25 on any service.</p>
-                    </div>
-                </a>
-                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
-                    <div class="coupon-card-top">
-                        <div class="coupon-amount">$109</div>
-                        <div class="coupon-label">Service Call Waived</div>
-                    </div>
-                    <div class="coupon-card-body">
-                        <h3>Free Diagnostic</h3>
-                        <p>Our $109 service call fee is applied toward your repair when you proceed.</p>
-                    </div>
-                </a>
-                <a href="#book" class="coupon-card" onclick="gtag('event','book_click',{'location':'coupon'})">
-                    <div class="coupon-card-top">
-                        <div class="coupon-amount">10% OFF</div>
-                        <div class="coupon-label">Senior &amp; Military</div>
-                    </div>
-                    <div class="coupon-card-body">
-                        <h3>Thank You Discount</h3>
-                        <p>10% off any repair for seniors (65+) and active/retired military members.</p>
-                    </div>
-                </a>
-            </div>
-            <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See all <a href="/coupons" style="color:#2563eb;">coupons &amp; offers</a>.</p>
-            <img src="/assets/images/repairs/GE-Fridge-Repair.webp"
-                 alt="Denver customer happy after appliance repair by Elevate Repair"
-                 class="section-photo"
-                 loading="lazy">
         </div>
     </section>
 
@@ -515,10 +528,11 @@
                     <span class="benefit-text"><strong>All Major Brands</strong> From Whirlpool and Samsung to Sub-Zero and Viking, we repair appliances from <a href="/brands" style="color:#2563eb;">every major manufacturer</a>.</span>
                 </li>
             </ul>
-            <img src="/assets/images/repairs/homepage/appliance-technician-home-service.webp"
-                 alt="Elevate Repair technician servicing an appliance in a Denver home"
+            <img src="/assets/images/photos/viking-range-open.webp"
+                 alt="Viking range with both oven doors open during a repair"
                  class="section-photo"
-                 loading="lazy">
+                 width="1200" height="900"
+                 loading="lazy" decoding="async">
         </div>
     </section>
 
@@ -543,10 +557,11 @@
                     <p>Once approved, we complete the repair with quality parts and test everything thoroughly. Backed by our 60-day warranty.</p>
                 </div>
             </div>
-            <img src="/assets/images/repairs/homepage/cooktop-repair-hero-desktop.webp"
-                 alt="Elevate Repair technician repairing a cooktop in a Denver home"
+            <img src="/assets/images/photos/lg-stacked-laundry.webp"
+                 alt="Stacked LG front-load washer and dryer in a laundry closet"
                  class="section-photo"
-                 loading="lazy">
+                 width="900" height="1200"
+                 loading="lazy" decoding="async">
         </div>
     </section>
 
@@ -556,21 +571,21 @@
             <h2>All Major Brands</h2>
             <p class="section-intro">Our technicians are factory-trained on every major appliance manufacturer.</p>
             <div class="brands-grid">
-                <a href="/whirlpool-appliance-repair-denver" class="brand-tag">Whirlpool</a>
-                <a href="/samsung-appliance-repair-denver" class="brand-tag">Samsung</a>
-                <a href="/lg-appliance-repair-denver" class="brand-tag">LG</a>
-                <a href="/ge-appliance-repair-denver" class="brand-tag">GE</a>
-                <a href="/maytag-appliance-repair-denver" class="brand-tag">Maytag</a>
-                <a href="/kitchenaid-appliance-repair-denver" class="brand-tag">KitchenAid</a>
-                <a href="/bosch-appliance-repair-denver" class="brand-tag">Bosch</a>
-                <a href="/frigidaire-appliance-repair-denver" class="brand-tag">Frigidaire</a>
-                <a href="/sub-zero-appliance-repair-denver" class="brand-tag">Sub-Zero</a>
-                <a href="/viking-appliance-repair-denver" class="brand-tag">Viking</a>
-                <a href="/kenmore-appliance-repair-denver" class="brand-tag">Kenmore</a>
-                <a href="/electrolux-appliance-repair-denver" class="brand-tag">Electrolux</a>
-                <a href="/amana-appliance-repair-denver" class="brand-tag">Amana</a>
-                <a href="/miele-appliance-repair-denver" class="brand-tag">Miele</a>
-                <a href="/panasonic-appliance-repair-denver" class="brand-tag">Panasonic</a>
+                <a href="/whirlpool-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/whirlpool.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Whirlpool</span></a>
+                <a href="/samsung-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/samsung.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Samsung</span></a>
+                <a href="/lg-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/lg.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>LG</span></a>
+                <a href="/ge-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/ge.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>GE</span></a>
+                <a href="/maytag-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/maytag.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Maytag</span></a>
+                <a href="/kitchenaid-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/kitchenaid.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>KitchenAid</span></a>
+                <a href="/bosch-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/bosch.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Bosch</span></a>
+                <a href="/frigidaire-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/frigidaire.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Frigidaire</span></a>
+                <a href="/sub-zero-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/sub-zero.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Sub-Zero</span></a>
+                <a href="/viking-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/viking.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Viking</span></a>
+                <a href="/kenmore-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/kenmore.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Kenmore</span></a>
+                <a href="/electrolux-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/electrolux.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Electrolux</span></a>
+                <a href="/amana-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/amana.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Amana</span></a>
+                <a href="/miele-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/miele.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Miele</span></a>
+                <a href="/panasonic-appliance-repair-denver" class="brand-tag brand-tag--logo"><img src="/assets/images/brands/panasonic.webp" alt="" aria-hidden="true" width="172" height="65" loading="lazy" decoding="async"><span>Panasonic</span></a>
             </div>
             <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See our full <a href="/brands" style="color:#2563eb;">brands page</a> for all manufacturers.</p>
         </div>
@@ -582,181 +597,19 @@
             <h2>Denver Neighborhoods We Serve</h2>
             <p class="section-intro">We repair appliances across Denver and surrounding communities.</p>
             <div class="area-cards">
-                <a href="/" class="area-card area-card-featured">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Denver, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Denver</div>
-                </a>
-                <a href="/downtown-denver" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Downtown, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Downtown</div>
-                </a>
-                <a href="/capitol-hill" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Capitol Hill, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Capitol Hill</div>
-                </a>
-                <a href="/cherry-creek" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Cherry Creek, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Cherry Creek</div>
-                </a>
-                <a href="/five-points" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Five Points, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Five Points</div>
-                </a>
-                <a href="/highlands" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Highlands, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Highlands</div>
-                </a>
-                <a href="/washington-park" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/denver-desktop.webp"
-                         alt="Appliance Repair in Wash Park, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Wash Park</div>
-                </a>
+                <a href="/downtown-denver" class="area-card"><img class="area-card-img" src="/assets/images/areas/denver-skyline-card.webp" srcset="/assets/images/areas/denver-skyline-card-sm.webp 400w, /assets/images/areas/denver-skyline-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Downtown Denver skyline with the Front Range on the horizon" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Downtown Denver</div></a>
+                <a href="/jefferson-park" class="area-card"><img class="area-card-img" src="/assets/images/areas/townhouse-rooftops-card.webp" srcset="/assets/images/areas/townhouse-rooftops-card-sm.webp 400w, /assets/images/areas/townhouse-rooftops-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Aerial view of townhouse rows along a curving street" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Jefferson Park</div></a>
+                <a href="/union-station" class="area-card"><img class="area-card-img" src="/assets/images/areas/lakewood-lake-card.webp" srcset="/assets/images/areas/lakewood-lake-card-sm.webp 400w, /assets/images/areas/lakewood-lake-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Frozen lake with a bare tree and the foothills beyond" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Union Station</div></a>
+                <a href="/capitol-hill" class="area-card"><img class="area-card-img" src="/assets/images/areas/geese-rock-card.webp" srcset="/assets/images/areas/geese-rock-card-sm.webp 400w, /assets/images/areas/geese-rock-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Canada geese resting on a rock" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Capitol Hill</div></a>
             </div>
             <h3 style="text-align:center;margin:28px 0 16px;color:#1f2937;">Nearby Cities</h3>
             <div class="area-cards">
-                <a href="/aurora" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/aurora-desktop.webp"
-                         alt="Appliance Repair in Aurora, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Aurora</div>
-                </a>
-                <a href="/lakewood" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/lakewood-desktop.webp"
-                         alt="Appliance Repair in Lakewood, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Lakewood</div>
-                </a>
-                <a href="/wheat-ridge" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/wheat%20ridge-desktop.webp"
-                         alt="Appliance Repair in Wheat Ridge, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Wheat Ridge</div>
-                </a>
-                <a href="/westminster" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/westminster-desktop.webp"
-                         alt="Appliance Repair in Westminster, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Westminster</div>
-                </a>
-                <a href="/arvada" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/arvada-desktop.webp"
-                         alt="Appliance Repair in Arvada, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Arvada</div>
-                </a>
-                <a href="/littleton" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/littleton-desktop.webp"
-                         alt="Appliance Repair in Littleton, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Littleton</div>
-                </a>
-                <a href="/centennial" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/centennial-desktop.webp"
-                         alt="Appliance Repair in Centennial, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Centennial</div>
-                </a>
-                <a href="/englewood" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/englewood-desktop.webp"
-                         alt="Appliance Repair in Englewood, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Englewood</div>
-                </a>
-                <a href="/boulder" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/boulder-desktop.webp"
-                         alt="Appliance Repair in Boulder, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Boulder</div>
-                </a>
-                <a href="/evergreen" class="area-card">
-                    <img class="area-card-img"
-                         src="/assets/images/cities%20banner/evergreen-desktop.webp"
-                         alt="Appliance Repair in Evergreen, CO"
-                         loading="lazy"
-                         width="400"
-                         height="250"
-                         style="object-fit:cover;border-radius:10px;">
-                    <div class="area-card-label">Evergreen</div>
-                </a>
+                <a href="/aurora" class="area-card"><img class="area-card-img" src="/assets/images/areas/mountain-meadow-card.webp" srcset="/assets/images/areas/mountain-meadow-card-sm.webp 400w, /assets/images/areas/mountain-meadow-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Snow-capped peaks above a pine meadow" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Aurora</div></a>
+                <a href="/westminster" class="area-card"><img class="area-card-img" src="/assets/images/areas/westminster-castle-card.webp" srcset="/assets/images/areas/westminster-castle-card-sm.webp 400w, /assets/images/areas/westminster-castle-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Aerial view of a red-brick, castle-style building beside a water tower" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Westminster</div></a>
+                <a href="/arvada" class="area-card"><img class="area-card-img" src="/assets/images/areas/arvada-barn-card.webp" srcset="/assets/images/areas/arvada-barn-card-sm.webp 400w, /assets/images/areas/arvada-barn-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Red-roofed barn on a hillside above the plains" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Arvada</div></a>
+                <a href="/littleton" class="area-card"><img class="area-card-img" src="/assets/images/areas/littleton-hall-card.webp" srcset="/assets/images/areas/littleton-hall-card-sm.webp 400w, /assets/images/areas/littleton-hall-card.webp 800w" sizes="(min-width: 769px) 25vw, 50vw" alt="Historic red-brick hall with a clock on a small-town street" width="800" height="500" loading="lazy" decoding="async"><div class="area-card-label">Littleton</div></a>
             </div>
-            <p class="section-intro" style="margin-top:16px;margin-bottom:0;">See all <a href="/service-areas" style="color:#2563eb;">service areas</a>.</p>
+            <p class="area-cards-more"><a href="/service-areas">See All Service Areas &rarr;</a></p>
         </div>
     </section>
 
@@ -765,38 +618,38 @@
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Do you offer same-day service?</div>
+                <details class="faq-item">
+                    <summary class="faq-question">Do you offer same-day service?</summary>
                     <div class="faq-answer">Yes! In most cases, if you call before noon we can dispatch a technician to your Denver home the very same day. Our team is on call 7 days a week for emergencies.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What brands do you service?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">What brands do you service?</summary>
                     <div class="faq-answer">We repair all major appliance brands including Whirlpool, GE, Samsung, LG, Maytag, Frigidaire, KitchenAid, Bosch, Sub-Zero, Viking, and many more. See our full <a href="/brands" style="color:#2563eb;">brands list</a>.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How much does a repair cost?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">How much does a repair cost?</summary>
                     <div class="faq-answer">It depends on the appliance and the issue. We charge a $109 service call fee for the diagnosis, then provide an upfront quote before starting work. The service call fee is applied toward the repair if you proceed. Check our pricing table above for typical ranges.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is your work guaranteed?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Is your work guaranteed?</summary>
                     <div class="faq-answer">Absolutely. We include a <a href="/warranty" style="color:#2563eb;">60-day warranty</a> on all repairs. If the same problem comes back within 60 days, we fix it free of charge.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What appliances do you repair?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">What appliances do you repair?</summary>
                     <div class="faq-answer">We fix refrigerators, freezers, ice makers, dishwashers, ovens, stoves, ranges, washers, dryers, microwaves, and more. If it's a major household appliance, our technicians can handle it.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How do I schedule a repair?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">How do I schedule a repair?</summary>
                     <div class="faq-answer">Just call us at <a href="tel:7205758432" style="color:#2563eb;" onclick="gtag('event','phone_click',{'phone_number':'(720) 575-8432'})">(720) 575-8432</a> or fill out our online booking form below. We'll arrange a convenient appointment and send a confirmation.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What is the service call / diagnostic fee?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">What is the service call / diagnostic fee?</summary>
                     <div class="faq-answer">Our service call fee is <strong>$109</strong>. This covers the technician's visit and full diagnosis. If you approve the repair, the $109 is applied as a credit toward your total cost.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What payment methods do you accept?</div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">What payment methods do you accept?</summary>
                     <div class="faq-answer">We accept cash, all major credit cards, and debit cards. Payment is collected after the repair is completed to your satisfaction.</div>
-                </div>
+                </details>
             </div>
             <p class="section-intro" style="margin-top:16px;margin-bottom:0;">More questions? Visit our <a href="/faq" style="color:#2563eb;">full FAQ page</a> or call us.</p>
         </div>
@@ -907,72 +760,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="gallery-section">
-        <div class="container">
-            <h2>Recent Appliance Repairs</h2>
-            <p class="section-intro">A look at real repair jobs completed across Denver and the surrounding area.</p>
-        </div>
-        <div class="gallery-carousel">
-            <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="Previous">&#8249;</button>
-            <div class="gallery-track" id="galleryTrack">
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/appliance-repair-service-denver.jpg" alt="Appliance repair service in Denver" loading="lazy">
-                    <div class="gallery-caption">Appliance Repair Service — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/built-in-dishwasher-repair-denver.jpeg" alt="Built-in dishwasher repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Built-In Dishwasher Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/double-wall-oven-repair-denver.jpeg" alt="Double wall oven repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Double Wall Oven Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/dryer-not-heating-denver.jpg" alt="Dryer not heating repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Dryer Not Heating — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/fridge-repair-aurora.jpeg" alt="Refrigerator repair in Aurora" loading="lazy">
-                    <div class="gallery-caption">Refrigerator Repair — Aurora</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/front-load-washer-drum-repair-denver.jpg" alt="Front-load washer drum repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Front-Load Washer Drum Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/front-load-washer-repair-denver.jpeg" alt="Front-load washer repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Front-Load Washer Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/gas-range-repair-denver.jpeg" alt="Gas range repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Gas Range Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/microwave-repair-denver.jpeg" alt="Microwave repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Microwave Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/oven-interior-repair-denver.jpeg" alt="Oven interior repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Oven Interior Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/stainless-dishwasher-repair-denver.jpeg" alt="Dishwasher tub inspection in Denver" loading="lazy">
-                    <div class="gallery-caption">Dishwasher Tub Inspection — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/stainless-steel-refrigerator-repair-denver.jpeg" alt="Stainless steel refrigerator repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Stainless Refrigerator Repair — Denver</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/assets/images/problems/top-load-washer-repair-denver.jpeg" alt="Top-load washer repair in Denver" loading="lazy">
-                    <div class="gallery-caption">Top-Load Washer Repair — Denver</div>
-                </div>
-            </div>
-            <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="Next">&#8250;</button>
         </div>
     </section>
 
@@ -1267,15 +1054,6 @@
             });
         })();
 
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(function(q) {
-            q.addEventListener('click', function() {
-                var item = this.parentElement;
-                var wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-                if (!wasOpen) item.classList.add('open');
-            });
-        });
 
         // Problems accordion
         document.querySelectorAll('.problem-category-btn').forEach(function(btn) {
@@ -1286,23 +1064,6 @@
             });
         });
 
-        // Gallery arrows
-        (function() {
-            var track = document.getElementById('galleryTrack');
-            var prev = document.getElementById('galleryPrev');
-            var next = document.getElementById('galleryNext');
-            if (!track || !prev || !next) return;
-            var cardWidth = function() {
-                var item = track.querySelector('.gallery-item');
-                return item ? item.offsetWidth + 16 : 296;
-            };
-            prev.addEventListener('click', function() {
-                track.scrollBy({ left: -cardWidth(), behavior: 'smooth' });
-            });
-            next.addEventListener('click', function() {
-                track.scrollBy({ left: cardWidth(), behavior: 'smooth' });
-            });
-        })();
 
         // Gallery modal (click-to-enlarge)
         (function() {

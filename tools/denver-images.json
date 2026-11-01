@@ -1,0 +1,957 @@
+{
+ "_doc": [
+  "Denver image catalogue: the single record of every appliance render, job / service photo and brand logo the pages use.",
+  "Exports are written by python3 tools/export-denver-images.py (no EXIF / XMP / ICC). Originals are never changed or deleted.",
+  "photos[].status: use = placed on pages; unused = kept, not placed; retired = must not appear on any page (see note).",
+  "No alt text or caption names a city: the place of each job is not recorded, so photos are never presented as Denver jobs.",
+  "renders: subject renders matched by looking at each image, not by file name. logos: one per Denver brand page; brands without an official file keep a text pill.",
+  "Source carries EXIF/XMP from 'Express Repair New York' with GPS coordinates; the export is written without any metadata."
+ ],
+ "renders": {
+  "refrigerator": {
+   "source": "assets/images/appliances/ChatGPT Image Oct 10, 2026, 08_43_41 PM.png",
+   "out": "assets/images/appliances/refrigerator-repair-denver.webp",
+   "alt": "Refrigerator",
+   "shows": "stainless French-door refrigerator",
+   "sourceMd5": "0ab3f37654eeb713a291df17279ca063",
+   "provenance": "Owner upload 2026-10-31 (AI-generated product render, no logo, no location); byte-identical to the Buffalo site's source PNG of the same name."
+  },
+  "washer": {
+   "source": "assets/images/appliances/ChatGPT Image Oct 10, 2026, 08_43_38 PM.png",
+   "out": "assets/images/appliances/washer-repair-denver.webp",
+   "alt": "Washing machine",
+   "shows": "front-load washer with detergent drawer and display",
+   "sourceMd5": "4349e261cbd0a5b9e3f59373fbf38c90",
+   "provenance": "Owner upload 2026-10-31 (AI-generated product render, no logo, no location); byte-identical to the Buffalo site's source PNG of the same name."
+  },
+  "dryer": {
+   "source": "assets/images/appliances/ChatGPT Image Oct 10, 2026, 08_43_40 PM.png",
+   "out": "assets/images/appliances/dryer-repair-denver.webp",
+   "alt": "Clothes dryer",
+   "shows": "front-load dryer with perforated drum, no detergent drawer",
+   "sourceMd5": "dabc86898959366c95fa2800388b6628",
+   "provenance": "Owner upload 2026-10-31 (AI-generated product render, no logo, no location); byte-identical to the Buffalo site's source PNG of the same name."
+  },
+  "dishwasher": {
+   "source": "assets/images/appliances/ChatGPT Image Oct 10, 2026, 08_44_32 PM.png",
+   "out": "assets/images/appliances/dishwasher-repair-denver.webp",
+   "alt": "Dishwasher",
+   "shows": "freestanding stainless dishwasher",
+   "sourceMd5": "c2c6516fd3933b07575223390e9c5961",
+   "provenance": "Owner upload 2026-10-31 (AI-generated product render, no logo, no location); byte-identical to the Buffalo site's source PNG of the same name."
+  },
+  "range": {
+   "source": "assets/images/appliances/ChatGPT Image Oct 10, 2026, 08_44_33 PM.png",
+   "out": "assets/images/appliances/range-repair-denver.webp",
+   "alt": "Kitchen range",
+   "shows": "stainless gas range with oven",
+   "sourceMd5": "fc25f028dd5bd7f6a69f333b58c25dc3",
+   "provenance": "Owner upload 2026-10-31 (AI-generated product render, no logo, no location); byte-identical to the Buffalo site's source PNG of the same name."
+  }
+ },
+ "photos": {
+  "washer-drum-open": {
+   "sources": [
+    "assets/images/repairs/front-load-washer-drum-repair.webp",
+    "assets/images/problems/front-load-washer-drum-repair-denver.jpg"
+   ],
+   "appliances": [
+    "washer"
+   ],
+   "kind": "repair",
+   "brand": null,
+   "alt": "Front-load washer drum exposed during a repair",
+   "caption": "Washer drum repair",
+   "status": "use",
+   "out": "assets/images/photos/washer-drum-open.webp",
+   "sourceMd5": [
+    "dee02bd21d80668aab567c865cfdf9af",
+    "5aed5825b522ef142421962b3a6962dd"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "dryer-top-removed": {
+   "sources": [
+    "assets/images/problems/dryer-not-heating-denver.jpg"
+   ],
+   "appliances": [
+    "dryer"
+   ],
+   "kind": "repair",
+   "brand": null,
+   "alt": "Dryer with its top panel removed during a heating repair",
+   "caption": "Dryer heating repair",
+   "status": "use",
+   "out": "assets/images/photos/dryer-top-removed.webp",
+   "sourceMd5": [
+    "8a5651abc494fe8b11c290950f870573"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "fridge-compressor": {
+   "sources": [
+    "assets/images/repairs/Refrigerator-compressor-close-up-during.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "repair",
+   "brand": null,
+   "alt": "Refrigerator compressor close-up during a diagnosis",
+   "caption": "Refrigerator compressor check",
+   "status": "use",
+   "out": "assets/images/photos/fridge-compressor.webp",
+   "sourceMd5": [
+    "e73cbf98b18243366143381cf8d592c9"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "tech-cooktop-repair": {
+   "sources": [
+    "assets/images/repairs/homepage/cooktop-repair-hero-desktop.webp",
+    "assets/images/repairs/homepage/cooktop-repair-hero-mobile.webp"
+   ],
+   "appliances": [
+    "oven",
+    "generic"
+   ],
+   "kind": "tech",
+   "brand": null,
+   "alt": "Technician repairing a gas cooktop",
+   "caption": "Gas cooktop repair",
+   "status": "use",
+   "out": "assets/images/photos/tech-cooktop-repair.webp",
+   "sourceMd5": [
+    "bf816420b3ec91864b96746e524c8528",
+    "4b74aa83583668431464780575bd9de6"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city.",
+   "group": "tech-home"
+  },
+  "tech-kitchen": {
+   "sources": [
+    "assets/images/repairs/homepage/appliance-technician-home-service-desktop.webp",
+    "assets/images/repairs/homepage/appliance-technician-home-service.webp"
+   ],
+   "appliances": [
+    "generic",
+    "oven"
+   ],
+   "kind": "tech",
+   "brand": null,
+   "alt": "Appliance repair technician working at a kitchen cooktop",
+   "caption": "Technician at work",
+   "status": "use",
+   "out": "assets/images/photos/tech-kitchen.webp",
+   "sourceMd5": [
+    "dd689664c69ad764a9f6da80c29e3818",
+    "7e40d5a77b3e49a843d76ba5e7cd2c20"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city.",
+   "group": "tech-home",
+   "note": "Same technician and kitchen as tech-cooktop-repair: never both on one page (group tech-home)."
+  },
+  "terminal-block-burnt": {
+   "sources": [
+    "assets/images/problems/appliance-repair-service-denver.jpg"
+   ],
+   "appliances": [
+    "generic",
+    "dryer"
+   ],
+   "kind": "repair",
+   "brand": null,
+   "alt": "Burnt terminal block found during an appliance repair",
+   "caption": "Burnt terminal block",
+   "status": "use",
+   "out": "assets/images/photos/terminal-block-burnt.webp",
+   "sourceMd5": [
+    "1e978235a11ea3cd91f8479ef0c83681"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "wall-oven-tools": {
+   "sources": [
+    "assets/images/repairs/built-in-oven-repair.webp",
+    "assets/images/problems/double-wall-oven-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "repair",
+   "brand": null,
+   "alt": "Built-in wall oven and microwave with tools on the counter",
+   "caption": "Wall oven repair",
+   "status": "use",
+   "out": "assets/images/photos/wall-oven-tools.webp",
+   "sourceMd5": [
+    "7c14ea866c5551b6744eb8b550e9b6a3",
+    "6c88729e46941d1b81a7fcf9e1c5c2d9"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "lg-stacked-laundry": {
+   "sources": [
+    "assets/images/repairs/lg-stacked-washer-dryer-repair.webp",
+    "assets/images/problems/front-load-washer-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "washer",
+    "dryer"
+   ],
+   "kind": "appliance",
+   "brand": "lg",
+   "alt": "Stacked LG front-load washer and dryer in a laundry closet",
+   "caption": "Stacked washer and dryer",
+   "status": "use",
+   "out": "assets/images/photos/lg-stacked-laundry.webp",
+   "sourceMd5": [
+    "a8bbc75125ee8e286abe6127688cbd7c",
+    "86d0c74fc92802e78fa1dac26fd9ae8b"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "top-load-washer": {
+   "sources": [
+    "assets/images/problems/top-load-washer-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "washer"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "Top-load washer in a basement laundry room",
+   "caption": "Top-load washer",
+   "status": "use",
+   "out": "assets/images/photos/top-load-washer.webp",
+   "sourceMd5": [
+    "e22f4da8f5787ca0685ffea5c7ea2590"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "dishwasher-built-in": {
+   "sources": [
+    "assets/images/problems/built-in-dishwasher-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "dishwasher"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "Built-in dishwasher beside kitchen cabinets",
+   "caption": "Built-in dishwasher",
+   "status": "use",
+   "out": "assets/images/photos/dishwasher-built-in.webp",
+   "sourceMd5": [
+    "3599badc0d108f04988e373dd8bcb27a"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "dishwasher-closed": {
+   "sources": [
+    "assets/images/problems/stainless-dishwasher-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "dishwasher"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "Stainless built-in dishwasher under a kitchen counter",
+   "caption": "Stainless dishwasher",
+   "status": "use",
+   "out": "assets/images/photos/dishwasher-closed.webp",
+   "sourceMd5": [
+    "0d3be14fe5465309969cab74b452720f"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "samsung-dishwasher-open": {
+   "sources": [
+    "assets/images/repairs/Samsung-Dishwasher.webp"
+   ],
+   "appliances": [
+    "dishwasher"
+   ],
+   "kind": "repair",
+   "brand": "samsung",
+   "alt": "Open Samsung dishwasher during a repair",
+   "caption": "Dishwasher repair",
+   "status": "use",
+   "out": "assets/images/photos/samsung-dishwasher-open.webp",
+   "sourceMd5": [
+    "faeba869ab14abd1f46b97b3c8280a88"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "gas-range": {
+   "sources": [
+    "assets/images/problems/gas-range-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "Stainless gas range in a home kitchen",
+   "caption": "Gas range",
+   "status": "use",
+   "out": "assets/images/photos/gas-range.webp",
+   "sourceMd5": [
+    "a9e82d6c6e20d9ee56de46db952083f3"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "gas-range-counter": {
+   "sources": [
+    "assets/images/repairs/residential-cooktop-repair.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "Gas range beside a white kitchen counter",
+   "caption": "Gas range",
+   "status": "use",
+   "out": "assets/images/photos/gas-range-counter.webp",
+   "sourceMd5": [
+    "cc18cdec992dd66181cc4f03bce5fe83"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "microwave-otr": {
+   "sources": [
+    "assets/images/problems/microwave-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "microwave"
+   ],
+   "kind": "appliance",
+   "brand": "bosch",
+   "alt": "Over-the-range microwave mounted above a kitchen counter",
+   "caption": "Over-the-range microwave",
+   "status": "use",
+   "out": "assets/images/photos/microwave-otr.webp",
+   "sourceMd5": [
+    "40ef168e2ddd61fc90ae1ac164172cce"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "viking-range-open": {
+   "sources": [
+    "assets/images/repairs/viking-range-repair.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "repair",
+   "brand": "viking",
+   "alt": "Viking range with both oven doors open during a repair",
+   "caption": "Viking range repair",
+   "status": "use",
+   "out": "assets/images/photos/viking-range-open.webp",
+   "sourceMd5": [
+    "83c50860f2c527690bc43b1e646d67fa"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "viking-badge": {
+   "sources": [
+    "assets/images/repairs/viking-range-closeup.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "appliance",
+   "brand": "viking",
+   "alt": "Viking Professional range badge close-up",
+   "caption": "Viking range",
+   "status": "use",
+   "out": "assets/images/photos/viking-badge.webp",
+   "sourceMd5": [
+    "3c1530579dad81acffd8c4c54459846f"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-washer": {
+   "sources": [
+    "assets/images/repairs/Appliance-Repair.webp"
+   ],
+   "appliances": [
+    "washer"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer giving a thumbs-up beside a front-load washer",
+   "caption": "Front-load washer",
+   "status": "use",
+   "out": "assets/images/photos/customer-washer.webp",
+   "sourceMd5": [
+    "b39394ca21b6933a1d61120e6492feb9"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-fridge-french": {
+   "sources": [
+    "assets/images/repairs/happy-fridge-repair-denver.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "customer",
+   "brand": "frigidaire",
+   "alt": "Customer giving a thumbs-up beside a French-door refrigerator",
+   "caption": "French-door refrigerator",
+   "status": "use",
+   "out": "assets/images/photos/customer-fridge-french.webp",
+   "sourceMd5": [
+    "e594a25ecf3b34e65fc862f833c943bc"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-fridge-hisense": {
+   "sources": [
+    "assets/images/repairs/GE-Fridge-Repair.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "customer",
+   "brand": "hisense",
+   "alt": "Customer beside a stainless French-door refrigerator",
+   "caption": "French-door refrigerator",
+   "status": "use",
+   "out": "assets/images/photos/customer-fridge-hisense.webp",
+   "sourceMd5": [
+    "30eccdb1bc9d5d80b350a0b12d672e2d"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-wall-oven": {
+   "sources": [
+    "assets/images/repairs/Oven-repair-denver.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer beside a built-in wall oven",
+   "caption": "Built-in wall oven",
+   "status": "use",
+   "out": "assets/images/photos/customer-wall-oven.webp",
+   "sourceMd5": [
+    "e5ab76baebc3ecbf0206e80dd036fe64"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-range": {
+   "sources": [
+    "assets/images/repairs/oven-repair-specialists-denver.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer beside an electric range",
+   "caption": "Electric range",
+   "status": "use",
+   "out": "assets/images/photos/customer-range.webp",
+   "sourceMd5": [
+    "81524942680f2776b05dc17c37843ec2"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-cooktop": {
+   "sources": [
+    "assets/images/repairs/Stove-Denver-Repair.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer beside a gas cooktop set into a brick alcove",
+   "caption": "Gas cooktop",
+   "status": "use",
+   "out": "assets/images/photos/customer-cooktop.webp",
+   "sourceMd5": [
+    "4332987f240880120413aa1faeffa0d8"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-fridge-side": {
+   "sources": [
+    "assets/images/repairs/Fridge-repair-denver.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer beside a side-by-side refrigerator",
+   "caption": "Side-by-side refrigerator",
+   "status": "unused",
+   "out": null,
+   "sourceMd5": [
+    "98f88e385096ff8e3b0ed5b2e47a48f2"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-fridge-2": {
+   "sources": [
+    "assets/images/repairs/homepage/Appliance-Repair denver.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "Customer beside a French-door refrigerator",
+   "caption": "French-door refrigerator",
+   "status": "unused",
+   "out": null,
+   "sourceMd5": [
+    "848be0c22940310415424d7e7f54582b"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-fridge-small": {
+   "sources": [
+    "assets/images/repairs/homepage/fridge-repair-denver.webp"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "customer",
+   "brand": null,
+   "alt": "",
+   "caption": "",
+   "status": "unused",
+   "note": "270x270 only; the shirt carries a small logo.",
+   "out": null,
+   "sourceMd5": [
+    "73e4350f00f7663904a18b0801382b17"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "customer-lg-washer": {
+   "sources": [
+    "assets/images/repairs/homepage/Dryer-repair-in-Denver.webp"
+   ],
+   "appliances": [
+    "washer"
+   ],
+   "kind": "customer",
+   "brand": "lg",
+   "alt": "",
+   "caption": "",
+   "status": "retired",
+   "note": "October 2026 audit: the photo shows a woman beside an LG front-load WASHER but was published as a dryer photo on 41 pages; replaced by the dryer repair photo on dryer pages and by washer photos elsewhere.",
+   "out": null,
+   "sourceMd5": [
+    "091022ea20faf5d73b80c048e7afc23a"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "fridge-door-photos-a": {
+   "sources": [
+    "assets/images/problems/fridge-repair-aurora.jpeg"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "",
+   "caption": "",
+   "status": "retired",
+   "note": "Unblurred children's school portraits and family photos on the refrigerator door, a person in the background; removed from every public gallery. Original kept untouched.",
+   "out": null,
+   "sourceMd5": [
+    "9b764de4e1b6469fbfe899e87dd1ecd5"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "fridge-door-photos-b": {
+   "sources": [
+    "assets/images/problems/stainless-steel-refrigerator-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "fridge"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "",
+   "caption": "",
+   "status": "retired",
+   "note": "Unblurred family photos on the refrigerator door; removed from every public gallery. Original kept untouched.",
+   "out": null,
+   "sourceMd5": [
+    "36172a78149d0ed16cea2a36ab375e4e"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "wolf-hood": {
+   "sources": [
+    "assets/images/repairs/Wolf-Range-Hood-Blower-Motor.webp"
+   ],
+   "appliances": [
+    "hood"
+   ],
+   "kind": "repair",
+   "brand": "wolf",
+   "alt": "",
+   "caption": "",
+   "status": "retired",
+   "note": "Range hood above a Wolf range; published as 'inspecting dryer components' on dryer pages. Not used.",
+   "out": null,
+   "sourceMd5": [
+    "cf4abfea6722d58e9ec3b767b08b5746"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "cooktop-overhead": {
+   "sources": [
+    "assets/images/problems/oven-interior-repair-denver.jpeg"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "appliance",
+   "brand": "monogram",
+   "alt": "",
+   "caption": "",
+   "status": "unused",
+   "note": "Gas cooktop shot from above, stored sideways; was captioned 'oven interior'.",
+   "out": null,
+   "sourceMd5": [
+    "e3b6fd26c5a4598439121c698fbce02c"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "oven-knob-stock": {
+   "sources": [
+    "assets/images/repairs/Repair-Appliance-Ikea.webp"
+   ],
+   "appliances": [
+    "oven"
+   ],
+   "kind": "stock",
+   "brand": null,
+   "alt": "",
+   "caption": "",
+   "status": "unused",
+   "note": "Stock-style image of an oven dial at 200 C; not a job photo.",
+   "out": null,
+   "sourceMd5": [
+    "2512ac63a94ae9c217f83f56d10ce1c5"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  },
+  "commercial-combi": {
+   "sources": [
+    "assets/images/repairs/commercial-oven-repair.webp"
+   ],
+   "appliances": [
+    "commercial"
+   ],
+   "kind": "appliance",
+   "brand": null,
+   "alt": "",
+   "caption": "",
+   "status": "retired",
+   "note": "Commercial combi-steamer; not a residential service.",
+   "out": null,
+   "sourceMd5": [
+    "d3f0829991d4403d5019e9932d960cb6"
+   ],
+   "provenance": "Company job / service photo already on the Denver site (byte-identical copies exist on the Buffalo site). The place of the job is not recorded, so no caption or alt names a city."
+  }
+ },
+ "logos": {
+  "whirlpool": {
+   "name": "Whirlpool",
+   "page": "/whirlpool-appliance-repair-denver",
+   "source": "assets/images/brands/whirlpool.jpg",
+   "out": "assets/images/brands/whirlpool.webp",
+   "status": "use",
+   "sourceMd5": "ce4b862e2c5817c615eb207d4559eb9d"
+  },
+  "samsung": {
+   "name": "Samsung",
+   "page": "/samsung-appliance-repair-denver",
+   "source": "assets/images/brands/samsung.jpg",
+   "out": "assets/images/brands/samsung.webp",
+   "status": "use",
+   "sourceMd5": "28f94c32ea98284c58365ab6b47db7ef"
+  },
+  "lg": {
+   "name": "LG",
+   "page": "/lg-appliance-repair-denver",
+   "source": "assets/images/brands/lg.jpg",
+   "out": "assets/images/brands/lg.webp",
+   "status": "use",
+   "sourceMd5": "f4b3298d0902864bd8a3d09e31938147"
+  },
+  "ge": {
+   "name": "GE",
+   "page": "/ge-appliance-repair-denver",
+   "source": "assets/images/brands/ge.jpg",
+   "out": "assets/images/brands/ge.webp",
+   "status": "use",
+   "sourceMd5": "cf2193f00a854745a5c8c690f6b267c8"
+  },
+  "maytag": {
+   "name": "Maytag",
+   "page": "/maytag-appliance-repair-denver",
+   "source": "assets/images/brands/maytag.jpg",
+   "out": "assets/images/brands/maytag.webp",
+   "status": "use",
+   "sourceMd5": "b633f491cbeb8c16b08b367f4c3575ee"
+  },
+  "kitchenaid": {
+   "name": "KitchenAid",
+   "page": "/kitchenaid-appliance-repair-denver",
+   "source": "assets/images/brands/kitchenaid.jpg",
+   "out": "assets/images/brands/kitchenaid.webp",
+   "status": "use",
+   "sourceMd5": "ae995b2986a08061325533993c9055b0"
+  },
+  "bosch": {
+   "name": "Bosch",
+   "page": "/bosch-appliance-repair-denver",
+   "source": "assets/images/brands/bosch.jpg",
+   "out": "assets/images/brands/bosch.webp",
+   "status": "use",
+   "sourceMd5": "0b31e80bb50ce1b0c5ff5aaf5286b171"
+  },
+  "frigidaire": {
+   "name": "Frigidaire",
+   "page": "/frigidaire-appliance-repair-denver",
+   "source": "assets/images/brands/frigidaire.jpg",
+   "out": "assets/images/brands/frigidaire.webp",
+   "status": "use",
+   "sourceMd5": "fa9b53c8e68c88374d47924ac5379ee8"
+  },
+  "kenmore": {
+   "name": "Kenmore",
+   "page": "/kenmore-appliance-repair-denver",
+   "source": "assets/images/brands/kenmore.jpg",
+   "out": "assets/images/brands/kenmore.webp",
+   "status": "use",
+   "sourceMd5": "5d72900b9974db4822b9f0fff018ddf0"
+  },
+  "electrolux": {
+   "name": "Electrolux",
+   "page": "/electrolux-appliance-repair-denver",
+   "source": "assets/images/brands/electrolux.jpg",
+   "out": "assets/images/brands/electrolux.webp",
+   "status": "use",
+   "sourceMd5": "d9de67df083be4381bcad017dd6c0ea5"
+  },
+  "amana": {
+   "name": "Amana",
+   "page": "/amana-appliance-repair-denver",
+   "source": "assets/images/brands/amana.jpg",
+   "out": "assets/images/brands/amana.webp",
+   "status": "use",
+   "sourceMd5": "320fcaec20c7b59371823fcffc005446"
+  },
+  "panasonic": {
+   "name": "Panasonic",
+   "page": "/panasonic-appliance-repair-denver",
+   "source": "assets/images/brands/panasonic.jpg",
+   "out": "assets/images/brands/panasonic.webp",
+   "status": "use",
+   "sourceMd5": "963eae5cb11030ee2e6eaf2c866db74d"
+  },
+  "miele": {
+   "name": "Miele",
+   "page": "/miele-appliance-repair-denver",
+   "source": "assets/images/brands/miele.jpg",
+   "out": "assets/images/brands/miele.webp",
+   "status": "use",
+   "sourceMd5": "48b03b02e554d403e95684a5bba590d0"
+  },
+  "sub-zero": {
+   "name": "Sub-Zero",
+   "page": "/sub-zero-appliance-repair-denver",
+   "source": "assets/images/brands/sub-zero.jpg",
+   "out": "assets/images/brands/sub-zero.webp",
+   "status": "use",
+   "sourceMd5": "9831439da15494fc82ec47699b373c5d"
+  },
+  "viking": {
+   "name": "Viking",
+   "page": "/viking-appliance-repair-denver",
+   "source": "assets/images/brands/viking.jpg",
+   "out": "assets/images/brands/viking.webp",
+   "status": "use",
+   "sourceMd5": "bc18235b25ba233ea01b88449bda7463"
+  },
+  "hotpoint": {
+   "name": "Hotpoint",
+   "page": "/hotpoint",
+   "source": "assets/images/brands/hotpoint.jpg",
+   "out": "assets/images/brands/hotpoint.webp",
+   "status": "use",
+   "sourceMd5": "1af220a557ae114c48e18af8e67d2c0e"
+  },
+  "haier": {
+   "name": "Haier",
+   "page": "/haier",
+   "source": "assets/images/brands/haier.jpg",
+   "out": "assets/images/brands/haier.webp",
+   "status": "use",
+   "sourceMd5": "f6292ee73a34ec02fd5774f6ff54a455"
+  },
+  "fisher-paykel": {
+   "name": "Fisher & Paykel",
+   "page": "/fisher-paykel",
+   "source": "assets/images/brands/fisher-paykel.jpg",
+   "out": "assets/images/brands/fisher-paykel.webp",
+   "status": "use",
+   "sourceMd5": "0b66bcc83f51acc50e37b555228fa7ab"
+  },
+  "thermador": {
+   "name": "Thermador",
+   "page": "/thermador",
+   "source": "assets/images/brands/thermador.jpg",
+   "out": "assets/images/brands/thermador.webp",
+   "status": "use",
+   "sourceMd5": "745e5d6bd02c03fc2a4e4d457350bcd3"
+  },
+  "wolf": {
+   "name": "Wolf",
+   "page": "/wolf",
+   "source": "assets/images/brands/wolf.jpg",
+   "out": "assets/images/brands/wolf.webp",
+   "status": "use",
+   "sourceMd5": "fa2c1bdf151df60418e0cd311b31558b"
+  },
+  "jenn-air": {
+   "name": "Jenn-Air",
+   "page": "/jenn-air",
+   "source": "assets/images/brands/jenn-air.jpg",
+   "out": "assets/images/brands/jenn-air.webp",
+   "status": "use",
+   "sourceMd5": "b923aabbb5d48403c2248dcef7865dc9"
+  },
+  "dacor": {
+   "name": "Dacor",
+   "page": "/dacor",
+   "source": "assets/images/brands/dacor.jpg",
+   "out": "assets/images/brands/dacor.webp",
+   "status": "use",
+   "sourceMd5": "3b230d582c3e87d86cb3aac92a8b00a4"
+  },
+  "speed-queen": {
+   "name": "Speed Queen",
+   "page": "/speed-queen",
+   "source": null,
+   "out": null,
+   "status": "no-logo",
+   "sourceMd5": null
+  },
+  "bertazzoni": {
+   "name": "Bertazzoni",
+   "page": "/bertazzoni",
+   "source": "assets/images/brands/bertazzoni.jpg",
+   "out": "assets/images/brands/bertazzoni.webp",
+   "status": "use",
+   "sourceMd5": "40bd8b75b23f6522a973fb895f7e78b9"
+  },
+  "bluestar": {
+   "name": "BlueStar",
+   "page": "/bluestar",
+   "source": "assets/images/brands/bluestar.jpg",
+   "out": "assets/images/brands/bluestar.webp",
+   "status": "use",
+   "sourceMd5": "2767af24fbfb20f1748e5d5e5a8f2f4f"
+  },
+  "gaggenau": {
+   "name": "Gaggenau",
+   "page": "/gaggenau",
+   "source": "assets/images/brands/gaggenau.jpg",
+   "out": "assets/images/brands/gaggenau.webp",
+   "status": "use",
+   "sourceMd5": "6afbc461b3ea1b6987dc462f3b5694b6"
+  },
+  "asko": {
+   "name": "Asko",
+   "page": "/asko",
+   "source": "assets/images/brands/asko.jpg",
+   "out": "assets/images/brands/asko.webp",
+   "status": "use",
+   "sourceMd5": "47d472dcf612a96e4eaa81399563319a"
+  },
+  "beko": {
+   "name": "Beko",
+   "page": "/beko",
+   "source": null,
+   "out": null,
+   "status": "no-logo",
+   "sourceMd5": null
+  },
+  "hisense": {
+   "name": "Hisense",
+   "page": "/hisense",
+   "source": null,
+   "out": null,
+   "status": "no-logo",
+   "sourceMd5": null
+  },
+  "insignia": {
+   "name": "Insignia",
+   "page": "/insignia",
+   "source": null,
+   "out": null,
+   "status": "no-logo",
+   "sourceMd5": null
+  },
+  "magic-chef": {
+   "name": "Magic Chef",
+   "page": "/magic-chef",
+   "source": "assets/images/brands/magic-chef.jpg",
+   "out": "assets/images/brands/magic-chef.webp",
+   "status": "use",
+   "sourceMd5": "327e6b466ab2a51eb77e8608f391a41b"
+  }
+ },
+ "unusedLogos": {
+  "files": [
+   "admiral",
+   "aeg",
+   "ariston",
+   "avantgarde",
+   "beaumark",
+   "blomberg",
+   "brada",
+   "broan",
+   "cafe",
+   "cove",
+   "danby",
+   "fulgor-milano",
+   "hobart",
+   "ikea",
+   "inglis",
+   "liebherr",
+   "marvel",
+   "moffat",
+   "porter-charles",
+   "premier",
+   "roper",
+   "sharp",
+   "sirius",
+   "smeg",
+   "tappan",
+   "thor-kitchen",
+   "venmar",
+   "vent-a-hood",
+   "westinghouse"
+  ],
+  "reason": "No Denver brand page for these brands (ventilation, commercial, retailer, Canadian-only or not serviced). A logo never creates a page or a service claim."
+ }
+}
