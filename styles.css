@@ -685,12 +685,16 @@ img.area-card-img {
     font-size: 15px;
 }
 
-/* === FAQ === */
+/* === FAQ ===
+   One native disclosure per question (details/summary): closed on load, the
+   whole question row toggles it, several can be open at once, the +/− is CSS,
+   the full answer stays in the HTML. Every FAQ on the site uses this markup
+   (tools/apply-faq-accordion.js); the homepage, /faq, the service, city,
+   guide and problem pages all share it. */
 .faq-list {
     max-width: 800px;
     margin: 0 auto;
 }
-
 .faq-item {
     background: #fff;
     margin-bottom: 10px;
@@ -698,43 +702,73 @@ img.area-card-img {
     overflow: hidden;
     border: 1px solid #e5e7eb;
 }
-
 .faq-question {
     padding: 16px 18px;
     font-weight: 600;
     font-size: 16px;
+    line-height: 1.4;
+    color: #1f2937;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    list-style: none;
 }
-
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+.faq-question::marker {
+    content: '';
+}
 .faq-question:hover {
     background: #f9fafb;
 }
-
+/* keyboard focus is visible inside the card (the card clips its corners) */
+.faq-question:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+    background: #eff6ff;
+}
+/* the +/− indicator is an icon, not text, so it never joins the question's
+   accessible name (a text "+" would be read out by screen readers) */
 .faq-question::after {
-    content: '+';
-    font-size: 22px;
-    color: #9ca3af;
+    content: '';
+    width: 14px;
+    height: 14px;
     flex-shrink: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round'><path d='M7 1v12M1 7h12'/></svg>") no-repeat center / contain;
 }
-
-.faq-item.open .faq-question::after {
-    content: '\2212';
+.faq-item[open] > .faq-question::after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round'><path d='M1 7h12'/></svg>");
 }
-
 .faq-answer {
-    display: none;
     padding: 0 18px 16px;
     color: #4b5563;
     font-size: 15px;
     line-height: 1.6;
 }
-
-.faq-item.open .faq-answer {
-    display: block;
+.faq-answer a {
+    color: #2563eb;
+}
+/* answers carried over from prose sections keep their paragraphs and lists;
+   these beat the .content-body p / ul rules */
+.faq-item .faq-answer p {
+    margin: 0 0 10px;
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.faq-item .faq-answer p:last-child {
+    margin-bottom: 0;
+}
+.faq-item .faq-answer ul,
+.faq-item .faq-answer ol {
+    margin: 0 0 10px 20px;
+}
+.faq-item .faq-answer li {
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 /* === Problems Accordion === */

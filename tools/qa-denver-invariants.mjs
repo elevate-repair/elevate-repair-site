@@ -8,7 +8,7 @@
  * For every production page that exists in the base (every .html except tools/, the legacy
  * *-repair-denver/ redirect directories, node_modules/ and .git/) it fails when any of these drift:
  *
- *   - phone: the multiset of tel: hrefs and of "(720) 575-8432" texts
+ *   - phone: the multiset of tel: hrefs, no "(720) 575-8432" text removed, no other number
  *   - Apps Script endpoints (script.google.com/macros/s/...), every <form>…</form> block, the hidden
  *     iframe and every hidden input (source, service, place_id, zip, city, state …)
  *   - tracking: every gtag('event' / 'config' …) call, every onclick attribute, the gtag.js loader,
@@ -58,7 +58,8 @@ function facts(src) {
   const ld = scripts.filter((s) => /ld\+json/.test(s.attrs)).map((s) => s.body.trim());
   return {
     tel: ms(all(/href="tel:[^"]*"/g, src)),
-    phoneText: (src.match(/\(720\) 575-8432/g) || []).length,
+    // visible copy only: FAQPage JSON-LD is rebuilt from the visible FAQ by tools/sync-faq-schema.js
+    phoneText: (src.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '').match(/\(720\) 575-8432/g) || []).length,
     endpoints: ms(all(/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec/g, src)),
     forms: ms(all(/<form\b[\s\S]*?<\/form>/g, src)),
     iframe: ms(all(/<iframe\b[^>]*hidden_iframe[^>]*>/g, src)),
@@ -118,7 +119,10 @@ for (const p of baseFiles) {
   const wSrc = readFileSync(join(ROOT, p), 'utf8');
   const w = facts(wSrc);
   if (p === 'thank-you.html' && wSrc !== baseRead(p)) err(p, 'thank-you page changed (conversion page must stay byte-identical)');
-  for (const k of ['tel', 'phoneText', 'endpoints', 'forms', 'iframe', 'hidden', 'gtagCalls', 'onclick', 'loader', 'clarity',
+  // the number itself never changes; a FAQ answer made visible may repeat it (as text, never a new tel link)
+  if (w.phoneText < b.phoneText) err(p, 'phone number text removed');
+  if (/\(720\) (?!575-8432|000-0000)\d{3}-\d{4}/.test(wSrc)) err(p, 'unexpected phone number');
+  for (const k of ['tel', 'endpoints', 'forms', 'iframe', 'hidden', 'gtagCalls', 'onclick', 'loader', 'clarity',
     'title', 'desc', 'robots', 'canonical', 'og', 'h1', 'h1count', 'ldNonFaq']) {
     if (b[k] !== w[k]) err(p, `${k} changed`);
   }
@@ -139,7 +143,7 @@ for (const p of newPages) {
   const s = readFileSync(join(ROOT, p), 'utf8');
   for (const t of all(/href="tel:[^"]*"/g, s)) if (t !== 'href="tel:7205758432"') err(p, `non-canonical tel link ${t}`);
   for (const e of all(/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec/g, s)) err(p, `new page posts to Apps Script ${e}`);
-  if (/\(720\) (?!575-8432)\d{3}-\d{4}/.test(s)) err(p, 'unexpected phone number');
+  if (/\(720\) (?!575-8432|000-0000)\d{3}-\d{4}/.test(s)) err(p, 'unexpected phone number');
 }
 
 console.log(`Denver invariants vs ${BASE}: ${baseFiles.length} base pages compared, ${newPages.length} new page(s)` +
